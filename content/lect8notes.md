@@ -1,5 +1,5 @@
 ---
-title: "Lecture 8 Summary"
+title: "Lecture 8 Notes"
 ---
 
 ### [00:00:01] Introduction and Model Selection Overview
