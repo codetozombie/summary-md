@@ -1,5 +1,5 @@
 ---
-title: "Lecture 8 Summary"
+title: "Lecture 9 Notes"
 ---
 
 
