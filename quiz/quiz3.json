@@ -1,0 +1,194 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "In an A/B test, what are \"subjects\"?",
+    "possible_answers": {
+      "A": "Statistical formulas used in analysis",
+      "B": "The items exposed to treatments",
+      "C": "The outcome variables measured in a study",
+      "D": "The software used to analyze data"
+    },
+    "correct_answer": "B",
+    "explanation": "In experimental design, 'subjects' refer to the individual units (such as users, patients, or web sessions) that are randomly assigned to be exposed to the different experimental treatments."
+  },
+  {
+    "question_no": 2,
+    "question_text": "In a properly designed A/B test, which of the following methods is used to assign subjects to the control and treatment groups?",
+    "possible_answers": {
+      "A": "Standardization",
+      "B": "Randomization",
+      "C": "Stratification",
+      "D": "Classification"
+    },
+    "correct_answer": "B",
+    "explanation": "Randomization ensures that each subject has an equal chance of being assigned to either group, minimizing selection bias and ensuring the groups are comparable."
+  },
+  {
+    "question_no": 2,
+    "question_text": "The main purpose of the control group in an A/B test is to:",
+    "possible_answers": {
+      "A": "Increase the number of participants",
+      "B": "Provide a baseline for comparison",
+      "C": "Ensure the treatment performs better",
+      "D": "Speed up the experiment"
+    },
+    "correct_answer": "B",
+    "explanation": "The control group represents the status quo (the existing version). It provides a baseline metric so researchers can accurately measure if the new treatment actually caused a significant change."
+  },
+  {
+    "question_no": 3,
+    "question_text": "The null hypothesis refers to:",
+    "possible_answers": {
+      "A": "A statement that the treatment always produces an effect",
+      "B": "A claim that any observed difference is due to chance",
+      "C": "The preferred outcome that the researcher expects to confirm",
+      "D": "A hypothesis that eliminates measurement error"
+    },
+    "correct_answer": "B",
+    "explanation": "The null hypothesis always takes the position of skepticism: it assumes there is no real effect or relationship, and any difference observed in the sample data is simply random statistical noise."
+  },
+  {
+    "question_no": 4,
+    "question_text": "The alternative hypothesis is best described as:",
+    "possible_answers": {
+      "A": "The assumption that no relationship exists between variables",
+      "B": "The explanation that supports random sampling error",
+      "C": "The competing claim that suggests a real effect or difference exists",
+      "D": "A hypothesis used only when results are statistically insignificant"
+    },
+    "correct_answer": "C",
+    "explanation": "The alternative hypothesis is the theory that the researcher is usually trying to prove; it claims that the treatment did have a statistically significant effect or that a real relationship exists."
+  },
+  {
+    "question_no": 5,
+    "question_text": "The correlation coefficient primarily measures:",
+    "possible_answers": {
+      "A": "The difference between the means of two variables",
+      "B": "The extent of association between two paired variables",
+      "C": "The probability that two variables are independent",
+      "D": "The variability within a single datasets"
+    },
+    "correct_answer": "B",
+    "explanation": "The correlation coefficient (ranging from -1 to 1) quantifies the strength and direction of the linear relationship or association between two paired numerical variables."
+  },
+  {
+    "question_no": 6,
+    "question_text": "In a permutation test, resamples are created by:",
+    "possible_answers": {
+      "A": "Generating new synthetic observations from a statistical model",
+      "B": "Drawing samples independently from each group with replacement",
+      "C": "Randomly reallocating existing observations among groups",
+      "D": "Removing extreme values before analysis"
+    },
+    "correct_answer": "C",
+    "explanation": "A permutation test combines all the data from the groups, shuffles the labels, and randomly redistributes the exact same observations back into groups to see how likely the original difference was."
+  },
+  {
+    "question_no": 7,
+    "question_text": "A blind study is best defined as a study in which:",
+    "possible_answers": {
+      "A": "Investigators do not collect outcome data directly",
+      "B": "Subjects are unaware of which treatment they are receiving",
+      "C": "Treatments are randomly assigned to participants",
+      "D": "Researchers conceal the study hypothesis from participants"
+    },
+    "correct_answer": "B",
+    "explanation": "In a blind (or single-blind) study, the participants do not know whether they are receiving the experimental treatment or the placebo, which prevents the placebo effect from skewing the results."
+  },
+  {
+    "question_no": 8,
+    "question_text": "Why are A/B tests commonly used in marketing and e-commerce?",
+    "possible_answers": {
+      "A": "They guarantee optimal decision-making outcomes",
+      "B": "They allow comparison between two treatments",
+      "C": "They eliminate variability among subjects",
+      "D": "They remove the need for statistical analysis"
+    },
+    "correct_answer": "B",
+    "explanation": "A/B tests allow marketers to show two variations (A and B) to users simultaneously and use data to directly compare which treatment drives better performance metrics."
+  },
+  {
+    "question_no": 9,
+    "question_text": "In which study design are neither the participants nor the investigators aware of treatment assignments?",
+    "possible_answers": {
+      "A": "Observational study",
+      "B": "Blind study",
+      "C": "Double-blind study",
+      "D": "Cross-sectional study"
+    },
+    "correct_answer": "C",
+    "explanation": "A double-blind study conceals the group assignment from both the subjects (preventing placebo effects) and the researchers interacting with them (preventing observer bias)."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Which of the following statements correctly describes a null hypothesis (H₀) in hypothesis testing?",
+    "possible_answers": {
+      "A": "It claims that there is a significant effect or difference in the population.",
+      "B": "It states that any observed difference is due to the treatment being tested.",
+      "C": "It assumes no effect, no difference, or no relationship exists in the population.",
+      "D": "It predicts the direction of change, such as an increase or decrease."
+    },
+    "correct_answer": "C",
+    "explanation": "The core definition of H₀ is the assumption of the 'status quo'—that nothing interesting is happening and there is no underlying difference or effect in the population."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Information about samples is observed, and information about large populations is often .................... from smaller samples.",
+    "possible_answers": {
+      "A": "Inferred",
+      "B": "Sampled",
+      "C": "Analyzed",
+      "D": "Deduced"
+    },
+    "correct_answer": "A",
+    "explanation": "Statistical inference is the act of using data drawn from a smaller sample to make generalized estimates or predictions (inferences) about the broader population."
+  },
+  {
+    "question_no": 12,
+    "question_text": "A histogram graph with its tail extending towards the right side is referred to as being",
+    "possible_answers": {
+      "A": "Negatively skewed",
+      "B": "Uniform",
+      "C": "Positively skewed",
+      "D": "Normally distributed"
+    },
+    "correct_answer": "C",
+    "explanation": "When the tail stretches into the higher (positive) values on the right side of the x-axis, the data is described as right-skewed or positively skewed."
+  },
+  {
+    "question_no": 13,
+    "question_text": "A histogram graph with most of the data points being to the left side is called",
+    "possible_answers": {
+      "A": "Negatively skewed",
+      "B": "Positively skewed",
+      "C": "Exponential",
+      "D": "Uniform"
+    },
+    "correct_answer": "B",
+    "explanation": "If the bulk of the data is clustered on the left side, it forces the tail to stretch out to the right side. Therefore, it is right-skewed, which is synonymous with positively skewed."
+  },
+  {
+    "question_no": 14,
+    "question_text": "For events that occur at a constant rate, the number of events per unit of time or space can be modeled as:",
+    "possible_answers": {
+      "A": "Normal distribution",
+      "B": "Binomial distribution",
+      "C": "Poisson distribution",
+      "D": "Uniform distribution"
+    },
+    "correct_answer": "C",
+    "explanation": "The Poisson distribution is specifically formulated to express the probability of a given number of independent events occurring in a fixed interval of time or space, given a constant mean rate."
+  },
+  {
+    "question_no": 15,
+    "question_text": "The two main types of resampling procedure are _______.",
+    "possible_answers": {
+      "A": "Normalization and standardization",
+      "B": "Regression and classification",
+      "C": "Bootstrap and permutation",
+      "D": "Sampling with replacement and stratified sampling"
+    },
+    "correct_answer": "C",
+    "explanation": "Bootstrapping (which draws samples with replacement to estimate confidence intervals) and permutation tests (which shuffle labels for hypothesis testing) are the two fundamental resampling methods."
+  }
+]

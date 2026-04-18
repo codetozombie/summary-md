@@ -1,0 +1,182 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which of the following is an example of a confounding variable?",
+    "possible_answers": {
+      "A": "Gender and sex recorded together",
+      "B": "Excluding location when predicting house prices",
+      "C": "Using too many predictors",
+      "D": "Encoding categorical variables"
+    },
+    "correct_answer": "B",
+    "explanation": "A confounder is a variable that is correlated with both the predictor and response. If you omit 'location' when predicting house prices based on size, the results will be severely biased because location drives both house size and price."
+  },
+  {
+    "question_no": 2,
+    "question_text": "In boxplots, an observation is considered an outlier if it lies beyond:",
+    "possible_answers": {
+      "A": "1.5 × IQR",
+      "B": "2 × IQR",
+      "C": "3 × IQR",
+      "D": "0.5 × IQR"
+    },
+    "correct_answer": "A",
+    "explanation": "Following Tukey's standard rule for boxplots, any data point that falls below Q1 - (1.5 * IQR) or above Q3 + (1.5 * IQR) is flagged as an outlier."
+  },
+  {
+    "question_no": 3,
+    "question_text": "Trying all possible combinations of predictor variables in regression is called:",
+    "possible_answers": {
+      "A": "Stepwise regression",
+      "B": "Ridge regression",
+      "C": "All subset regression",
+      "D": "Logistic regression"
+    },
+    "correct_answer": "C",
+    "explanation": "All subset regression (also known as best subsets) explicitly fits a distinct model for every single mathematical combination of available predictor variables to find the best fit."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Perfect multicollinearity occurs when:",
+    "possible_answers": {
+      "A": "Two variables have zero correlation",
+      "B": "One predictor can be expressed as a linear combination of others",
+      "C": "All predictors are independent",
+      "D": "The dataset has missing values"
+    },
+    "correct_answer": "B",
+    "explanation": "Perfect multicollinearity happens when an independent variable contains exactly the same information as a combination of other variables (e.g., Var_A = 2 * Var_B), making it impossible for the model to isolate their individual effects."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which statistic is commonly used to detect influential observations?",
+    "possible_answers": {
+      "A": "Cook's Distance",
+      "B": "RMSE",
+      "C": "AIC",
+      "D": "R²"
+    },
+    "correct_answer": "A",
+    "explanation": "Cook's Distance is a diagnostic metric used to measure the influence of a single data point. It calculates how much the regression coefficients would change if that specific observation were removed from the dataset."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Heteroscedasticity refers to:",
+    "possible_answers": {
+      "A": "Nonlinear relationships",
+      "B": "Lack of constant variance in residuals",
+      "C": "Perfect correlation between predictors",
+      "D": "Normal distribution of errors"
+    },
+    "correct_answer": "B",
+    "explanation": "A key assumption of linear regression is homoscedasticity (constant variance of errors). Heteroscedasticity occurs when the spread of the residuals widens or narrows at different points along the regression line."
+  },
+  {
+    "question_no": 7,
+    "question_text": "For regression inference to be valid, residuals should be:",
+    "possible_answers": {
+      "A": "Normally distributed",
+      "B": "Independent",
+      "C": "Have constant variance",
+      "D": "All of the above"
+    },
+    "correct_answer": "D",
+    "explanation": "For hypothesis tests and confidence intervals in OLS regression to be mathematically reliable, the errors (residuals) must be independent, normally distributed, and homoscedastic (constant variance)."
+  },
+  {
+    "question_no": 8,
+    "question_text": "Which of the following is an example of redundancy that can cause multicollinearity?",
+    "possible_answers": {
+      "A": "Age and income",
+      "B": "Gender and sex",
+      "C": "Height and weight",
+      "D": "Salary and education"
+    },
+    "correct_answer": "B",
+    "explanation": "Gender and sex often represent completely overlapping constructs in many datasets. Including both as separate predictive features feeds the model identical information, triggering multicollinearity."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Why is all subset regression often impractical for large datasets?",
+    "possible_answers": {
+      "A": "It produces biased estimates",
+      "B": "It is computationally expensive",
+      "C": "It reduces prediction accuracy",
+      "D": "It requires categorical variables"
+    },
+    "correct_answer": "B",
+    "explanation": "With 'p' number of predictors, all subset regression requires evaluating 2^p models. This exponential growth makes the procedure computationally impossible when dealing with high-dimensional datasets."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Which metric adjusts the R² value by penalizing the inclusion of additional predictors?",
+    "possible_answers": {
+      "A": "Mean Squared Error",
+      "B": "Adjusted R²",
+      "C": "RMSE",
+      "D": "Cross Validation"
+    },
+    "correct_answer": "B",
+    "explanation": "Standard R² always stays the same or goes up when you add variables. Adjusted R² includes a mathematical penalty for adding useless variables, providing a more honest evaluation of the model's predictive power."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Which of the following is a key danger when using regression for prediction?",
+    "possible_answers": {
+      "A": "Standardization",
+      "B": "Interpolation",
+      "C": "Extrapolation beyond the data range",
+      "D": "Normalization"
+    },
+    "correct_answer": "C",
+    "explanation": "Extrapolating means using the model to make predictions outside the range of the original training data. This is dangerous because the relationships observed within the data range may not hold true outside of it."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Which stepwise method begins with the full model and removes predictors sequentially?",
+    "possible_answers": {
+      "A": "Forward selection",
+      "B": "Gradient selection",
+      "C": "Random selection",
+      "D": "Backward elimination"
+    },
+    "correct_answer": "D",
+    "explanation": "Backward elimination does the opposite of forward selection. It loads all available variables into the model first, evaluates them, and drops the least statistically significant predictor one by one."
+  },
+  {
+    "question_no": 13,
+    "question_text": "Categorical variables in regression are typically encoded using:",
+    "possible_answers": {
+      "A": "Binary dummy variables",
+      "B": "Polynomial encoding",
+      "C": "Fourier encoding",
+      "D": "Linear encoding"
+    },
+    "correct_answer": "A",
+    "explanation": "Regression models require numerical inputs. Categorical data is standardly converted into a set of 'dummy variables', which use 1s and 0s to indicate the presence or absence of a category."
+  },
+  {
+    "question_no": 14,
+    "question_text": "A confounding variable arises due to:",
+    "possible_answers": {
+      "A": "Redundant variables",
+      "B": "Missing important variables",
+      "C": "Excessive predictors",
+      "D": "Normal distribution"
+    },
+    "correct_answer": "B",
+    "explanation": "Confounding bias occurs strictly because an important, influential variable was excluded from the model. Because it is missing, the model attributes its effect to the variables that are present."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Which of the following methods can help detect interaction between variables?",
+    "possible_answers": {
+      "A": "Stepwise regression",
+      "B": "Penalized regression",
+      "C": "Domain knowledge",
+      "D": "All of the above"
+    },
+    "correct_answer": "D",
+    "explanation": "All these are valid approaches. Domain knowledge suggests which interactions make logical sense, while automated methods like stepwise or penalized regression (like Lasso) can empirically test and select interaction terms."
+  }
+]
