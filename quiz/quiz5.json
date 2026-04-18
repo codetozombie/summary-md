@@ -9,7 +9,7 @@
       "D": "Encoding categorical variables"
     },
     "correct_answer": "B",
-    "explanation": "A confounder is a variable that is correlated with both the predictor and response. If you omit 'location' when predicting house prices based on size, the results will be severely biased because location drives both house size and price."
+    "explanation": "If a variable that affects both the predictor and the outcome is missing (like location in house prices), it results in confounding bias."
   },
   {
     "question_no": 2,
@@ -21,7 +21,7 @@
       "D": "0.5 × IQR"
     },
     "correct_answer": "A",
-    "explanation": "Following Tukey's standard rule for boxplots, any data point that falls below Q1 - (1.5 * IQR) or above Q3 + (1.5 * IQR) is flagged as an outlier."
+    "explanation": "Tukey’s standard for boxplots flags points as outliers if they are more than 1.5 times the Interquartile Range away from the upper or lower quartiles."
   },
   {
     "question_no": 3,
@@ -33,7 +33,7 @@
       "D": "Logistic regression"
     },
     "correct_answer": "C",
-    "explanation": "All subset regression (also known as best subsets) explicitly fits a distinct model for every single mathematical combination of available predictor variables to find the best fit."
+    "explanation": "All subset regression (best subset) tests every possible combination of features to find the mathematically optimal fit."
   },
   {
     "question_no": 4,
@@ -45,7 +45,7 @@
       "D": "The dataset has missing values"
     },
     "correct_answer": "B",
-    "explanation": "Perfect multicollinearity happens when an independent variable contains exactly the same information as a combination of other variables (e.g., Var_A = 2 * Var_B), making it impossible for the model to isolate their individual effects."
+    "explanation": "Perfect multicollinearity happens when features are exact linear combinations of each other, making it impossible for the model to estimate their separate effects."
   },
   {
     "question_no": 5,
@@ -57,7 +57,7 @@
       "D": "R²"
     },
     "correct_answer": "A",
-    "explanation": "Cook's Distance is a diagnostic metric used to measure the influence of a single data point. It calculates how much the regression coefficients would change if that specific observation were removed from the dataset."
+    "explanation": "Cook's distance measures how much the regression coefficients change when a single observation is deleted."
   },
   {
     "question_no": 6,
@@ -69,7 +69,7 @@
       "D": "Normal distribution of errors"
     },
     "correct_answer": "B",
-    "explanation": "A key assumption of linear regression is homoscedasticity (constant variance of errors). Heteroscedasticity occurs when the spread of the residuals widens or narrows at different points along the regression line."
+    "explanation": "Heteroscedasticity violates the assumption of constant error variance, often appearing as a 'fan' shape in a residual plot."
   },
   {
     "question_no": 7,
@@ -81,7 +81,7 @@
       "D": "All of the above"
     },
     "correct_answer": "D",
-    "explanation": "For hypothesis tests and confidence intervals in OLS regression to be mathematically reliable, the errors (residuals) must be independent, normally distributed, and homoscedastic (constant variance)."
+    "explanation": "Linear regression models rely on the assumptions that errors are normal, independent, and homoscedastic (constant variance)."
   },
   {
     "question_no": 8,
@@ -93,7 +93,7 @@
       "D": "Salary and education"
     },
     "correct_answer": "B",
-    "explanation": "Gender and sex often represent completely overlapping constructs in many datasets. Including both as separate predictive features feeds the model identical information, triggering multicollinearity."
+    "explanation": "Variables that represent overlapping or identical constructs (like gender and sex in some datasets) create redundancy and multicollinearity."
   },
   {
     "question_no": 9,
@@ -105,7 +105,7 @@
       "D": "It requires categorical variables"
     },
     "correct_answer": "B",
-    "explanation": "With 'p' number of predictors, all subset regression requires evaluating 2^p models. This exponential growth makes the procedure computationally impossible when dealing with high-dimensional datasets."
+    "explanation": "Because the number of possible models grows exponentially (2^k) with the number of predictors, all subset regression becomes too costly for large feature sets."
   },
   {
     "question_no": 10,
@@ -117,7 +117,7 @@
       "D": "Cross Validation"
     },
     "correct_answer": "B",
-    "explanation": "Standard R² always stays the same or goes up when you add variables. Adjusted R² includes a mathematical penalty for adding useless variables, providing a more honest evaluation of the model's predictive power."
+    "explanation": "Adjusted R² penalizes adding features that do not significantly improve the model, preventing overfitting."
   },
   {
     "question_no": 11,
@@ -129,7 +129,7 @@
       "D": "Normalization"
     },
     "correct_answer": "C",
-    "explanation": "Extrapolating means using the model to make predictions outside the range of the original training data. This is dangerous because the relationships observed within the data range may not hold true outside of it."
+    "explanation": "Extrapolation is risky because relationships observed within the training data range may not remain true outside of it."
   },
   {
     "question_no": 12,
@@ -141,7 +141,7 @@
       "D": "Backward elimination"
     },
     "correct_answer": "D",
-    "explanation": "Backward elimination does the opposite of forward selection. It loads all available variables into the model first, evaluates them, and drops the least statistically significant predictor one by one."
+    "explanation": "Backward elimination starts with all variables and removes the least significant one until only significant predictors remain."
   },
   {
     "question_no": 13,
@@ -153,7 +153,7 @@
       "D": "Linear encoding"
     },
     "correct_answer": "A",
-    "explanation": "Regression models require numerical inputs. Categorical data is standardly converted into a set of 'dummy variables', which use 1s and 0s to indicate the presence or absence of a category."
+    "explanation": "Dummy encoding (using 0s and 1s) converts categories into numerical variables the regression equation can use."
   },
   {
     "question_no": 14,
@@ -165,7 +165,7 @@
       "D": "Normal distribution"
     },
     "correct_answer": "B",
-    "explanation": "Confounding bias occurs strictly because an important, influential variable was excluded from the model. Because it is missing, the model attributes its effect to the variables that are present."
+    "explanation": "Confounding bias is the result of omitting a variable that influences both the independent and dependent variables."
   },
   {
     "question_no": 15,
@@ -177,6 +177,6 @@
       "D": "All of the above"
     },
     "correct_answer": "D",
-    "explanation": "All these are valid approaches. Domain knowledge suggests which interactions make logical sense, while automated methods like stepwise or penalized regression (like Lasso) can empirically test and select interaction terms."
+    "explanation": "Both empirical methods (automated selection) and domain expertise are effective for identifying meaningful interactions between features."
   }
 ]

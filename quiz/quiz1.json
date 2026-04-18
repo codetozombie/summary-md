@@ -9,7 +9,7 @@
       "D": "Trimmed mean"
     },
     "correct_answer": "D",
-    "explanation": "A trimmed mean removes a predetermined percentage of extreme outliers (the highest and lowest values) before calculating the average, making it more robust against anomalies than a standard mean."
+    "explanation": "A trimmed mean removes a predetermined percentage of extreme values from both ends of a sorted dataset, making it significantly more robust against outliers than a standard mean."
   },
   {
     "question_no": 2,
@@ -21,7 +21,7 @@
       "D": "Scatter plot"
     },
     "correct_answer": "B",
-    "explanation": "The mean is a numerical statistic used to summarize the center of a dataset. Box plots, histograms, and scatter plots are all graphical/visual ways of summarizing data."
+    "explanation": "The mean is a numerical statistic. Box plots, histograms, and scatter plots are visual or graphical methods used to summarize data distributions."
   },
   {
     "question_no": 3,
@@ -33,7 +33,7 @@
       "D": "Case"
     },
     "correct_answer": "B",
-    "explanation": "In tabular data, a row represents a single observation and can be called a record, example, or case. An 'attribute' refers to a column or feature of the data."
+    "explanation": "In a data matrix, rows are referred to as records, cases, or examples. 'Attribute' refers to a column, also known as a feature or variable."
   },
   {
     "question_no": 4,
@@ -45,11 +45,11 @@
       "D": "Because histograms do not represent frequency"
     },
     "correct_answer": "B",
-    "explanation": "Histograms display continuous numerical data. A gap between bars on a continuous scale visually implies that the interval exists but contains zero values, which can misrepresent the underlying distribution if not intentionally meant to show a zero-frequency bin."
+    "explanation": "Histograms represent continuous data. Since the x-axis is a continuous scale, a gap visually implies that the data range is missing or has a frequency of zero."
   },
   {
     "question_no": 5,
-    "question_text": "In statistical analysis, the decimal representation of percentiles is referred to as",
+    "question_text": "In statistical analysis, the decimal representation of percentiles is referred to as:",
     "possible_answers": {
       "A": "Proportions",
       "B": "Intervals",
@@ -57,7 +57,7 @@
       "D": "Frequencies"
     },
     "correct_answer": "C",
-    "explanation": "Quantiles divide the data into equal parts and are mathematically expressed as decimals between 0 and 1 (e.g., the 0.5 quantile is the exact same as the 50th percentile)."
+    "explanation": "Quantiles are the decimal versions of percentiles (e.g., the 0.25 quantile is the 25th percentile)."
   },
   {
     "question_no": 6,
@@ -69,7 +69,7 @@
       "D": "x̄ = (Σ_{i=1}^{n-p} x_i) / (n-2)"
     },
     "correct_answer": "C",
-    "explanation": "If 'p' values are trimmed from both the top and the bottom of the sorted dataset, you are left with (n - 2p) observations. The sum is taken from the (p+1)th value to the (n-p)th value, divided by the remaining count (n - 2p)."
+    "explanation": "To calculate a trimmed mean, you sum the values starting from the (p+1)-th position to the (n-p)-th position and divide by the remaining count (n - 2p)."
   },
   {
     "question_no": 7,
@@ -81,11 +81,11 @@
       "D": "Interval"
     },
     "correct_answer": "C",
-    "explanation": "In data science and statistics, anomalies and outliers both describe data points that are distinctly different from the established normal behavior of the dataset."
+    "explanation": "Anomaly is the standard technical term used interchangeably with outlier in data science."
   },
   {
     "question_no": 8,
-    "question_text": "When a histogram is smoothed to show the distribution of data in a continuous manner, the resulting graph is called a",
+    "question_text": "When a histogram is smoothed to show the distribution of data in a continuous manner, the resulting graph is called a:",
     "possible_answers": {
       "A": "Histogram curve",
       "B": "Cumulative distribution",
@@ -93,7 +93,7 @@
       "D": "Density plot"
     },
     "correct_answer": "D",
-    "explanation": "A density plot (such as Kernel Density Estimation) smooths out the discrete bins of a histogram to create a continuous probability density curve."
+    "explanation": "A density plot uses Kernel Density Estimation (KDE) to turn a discrete histogram into a continuous curve."
   },
   {
     "question_no": 9,
@@ -105,11 +105,11 @@
       "D": "Normalizing the output"
     },
     "correct_answer": "C",
-    "explanation": "Most classic ML models require numerical matrices. Unstructured data (like raw text or images) must be transformed into a structured format (like embeddings, feature vectors, or tabular data) before modeling."
+    "explanation": "Traditional machine learning models require data in a structured tabular format (rows and columns) to process numerical features."
   },
   {
     "question_no": 10,
-    "question_text": "A discrete numeric variable",
+    "question_text": "A discrete numeric variable:",
     "possible_answers": {
       "A": "Takes only integer values",
       "B": "Takes numeric values on a continuous scale",
@@ -117,23 +117,23 @@
       "D": "Is always binary"
     },
     "correct_answer": "A",
-    "explanation": "Discrete variables represent countable items (like number of children or number of cars). They take on distinct, separated integer values, unlike continuous variables which can be measured to any decimal."
+    "explanation": "Discrete variables represent countable items (like the number of students), which are typically expressed as integers."
   },
   {
     "question_no": 11,
     "question_text": "Which of the following expressions correctly represents the sample variance?",
     "possible_answers": {
-      "A": "s = (Σ_{i=1}^n x_i) / n",
-      "B": "s² = (Σ_{i=1}^n (x_i - x̄)) / n",
-      "C": "s² = (Σ_{i=1}^n (x_i - x̄)²) / (n-1)",
-      "D": "s² = (Σ_{i=1}^n x_i²) / n"
+      "A": "s = (Σ x_i) / n",
+      "B": "s² = (Σ (x_i - x̄)) / n",
+      "C": "s² = (Σ (x_i - x̄)²) / (n-1)",
+      "D": "s² = (Σ x_i²) / n"
     },
     "correct_answer": "C",
-    "explanation": "Sample variance calculates the sum of the squared differences from the mean, divided by (n - 1). Dividing by n-1 (Bessel's correction) corrects the bias in the estimation of the population variance."
+    "explanation": "The sample variance uses (n-1) in the denominator to ensure an unbiased estimate of the population variance."
   },
   {
     "question_no": 12,
-    "question_text": "In the formula for variance, the term n-1 is referred to as",
+    "question_text": "In the formula for variance, the term n-1 is referred to as:",
     "possible_answers": {
       "A": "Degree of skewness",
       "B": "Degree of freedom",
@@ -141,7 +141,7 @@
       "D": "Degree of variation"
     },
     "correct_answer": "B",
-    "explanation": "In statistical calculations, 'degrees of freedom' (typically n-1 for variance) refers to the number of independent values or quantities that can vary within the data sample."
+    "explanation": "Degrees of freedom refer to the number of values in a final calculation that are free to vary."
   },
   {
     "question_no": 13,
@@ -151,7 +151,7 @@
       "B": "True"
     },
     "correct_answer": "B",
-    "explanation": "True. The mathematician John Tukey heavily championed the concept of Exploratory Data Analysis to encourage statisticians to visually and quantitatively investigate data before formal modeling."
+    "explanation": "John Tukey was the pioneering statistician who introduced EDA as a critical step before formal hypothesis testing."
   },
   {
     "question_no": 14,
@@ -163,11 +163,11 @@
       "D": "Range"
     },
     "correct_answer": "A",
-    "explanation": "Because the mean mathematically averages every single value in the dataset, a very large or very small outlier will pull the mean towards it. The median and mode remain mostly unaffected."
+    "explanation": "The mean is calculated using the magnitude of every value; a single extreme outlier can pull the mean significantly in its direction."
   },
   {
     "question_no": 15,
-    "question_text": "Structured data comes in two major forms. They are..................",
+    "question_text": "Structured data comes in two major forms. They are:",
     "possible_answers": {
       "A": "Numeric and Continuous",
       "B": "Binary and Categorical",
@@ -175,6 +175,6 @@
       "D": "Numeric and Categorical"
     },
     "correct_answer": "D",
-    "explanation": "At its highest level, structured data is divided into quantitative measures (Numeric data) and qualitative classifications (Categorical data)."
+    "explanation": "The two primary classifications for data features are numerical (quantitative) and categorical (qualitative)."
   }
 ]
