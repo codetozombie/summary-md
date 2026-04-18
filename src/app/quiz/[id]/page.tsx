@@ -11,7 +11,7 @@ export default async function QuizRoutePage({ params }: { params: { id: string }
   }
 
   return (
-    <main className="p-4 sm:p-8 md:p-12 animate-fade-in-up">
+    <main className="min-h-screen px-4 sm:px-8 py-6">
       <div className="max-w-3xl mx-auto">
         <SingleQuizApp quiz={quiz} />
       </div>
