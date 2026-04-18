@@ -1,0 +1,482 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "To read a CSV file into a pandas DataFrame, the correct call is:",
+    "possible_answers": {
+      "A": "pd.read(\"file.csv\")",
+      "B": "pd.read_csv(\"file.csv\")",
+      "C": "pd.load_csv(\"file.csv\")",
+      "D": "pd.DataFrame.from_csv(\"file.csv\")"
+    },
+    "correct_answer": "B",
+    "explanation": "The standard pandas function for loading comma-separated values into a DataFrame is `pd.read_csv()`."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Given a DataFrame df, which returns the first 10 rows?",
+    "possible_answers": {
+      "A": "df.first(10)",
+      "B": "df[:10].show()",
+      "C": "df.head(10)",
+      "D": "df.top(10)"
+    },
+    "correct_answer": "C",
+    "explanation": "The `.head(n)` method in pandas returns the first 'n' rows of a DataFrame or Series. The default is 5 if n is not specified."
+  },
+  {
+    "question_no": 3,
+    "question_text": "To get summary statistics (mean, std, quartiles) of all numeric columns:",
+    "possible_answers": {
+      "A": "df.stats()",
+      "B": "df.summary()",
+      "C": "df.describe()",
+      "D": "df.info()"
+    },
+    "correct_answer": "C",
+    "explanation": "`df.describe()` automatically computes and displays count, mean, std, min, percentiles (25%, 50%, 75%), and max for numerical columns."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Which code correctly filters rows where price_usd is less than 100000?",
+    "possible_answers": {
+      "A": "df.filter(price_usd < 100000)",
+      "B": "df[df[\"price_usd\"] < 100000]",
+      "C": "df.where(\"price_usd < 100000\")",
+      "D": "df.select(price_usd < 100000)"
+    },
+    "correct_answer": "B",
+    "explanation": "This uses standard pandas boolean indexing. `df[\"price_usd\"] < 100000` creates a boolean mask, and passing it back into `df[...]` filters the rows."
+  },
+  {
+    "question_no": 5,
+    "question_text": "To split a string column \"lat-lon\" into two new columns on the \",\" separator:",
+    "possible_answers": {
+      "A": "df[\"lat-lon\"].split(\",\", expand=True)",
+      "B": "df[\"lat-lon\"].str.split(\",\", expand=True)",
+      "C": "df.split(\"lat-lon\", sep=\",\")",
+      "D": "pd.split(df[\"lat-lon\"], \",\")"
+    },
+    "correct_answer": "B",
+    "explanation": "To apply string methods to a pandas Series, you must access the `.str` accessor first. The `expand=True` argument turns the resulting lists into separate columns."
+  },
+  {
+    "question_no": 6,
+    "question_text": "To impute missing numeric values with the column mean:",
+    "possible_answers": {
+      "A": "from sklearn.impute import SimpleImputer; SimpleImputer(strategy=\"mean\")",
+      "B": "from sklearn.preprocessing import MeanImputer",
+      "C": "from sklearn.fill import Imputer(method=\"mean\")",
+      "D": "df.impute(\"mean\")"
+    },
+    "correct_answer": "A",
+    "explanation": "`SimpleImputer` is the standard scikit-learn class for basic imputation. You configure its behavior via the `strategy` parameter."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Which code correctly builds a pipeline of imputation → one-hot encoding → linear regression?",
+    "possible_answers": {
+      "A": "Pipeline([SimpleImputer(), OneHotEncoder(), LinearRegression()])",
+      "B": "make_pipeline(SimpleImputer(), OneHotEncoder(), LinearRegression())",
+      "C": "Pipeline(SimpleImputer + OneHotEncoder + LinearRegression)",
+      "D": "sklearn.pipe(imp, ohe, lr)"
+    },
+    "correct_answer": "B",
+    "explanation": "`make_pipeline()` is a convenient wrapper in scikit-learn that automatically generates names for the steps. If using `Pipeline()`, you must pass a list of (name, object) tuples."
+  },
+  {
+    "question_no": 8,
+    "question_text": "After model.fit(X_train, y_train), to compute predictions on X_test:",
+    "possible_answers": {
+      "A": "model.score(X_test)",
+      "B": "model.predict(X_test)",
+      "C": "model.transform(X_test)",
+      "D": "model.output(X_test)"
+    },
+    "correct_answer": "B",
+    "explanation": "All predictive models (estimators) in scikit-learn use the `.predict()` method to generate output labels or values for new data."
+  },
+  {
+    "question_no": 9,
+    "question_text": "For a fitted LinearRegression model, the learned intercept is accessed via:",
+    "possible_answers": {
+      "A": "model.coef_[0]",
+      "B": "model.intercept_",
+      "C": "model.bias",
+      "D": "model.params[0]"
+    },
+    "correct_answer": "B",
+    "explanation": "In scikit-learn, attributes that are estimated or learned directly from the data during the `.fit()` process are suffixed with a trailing underscore (e.g., `intercept_`, `coef_`)."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Which metric function computes the mean absolute error between y_true and y_pred?",
+    "possible_answers": {
+      "A": "from sklearn.metrics import mean_abs_error",
+      "B": "from sklearn.metrics import mean_absolute_error",
+      "C": "from sklearn.metrics import MAE",
+      "D": "from sklearn.metrics import abs_error"
+    },
+    "correct_answer": "B",
+    "explanation": "Scikit-learn spells out the full name of the metric: `mean_absolute_error`. There is no abbreviation in the import path."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Which code correctly counts documents in a collection where site == 29?",
+    "possible_answers": {
+      "A": "collection.count({\"site\": 29})",
+      "B": "collection.count_documents({\"site\": 29})",
+      "C": "collection.length({\"site\": 29})",
+      "D": "collection.size(\"site\", 29)"
+    },
+    "correct_answer": "B",
+    "explanation": "`count_documents()` is the modern, supported PyMongo method for counting records that match a specific filter query."
+  },
+  {
+    "question_no": 12,
+    "question_text": "In PyMongo, the filter for \"P2 readings greater than 100\" is:",
+    "possible_answers": {
+      "A": "{\"measurement\": \"P2\", \"value\": {\"$gt\": 100}}",
+      "B": "{\"measurement\": \"P2\", \"value > 100\"}",
+      "C": "{\"measurement == 'P2'\", \"value\": \"> 100\"}",
+      "D": "{\"measurement\": \"P2\", \"value.gt\": 100}"
+    },
+    "correct_answer": "A",
+    "explanation": "MongoDB queries use nested dictionaries for conditional operators. The greater-than operator is `$gt`."
+  },
+  {
+    "question_no": 13,
+    "question_text": "To resample a DatetimeIndex-ed Series y to hourly means:",
+    "possible_answers": {
+      "A": "y.resample(\"1H\").mean()",
+      "B": "y.groupby(\"hour\").mean()",
+      "C": "y.to_hourly().mean()",
+      "D": "y.rolling(\"1H\").mean()"
+    },
+    "correct_answer": "A",
+    "explanation": "`.resample('1H')` works like a groupby operation specifically designed for time-series frequency conversion, followed by an aggregation method like `.mean()`."
+  },
+  {
+    "question_no": 14,
+    "question_text": "The correct import for an ARIMA model from statsmodels is:",
+    "possible_answers": {
+      "A": "from statsmodels import ARIMA",
+      "B": "from statsmodels.tsa.arima.model import ARIMA",
+      "C": "from statsmodels.tsa import ARIMAModel",
+      "D": "from arima import ARIMA"
+    },
+    "correct_answer": "B",
+    "explanation": "In recent versions of `statsmodels`, the ARIMA class is located specifically under the `tsa.arima.model` path."
+  },
+  {
+    "question_no": 15,
+    "question_text": "After fitting model = ARIMA(y, order=(1,0,1)).fit(), to forecast 24 steps ahead:",
+    "possible_answers": {
+      "A": "model.forecast(24)",
+      "B": "model.forecast(steps=24)",
+      "C": "model.predict(n=24)",
+      "D": "model.next(24)"
+    },
+    "correct_answer": "B",
+    "explanation": "The `.forecast()` method of a fitted `ARIMAResults` object requires the `steps` parameter to determine how far into the future to predict."
+  },
+  {
+    "question_no": 16,
+    "question_text": "To read a SQL query into a DataFrame using sqlite:",
+    "possible_answers": {
+      "A": "pd.read_sql(query, conn)",
+      "B": "pd.query_sql(conn, query)",
+      "C": "sqlite3.read(query).to_df()",
+      "D": "pd.DataFrame.from_sql(query)"
+    },
+    "correct_answer": "A",
+    "explanation": "`pd.read_sql()` executes a raw SQL query string against a provided database connection object and formats the output into a pandas DataFrame."
+  },
+  {
+    "question_no": 17,
+    "question_text": "Which SQL returns the count of buildings per district_id, showing only districts with more than 1000 records?\n\nSELECT district_id, COUNT(*) AS n\nFROM buildings\nGROUP BY district_id\n_____ n > 1000;",
+    "possible_answers": {
+      "A": "WHERE",
+      "B": "HAVING",
+      "C": "FILTER",
+      "D": "SELECT"
+    },
+    "correct_answer": "B",
+    "explanation": "Because `n` is an aggregated count resulting from a `GROUP BY` clause, you must use `HAVING` to filter it. `WHERE` cannot filter aggregated functions."
+  },
+  {
+    "question_no": 18,
+    "question_text": "The correct import for logistic regression in scikit-learn is:",
+    "possible_answers": {
+      "A": "from sklearn.linear_model import LogisticRegression",
+      "B": "from sklearn.classifier import Logistic",
+      "C": "from sklearn.logistic import LogisticRegression",
+      "D": "from sklearn.models import LogisticClassifier"
+    },
+    "correct_answer": "A",
+    "explanation": "Even though it is a classification algorithm, Logistic Regression is fundamentally a linear model and is located in the `linear_model` module."
+  },
+  {
+    "question_no": 19,
+    "question_text": "To get probability estimates (not class labels) from a fitted logistic model:",
+    "possible_answers": {
+      "A": "model.predict(X)",
+      "B": "model.predict_proba(X)",
+      "C": "model.probability(X)",
+      "D": "model.score(X)"
+    },
+    "correct_answer": "B",
+    "explanation": "`.predict()` outputs the hard class labels (0 or 1). `.predict_proba()` outputs the raw probabilities for each class (e.g., 0.85 chance of class 1)."
+  },
+  {
+    "question_no": 20,
+    "question_text": "Which line creates a DecisionTreeClassifier limited to depth 5?",
+    "possible_answers": {
+      "A": "DecisionTreeClassifier(depth=5)",
+      "B": "DecisionTreeClassifier(max_depth=5)",
+      "C": "DecisionTree(max_levels=5)",
+      "D": "Classifier(tree_depth=5)"
+    },
+    "correct_answer": "B",
+    "explanation": "`max_depth` is the specific hyperparameter name used throughout scikit-learn's tree-based models to restrict tree growth."
+  },
+  {
+    "question_no": 21,
+    "question_text": "The correct import for SMOTE is:",
+    "possible_answers": {
+      "A": "from sklearn.oversample import SMOTE",
+      "B": "from imblearn.over_sampling import SMOTE",
+      "C": "from imbalanced import SMOTE",
+      "D": "from sklearn.imbalanced import SMOTE"
+    },
+    "correct_answer": "B",
+    "explanation": "SMOTE is not part of standard scikit-learn. It is found in the `imblearn` (imbalanced-learn) library under the `over_sampling` module."
+  },
+  {
+    "question_no": 22,
+    "question_text": "Applied correctly, SMOTE is called as:",
+    "possible_answers": {
+      "A": "X_res, y_res = SMOTE().fit_resample(X_train, y_train)",
+      "B": "X_res = SMOTE().transform(X_train)",
+      "C": "SMOTE().apply(X_train, y_train)",
+      "D": "SMOTE().fit(X_train).predict(y_train)"
+    },
+    "correct_answer": "A",
+    "explanation": "Resamplers in `imblearn` use the `.fit_resample(X, y)` method, which returns the newly augmented X and y datasets together."
+  },
+  {
+    "question_no": 23,
+    "question_text": "Which completes a grid search over n_estimators and max_depth with 5-fold CV?\nparams = {\"n_estimators\": [50, 100], \"max_depth\": [3, 6]}\ngrid = _____(clf, params, cv=5, scoring=\"f1\")\ngrid.fit(X_train, y_train)",
+    "possible_answers": {
+      "A": "RandomSearch",
+      "B": "GridSearchCV",
+      "C": "CVSearch",
+      "D": "HyperGrid"
+    },
+    "correct_answer": "B",
+    "explanation": "`GridSearchCV` (Grid Search Cross Validation) is the standard scikit-learn class for exhaustively testing hyperparameter combinations."
+  },
+  {
+    "question_no": 24,
+    "question_text": "After grid.fit(...), to retrieve the best hyperparameter combination:",
+    "possible_answers": {
+      "A": "grid.best_params",
+      "B": "grid.best_params_",
+      "C": "grid.params_best",
+      "D": "grid.winning_params()"
+    },
+    "correct_answer": "B",
+    "explanation": "Because the best parameters are learned during the `.fit()` step, the attribute follows the scikit-learn convention of having a trailing underscore: `best_params_`."
+  },
+  {
+    "question_no": 25,
+    "question_text": "Which line correctly saves a trained model using joblib?",
+    "possible_answers": {
+      "A": "joblib.save(model, \"model.pkl\")",
+      "B": "joblib.dump(model, \"model.pkl\")",
+      "C": "joblib.write(\"model.pkl\", model)",
+      "D": "joblib.export(model, \"model.pkl\")"
+    },
+    "correct_answer": "B",
+    "explanation": "`joblib.dump()` is the function used to serialize (save) a Python object structure, like a scikit-learn model, to a file."
+  },
+  {
+    "question_no": 26,
+    "question_text": "The correct import and instantiation of k-means with k=5 is:",
+    "possible_answers": {
+      "A": "from sklearn.cluster import KMeans; KMeans(k=5)",
+      "B": "from sklearn.cluster import KMeans; KMeans(n_clusters=5)",
+      "C": "from sklearn.kmeans import Model(clusters=5)",
+      "D": "from sklearn.unsupervised import KMeans(5)"
+    },
+    "correct_answer": "B",
+    "explanation": "In scikit-learn's `KMeans`, the parameter dictating the number of 'k' centroids is explicitly named `n_clusters`."
+  },
+  {
+    "question_no": 27,
+    "question_text": "Which is the correct order to standardise then cluster?",
+    "possible_answers": {
+      "A": "KMeans().fit(X); StandardScaler().fit(X)",
+      "B": "X_s = StandardScaler().fit_transform(X); KMeans(n_clusters=k).fit(X_s)",
+      "C": "StandardScaler(KMeans(n_clusters=k)).fit(X)",
+      "D": "KMeans().fit(X.standardize())"
+    },
+    "correct_answer": "B",
+    "explanation": "You must first fit and transform the data using the scaler (`fit_transform`), and then pass that resulting standardized matrix (`X_s`) into the KMeans `.fit()` method."
+  },
+  {
+    "question_no": 28,
+    "question_text": "After km = KMeans(n_clusters=4).fit(X), the cluster assignment for each row is in:",
+    "possible_answers": {
+      "A": "km.clusters_",
+      "B": "km.labels_",
+      "C": "km.assignments_",
+      "D": "km.predict_"
+    },
+    "correct_answer": "B",
+    "explanation": "The fitted attribute `.labels_` contains an array of the cluster index assignments (0, 1, 2, or 3) for every sample in the training data."
+  },
+  {
+    "question_no": 29,
+    "question_text": "To reduce X to 2 principal components:",
+    "possible_answers": {
+      "A": "PCA(2).reduce(X)",
+      "B": "PCA(n_components=2).fit_transform(X)",
+      "C": "PrincipalComponents(X, 2)",
+      "D": "PCA(X, n=2).transform()"
+    },
+    "correct_answer": "B",
+    "explanation": "You initialize PCA with `n_components=2`, then use `.fit_transform()` to learn the components and immediately project X onto them."
+  },
+  {
+    "question_no": 30,
+    "question_text": "After pca = PCA(n_components=5).fit(X), the fraction of variance captured by each component is:",
+    "possible_answers": {
+      "A": "pca.variance_",
+      "B": "pca.explained_variance_ratio_",
+      "C": "pca.components_",
+      "D": "pca.variance_fraction"
+    },
+    "correct_answer": "B",
+    "explanation": "`.explained_variance_ratio_` returns an array indicating the percentage of the dataset's total variance that is preserved inside each individual component."
+  },
+  {
+    "question_no": 31,
+    "question_text": "Which scipy function performs a chi-square test of independence on a contingency table?",
+    "possible_answers": {
+      "A": "scipy.stats.chisquare",
+      "B": "scipy.stats.chi2_contingency",
+      "C": "scipy.stats.chi_square_test",
+      "D": "scipy.stats.chi2.test"
+    },
+    "correct_answer": "B",
+    "explanation": "`chi2_contingency` is the specific SciPy function designed to calculate the test statistic and p-value for independence across a 2D contingency table."
+  },
+  {
+    "question_no": 32,
+    "question_text": "The return values of chi2_contingency(observed) are, in order:",
+    "possible_answers": {
+      "A": "p-value, chi² statistic, dof, expected",
+      "B": "chi² statistic, p-value, dof, expected",
+      "C": "expected, chi², p-value, dof",
+      "D": "dof, chi², p-value, observed"
+    },
+    "correct_answer": "B",
+    "explanation": "The function consistently returns a tuple containing exactly four items in this specific order: the test statistic, the p-value, degrees of freedom, and the expected frequencies array."
+  },
+  {
+    "question_no": 33,
+    "question_text": "Which code correctly performs one shuffle iteration of a permutation test on arrays a and b?\ncombined = np.concatenate([a, b])\n___________________\ndiff = combined[:len(a)].mean() - combined[len(a):].mean()",
+    "possible_answers": {
+      "A": "np.random.choice(combined)",
+      "B": "np.random.shuffle(combined)",
+      "C": "combined = combined.sort()",
+      "D": "np.random.sample(combined)"
+    },
+    "correct_answer": "B",
+    "explanation": "`np.random.shuffle()` randomly reorders the elements of an array in-place, which is the core mechanic required to build a null distribution in a permutation test."
+  },
+  {
+    "question_no": 34,
+    "question_text": "To build a contingency table from two categorical pandas Series x and y:",
+    "possible_answers": {
+      "A": "pd.contingency(x, y)",
+      "B": "pd.crosstab(x, y)",
+      "C": "x.contingency_with(y)",
+      "D": "pd.pivot(x, y)"
+    },
+    "correct_answer": "B",
+    "explanation": "`pd.crosstab()` computes a simple cross-tabulation of two (or more) factors, acting essentially as a frequency table."
+  },
+  {
+    "question_no": 35,
+    "question_text": "The p-value in a permutation test is estimated as:",
+    "possible_answers": {
+      "A": "np.mean(perm_stats)",
+      "B": "np.mean(np.abs(perm_stats) >= np.abs(observed_stat))",
+      "C": "np.std(perm_stats) / observed_stat",
+      "D": "1 - np.max(perm_stats)"
+    },
+    "correct_answer": "B",
+    "explanation": "This calculates the exact proportion of times the randomly shuffled simulated differences were greater than or equal to the actual difference observed in reality."
+  },
+  {
+    "question_no": 36,
+    "question_text": "To make a GET request with query parameters in Python:",
+    "possible_answers": {
+      "A": "requests.fetch(url, query={...})",
+      "B": "requests.get(url, params={...})",
+      "C": "requests.pull(url, args={...})",
+      "D": "http.get(url, query={...})"
+    },
+    "correct_answer": "B",
+    "explanation": "The `requests` library uses the `params` keyword argument to safely append query string parameters (like `?key=value`) to a URL."
+  },
+  {
+    "question_no": 37,
+    "question_text": "After r = requests.get(url), the parsed JSON body is accessed via:",
+    "possible_answers": {
+      "A": "r.body",
+      "B": "r.content.parse()",
+      "C": "r.json()",
+      "D": "r.data"
+    },
+    "correct_answer": "C",
+    "explanation": "The `requests` response object provides the `.json()` method, which automatically parses the response body into a Python dictionary."
+  },
+  {
+    "question_no": 38,
+    "question_text": "The correct import for fitting a GARCH model in Python is:",
+    "possible_answers": {
+      "A": "from statsmodels.garch import GARCH",
+      "B": "from arch import arch_model",
+      "C": "from scipy.volatility import GARCH",
+      "D": "from sklearn.ts import GARCH"
+    },
+    "correct_answer": "B",
+    "explanation": "The `arch` library (built by Kevin Sheppard) is the standard package for modeling volatility. `arch_model` is the primary wrapper function."
+  },
+  {
+    "question_no": 39,
+    "question_text": "To fit a GARCH(1,1) on a return series r:",
+    "possible_answers": {
+      "A": "arch_model(r, p=1, q=1).fit()",
+      "B": "GARCH(r, order=(1,1)).fit()",
+      "C": "arch_model(r).fit(p=1, q=1)",
+      "D": "GARCH(1, 1).train(r)"
+    },
+    "correct_answer": "A",
+    "explanation": "You pass the data `r` and the lag parameters `p` and `q` directly to the `arch_model()` constructor, then chain the `.fit()` method to train it."
+  },
+  {
+    "question_no": 40,
+    "question_text": "To connect to a SQLite database file in Python's standard library:",
+    "possible_answers": {
+      "A": "sqlite3.open(\"data.db\")",
+      "B": "sqlite3.connect(\"data.db\")",
+      "C": "sqlite.connect_db(\"data.db\")",
+      "D": "sql.open(\"data.db\")"
+    },
+    "correct_answer": "B",
+    "explanation": "`sqlite3.connect()` opens a connection to an SQLite database file. If the file does not exist, it will create one automatically."
+  }
+]

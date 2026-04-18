@@ -1,0 +1,842 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which of the following is NOT a synonym for categorical data?",
+    "possible_answers": {
+      "A": "Nominal",
+      "B": "Enumerated",
+      "C": "Factor",
+      "D": "Continuous"
+    },
+    "correct_answer": "D",
+    "explanation": "Continuous data represents measurable numerical quantities, while nominal, enumerated, and factor all refer to discrete categorical labels."
+  },
+  {
+    "question_no": 2,
+    "question_text": "A variable recording \"education level\" as {High school, Bachelor's, Master's, PhD} is best classified as:",
+    "possible_answers": {
+      "A": "Binary",
+      "B": "Ordinal",
+      "C": "Continuous",
+      "D": "Nominal"
+    },
+    "correct_answer": "B",
+    "explanation": "Ordinal data is categorical data that has a clear, meaningful inherent order or ranking."
+  },
+  {
+    "question_no": 3,
+    "question_text": "The formula Σxᵢ / n represents:",
+    "possible_answers": {
+      "A": "Weighted mean",
+      "B": "Median",
+      "C": "Arithmetic mean",
+      "D": "Trimmed mean"
+    },
+    "correct_answer": "C",
+    "explanation": "This is the mathematical definition of the arithmetic mean: the sum of all values divided by the total number of values."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Which estimate of location is NOT robust to outliers?",
+    "possible_answers": {
+      "A": "Median",
+      "B": "Trimmed mean",
+      "C": "Weighted median",
+      "D": "Mean"
+    },
+    "correct_answer": "D",
+    "explanation": "The standard mean includes the exact magnitude of every data point, making it highly sensitive to extreme outliers."
+  },
+  {
+    "question_no": 5,
+    "question_text": "The sample variance uses (n − 1) rather than n in the denominator to:",
+    "possible_answers": {
+      "A": "Make the computation faster",
+      "B": "Account for degrees of freedom and avoid bias",
+      "C": "Match the mean calculation",
+      "D": "Produce a robust estimate"
+    },
+    "correct_answer": "B",
+    "explanation": "Using n-1 (Bessel's correction) adjusts for degrees of freedom, ensuring the sample variance is an unbiased estimator of the population variance."
+  },
+  {
+    "question_no": 6,
+    "question_text": "The interquartile range is defined as:",
+    "possible_answers": {
+      "A": "95th percentile − 5th percentile",
+      "B": "Max − Min",
+      "C": "75th percentile − 25th percentile",
+      "D": "Mean + 2 SD"
+    },
+    "correct_answer": "C",
+    "explanation": "The Interquartile Range (IQR) measures the middle 50% of the data, calculated as Q3 (75th percentile) minus Q1 (25th percentile)."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Which of these statements is TRUE about histograms?",
+    "possible_answers": {
+      "A": "They display categorical data with gaps between bars",
+      "B": "Their y-axis is always labelled \"density\"",
+      "C": "They plot binned numeric data without gaps between bars",
+      "D": "They are the same as bar charts"
+    },
+    "correct_answer": "C",
+    "explanation": "Histograms group continuous numerical data into bins and plot them adjacently without gaps to represent continuity."
+  },
+  {
+    "question_no": 8,
+    "question_text": "A density plot is best described as:",
+    "possible_answers": {
+      "A": "A cumulative frequency plot",
+      "B": "A smoothed version of a histogram",
+      "C": "A count of data per bin",
+      "D": "A scatterplot of two variables"
+    },
+    "correct_answer": "B",
+    "explanation": "Density plots typically use Kernel Density Estimation (KDE) to create a continuous, smoothed curve representing the data's distribution."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Pearson's correlation coefficient r = 0 implies:",
+    "possible_answers": {
+      "A": "No relationship exists between the variables",
+      "B": "The variables are independent",
+      "C": "There is no linear relationship between the variables",
+      "D": "One variable causes the other"
+    },
+    "correct_answer": "C",
+    "explanation": "A Pearson correlation of 0 strictly means there is no linear association; non-linear relationships could still exist."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Which visualization is most appropriate for exploring the relationship between two numeric variables when n is very large?",
+    "possible_answers": {
+      "A": "Scatterplot",
+      "B": "Bar chart",
+      "C": "Hexagonal binning",
+      "D": "Pie chart"
+    },
+    "correct_answer": "C",
+    "explanation": "With large datasets, scatterplots suffer from overplotting. Hexagonal binning groups dense points into shaded regions to show concentration."
+  },
+  {
+    "question_no": 11,
+    "question_text": "A boxplot's whiskers typically extend to:",
+    "possible_answers": {
+      "A": "The minimum and maximum values only",
+      "B": "±1 standard deviation",
+      "C": "Approximately 1.5 × IQR beyond the box",
+      "D": "The 10th and 90th percentiles"
+    },
+    "correct_answer": "C",
+    "explanation": "Standard Tukey boxplots extend whiskers to the furthest data point within 1.5 * IQR from the first and third quartiles."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Which estimate of variability is most robust?",
+    "possible_answers": {
+      "A": "Range",
+      "B": "Standard deviation",
+      "C": "Variance",
+      "D": "Median absolute deviation from median"
+    },
+    "correct_answer": "D",
+    "explanation": "The Median Absolute Deviation (MAD) uses medians for both center and distance, completely ignoring the magnitude of extreme outliers."
+  },
+  {
+    "question_no": 13,
+    "question_text": "\"Expected value\" is most accurately defined as:",
+    "possible_answers": {
+      "A": "The arithmetic mean of a sample",
+      "B": "The sum of outcome values weighted by their probabilities",
+      "C": "The predicted value from a regression line",
+      "D": "The most common value in a distribution"
+    },
+    "correct_answer": "B",
+    "explanation": "In probability, expected value is the long-run average, computed by multiplying each possible outcome by its probability and summing them."
+  },
+  {
+    "question_no": 14,
+    "question_text": "Which visualization is best for comparing the distribution of a numeric variable across multiple categorical groups?",
+    "possible_answers": {
+      "A": "Scatterplot",
+      "B": "Boxplot per category",
+      "C": "Heatmap",
+      "D": "QQ-plot"
+    },
+    "correct_answer": "B",
+    "explanation": "Side-by-side boxplots allow quick visual comparison of medians, spread, and outliers across different categories."
+  },
+  {
+    "question_no": 15,
+    "question_text": "A contingency table summarises:",
+    "possible_answers": {
+      "A": "Two numeric variables",
+      "B": "One numeric and one categorical variable",
+      "C": "Two categorical variables",
+      "D": "A single time series"
+    },
+    "correct_answer": "C",
+    "explanation": "Contingency tables (or crosstabs) display the frequency counts of outcomes resulting from the intersection of two categorical variables."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Sample bias refers to:",
+    "possible_answers": {
+      "A": "Random variation between samples",
+      "B": "A systematic difference between the sample and the population",
+      "C": "Error introduced by small sample sizes",
+      "D": "A high standard error"
+    },
+    "correct_answer": "B",
+    "explanation": "Sample bias occurs when the sampling method systematically over- or under-represents certain segments of the population."
+  },
+  {
+    "question_no": 17,
+    "question_text": "The 1936 Literary Digest poll was a famous example of:",
+    "possible_answers": {
+      "A": "Stratified sampling",
+      "B": "Sample bias despite large n",
+      "C": "The Central Limit Theorem in action",
+      "D": "Selection bias due to regression to the mean"
+    },
+    "correct_answer": "B",
+    "explanation": "Despite millions of responses, the poll failed drastically because its sample (auto and phone owners) systematically biased toward wealthier voters."
+  },
+  {
+    "question_no": 18,
+    "question_text": "Regression to the mean is best described as:",
+    "possible_answers": {
+      "A": "A statistical force pulling extreme values back toward the average",
+      "B": "The tendency of extreme measurements to be followed by more central ones",
+      "C": "The reduction in variance as sample size grows",
+      "D": "A form of selection bias"
+    },
+    "correct_answer": "B",
+    "explanation": "It is a statistical phenomenon where unusually high or low observations are likely to be followed by observations closer to the true population mean."
+  },
+  {
+    "question_no": 19,
+    "question_text": "The data distribution is:",
+    "possible_answers": {
+      "A": "The distribution of a sample statistic over many samples",
+      "B": "The distribution of individual values in a dataset",
+      "C": "The theoretical distribution of the population",
+      "D": "The sampling distribution of the mean"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'data distribution' refers to the spread and shape of the actual individual raw data points collected."
+  },
+  {
+    "question_no": 20,
+    "question_text": "The Central Limit Theorem states that:",
+    "possible_answers": {
+      "A": "All data distributions are normal if n is large enough",
+      "B": "The sampling distribution of the mean approaches normal as n grows, regardless of the population distribution",
+      "C": "The population mean equals the sample mean as n grows",
+      "D": "The normal distribution applies to all statistics"
+    },
+    "correct_answer": "B",
+    "explanation": "The CLT guarantees that the distribution of sample means will be approximately normal if the sample size is sufficiently large, even if the underlying data is not."
+  },
+  {
+    "question_no": 21,
+    "question_text": "The standard error of the mean is given by:",
+    "possible_answers": {
+      "A": "s / n",
+      "B": "s / √n",
+      "C": "s²",
+      "D": "s × √n"
+    },
+    "correct_answer": "B",
+    "explanation": "The standard error is calculated by dividing the sample standard deviation (s) by the square root of the sample size (n)."
+  },
+  {
+    "question_no": 22,
+    "question_text": "To halve the standard error, you must:",
+    "possible_answers": {
+      "A": "Double the sample size",
+      "B": "Halve the sample size",
+      "C": "Quadruple the sample size",
+      "D": "Square the sample size"
+    },
+    "correct_answer": "C",
+    "explanation": "Because of the square root rule in the standard error formula (s / √n), you must increase the sample size by a factor of four to cut the error in half."
+  },
+  {
+    "question_no": 23,
+    "question_text": "A bootstrap sample is drawn:",
+    "possible_answers": {
+      "A": "Without replacement from the population",
+      "B": "Without replacement from the sample",
+      "C": "With replacement from the sample",
+      "D": "With replacement from the population"
+    },
+    "correct_answer": "C",
+    "explanation": "Bootstrapping involves repeatedly sampling data points from the original dataset with replacement to build empirical distributions."
+  },
+  {
+    "question_no": 24,
+    "question_text": "The bootstrap is primarily used to:",
+    "possible_answers": {
+      "A": "Test hypotheses",
+      "B": "Estimate the sampling distribution and variability of a statistic",
+      "C": "Generate new real data",
+      "D": "Correct for selection bias"
+    },
+    "correct_answer": "B",
+    "explanation": "The bootstrap is a resampling technique used to estimate the standard error and confidence intervals of almost any statistical metric."
+  },
+  {
+    "question_no": 25,
+    "question_text": "A 95% confidence interval correctly means:",
+    "possible_answers": {
+      "A": "There is a 95% probability the true parameter lies in this interval",
+      "B": "95% of the sample data lies within this interval",
+      "C": "If the sampling procedure were repeated many times, 95% of such intervals would contain the true parameter",
+      "D": "The parameter is statistically significant at α = 0.05"
+    },
+    "correct_answer": "C",
+    "explanation": "A confidence interval speaks to the reliability of the estimation procedure over many repeated samples, not the probability of a single fixed parameter."
+  },
+  {
+    "question_no": 26,
+    "question_text": "In a standard normal distribution, approximately what percentage of data lies within two standard deviations of the mean?",
+    "possible_answers": {
+      "A": "68%",
+      "B": "95%",
+      "C": "99.7%",
+      "D": "50%"
+    },
+    "correct_answer": "B",
+    "explanation": "Per the empirical rule (68-95-99.7), roughly 95% of the data falls within ±2 standard deviations from the mean."
+  },
+  {
+    "question_no": 27,
+    "question_text": "A z-score of 2.0 indicates that the observation is:",
+    "possible_answers": {
+      "A": "In the top 2% of the distribution",
+      "B": "Two standard deviations above the mean",
+      "C": "Two times the median",
+      "D": "At the 20th percentile"
+    },
+    "correct_answer": "B",
+    "explanation": "A z-score represents the exact number of standard deviations a given data point is above (positive) or below (negative) the mean."
+  },
+  {
+    "question_no": 28,
+    "question_text": "A QQ-plot is used to:",
+    "possible_answers": {
+      "A": "Compare a sample distribution against a theoretical distribution",
+      "B": "Display two quantitative variables",
+      "C": "Show the correlation matrix",
+      "D": "Plot residuals against fitted values"
+    },
+    "correct_answer": "A",
+    "explanation": "Quantile-Quantile plots graphically compare the quantiles of a dataset against the quantiles of a theoretical distribution (usually normal)."
+  },
+  {
+    "question_no": 29,
+    "question_text": "In a QQ-plot where points deviate strongly from the line at the extremes, the data is likely:",
+    "possible_answers": {
+      "A": "Normally distributed",
+      "B": "Long-tailed / heavy-tailed",
+      "C": "Uniformly distributed",
+      "D": "Bimodal"
+    },
+    "correct_answer": "B",
+    "explanation": "Points curving sharply away from the reference line at the ends indicate extreme values occur more frequently than they would in a normal distribution (heavy tails)."
+  },
+  {
+    "question_no": 30,
+    "question_text": "The Student's t-distribution has:",
+    "possible_answers": {
+      "A": "Thinner tails than the normal distribution",
+      "B": "Heavier tails than the normal distribution",
+      "C": "Exactly the same shape as the normal distribution",
+      "D": "A bounded range"
+    },
+    "correct_answer": "B",
+    "explanation": "The t-distribution has fatter/heavier tails to account for the increased uncertainty associated with estimating population variance from small samples."
+  },
+  {
+    "question_no": 31,
+    "question_text": "As the degrees of freedom in a t-distribution increase, the distribution:",
+    "possible_answers": {
+      "A": "Becomes more skewed",
+      "B": "Approaches the standard normal distribution",
+      "C": "Becomes uniform",
+      "D": "Develops heavier tails"
+    },
+    "correct_answer": "B",
+    "explanation": "As sample size (and degrees of freedom) grows infinitely large, the t-distribution mathematically converges to a perfect standard normal Z-distribution."
+  },
+  {
+    "question_no": 32,
+    "question_text": "The binomial distribution describes:",
+    "possible_answers": {
+      "A": "The time between events",
+      "B": "The number of successes in n trials with probability p",
+      "C": "Continuous measurement errors",
+      "D": "The rate of events in an interval"
+    },
+    "correct_answer": "B",
+    "explanation": "The binomial distribution models discrete binary outcomes (success/failure) over a fixed number of independent trials."
+  },
+  {
+    "question_no": 33,
+    "question_text": "Which scenario is best modelled by a Poisson distribution?",
+    "possible_answers": {
+      "A": "The height of students in a class",
+      "B": "The time until the next customer arrives",
+      "C": "The number of emails received per hour",
+      "D": "The number of heads in 10 coin flips"
+    },
+    "correct_answer": "C",
+    "explanation": "The Poisson distribution models the discrete count of events occurring within a fixed interval of time or space."
+  },
+  {
+    "question_no": 34,
+    "question_text": "The exponential distribution describes:",
+    "possible_answers": {
+      "A": "The number of successes in n trials",
+      "B": "The time between events in a Poisson process",
+      "C": "The variability of a sample statistic",
+      "D": "The shape of long-tailed returns"
+    },
+    "correct_answer": "B",
+    "explanation": "If events follow a Poisson distribution (counts per interval), the continuous waiting time between those consecutive events follows an exponential distribution."
+  },
+  {
+    "question_no": 35,
+    "question_text": "\"Bias\" in statistics is defined as:",
+    "possible_answers": {
+      "A": "Random error",
+      "B": "Systematic error",
+      "C": "Sampling variability",
+      "D": "Standard error"
+    },
+    "correct_answer": "B",
+    "explanation": "Bias represents a systematic directional error where an estimate consistently skews higher or lower than the true population parameter."
+  },
+  {
+    "question_no": 36,
+    "question_text": "In a proper A/B test, subjects are assigned to groups via:",
+    "possible_answers": {
+      "A": "Systematic selection",
+      "B": "Stratified sampling",
+      "C": "Randomization",
+      "D": "Volunteer sign-up"
+    },
+    "correct_answer": "C",
+    "explanation": "Randomization is critical to ensure that external variables are evenly distributed between the control and treatment groups."
+  },
+  {
+    "question_no": 37,
+    "question_text": "The control group in an experiment:",
+    "possible_answers": {
+      "A": "Receives the new treatment",
+      "B": "Receives no treatment or the standard treatment",
+      "C": "Is selected to be demographically different",
+      "D": "Is always the smaller group"
+    },
+    "correct_answer": "B",
+    "explanation": "The control group maintains the status quo, providing a baseline to compare against the treatment group's results."
+  },
+  {
+    "question_no": 38,
+    "question_text": "The null hypothesis typically asserts:",
+    "possible_answers": {
+      "A": "That there is a meaningful effect",
+      "B": "That chance alone explains the observed result",
+      "C": "That the sample size is adequate",
+      "D": "That the alternative is preferred"
+    },
+    "correct_answer": "B",
+    "explanation": "The null hypothesis assumes no underlying relationship or effect exists, and any observed difference is purely due to random sampling noise."
+  },
+  {
+    "question_no": 39,
+    "question_text": "A one-tailed (one-way) test is used when:",
+    "possible_answers": {
+      "A": "You test in both directions",
+      "B": "You are only interested in a deviation in one specific direction",
+      "C": "The data is one-dimensional",
+      "D": "The p-value is small"
+    },
+    "correct_answer": "B",
+    "explanation": "One-tailed tests are used when a change in the opposite direction is meaningless or ignored, assessing significance only for a strictly greater-than or less-than condition."
+  },
+  {
+    "question_no": 40,
+    "question_text": "The correct interpretation of \"fail to reject H₀\" is:",
+    "possible_answers": {
+      "A": "The null hypothesis is proven true",
+      "B": "There is insufficient evidence to reject the null",
+      "C": "The alternative hypothesis is false",
+      "D": "The effect size is zero"
+    },
+    "correct_answer": "B",
+    "explanation": "Statistical tests cannot prove the null hypothesis is absolutely true; they can only conclude the sample lacked sufficient evidence to confidently reject it."
+  },
+  {
+    "question_no": 41,
+    "question_text": "A p-value is defined as:",
+    "possible_answers": {
+      "A": "The probability that the null hypothesis is true",
+      "B": "The probability that the alternative hypothesis is true",
+      "C": "The probability of observing data at least as extreme as seen, given H₀ is true",
+      "D": "The probability of making a correct decision"
+    },
+    "correct_answer": "C",
+    "explanation": "The p-value calculates how likely your sample results would be produced entirely by chance if the null hypothesis were a true fact."
+  },
+  {
+    "question_no": 42,
+    "question_text": "α = 0.05 represents:",
+    "possible_answers": {
+      "A": "The probability of Type II error",
+      "B": "The threshold for statistical significance — probability of rejecting H₀ when it is true",
+      "C": "The power of the test",
+      "D": "The confidence level"
+    },
+    "correct_answer": "B",
+    "explanation": "Alpha is the predetermined risk tolerance level for committing a Type I error (declaring a false positive)."
+  },
+  {
+    "question_no": 43,
+    "question_text": "A Type I error is:",
+    "possible_answers": {
+      "A": "Failing to reject a true null hypothesis",
+      "B": "Rejecting a true null hypothesis",
+      "C": "Accepting a false null hypothesis",
+      "D": "Using the wrong test statistic"
+    },
+    "correct_answer": "B",
+    "explanation": "A Type I error is a false positive—concluding there is a significant effect when there is actually no real effect."
+  },
+  {
+    "question_no": 44,
+    "question_text": "In a permutation test, data are reshuffled:",
+    "possible_answers": {
+      "A": "With replacement",
+      "B": "Without replacement",
+      "C": "Only within the treatment group",
+      "D": "Using a bootstrap draw"
+    },
+    "correct_answer": "B",
+    "explanation": "Permutation combines all observations, then randomly redistributes the exact same fixed set of values (without replacement) to build a null distribution."
+  },
+  {
+    "question_no": 45,
+    "question_text": "Which of these best distinguishes permutation tests from bootstrap?",
+    "possible_answers": {
+      "A": "Permutation uses replacement; bootstrap does not",
+      "B": "Bootstrap tests hypotheses; permutation estimates variability",
+      "C": "Permutation tests hypotheses (shuffle without replacement); bootstrap estimates variability (sample with replacement)",
+      "D": "They are identical"
+    },
+    "correct_answer": "C",
+    "explanation": "Permutation breaks relationships to test the null hypothesis, while bootstrapping samples with replacement to estimate standard errors and confidence intervals."
+  },
+  {
+    "question_no": 46,
+    "question_text": "A test comparing the means of three or more independent groups is best performed using:",
+    "possible_answers": {
+      "A": "A t-test",
+      "B": "A chi-square test",
+      "C": "ANOVA (F-test)",
+      "D": "A permutation test only"
+    },
+    "correct_answer": "C",
+    "explanation": "Analysis of Variance (ANOVA) is explicitly designed to compare the means of multiple groups simultaneously to see if at least one differs."
+  },
+  {
+    "question_no": 47,
+    "question_text": "The F-statistic in ANOVA is computed as:",
+    "possible_answers": {
+      "A": "Variance within groups / Variance between groups",
+      "B": "Variance between groups / Variance within groups",
+      "C": "(Observed − Expected)² / Expected",
+      "D": "Sum of squared residuals / n"
+    },
+    "correct_answer": "B",
+    "explanation": "The F-ratio compares the variation caused by the group differences (between) against the random noise within the groups (within)."
+  },
+  {
+    "question_no": 48,
+    "question_text": "A chi-square test of independence is used to test:",
+    "possible_answers": {
+      "A": "The equality of two means",
+      "B": "The association between two categorical variables",
+      "C": "The normality of a distribution",
+      "D": "The variance of a sample"
+    },
+    "correct_answer": "B",
+    "explanation": "Chi-square evaluates whether the observed frequency distribution across a contingency table significantly differs from expected independent frequencies."
+  },
+  {
+    "question_no": 49,
+    "question_text": "Fisher's exact test is preferred over the chi-square test when:",
+    "possible_answers": {
+      "A": "The sample size is very large",
+      "B": "The expected counts in some cells are small (< 5)",
+      "C": "The variables are continuous",
+      "D": "The data is time-indexed"
+    },
+    "correct_answer": "B",
+    "explanation": "The Chi-square test relies on large-sample approximations; Fisher's exact test calculates exact probabilities and works well for sparse contingency tables."
+  },
+  {
+    "question_no": 50,
+    "question_text": "For a contingency table with r rows and c columns, the chi-square degrees of freedom are:",
+    "possible_answers": {
+      "A": "r + c",
+      "B": "rc",
+      "C": "(r − 1)(c − 1)",
+      "D": "n − 1"
+    },
+    "correct_answer": "C",
+    "explanation": "This formula defines the number of internal cells in a table that are free to vary once the row and column totals are fixed."
+  },
+  {
+    "question_no": 51,
+    "question_text": "Alpha inflation refers to:",
+    "possible_answers": {
+      "A": "A widening confidence interval",
+      "B": "The increased probability of at least one false positive as the number of tests increases",
+      "C": "A bias in the sample selection",
+      "D": "An increase in the effect size"
+    },
+    "correct_answer": "B",
+    "explanation": "When performing multiple hypothesis tests simultaneously, the cumulative chance of making at least one Type I error compounds rapidly."
+  },
+  {
+    "question_no": 52,
+    "question_text": "The Bonferroni correction involves:",
+    "possible_answers": {
+      "A": "Increasing α for each test",
+      "B": "Dividing α by the number of tests performed",
+      "C": "Multiplying all p-values by the effect size",
+      "D": "Adjusting the degrees of freedom"
+    },
+    "correct_answer": "B",
+    "explanation": "It strictly controls the family-wise error rate by requiring a proportionally smaller p-value threshold for each individual test."
+  },
+  {
+    "question_no": 53,
+    "question_text": "Statistical power is defined as:",
+    "possible_answers": {
+      "A": "The probability of Type I error",
+      "B": "1 − β, the probability of correctly rejecting a false H₀",
+      "C": "The p-value of the test",
+      "D": "The sample size needed"
+    },
+    "correct_answer": "B",
+    "explanation": "Power is the test's ability to successfully detect an effect that actually exists in reality, avoiding a false negative (Type II error, Beta)."
+  },
+  {
+    "question_no": 54,
+    "question_text": "To increase the power of a test, one can:",
+    "possible_answers": {
+      "A": "Decrease the sample size",
+      "B": "Decrease the effect size to detect",
+      "C": "Increase the sample size",
+      "D": "Decrease α"
+    },
+    "correct_answer": "C",
+    "explanation": "More data points reduce the standard error of estimates, increasing the model's sensitivity and statistical power."
+  },
+  {
+    "question_no": 55,
+    "question_text": "A multi-arm bandit algorithm differs from a traditional A/B test because it:",
+    "possible_answers": {
+      "A": "Uses a smaller sample",
+      "B": "Progressively allocates more traffic to better-performing arms during the experiment",
+      "C": "Requires no randomization",
+      "D": "Only works with two treatments"
+    },
+    "correct_answer": "B",
+    "explanation": "Bandits optimize 'earn while you learn' by dynamically shifting traffic away from losing variations in real time, unlike static A/B tests."
+  },
+  {
+    "question_no": 56,
+    "question_text": "In the regression equation Y = b₀ + b₁X, b₁ represents:",
+    "possible_answers": {
+      "A": "The predicted value of Y when X = 0",
+      "B": "The slope — the change in Y per unit change in X",
+      "C": "The residual",
+      "D": "The correlation coefficient"
+    },
+    "correct_answer": "B",
+    "explanation": "The coefficient b₁ is the slope of the regression line, indicating the expected change in the dependent variable for a 1-unit increase in X."
+  },
+  {
+    "question_no": 57,
+    "question_text": "Residuals in regression are:",
+    "possible_answers": {
+      "A": "The fitted values",
+      "B": "The difference between observed and fitted values",
+      "C": "The variance of Y",
+      "D": "The squared error divided by n"
+    },
+    "correct_answer": "B",
+    "explanation": "A residual is the error term: what the actual data point was minus what the regression equation predicted it would be."
+  },
+  {
+    "question_no": 58,
+    "question_text": "Ordinary least squares (OLS) minimises:",
+    "possible_answers": {
+      "A": "The sum of residuals",
+      "B": "The sum of absolute residuals",
+      "C": "The sum of squared residuals",
+      "D": "The maximum residual"
+    },
+    "correct_answer": "C",
+    "explanation": "OLS finds the line of best fit by minimizing the sum of the squared vertical distances (errors) between the data points and the line."
+  },
+  {
+    "question_no": 59,
+    "question_text": "R² represents:",
+    "possible_answers": {
+      "A": "The square of the regression coefficient",
+      "B": "The proportion of variance in Y explained by the model",
+      "C": "The variance of the residuals",
+      "D": "The correlation between predictors"
+    },
+    "correct_answer": "B",
+    "explanation": "R-squared is the coefficient of determination, indicating how much of the target variable's fluctuation is accounted for by the inputs."
+  },
+  {
+    "question_no": 60,
+    "question_text": "RMSE stands for:",
+    "possible_answers": {
+      "A": "Relative Model Standard Error",
+      "B": "Residual Mean Standard Error",
+      "C": "Root Mean Squared Error",
+      "D": "Random Model Sampling Error"
+    },
+    "correct_answer": "C",
+    "explanation": "RMSE calculates the square root of the average squared residuals, bringing the error metric back to the original units of the target variable."
+  },
+  {
+    "question_no": 61,
+    "question_text": "A prediction interval in regression is:",
+    "possible_answers": {
+      "A": "Always narrower than a confidence interval for the mean response",
+      "B": "Always wider than a confidence interval for the mean response",
+      "C": "Equal in width to the confidence interval",
+      "D": "Independent of the sample size"
+    },
+    "correct_answer": "B",
+    "explanation": "Prediction intervals estimate the range for a single new observation, incorporating both model uncertainty and individual data scatter, making them wider."
+  },
+  {
+    "question_no": 62,
+    "question_text": "For a categorical predictor with k levels, the number of dummy variables needed in linear regression is:",
+    "possible_answers": {
+      "A": "k",
+      "B": "k − 1",
+      "C": "k + 1",
+      "D": "2k"
+    },
+    "correct_answer": "B",
+    "explanation": "One category must be left out as the reference baseline to prevent perfect multicollinearity (the dummy variable trap)."
+  },
+  {
+    "question_no": 63,
+    "question_text": "Multicollinearity refers to:",
+    "possible_answers": {
+      "A": "Missing values in predictor variables",
+      "B": "Near-perfect correlation among predictor variables, making coefficient estimates unstable",
+      "C": "Non-constant residual variance",
+      "D": "Outliers in the response variable"
+    },
+    "correct_answer": "B",
+    "explanation": "When independent variables are highly correlated with each other, the regression algorithm struggles to isolate their individual effects on the target."
+  },
+  {
+    "question_no": 64,
+    "question_text": "A confounding variable is:",
+    "possible_answers": {
+      "A": "A redundant predictor",
+      "B": "An important omitted variable that leads to spurious relationships",
+      "C": "An outlier in the data",
+      "D": "A non-linear transformation of a predictor"
+    },
+    "correct_answer": "B",
+    "explanation": "A confounder influences both the dependent variable and independent variable, causing a spurious association if omitted from the model."
+  },
+  {
+    "question_no": 65,
+    "question_text": "A record with an extreme X value but a fitted value close to observed Y has:",
+    "possible_answers": {
+      "A": "High leverage but is not necessarily influential",
+      "B": "High influence but low leverage",
+      "C": "A large residual",
+      "D": "A small Cook's distance regardless of fit"
+    },
+    "correct_answer": "A",
+    "explanation": "High leverage means the point lies far horizontally (extreme X), but it is only 'influential' if deleting it would significantly alter the regression line."
+  },
+  {
+    "question_no": 66,
+    "question_text": "Heteroskedasticity is:",
+    "possible_answers": {
+      "A": "Non-linear relationship between X and Y",
+      "B": "Non-constant variance of residuals across the range of fitted values",
+      "C": "Correlated predictors",
+      "D": "Non-normal residuals"
+    },
+    "correct_answer": "B",
+    "explanation": "It violates the assumption of homoskedasticity, appearing as a fan or funnel shape in a residual scatter plot."
+  },
+  {
+    "question_no": 67,
+    "question_text": "A partial residual plot is used to:",
+    "possible_answers": {
+      "A": "Detect multicollinearity",
+      "B": "Reveal the relationship between a single predictor and the response, controlling for others",
+      "C": "Show the overall model fit",
+      "D": "Visualise interactions"
+    },
+    "correct_answer": "B",
+    "explanation": "It isolates the specific linear (or non-linear) relationship of one variable against the target by factoring out the effects of all other variables."
+  },
+  {
+    "question_no": 68,
+    "question_text": "k-fold cross-validation involves:",
+    "possible_answers": {
+      "A": "Splitting the data once into training and test sets",
+      "B": "Dividing data into k folds, training on k−1, testing on the remaining, and rotating",
+      "C": "Bootstrapping k times and averaging",
+      "D": "Running k independent regressions on disjoint datasets"
+    },
+    "correct_answer": "B",
+    "explanation": "This technique provides a reliable estimate of model performance by ensuring every data point is used exactly once in a validation fold."
+  },
+  {
+    "question_no": 69,
+    "question_text": "Spline regression is best described as:",
+    "possible_answers": {
+      "A": "A regression with polynomial terms of the same degree across the entire range",
+      "B": "Fitting a smooth curve by joining piecewise polynomial segments at knots",
+      "C": "A non-parametric density estimator",
+      "D": "A regression on log-transformed predictors"
+    },
+    "correct_answer": "B",
+    "explanation": "Splines handle non-linear relationships gracefully by fitting separate polynomials between defined boundaries (knots) and linking them smoothly."
+  },
+  {
+    "question_no": 70,
+    "question_text": "Generalised Additive Models (GAMs) differ from spline regression in that:",
+    "possible_answers": {
+      "A": "They require linear predictors",
+      "B": "They automatically select the knots/smoothness for each predictor",
+      "C": "They only handle categorical data",
+      "D": "They cannot be used for prediction"
+    },
+    "correct_answer": "B",
+    "explanation": "GAMs expand upon splines by using algorithms (like penalized likelihood) to automatically determine the optimal smoothness without manual knot placement."
+  }
+]

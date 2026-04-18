@@ -1,0 +1,842 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "MongoDB organises data as:",
+    "possible_answers": {
+      "A": "Tables and rows",
+      "B": "Documents inside collections",
+      "C": "Graphs and edges",
+      "D": "Key-value pairs only"
+    },
+    "correct_answer": "B",
+    "explanation": "As a NoSQL database, MongoDB stores flexible JSON-like documents inside organizational groupings called collections."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Which PyMongo method returns the number of documents matching a filter?",
+    "possible_answers": {
+      "A": ".find()",
+      "B": ".count_documents()",
+      "C": ".size()",
+      "D": ".length()"
+    },
+    "correct_answer": "B",
+    "explanation": "The `.count_documents(filter)` method is the standard PyMongo function to accurately count matching records server-side."
+  },
+  {
+    "question_no": 3,
+    "question_text": "In a MongoDB query, which operator represents \"greater than\"?",
+    "possible_answers": {
+      "A": ">",
+      "B": "$greater",
+      "C": "$gt",
+      "D": "GT"
+    },
+    "correct_answer": "C",
+    "explanation": "MongoDB uses a specific syntax for comparison operators, where $gt stands for 'greater than'."
+  },
+  {
+    "question_no": 4,
+    "question_text": "A time series is called stationary if:",
+    "possible_answers": {
+      "A": "Its values never change",
+      "B": "Its mean, variance, and autocorrelation are constant over time",
+      "C": "It has no seasonal component",
+      "D": "It always trends upward"
+    },
+    "correct_answer": "B",
+    "explanation": "Stationarity means the statistical properties of the series do not depend on the time at which the series is observed."
+  },
+  {
+    "question_no": 5,
+    "question_text": "The null hypothesis of the Augmented Dickey-Fuller (ADF) test is:",
+    "possible_answers": {
+      "A": "The series is stationary",
+      "B": "The series has a unit root (is non-stationary)",
+      "C": "The residuals are normal",
+      "D": "The autocorrelation is zero"
+    },
+    "correct_answer": "B",
+    "explanation": "The ADF test checks for non-stationarity; failing to reject the null means the time series likely contains a trend or unit root."
+  },
+  {
+    "question_no": 6,
+    "question_text": "In selecting the order p for an AR(p) model, one typically examines:",
+    "possible_answers": {
+      "A": "The ACF plot",
+      "B": "The PACF plot",
+      "C": "The QQ-plot",
+      "D": "The histogram"
+    },
+    "correct_answer": "B",
+    "explanation": "The Partial Autocorrelation Function (PACF) isolates the direct effect of a specific lag, making it ideal for identifying the autoregressive order (p)."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Resampling a time series from hourly to daily observations is called:",
+    "possible_answers": {
+      "A": "Upsampling",
+      "B": "Downsampling",
+      "C": "Interpolation",
+      "D": "Differencing"
+    },
+    "correct_answer": "B",
+    "explanation": "Downsampling decreases the frequency of the data (fewer data points), while upsampling increases the frequency."
+  },
+  {
+    "question_no": 8,
+    "question_text": "In pandas, the correct code to compute a weekly (168-hour) rolling mean on a Series y is:",
+    "possible_answers": {
+      "A": "y.resample(\"168H\").mean()",
+      "B": "y.rolling(168).mean()",
+      "C": "y.groupby(168).mean()",
+      "D": "y.shift(168).mean()"
+    },
+    "correct_answer": "B",
+    "explanation": "The `.rolling(window)` method creates a sliding window calculation over the specified number of periods."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Walk-forward validation is preferred over random train/test split for time series because:",
+    "possible_answers": {
+      "A": "It is computationally faster",
+      "B": "Random splitting can leak future information into training",
+      "C": "It produces smaller test sets",
+      "D": "It removes the need for cross-validation"
+    },
+    "correct_answer": "B",
+    "explanation": "Time series data holds chronological dependencies. Random splits cause data leakage where the model trains on future events to predict past ones."
+  },
+  {
+    "question_no": 10,
+    "question_text": "In an ARIMA(p, d, q) model, the parameter d represents:",
+    "possible_answers": {
+      "A": "The number of seasonal lags",
+      "B": "The number of times the series is differenced to achieve stationarity",
+      "C": "The number of autoregressive terms",
+      "D": "The forecast horizon"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'd' stands for degree of integration, signifying how many times consecutive observations were subtracted to remove trends."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Which metric is most appropriate when outlier predictions should not be over-penalised?",
+    "possible_answers": {
+      "A": "Mean Squared Error",
+      "B": "Mean Absolute Error",
+      "C": "R²",
+      "D": "Accuracy"
+    },
+    "correct_answer": "B",
+    "explanation": "MAE takes the absolute value of errors, growing linearly. MSE squares the errors, causing large outlier mistakes to disproportionately blow up the score."
+  },
+  {
+    "question_no": 12,
+    "question_text": "An AR(2) model expresses:",
+    "possible_answers": {
+      "A": "Today's value as a function of the last two error terms",
+      "B": "Today's value as a function of the last two observations",
+      "C": "The moving average of the last two observations",
+      "D": "The difference between this period and two periods ago"
+    },
+    "correct_answer": "B",
+    "explanation": "Autoregressive (AR) models regress the target variable against its own past (lagged) chronological values."
+  },
+  {
+    "question_no": 13,
+    "question_text": "In SQL, the clause that filters rows BEFORE grouping is:",
+    "possible_answers": {
+      "A": "HAVING",
+      "B": "WHERE",
+      "C": "GROUP BY",
+      "D": "ORDER BY"
+    },
+    "correct_answer": "B",
+    "explanation": "The WHERE clause acts on individual rows before any aggregations occur, whereas HAVING filters the grouped aggregates."
+  },
+  {
+    "question_no": 14,
+    "question_text": "HAVING differs from WHERE in that it:",
+    "possible_answers": {
+      "A": "Is faster",
+      "B": "Filters groups after aggregation",
+      "C": "Is used only with JOINs",
+      "D": "Cannot use comparison operators"
+    },
+    "correct_answer": "B",
+    "explanation": "HAVING is evaluated in the SQL execution pipeline specifically to filter the resultant metrics derived from a GROUP BY clause."
+  },
+  {
+    "question_no": 15,
+    "question_text": "A LEFT JOIN between table A and table B returns:",
+    "possible_answers": {
+      "A": "Only rows where keys match in both tables",
+      "B": "All rows from A, matched with B where possible, NULL otherwise",
+      "C": "All rows from B, matched with A where possible",
+      "D": "Rows unique to A or B only"
+    },
+    "correct_answer": "B",
+    "explanation": "A LEFT JOIN guarantees every record from the 'left' table is preserved regardless of whether a matching record exists in the 'right' table."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Logistic regression predicts:",
+    "possible_answers": {
+      "A": "A continuous numeric outcome",
+      "B": "The probability of a binary outcome",
+      "C": "The variance of the response",
+      "D": "A ranking among classes"
+    },
+    "correct_answer": "B",
+    "explanation": "Despite 'regression' in the name, logistic regression is a classification algorithm that outputs a probability score between 0 and 1."
+  },
+  {
+    "question_no": 17,
+    "question_text": "The sigmoid function σ(z) maps real values into the range:",
+    "possible_answers": {
+      "A": "[−1, 1]",
+      "B": "(0, 1)",
+      "C": "[0, ∞)",
+      "D": "(−∞, ∞)"
+    },
+    "correct_answer": "B",
+    "explanation": "The sigmoid curve mathematically squashes any continuous input variable strictly within the bounds of 0 and 1, creating a valid probability."
+  },
+  {
+    "question_no": 18,
+    "question_text": "The log-odds (logit) of probability p is:",
+    "possible_answers": {
+      "A": "ln(p)",
+      "B": "ln(p / (1 − p))",
+      "C": "p / (1 − p)",
+      "D": "e^p"
+    },
+    "correct_answer": "B",
+    "explanation": "The logit link function is the natural log of the odds (probability of success divided by the probability of failure)."
+  },
+  {
+    "question_no": 19,
+    "question_text": "Applying OrdinalEncoder to a nominal variable like {red, green, blue} is problematic for linear models because:",
+    "possible_answers": {
+      "A": "It produces too many columns",
+      "B": "It imposes a false ordering that the model interprets as meaningful distance",
+      "C": "It requires numerical values",
+      "D": "It cannot handle missing data"
+    },
+    "correct_answer": "B",
+    "explanation": "Assigning 1, 2, 3 to colors forces a linear model to assume mathematically that blue is 'greater than' red, creating false relationships."
+  },
+  {
+    "question_no": 20,
+    "question_text": "In a decision tree, which measure is used by default in scikit-learn to evaluate splits?",
+    "possible_answers": {
+      "A": "Entropy",
+      "B": "Gini impurity",
+      "C": "Variance",
+      "D": "Mean squared error"
+    },
+    "correct_answer": "B",
+    "explanation": "Scikit-learn uses Gini impurity by default for classification trees, measuring how often a randomly chosen element would be incorrectly labelled."
+  },
+  {
+    "question_no": 21,
+    "question_text": "Which hyperparameter most directly limits the depth of a decision tree?",
+    "possible_answers": {
+      "A": "min_samples_leaf",
+      "B": "max_depth",
+      "C": "n_estimators",
+      "D": "learning_rate"
+    },
+    "correct_answer": "B",
+    "explanation": "The `max_depth` parameter explicitly prevents the tree algorithm from continuing to split nodes endlessly, preventing overfitting."
+  },
+  {
+    "question_no": 22,
+    "question_text": "In a confusion matrix, a False Positive occurs when:",
+    "possible_answers": {
+      "A": "The model predicts positive and the actual is positive",
+      "B": "The model predicts negative and the actual is positive",
+      "C": "The model predicts positive and the actual is negative",
+      "D": "The model predicts negative and the actual is negative"
+    },
+    "correct_answer": "C",
+    "explanation": "A False Positive (Type I error) is when the model incorrectly flags a negative ground-truth instance as a positive hit."
+  },
+  {
+    "question_no": 23,
+    "question_text": "Precision is computed as:",
+    "possible_answers": {
+      "A": "TP / (TP + FN)",
+      "B": "TP / (TP + FP)",
+      "C": "(TP + TN) / total",
+      "D": "TN / (TN + FP)"
+    },
+    "correct_answer": "B",
+    "explanation": "Precision evaluates accuracy of the positive predictions: out of everything the model claimed was positive, how many were actually correct?"
+  },
+  {
+    "question_no": 24,
+    "question_text": "Recall (sensitivity) is computed as:",
+    "possible_answers": {
+      "A": "TP / (TP + FN)",
+      "B": "TP / (TP + FP)",
+      "C": "TN / (TN + FP)",
+      "D": "(TP + TN) / total"
+    },
+    "correct_answer": "A",
+    "explanation": "Recall measures detection rate: out of all the true positive ground-truth cases, what fraction did the model successfully find?"
+  },
+  {
+    "question_no": 25,
+    "question_text": "The F1 score is:",
+    "possible_answers": {
+      "A": "The arithmetic mean of precision and recall",
+      "B": "The harmonic mean of precision and recall",
+      "C": "Precision × Recall",
+      "D": "Precision + Recall"
+    },
+    "correct_answer": "B",
+    "explanation": "The harmonic mean severely penalizes extreme disparities, meaning the F1 score is only high if both Precision and Recall are relatively balanced."
+  },
+  {
+    "question_no": 26,
+    "question_text": "Accuracy is misleading on imbalanced data because:",
+    "possible_answers": {
+      "A": "It over-weights the minority class",
+      "B": "A trivial majority-class classifier can achieve high accuracy while being useless",
+      "C": "It cannot be computed",
+      "D": "It always exceeds precision"
+    },
+    "correct_answer": "B",
+    "explanation": "If 99% of transactions are legitimate, predicting 'legitimate' every single time yields 99% accuracy but fails to catch any fraud."
+  },
+  {
+    "question_no": 27,
+    "question_text": "SMOTE addresses class imbalance by:",
+    "possible_answers": {
+      "A": "Dropping majority-class examples",
+      "B": "Generating synthetic minority-class examples by interpolating between neighbours",
+      "C": "Duplicating minority-class rows exactly",
+      "D": "Adjusting class weights in the loss function"
+    },
+    "correct_answer": "B",
+    "explanation": "Synthetic Minority Over-sampling Technique (SMOTE) draws lines between existing minority instances to mathematically simulate new, distinct data points."
+  },
+  {
+    "question_no": 28,
+    "question_text": "When applying SMOTE, the correct practice is to resample:",
+    "possible_answers": {
+      "A": "The entire dataset before splitting",
+      "B": "The training set only",
+      "C": "The test set only",
+      "D": "Both training and test sets"
+    },
+    "correct_answer": "B",
+    "explanation": "Resampling before the train/test split causes data leakage; the test set must remain unmanipulated to reflect true real-world distribution."
+  },
+  {
+    "question_no": 29,
+    "question_text": "Stratified k-fold cross-validation is preferred for imbalanced classification because:",
+    "possible_answers": {
+      "A": "It reduces computation time",
+      "B": "It preserves class proportions in each fold",
+      "C": "It guarantees equal fold sizes",
+      "D": "It uses bootstrap sampling"
+    },
+    "correct_answer": "B",
+    "explanation": "Stratification guarantees that rare classes aren't completely missed in a specific validation fold, providing a stable evaluation."
+  },
+  {
+    "question_no": 30,
+    "question_text": "Bagging ensembles reduce variance by:",
+    "possible_answers": {
+      "A": "Training models sequentially and correcting residuals",
+      "B": "Training models in parallel on bootstrap samples and averaging predictions",
+      "C": "Selecting the best single model",
+      "D": "Using weighted voting among different algorithms"
+    },
+    "correct_answer": "B",
+    "explanation": "Bootstrap Aggregation (Bagging) builds independent models on random subsets of data to smooth out noisy, overfitted decision boundaries."
+  },
+  {
+    "question_no": 31,
+    "question_text": "Gradient boosting reduces bias by:",
+    "possible_answers": {
+      "A": "Training models in parallel on bootstrap samples",
+      "B": "Training models sequentially, each fitting residuals of the previous",
+      "C": "Averaging predictions from many decision trees",
+      "D": "Using random feature subsets per tree"
+    },
+    "correct_answer": "B",
+    "explanation": "Boosting turns weak learners into strong learners by forcing each successive tree to correct the mathematical errors (residuals) of its predecessors."
+  },
+  {
+    "question_no": 32,
+    "question_text": "Random Forest is an example of:",
+    "possible_answers": {
+      "A": "Boosting",
+      "B": "Bagging",
+      "C": "Stacking",
+      "D": "Neural ensemble"
+    },
+    "correct_answer": "B",
+    "explanation": "Random Forest applies bagging (bootstrap aggregation) to a forest of decision trees, adding random feature selection at each node split."
+  },
+  {
+    "question_no": 33,
+    "question_text": "The distinction between a parameter and a hyperparameter is that:",
+    "possible_answers": {
+      "A": "Parameters are integers, hyperparameters are floats",
+      "B": "Parameters are learned from data during training; hyperparameters are set before training",
+      "C": "Parameters are hidden; hyperparameters are visible",
+      "D": "They are synonymous"
+    },
+    "correct_answer": "B",
+    "explanation": "Hyperparameters (like tree depth or learning rate) define the model architecture, while parameters (like regression coefficients) are the optimized weights."
+  },
+  {
+    "question_no": 34,
+    "question_text": "GridSearchCV with cv=5 and 12 hyperparameter combinations will fit the model how many times?",
+    "possible_answers": {
+      "A": "5",
+      "B": "12",
+      "C": "60",
+      "D": "17"
+    },
+    "correct_answer": "C",
+    "explanation": "Grid search is an exhaustive loop: 12 combinations mathematically run across 5 folds means exactly 60 individual model trainings (12 * 5 = 60)."
+  },
+  {
+    "question_no": 35,
+    "question_text": "The ROC curve plots:",
+    "possible_answers": {
+      "A": "Precision against Recall",
+      "B": "True Positive Rate against False Positive Rate across thresholds",
+      "C": "Accuracy against sample size",
+      "D": "Loss against epoch"
+    },
+    "correct_answer": "B",
+    "explanation": "The Receiver Operating Characteristic (ROC) curve evaluates classification performance at all possible prediction thresholds."
+  },
+  {
+    "question_no": 36,
+    "question_text": "An AUC of 0.5 indicates:",
+    "possible_answers": {
+      "A": "Perfect discrimination",
+      "B": "No discrimination — equivalent to random guessing",
+      "C": "Worse than random",
+      "D": "Statistical significance at α = 0.5"
+    },
+    "correct_answer": "B",
+    "explanation": "An Area Under the Curve (AUC) of 0.5 forms a diagonal line, meaning the model is functionally no better than flipping a coin."
+  },
+  {
+    "question_no": 37,
+    "question_text": "For highly imbalanced datasets, which curve is generally more informative than ROC?",
+    "possible_answers": {
+      "A": "Calibration curve",
+      "B": "Precision-Recall curve",
+      "C": "Learning curve",
+      "D": "Gain curve"
+    },
+    "correct_answer": "B",
+    "explanation": "ROC curves can be overly optimistic on imbalanced data; PR curves explicitly evaluate the minority class tradeoffs without being distorted by true negatives."
+  },
+  {
+    "question_no": 38,
+    "question_text": "Which library is commonly used to save a trained scikit-learn model to disk?",
+    "possible_answers": {
+      "A": "pickle or joblib",
+      "B": "csv",
+      "C": "requests",
+      "D": "matplotlib"
+    },
+    "correct_answer": "A",
+    "explanation": "Python's `pickle` and scikit-learn's optimized `joblib` libraries serialize complex model object structures into binary files for later deployment."
+  },
+  {
+    "question_no": 39,
+    "question_text": "Which of the following is an unsupervised learning task?",
+    "possible_answers": {
+      "A": "Predicting house prices from features",
+      "B": "Classifying emails as spam or not",
+      "C": "Grouping customers into segments without labelled groups",
+      "D": "Forecasting stock prices"
+    },
+    "correct_answer": "C",
+    "explanation": "Unsupervised learning extracts underlying structures and patterns from data that does not have predefined output labels or target variables."
+  },
+  {
+    "question_no": 40,
+    "question_text": "The k-means algorithm minimises:",
+    "possible_answers": {
+      "A": "The maximum distance between any two points",
+      "B": "The within-cluster sum of squared distances (inertia)",
+      "C": "The silhouette score",
+      "D": "The total variance of the data"
+    },
+    "correct_answer": "B",
+    "explanation": "K-means iteratively optimizes by tightening the distance of all data points to the center (centroid) of their respective assigned cluster."
+  },
+  {
+    "question_no": 41,
+    "question_text": "The four core steps of k-means in order are:",
+    "possible_answers": {
+      "A": "Initialise centroids → assign points → update centroids → repeat until convergence",
+      "B": "Assign points → choose k → compute distances → repeat",
+      "C": "Standardise → compute distances → update labels → stop",
+      "D": "Initialise → shuffle → resample → predict"
+    },
+    "correct_answer": "A",
+    "explanation": "These four steps form Lloyd's algorithm, systematically dragging the centroids toward the dense center of mass of the data subgroups."
+  },
+  {
+    "question_no": 42,
+    "question_text": "The elbow method helps choose:",
+    "possible_answers": {
+      "A": "The learning rate in gradient descent",
+      "B": "The value of k in k-means",
+      "C": "The number of principal components",
+      "D": "The regularisation parameter"
+    },
+    "correct_answer": "B",
+    "explanation": "Plotting inertia against 'k' reveals an elbow point, which represents the optimal tradeoff between tighter clusters and too many clusters."
+  },
+  {
+    "question_no": 43,
+    "question_text": "The silhouette score ranges from:",
+    "possible_answers": {
+      "A": "0 to 1, higher is better",
+      "B": "−1 to +1, higher is better",
+      "C": "0 to ∞, lower is better",
+      "D": "−∞ to +∞"
+    },
+    "correct_answer": "B",
+    "explanation": "A score near +1 means clear separation, 0 means overlapping clusters, and negative scores mean points are likely assigned to the wrong cluster."
+  },
+  {
+    "question_no": 44,
+    "question_text": "A silhouette score near 0 indicates:",
+    "possible_answers": {
+      "A": "A perfect clustering",
+      "B": "The point lies on the boundary between two clusters",
+      "C": "The point is an outlier",
+      "D": "No clusters exist"
+    },
+    "correct_answer": "B",
+    "explanation": "A zero score implies the distance from the point to its own cluster is identical to the distance to the nearest neighboring cluster."
+  },
+  {
+    "question_no": 45,
+    "question_text": "Standardisation is essential before k-means because:",
+    "possible_answers": {
+      "A": "k-means requires positive values",
+      "B": "k-means uses Euclidean distance, which is dominated by features with larger scales",
+      "C": "It increases convergence speed",
+      "D": "It makes the output easier to plot"
+    },
+    "correct_answer": "B",
+    "explanation": "If one feature is measured in millions and another in decimals, the larger numbers will completely overpower the distance calculations."
+  },
+  {
+    "question_no": 46,
+    "question_text": "The first principal component in PCA is the direction that:",
+    "possible_answers": {
+      "A": "Minimises reconstruction error across all features",
+      "B": "Captures the maximum variance in the data",
+      "C": "Is orthogonal to the response variable",
+      "D": "Maximises feature correlation"
+    },
+    "correct_answer": "B",
+    "explanation": "Principal Component Analysis rotates axes to find the exact line through the multidimensional space where data points spread out the furthest."
+  },
+  {
+    "question_no": 47,
+    "question_text": "Principal components are, by construction:",
+    "possible_answers": {
+      "A": "Correlated with each other",
+      "B": "Orthogonal (uncorrelated) to each other",
+      "C": "Always interpretable domain features",
+      "D": "Identical to the original features"
+    },
+    "correct_answer": "B",
+    "explanation": "Each new dimension extracted in PCA is mathematically forced to be perfectly perpendicular (orthogonal) to the ones before it, eliminating correlation."
+  },
+  {
+    "question_no": 48,
+    "question_text": "The explained variance ratio in PCA tells you:",
+    "possible_answers": {
+      "A": "The correlation between PCs",
+      "B": "The fraction of total variance captured by each PC",
+      "C": "The number of clusters",
+      "D": "The feature importance for classification"
+    },
+    "correct_answer": "B",
+    "explanation": "It quantifies what percentage of the total original dataset's information is retained inside each new compressed principal component."
+  },
+  {
+    "question_no": 49,
+    "question_text": "A scree plot is used to:",
+    "possible_answers": {
+      "A": "Detect outliers",
+      "B": "Decide how many principal components to retain",
+      "C": "Visualise cluster boundaries",
+      "D": "Test for normality"
+    },
+    "correct_answer": "B",
+    "explanation": "By charting the explained variance of each component, a scree plot visually identifies where adding more dimensions stops being useful."
+  },
+  {
+    "question_no": 50,
+    "question_text": "The curse of dimensionality refers to:",
+    "possible_answers": {
+      "A": "Too many labels in a dataset",
+      "B": "The fact that distance-based methods degrade and data becomes sparse as feature count grows",
+      "C": "Overfitting on small datasets",
+      "D": "Computational cost of deep learning"
+    },
+    "correct_answer": "B",
+    "explanation": "In high-dimensional spaces, the concept of volume expands exponentially, causing all data points to become roughly equidistant and rendering distance metrics useless."
+  },
+  {
+    "question_no": 51,
+    "question_text": "Which test is appropriate for comparing proportions across two categorical variables in a contingency table?",
+    "possible_answers": {
+      "A": "t-test",
+      "B": "ANOVA",
+      "C": "Chi-square test of independence",
+      "D": "Pearson correlation"
+    },
+    "correct_answer": "C",
+    "explanation": "The Chi-square test is the standard statistical method to evaluate differences in categorical proportions against expected counts."
+  },
+  {
+    "question_no": 52,
+    "question_text": "When expected cell counts in a contingency table are below 5, the appropriate test is:",
+    "possible_answers": {
+      "A": "Chi-square",
+      "B": "ANOVA",
+      "C": "Fisher's exact test",
+      "D": "t-test"
+    },
+    "correct_answer": "C",
+    "explanation": "Chi-square fails on sparse tables; Fisher's calculates exact factorial probabilities, bypassing the need for approximation assumptions."
+  },
+  {
+    "question_no": 53,
+    "question_text": "The degrees of freedom for a chi-square test on a 3 × 4 contingency table are:",
+    "possible_answers": {
+      "A": "7",
+      "B": "12",
+      "C": "6",
+      "D": "11"
+    },
+    "correct_answer": "C",
+    "explanation": "Calculated as (Rows - 1) * (Columns - 1). Here, (3 - 1) * (4 - 1) = 2 * 3 = 6."
+  },
+  {
+    "question_no": 54,
+    "question_text": "The expected count in cell (i, j) of a contingency table under the null hypothesis of independence is:",
+    "possible_answers": {
+      "A": "(row total + column total) / 2",
+      "B": "(row total × column total) / grand total",
+      "C": "grand total / (rows × columns)",
+      "D": "row total × column total"
+    },
+    "correct_answer": "B",
+    "explanation": "If variables are truly independent, the expected probability of landing in a specific cell is the product of its marginal probabilities."
+  },
+  {
+    "question_no": 55,
+    "question_text": "In a permutation test, the p-value is estimated by:",
+    "possible_answers": {
+      "A": "The proportion of permutation test statistics as extreme or more extreme than the observed",
+      "B": "The mean of permutation test statistics",
+      "C": "The standard deviation of the permutations",
+      "D": "1 minus the confidence level"
+    },
+    "correct_answer": "A",
+    "explanation": "This empirically determines how often a randomly shuffled null-distribution produced a difference larger than the actual experiment did."
+  },
+  {
+    "question_no": 56,
+    "question_text": "The ETL acronym stands for:",
+    "possible_answers": {
+      "A": "Estimate, Test, Learn",
+      "B": "Extract, Transform, Load",
+      "C": "Encode, Tune, Log",
+      "D": "Evaluate, Train, Launch"
+    },
+    "correct_answer": "B",
+    "explanation": "ETL defines the core data engineering pipeline: extracting raw data, transforming it to be clean/useful, and loading it into a final database."
+  },
+  {
+    "question_no": 57,
+    "question_text": "An ETL job described as \"idempotent\" means:",
+    "possible_answers": {
+      "A": "It runs very quickly",
+      "B": "It can be re-executed without changing the result beyond the initial run",
+      "C": "It uses no external dependencies",
+      "D": "It produces identical output files each time"
+    },
+    "correct_answer": "B",
+    "explanation": "Idempotency prevents data duplication or corruption by ensuring multiple runs of the same script yield exactly the same database state."
+  },
+  {
+    "question_no": 58,
+    "question_text": "In a typical WQU lab workflow, experiment records would usually be stored in which database?",
+    "possible_answers": {
+      "A": "MySQL",
+      "B": "MongoDB",
+      "C": "Oracle",
+      "D": "DuckDB"
+    },
+    "correct_answer": "B",
+    "explanation": "WQU curriculums frequently use MongoDB because its NoSQL document structure excels at logging dynamic experiment configurations."
+  },
+  {
+    "question_no": 59,
+    "question_text": "A Type II error in an A/B test corresponds to:",
+    "possible_answers": {
+      "A": "Declaring a real effect when none exists",
+      "B": "Missing a real effect that does exist",
+      "C": "Miscoding the data",
+      "D": "Making the wrong chart"
+    },
+    "correct_answer": "B",
+    "explanation": "A Type II error is a false negative—your new website layout actually improved sales, but your test lacked the power to prove it."
+  },
+  {
+    "question_no": 60,
+    "question_text": "Power in an experiment equals:",
+    "possible_answers": {
+      "A": "α",
+      "B": "β",
+      "C": "1 − β",
+      "D": "1 − α"
+    },
+    "correct_answer": "C",
+    "explanation": "Where Beta (β) is the probability of a Type II error, statistical power is the inverse probability of successfully avoiding that error."
+  },
+  {
+    "question_no": 61,
+    "question_text": "In REST APIs, the HTTP verb used to retrieve a resource is:",
+    "possible_answers": {
+      "A": "POST",
+      "B": "GET",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "correct_answer": "B",
+    "explanation": "The GET method requests a representation of a specified resource without altering any server state."
+  },
+  {
+    "question_no": 62,
+    "question_text": "Which HTTP status code indicates \"resource not found\"?",
+    "possible_answers": {
+      "A": "200",
+      "B": "301",
+      "C": "404",
+      "D": "500"
+    },
+    "correct_answer": "C",
+    "explanation": "A 404 client error response code indicates that the server cannot find the requested URL endpoint or resource."
+  },
+  {
+    "question_no": 63,
+    "question_text": "An HTTP 5xx status code signals:",
+    "possible_answers": {
+      "A": "Client error",
+      "B": "Successful request",
+      "C": "Redirect",
+      "D": "Server error"
+    },
+    "correct_answer": "D",
+    "explanation": "The 5xx block of status codes indicates that the server failed to fulfill a request due to an internal server breakdown or misconfiguration."
+  },
+  {
+    "question_no": 64,
+    "question_text": "When modelling financial time series, returns are preferred over prices because:",
+    "possible_answers": {
+      "A": "Returns are easier to compute",
+      "B": "Prices are not typically stationary, whereas returns usually are",
+      "C": "Prices lack time-indexing",
+      "D": "Returns always have a normal distribution"
+    },
+    "correct_answer": "B",
+    "explanation": "Stock prices are random walks with trends (non-stationary). Calculating returns mathematically differences the series, satisfying machine learning model assumptions."
+  },
+  {
+    "question_no": 65,
+    "question_text": "The log return between two consecutive prices Pₜ and Pₜ₋₁ is:",
+    "possible_answers": {
+      "A": "Pₜ − Pₜ₋₁",
+      "B": "(Pₜ − Pₜ₋₁) / Pₜ₋₁",
+      "C": "ln(Pₜ / Pₜ₋₁)",
+      "D": "Pₜ / Pₜ₋₁"
+    },
+    "correct_answer": "C",
+    "explanation": "Logarithmic returns are heavily used in quantitative finance due to their time-additive properties and normalization of extreme skews."
+  },
+  {
+    "question_no": 66,
+    "question_text": "Volatility clustering is the empirical observation that:",
+    "possible_answers": {
+      "A": "Returns cluster around zero",
+      "B": "Periods of high volatility tend to be followed by high volatility, and low by low",
+      "C": "Volatility is always constant",
+      "D": "Volatility decreases over time"
+    },
+    "correct_answer": "B",
+    "explanation": "A universal stylized fact of financial markets: large price swings bunch together during panics, and small price changes group together during calm periods."
+  },
+  {
+    "question_no": 67,
+    "question_text": "Standard ARMA models are inadequate for many financial returns because:",
+    "possible_answers": {
+      "A": "They cannot model trend",
+      "B": "They assume constant variance (homoskedasticity)",
+      "C": "They require weekly data",
+      "D": "They cannot be fit in Python"
+    },
+    "correct_answer": "B",
+    "explanation": "Because financial markets exhibit volatility clustering, the core ARMA assumption of constant variance breaks down completely."
+  },
+  {
+    "question_no": 68,
+    "question_text": "The GARCH model models the:",
+    "possible_answers": {
+      "A": "Mean of returns",
+      "B": "Variance (volatility) of returns, conditional on past information",
+      "C": "Autocorrelation of prices",
+      "D": "Kurtosis of returns"
+    },
+    "correct_answer": "B",
+    "explanation": "Generalized Autoregressive Conditional Heteroskedasticity (GARCH) dynamically models future variance based on recent past variances and squared shocks."
+  },
+  {
+    "question_no": 69,
+    "question_text": "Which is the most commonly used GARCH specification in practice?",
+    "possible_answers": {
+      "A": "GARCH(0, 1)",
+      "B": "GARCH(1, 1)",
+      "C": "GARCH(2, 2)",
+      "D": "GARCH(p, p) with large p"
+    },
+    "correct_answer": "B",
+    "explanation": "The simplest specification, GARCH(1,1), involves just one lag of squared returns and one lag of variance, yet captures the vast majority of financial volatility clustering."
+  },
+  {
+    "question_no": 70,
+    "question_text": "Which Python library is commonly used to fit GARCH models?",
+    "possible_answers": {
+      "A": "arch",
+      "B": "statsmodels.garch",
+      "C": "sklearn.volatility",
+      "D": "scipy.garch"
+    },
+    "correct_answer": "A",
+    "explanation": "The 'arch' library (written by Kevin Sheppard) is the standard and most robust Python package for estimating volatility models."
+  }
+]
