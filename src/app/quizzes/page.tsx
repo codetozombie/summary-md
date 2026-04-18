@@ -5,12 +5,29 @@ export default function QuizzesPage() {
   const quizzes = getQuizzes();
 
   return (
-    <main className="p-4 sm:p-8 md:p-12 animate-fade-in-up">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-slate-900 mb-2">Practice Quizzes</h1>
-        <p className="text-slate-600 mb-8">Test your knowledge and track your progress across all topics.</p>
+    <main className="min-h-screen">
+      {/* Page Header */}
+      <div className="px-5 sm:px-8 py-8 border-b border-slate-200 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center gap-3 mb-1">
+            <div className="w-8 h-8 rounded-xl bg-emerald-600 flex items-center justify-center">
+              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Practice Quizzes</h1>
+          </div>
+          <p className="text-slate-500 text-sm mt-2 ml-11">
+            Test your knowledge and track your progress across all {quizzes.length} quizzes.
+          </p>
+        </div>
+      </div>
 
-        <QuizListClient quizzes={quizzes} />
+      <div className="px-5 sm:px-8 py-6">
+        <div className="max-w-3xl mx-auto animate-fade-in-up">
+          <QuizListClient quizzes={quizzes} />
+        </div>
       </div>
     </main>
   );
