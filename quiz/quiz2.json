@@ -1,0 +1,180 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "When is the t-distribution used instead of the normal distribution?",
+    "possible_answers": {
+      "A": "For large sample",
+      "B": "For known population variance",
+      "C": "For small samples or unknown population variance",
+      "D": "For discrete data"
+    },
+    "correct_answer": "C",
+    "explanation": "The t-distribution has heavier tails to account for the increased uncertainty when the sample size is small (n < 30) or the population standard deviation is unknown."
+  },
+  {
+    "question_no": 2,
+    "question_text": "The standard distribution is a normal distribution that has a:",
+    "possible_answers": {
+      "A": "σ=1 and μ=0",
+      "B": "σ=0 and μ=1",
+      "C": "σ=1 and μ=1",
+      "D": "σ=0 and μ=0"
+    },
+    "correct_answer": "A",
+    "explanation": "The standard normal distribution (Z-distribution) is defined by a mean (μ) of 0 and a standard deviation (σ) of 1."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What does a 95% confidence interval indicate?",
+    "possible_answers": {
+      "A": "There is a 95% probability the interval contains the sample mean.",
+      "B": "There is a 95% probability the interval contains the population mean.",
+      "C": "We are 95% confident that the interval contains the population mean.",
+      "D": "The interval always contains the population mean."
+    },
+    "correct_answer": "C",
+    "explanation": "95% confidence means that if we repeated the sampling process multiple times, 95% of the intervals generated would contain the true population mean."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Which statistical distribution is used to estimate departure from expectation?",
+    "possible_answers": {
+      "A": "Chi-square distribution",
+      "B": "ANOVA",
+      "C": "t-distribution",
+      "D": "F-distribution"
+    },
+    "correct_answer": "A",
+    "explanation": "The Chi-square test measures how much the observed data deviates from the expected data under a specific hypothesis."
+  },
+  {
+    "question_no": 5,
+    "question_text": "The method used to calculate probabilities in a normal distribution is:",
+    "possible_answers": {
+      "A": "Bootstrapping",
+      "B": "Standardization",
+      "C": "Sampling",
+      "D": "Regression"
+    },
+    "correct_answer": "B",
+    "explanation": "Standardization involves converting raw data points into Z-scores so that probabilities can be determined using a standard normal table."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Which of the following represents the correct formula for calculating a z-score?",
+    "possible_answers": {
+      "A": "z = (x - μ) / σ",
+      "B": "z = (μ - x) / σ",
+      "C": "z = σ / (x - μ)",
+      "D": "z = (x - σ) / μ"
+    },
+    "correct_answer": "A",
+    "explanation": "The Z-score measures how many standard deviations a point is from the mean."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Which of the following best describes data snooping?",
+    "possible_answers": {
+      "A": "The process of collecting large datasets from multiple sources",
+      "B": "Repeatedly using the same dataset for hypothesis testing or model selection, leading to biased results",
+      "C": "Applying statistical models only to training data",
+      "D": "Cleaning noisy data before statistical analysis"
+    },
+    "correct_answer": "B",
+    "explanation": "Data snooping occurs when a researcher tests many hypotheses on the same data until a significant result is found, increasing the risk of false positives."
+  },
+  {
+    "question_no": 8,
+    "question_text": "The square root of n rule in standard error implies that:",
+    "possible_answers": {
+      "A": "The standard error increases as sample size increases",
+      "B": "The standard error decreases proportionally to n",
+      "C": "The standard error decreases proportionally to √n",
+      "D": "The standard error is independent of sample size."
+    },
+    "correct_answer": "C",
+    "explanation": "The formula for Standard Error (SE) is σ / √n, meaning the error decreases at a rate proportional to the square root of the sample size."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Which statement best distinguishes standard deviation (SD) from standard error (SE)?",
+    "possible_answers": {
+      "A": "SD measures variability in the data, while SE measures variability of the sample mean",
+      "B": "SD measures variability of the sample mean, while SE measures variability in the data",
+      "C": "SD and SE measure the same thing",
+      "D": "SD is only used in classification problems, while SE is used in regression problems"
+    },
+    "correct_answer": "A",
+    "explanation": "Standard Deviation is a descriptive statistic about individual data points; Standard Error is an inferential statistic about the precision of the estimated mean."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Bootstrap samples are drawn:",
+    "possible_answers": {
+      "A": "Without replacement from the sample",
+      "B": "With replacement from the sample",
+      "C": "Without replacement from the population",
+      "D": "With replacement from the population"
+    },
+    "correct_answer": "B",
+    "explanation": "Bootstrapping involves taking random samples from the original dataset with replacement to estimate the distribution of a statistic."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Which of the following is NOT an example of a binomial experiment?",
+    "possible_answers": {
+      "A": "Flipping a coin 10 times and counting the number of heads",
+      "B": "Recording whether each website visitors clicks an ad",
+      "C": "Measuring the exact time (in seconds) it takes students to complete a quiz",
+      "D": "Checking 20 bulbs and counting how many are defective"
+    },
+    "correct_answer": "C",
+    "explanation": "A binomial experiment requires discrete outcomes (Success/Failure). Time is a continuous variable, so it cannot be modeled with a binomial distribution."
+  },
+  {
+    "question_no": 12,
+    "question_text": "The reason for which usually the sample (n-1) is used in calculation of variance instead of the population (n) is that:",
+    "possible_answers": {
+      "A": "The sample introduces a biased estimate in the variance calculation",
+      "B": "We want to make estimates about the sample based on the population",
+      "C": "The sample introduces an unbiased estimate in the variance calculation",
+      "D": "We want to make estimates about the population based on the sample"
+    },
+    "correct_answer": "C",
+    "explanation": "Using (n-1), known as Bessel's correction, ensures the sample variance is an unbiased estimator of the population variance."
+  },
+  {
+    "question_no": 13,
+    "question_text": "If a Q-Q plot does NOT form a straight line, what does it suggest?",
+    "possible_answers": {
+      "A": "The data is normally distributed",
+      "B": "The data is not normally distributed",
+      "C": "The mean is zero",
+      "D": "The variance is one"
+    },
+    "correct_answer": "B",
+    "explanation": "A Quantile-Quantile plot compares data to a normal distribution; deviations from a straight line indicate non-normality."
+  },
+  {
+    "question_no": 14,
+    "question_text": "Which of the following is a sampling technique?",
+    "possible_answers": {
+      "A": "Stratified sampling",
+      "B": "Randomized Control Study",
+      "C": "Internal Sampling",
+      "D": "Observation Sampling"
+    },
+    "correct_answer": "A",
+    "explanation": "Stratified sampling involves dividing the population into groups (strata) and sampling from each group to ensure representation."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Standard Deviation is sensitive to outliers.",
+    "possible_answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "explanation": "Because Standard Deviation involves squaring the distance of each point from the mean, extreme outliers have a disproportionately large impact on the result."
+  }
+]
