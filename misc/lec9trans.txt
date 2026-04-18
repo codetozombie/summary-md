@@ -1,0 +1,321 @@
+00:00:00
+We would like to proceed from where we ended the last time. And in so doing, we want to take a short step backward to restart again on interpreting the regression equation. Interpreting the regression equation. Okay. While trying to go deeper into this particular section, we try to lay emphasis on some few things for you. What that does scientists will do and what staticians also do with this same concept. Okay. Now, as mentioned earlier on, you and I as data scientists, the most important use for regression is mainly
+
+00:01:07
+for prediction. What are you predicting? We are predicting some dependent variable or the outcome variable. Okay. However, in some cases, we want to gain insight from the equation itself. For example, y = our mx + c. This is our regression equation. We want to also gain some understanding about the equation itself in terms of the relation that exist between the predictor variable say x and the outcome variable say y. Of course the mapping between X and Y is your f ofx which happens to be your regression line over here.
+
+00:02:03
+So here we want to try some means of trying to understand the equation and trying to interpret what they are. In doing so we introduce to you the concept of correlated correlated predictors. correlated predictors. Okay. Now in multiple regression the predictor variable are often correlated or your X you keep on saying X to represent your dependent variable. So your X variable are mostly correlated and you realize that if your input variables just as we saw in 311 if they are correlated then most likely your model is not going
+
+00:03:01
+to perform well for you. Unfortunately, for that reason, it is our responsibility to be able to identify these correlated variables and deal with them. And deal with them. Now, having a very high correlated predictors only make it difficult for interpretability. so difficult to interpret because you're not quite sure what is causing your prediction to do well or not to do well. You may also have some variables being negative correlated and you cannot really explain what is causing that dynamics in there. This is the reason
+
+00:03:48
+why you and I are responsible or are more interested in understanding this correlated variables so as to be able to deal with them accordingly. Okay. So that's why you should be concerned. So you need to actually understand these variables, find out what they are and then proceed from there accordingly. Sorry. Sorry. Okay. It is interesting to note that v variables being correlated is not the only issue we have. Oh, sorry. So the only issue we have when it comes to interpreting regression coefficients
+
+00:04:40
+remember in our previous meeting I explained to you that if you have your data standardized that's from 311 they are convinced that the coefficient really tells you the importance of the variable okay at this point I'm also telling you that if your variables are highly correlated It makes the coefficient difficult to interpret. And while saying so, I'm still repeating that having correlated variable is not the only issue to deal with when interpreting your variables. Okay. Now, what else do you and I want
+
+00:05:25
+to look at? When you have variables highly correlated then we are also prone to the issue of multi- colinearity colinearity that's an extreme case of correlated variables and this will result in multiolinearity and what is it it's nothing but A condition. A condition in which there is there is redundancy redundance among the predictor or the X the predictor variables. So again if two variables are highly correlated this simply means that one of them is redundant and so therefore it is our
+
+00:06:37
+responsibility to deal with that redundancy. Don't forget in 311 we explain to you that if variables are redundant it only cause your model to misbehave. Don't forget having more variables also creates issue of overfitting and getting to know that even all those variables that are a lot are even redundant. Can you imagine these are the issues that you have to pay attention to. So all we are saying is if are correlated then if you expect in your data. Okay. So how are this red introduced into your model into your
+
+00:07:30
+data is from the data that leads to the issue in the model cuz every variable is represented as a predictor. So how do this redundancy occur in the first place? one when you and I ended up including a given variable a given variable multiple times multiple times. Take for example which is a lot gender and sex. So we ask what's gender male or female. In some jurisdictions or environment we don't see what's gender. Instead we ask what's your sex? It becomes male again and female. I'm not quite
+
+00:08:32
+sure if you came across this humor in some years back. Maybe some of you shall have been around your GSS maybe at a time where there was a form during survey I think sensors sensors census data right and then as part of the instrument instrument simply means questionaire if you hear the word instrument from statistics point of view it simply means questionaire means questionaire so the questionnaire they wrote Instead of saying gender on the form, they wrote sex on the form. And they assumed that we all can read
+
+00:09:17
+and write. So they wrote sex over there and the person was writing six, people are writing seven, people are writing four over there. All because they took sex to be something different from gender. And it was ah what were people what were people writing over there? This led to the introduction of you harmonizing your data during the pilot stage to say sex and then colon put male over the a box then female under box. This will prevent the end user from typing 6 and4 over there. So now you know that sex here means
+
+00:10:03
+gender not how much sex you are having in a day and a week. Okay. So these are some of the bias that can be introduced in your conversation or your communication. Okay. So we proceed from there. So if you have your data gender and sex at the same time and they all male and female this can introduce redundancy in your work. Remember also I spoke about the issue of the binary dummies. The binary dumies dummy variables which you and I would have called the one hot encoding. Now anytime you are working with this date working
+
+00:11:01
+with this particular information you are supposed to create a degree of freedom of n minus one for yourself. If you have one attribute say the gender or the sex which gives us male and female they only represent one of us. If take for example skin tone fair light dark there are three of them you present only two of them and leave one out and I assume there once a bias them if you end up using all the three variables they also include into your work rather than see as well okay of course when it comes to decision
+
+00:11:47
+tree random forest and the rest or the AI systems we don't really care about that anyway we use everything because they are seen as features for us. Okay, good. Thirdly, if two variables even though they aren't the same but they are perfectly or near perfectly correlated. For example, I take bedroom no bathroom rather bathroom. Yeah, I think bathroom and then bedroom. In modern houses today, the bathrooms are found the bedroom as well. There is a strong correlation between these two guys.
+
+00:12:31
+If that comes out clearly, they have to deal with it as well. This can also give even though they are two different things, they're correlated. This can also increase interest redundancy in your data as well. talking. Now remember that multinearity over here is not a big deal when handling nonlinear nonlinear regression which is very important to note. This is only observed when it comes to linear models. linear models. Okay. Aside dealing with dancing which comes from correlation which includes the idea of multinearity.
+
+00:13:16
+The next thing you and I want to deal with is co-ounding variables co-ounding variables to also deal with. Now these are two opposite things you and I want to pay attention to. The idea of correlation and the idea of co-ounding sounds confounding whichever way. Okay. So if I say coounding remember that I am being silent on my N that's a confounding variable whichever way you want to pronounce it that's fine okay but I've heard these two pronunciations before so I'm using the two that's what
+
+00:14:10
+so it come correlation we are introducing When it comes to co-ounding, you are introducing omission. How then do I explain these two guys to you? Having gender and sex in your data set with the same information. So I never have male male because the same quaming here I'mma female female all because these two guys really are all for gender this introduce a high correlation for that reason you are hot you are redundant so we say an error of commission commission Okay, now let's go to let's go to say
+
+00:15:27
+what I can I use over here. Can I use it by here? House price and location. So as part of your printer variable, you only focus on the size of the facility, number of bedroom in the facility and then you forgot to include location. This is a very important parameter, sorry, important feature to help us predict our house more accurately. Unfortunately, you have removed it. This is what we call an error of omission. An error of omission. And so the validity of your model is affected which means a six-bedroom
+
+00:16:36
+apartment in somewhere people always use Nema to do some to explain some of these things. If you are there, forgive me for that. So, a place in Nema and a place in Islong and you are saying that whichever way the price is 10,000 a month like really. So, you omitting location has caused a very big harm to your model. So, we say this a confounding variable. A confounding variable. Okay. So if you end up omitting this relevant variable then you also end up misinterpreting your coefficient as well. These are
+
+00:17:26
+things to pay attention to. The argument always is about how do you know how do you know that this is a confounding variable? That's the biggest question people always ask when it comes to commission for example. How do you correlated? You just compute your piercing correlation and continue from there. You are done. If the value is so huge close to one or negative one, so be it. You can just discard it and proceed. But I've taken something out. How do I know that the thing I'm taking out is really
+
+00:17:59
+important. This is why those who do AI in health, I always tell them, have you consulted their medical doctor to find out why they think this indicator is extremely important to them? To conclude. So don't just sit in your office space and assume that because AI says it's not important, you take it out. You need to have a real interaction with people to be able to find out. And then you have to also explain to them why you think that variable do not really matter. Maybe because it takes so much effort,
+
+00:18:43
+so much resource, so much time to compute. However, that same variable is actually a commission to another variable. So based on that you can say let's ask take it out but after taking everything out you now go and ask them this what I'm getting they will now say oh we can't even ignore for example medication for medication for under five toddlers your weight your height contribute to how much dosage to be given to you you don't just give but once become an adult I think 12 years 12
+
+00:19:30
+years plus they don't really care what has been given to you even though some even though some illness demand those dosage but it's not really a big deal as compared to kids as compared to kids these are things you need to pay attention to so the medic will say you cannot neglect the age of the from it that becomes a confounding variable to pay attention to. So usually is by experience is by the domain in which you're working in to be able to conclude if really a variable is confounding or not.
+
+00:20:13
+Okay. We then proceed to look at a very important thing which is interaction. interaction and main effect. Remember I spoke about this in 311 along a line where I gave you I taught this thing under under lasso under lasso where we realized that some variables were irrelevant and then if you take them out it affect other variables as well. But you bring them back even though they are not so strong together they give a high predicting power. Which means those two variables they interact because they interact they give you a
+
+00:21:12
+much stronger power but independently they are seen as though they are irrelevant to your work. This normally happens in our daily life consciously or unconsciously. I've always said to people all the time, I have so many friends, but I don't have friends. Very ambiguous, right? So, anyone who can talk to me, who is free to speak to me, who doesn't fear getting close to me is my friend. It ends there. Okay. Now those who I work with daily are the people I consider the friends right now. They all can't give you what
+
+00:22:05
+you want but you can't take them out from the circle either. They will not make you prosper. They will not make you win a jackpot. They will not make you get the best day. you not make you get like everything about you cannot come through them. However, if you take them from your circle too, you could feel like they empty. Why? Why? Because you realize that oh there are some places that if you really want to go without them you cannot go there. Take for example that guy is a dispatch rider and he can speed so for some few
+
+00:22:55
+seconds and get there get a things done and come back to you again. They not people use daily they don't come to your daily life however at a very important state without them you can't continue. So you can't throw them away but they're not really really really part of you. That becomes an interaction. The argument is how do you know what to interact with you? So let us help with the two interactions and main effect. The main effect, the main effect ideally is the same as the predator variables.
+
+00:23:47
+Okay. So you hear of main effect all we are talking about is PR variables but not just PR variables they have other conditions to pay attention to. Remember we told you earlier on that you only pay attention to the most relevant variables in your work in your work. So they are really the main effect. Okay I continue. So go ahead. Hello, bro. So, uh, I'm listening. I'm listening. If you're talking, I can't hear you. Can anyone else hear me? I'm the one Anyway, apologies. I just
+
+00:24:57
+have to speak and then my network just flipped. Okay, go ahead. Can you hear me? Can you hear me? >> Yes, we can hear you now. >> Yeah. Sorry, I just had a flip in in my network. So, go ahead with your question. >> Yeah. So, I was asking provided maybe we are trying to compare housing prices for instance if we should choose Acra as a whole the whole of Ara that may be a scope that maybe someone is a comparative to a place like maybe or reg may be more expensive in terms of the the relativity. However, there may
+
+00:25:46
+be places within Ara that may cost very less compared to a place in ho or something. So having that even though when think about them as variables they may be they may have a strong correlation but I mean thinking of it as the very specific location within Ara could also influence it. Even though if we should took we should take out is legon out as a location that may have that that may have an impact but not as compared to when we take a shan out of it. Can we make that analogy? >> Well, so again it depends on what your
+
+00:26:25
+objectives are. What do you want to measure? The data at hand determines what you want to do based on your experience. So if you want to go regional level, it depends on what you want to measure. >> Yes. >> You want to go within the region? Again, depends what you want to measure. >> Okay. >> Are you okay? So regional level, which town in H is comparable to Ara? regional level which part of Tak is comparable to Isl but globally one may say that Ara is more expensive to live than
+
+00:27:22
+are you okay can you hear me oh this twig. I'm not quite sure why I'm struggling right now, but anyway, if it goes off a gas access point and then use another network, but did you hear earlier on? >> Yes. So you were saying depending on which town in H can be compared to a town in Ara you making that >> okay that's fine right however then the thing went off however on a global level everyone can attest to the fact that living in Ara here is much expensive than are you okay that's what you all will
+
+00:28:21
+say >> yes generalization yeah >> exactly Right. But for all you know, there's a point in Ara here that you can leave and it be cheaper than living in H. So again, it depends what you want to calibrate. So you pick the whole region they can conclude that from I'm told just last two days talking to a friend in Kumasi has kumasi now. So it's becoming like a I was like ah what's this response then? So now the traffic in Kumasi is now becoming terrible in Kumasia becoming so much terrible. I
+
+00:29:03
+was like oh really since when so these are some of the things that people are experiencing over there now. >> Okay. Okay. Sir. So lastly, so should should I take maybe bread, butter and tea? Should you should you take tea with bread alone? Should you take tea with bread alone? You will you have some effect. However, if you should add butter to that bread, you have a different effect. But if you just take the butter alone, you will not have much action. Can that be the case? >> That will be kind of interruption.
+
+00:29:41
+>> The interaction. Okay. >> Right. Interruption. And the bread, butter and tea are the main effects. >> The main effects. >> Yeah. But the argument here is can't I take bread and tea alone without butter? I could. >> Yes, you you can. Yeah, you can. Yes. >> But I can't eat I can't eat butter and tea alone. >> Yes. >> Are you okay? But I can take tea alone. I can't eat butter alone either. >> Yes, please. >> But argument is is that interaction
+
+00:30:13
+strong or not? That's why it's always difficult to conclude on what interacts. >> Okay. >> Without prior knowledge or experience in the domain. >> All right. >> Because you and I have eaten butter, butter, bread and tea, we can conclude that okay, you will not see someone eating bread and tea and say he's poor, right? >> Yes. >> But you can see someone eating only tea and say the person is poor. Maybe he doesn't eat bread but by virtue of our por knowledge we say the person
+
+00:30:47
+is poor not to eat bread with tea right those who dip their bread in tea and eat and those who eat the tea together whichever is the same food >> when you see someone dipping the bread in the tea you say it's was from a village it's from a village whichever way the interaction is the But prior knowledge tells you that that interaction is not a good interaction. >> Do you get it? >> Exactly. Which is why we need the subject matter expecting. >> Exactly. Exactly. >> Okay. So this question you've asked have
+
+00:31:34
+indirectly resolved what I want to say about the interaction the bread butter and tea they are the main effect now those main effect the argument here is an assumption was made >> please your slide is blank I don't know if >> could be the work. >> I'm not quite sure. Let me stop sharing and share. Can you all see the T is can you also see or you also see black? >> No, it's blank. >> Okay. >> Okay. Let me stop and then red. >> Okay. If they should go off again to change my
+
+00:32:23
+access point doesn't make sense. Can you see now? >> Yes. >> Okay. Thank you. Okay. So, you continue. So as I was speaking earlier on there's bread butter in this scenario are the main effect or the predictor variable which correspond to we predicting taste or we predicting maybe satisfaction whichever way as our output variable depend what you want to achieve. People take this together to be satisfied for some people to is a taste. It tastes good to add butter to it. Sounds okay.
+
+00:33:13
+Whichever way is the new trend I'm full it ends there. So there is an assumption that you've made. And what's the assumption? The assumption is that your predictor. Your predictor and your response are independent. are independent. If that is what you want to say, it is the assumption they can conclude that indeed these are the main effects. Unfortunately, this is not always the case. It's not always the case because there could be some interaction between some of the variables and we have interaction also means that
+
+00:34:04
+we are not independent. For that reason, it's up to us to find out what are those variables which are not independent and then deal with them accordingly. Okay. So when it comes to Python R there are some base models you can leverage on and they ask the Python code or the R code to figure out what are some of the interactions they can look into and proceed from there. However, I always suggest to look into experience to be able to conclude on which of the predictor variables are independent for that phase they
+
+00:34:51
+interact. That's what I always suggest. There are other ways to find out what the interactions are. We can also go by penalized regression which I've already explained to you earlier on. The penalized regression can be used to figure out which of the variables are dependent and independent. In fact, I even mentioned this guide to you about lasso that led to this conversation. We can also use a stepwise selection which I also explained to you in our last meeting. If I add you, even though your your improvement is
+
+00:35:39
+marginal, collectively when I take you out, I will go down. When I add you, there's a small improvement, I'll proceed from there. But I will always go in for proud knowledge. Proud knowledge and proceed from there as well. That's something to pay attention to in the first part of your discussion. So this bring us to the end of interacting interpreting our coefficient or our regression model. We'll now look at how to diagnose our regression model. How to diagnose our regression model? As
+
+00:36:22
+I said earlier on, unless you cannot meet to have time to get your work done to a very high level. So we are going full term today as you are going all the way to 7:30. So let's get ourself ready. Okay. to regression diagnostics diagnostics. Okay. In the context of research when it comes to explain modeling just as we saw in our previous note right where we want to understand the model itself and not just the predictions given to us. Then we have to take various steps apart from the metric just to be able to understand whether
+
+00:37:25
+the model is doing something good for us or not. So how well does your model fit your data? That's the most common question that you and I will ask. How well does my model? And it's a question you've been asking from 311 till now. Do my model fit my data? How well? Okay. To be able to answer this question, we realize that again from 311, we make use of the analysis the analysis of your residual. What's this moment? Okay. Yeah, that's fine. of your residual residuals. Okay. And you and I realize that the word
+
+00:38:26
+residual takes us into error from the ML point of view end up saying our loss whichever way. Okay. So we proceed from there. Now in as much as we can analyze our residual to be able to measure how well our model fit. Don't forget during those days in our class we had a line like this with sample. Okay. So I've changed the the network. Now let's hold that one. get stable. I'm not sure what's happened today. I see my screen. Can my screen be seen? >> Yes, please. >> Okay, thank you. So, I talking about
+
+00:39:34
+residual which translates to error. You and I will say loss whichever way and I explain to you graphically this way where you have a regression line with some point over here it will measure distance from the point to the line that serve as a residual that's what remember that this step do not directly address the accuracy of your model it doesn't you still have to go ahead and then figure out which parameters are useful in trying to build a very good model. However, they provide useful insight in
+
+00:40:15
+how to set out your predictive environment. That's we do what we do. Having this will not improve your model. No, but having this will tell you how well your model is behaving or not and proceed from there as well. If that's the case, then what are the things you want to pay attention to? Okay, remember in your 311 class I spoke about having Bill Gates in your community and for that reason you are claiming that everyone there is rich but unfortunately the existence of Bates in your community
+
+00:40:57
+is an outlier. Right? So the first thing you and I want to deal with is the outliers that the first thing and I would like to deal with. Okay. And outliers we all know for sure that they are nothing but the Can you still hear me? Yes, please. >> Yeah, I thought I went off. Sorry. Yeah. Okay. So, this outliers are also known as extreme value. The extreme value. Okay. You all know extreme values are distance away from the distance away from the observed. Oh, observed observed. Okay. So, there must be a way to be able to
+
+00:42:19
+address outliers. Remember in our early part of our class where we're talking about the data itself, we spoke about the issue of location estimates, location and variability estimates. If you remember those days where by location we spoke about the mean and we spoke about the standard deviation or the variance. Okay. Based on this information you able to tell whether you are an outlier or not. Remember an outlier can cause a problem to your regression model for that reason. You must find ways to address
+
+00:43:06
+them either taking them out or trying to give them lesser weight and proceed from there as well. Okay. Now, how do you and I want to examine this outliers under the diagnostics? That's where we make use of our traditional knowledge of residuals or error. At this point we are more concerned about the standardized error. Standardized residual or error. One may ask how is this defined? You know the residual is an error. If you are an error, there's a difference between the original and the predicted
+
+00:43:58
+or the actual and the predicted. But why standardized? That mean divide by the standard error. So the residual the residual over the standard error or the residual will give us the standardized residual. These are the things you use to be able to examine the presence of an outlier in your model. Don't forget presence will create an issue for your final model. Unfortunately, there's no theory from statistics point of view to help us separate outliers from nonoutliers. In as much as there's no theory to help
+
+00:44:51
+us do that, there's a rule of thumb to find out whether you are an outlier or not. And that's what you and I want to pay attention to. We came across that in our previous class. the use of the box plot. When I talk about visualization, I took you through this as well. So the box plot and the box plot I gave you a diagram like this. The middle being your median. They have some things over here being the max, the mean, the first quarter, the third quarter. Okay, here we can the interquartile
+
+00:45:40
+range the interquartile range if you remember that thing. Okay, and you realize that when you plot the box plot to your data there are some points over here all those guys forms the outlier. So this is of knowledge and I told you that in R this is computed oh what is this? This computed as 1.5 of your IQR 1.5 your IQR below and above. So from this point and from that point if you find yourself outside of that and below of this then become a member of the outliers to be looked into and stripped off. This have to do the data
+
+00:46:35
+itself. So fish them out and proceed. This is why data cleaning becomes important to proceed from there. Again this is about the data not about the measurement not about when I say measurement here I'm refer to attribute attribute but instead what we are collecting for the attribute is the thing causing the model to misbehave. Okay. And realize that when you take them out, your model tends to behave differently as well. And most often it's important to take them out to be able to understand the best case scenario. How
+
+00:47:21
+are we living? It's like saying that oh everyone in Ghana is rich. Well, maybe it is true, maybe not. But on a larger scale, is that true? Most often not. Which then implies there are some few people in that enclave creating us or causing us to conclude on what we see. I've always wondered or been wondering all the time from the World Bankification about what who we are as Ghanaians. I try so hard to appreciate it especially when they compare us to Ethiopia. These are my personal take anyway.
+
+00:48:16
+almost all African countries you want to go to, you don't go through Ethiopia, you can't get there. Ethiopians have all the airlines and all the other things you can think of. And yes, economically Ghana is seen higher than Ethopia. And remember that anytime you are being rated higher, your cost of living becomes higher. to hear people complain when they come back to Ghana that it's so expensive to live in Ara or so expensive to live in Ghana or and again we have been placed on the low middle income
+
+00:49:00
+whereas Ethopia are being placed on a low income and so their taxes their survival their processes their import certainly will be more moderate as compared to you and I in Ghana year as to what indicators were used to conclude I can't really tell or conclude on that you can read more into it as to what really caused us to be on this higher belt when you and I internally feels like survivor is not really surviving Anyway, so these are the things you want to pay attention to as you begin to understand
+
+00:49:47
+some of these things from data point of view and you can also critique going forward why this should happen or why that must happen. Okay. After observing the issue of outliers, you can take out the next thing and I will talk about is influential values which we call the leverage the influential influential values. Okay. Now these are nothing but values. values whose absence whose absence would cause a significant drop or change if you say that way in your regression model in your model. When that happens, we see that it is an
+
+00:50:51
+influential value. These are important to identify in your model as well and then take them out. Okay. Now, usually for me, I always say that there's no real distinction between influential values and outlier, but there's a thin line between what they are. Outliers usually usually are caused by errors in measurement usually. But influential variables are not necessarily errors. Right? So you may classify some of the outliers as influential variables. So technically the biggest scenario could be called an influential
+
+00:51:50
+value. Anyway, Leo, so before I continue, go ahead. Yes, sir. So, you made a point. You said there's no clear distinction between out and the second word you mentioned your line broke. I don't know. I didn't hear influential value. >> Okay. And uh we said and you also made you said when there are values whose absence can change the model >> right >> however and you said we have to locate them and then remove them. The question is um couldn't there be some influential
+
+00:52:32
+values that are um very significant to the the the models improvement in a way. >> Right. Right. So, >> so how do we know when to >> Thank you. Again, experience comes in clearly. All outliers traditionally might be removed. No ways about that. But it's up to you to really validate if they all really outliers and not influential values because they may also go beyond a scale. And I'm saying that the biggest scenario may not necessarily be an outlier but rather an influential value.
+
+00:53:22
+Right? Now take for example the presence of financial strength is being placed over here and then one is here. Without this guy, I'm end up seeing my model looks like this. I may with this guy because I have to fit that data, I'm end up becoming like this. The argument is by experience, do we not see and feel that our data really looks more like this than like this? Exploratory exploratory. So even though this guy seems to be an outlier far off, his presence is useful to be added. Then you proceed from
+
+00:54:18
+there. So again visualize your data to be able to distinguish between what must be kept and what must really be thrown out. Does it make sense now? Okay. >> Yes. Yes. Right. So, contest matters a lot. >> Yeah. That's very important. That's very important. Right. Mhm. So, you proceed from there. Okay. Now, there are several metric. Hey, which was on my board. Disable that one. Okay, there are several metrics that you and I can use to identify leverage where lem means influential values.
+
+00:55:14
+Okay, now the common metric that you and I want to use is called the heat value. The hearts value the hearts value. But I'll show you a visual approach that people normally will use as compared to this. And that one captures all of this together. The hard value and the hard value is defined as 2 * p + 1 over n as usual. Now I know what p and n stands for the variables and observation. The variable and observation. Okay. So this is actually a threshold value. If your value is above this threshold
+
+00:56:00
+value, they are considered a leverage or an influential value that they use or the heart value. This is the heart value. Another one which is very common to most of us from the stars class is called the cooks the cooks distance. the cook distance and again the threshold for measuring that is 4 / n minus p minus one and the rule of thumb usually we use in the industry is the value or the distance is more than 0 I think this 08 or 8 I'll check again if it's beyond 0.8 eight that we normally use. But this is
+
+00:56:45
+the formula for doing that. Okay. The wider the wider the distance the high influential you'll be. So higher values indicate higher leverage. Higher leverage. Okay. To make things easier for everyone to observe pictorially and visually, we use the bubble plot. So indirectly you're now beginning to feel the relevance of the visualization we did earlier on earlier on the plots. So bigger bubbles of course will give us higher leverage higher leverage okay so I'm saying that okay is 0.08
+
+00:57:34
+rather not 0.8 thank you 0.08 08. If the distance, your cook distance is more than this, if this value is more than this threshold, then it's considered a leverage or influential value. These are things you want to pay attention to. So the bubble plot will help you observe that as well. Remember in some books the world plot is being contextualized into influential plots or the influence plots whichever way. So again what you read determines what you see and don't be confused with the use of these two
+
+00:58:19
+things as well. Okay. So you proceed from there. There's one more thing you and I again want to pay attention to. After understanding the effect of influential values, after understanding the effect of outliers, we also want to understand the effect of hetroscadacity. A very common word from the stars people as well. Heterero cadacity. So the word should mean many right scasticity against The non normality which is not you should know by now. Non-normality and the issue of correlated error error.
+
+00:59:44
+The next thing to pay attention to or to observe very important to usually the stars guys will always pay attention to distribution distribution I say the stars guy will pay attention most of I'm saying that we are data scientists we don't really pay so much attention to that if you have huge data Okay, the distribution of our error or remember again that before data science came into being stars were there. We have less computing resource and for that matter we need to do a lot of inference from the sample to
+
+01:00:35
+population. For that reason they must we must have rigorous mathematics to be able to support our claim of our population. But today we have enough computing power to be able to leverage the data itself and then get what we want to see and proceed from there as well as compared to we still depending heavily on statistics. These are things you may want to pay attention to. Okay. So they will pay attention to the distribution of the residual and then proceed from there as well. Okay. Most often in doing so
+
+01:01:22
+the focus have been proven that the ordinary square method are unbiased. are unbiased. In most cases, it happens to be or to produce an optimal an optimal estimate for us. So why then do we worry so much then? Right? Why do so much then? Okay. But again as I said earlier on in the advent of data you as scientists do not really need this distribution to be able to conclude the performance of your model. So not so much concern about them. However we also need them for the purpose of trying to validate formal
+
+01:02:27
+statistics and proceed from there as well. That's when you want to pay attention to that. You want to be able to prove for yourself there are some assumptions you've made. There are some hypothesis you've derived and you want to make a formal inference statistically on that then this becomes very important to to pay attention to as well. But if all you need is whether the prediction will work or not, then we don't really focus on that as well because the intuition of that model is
+
+01:03:09
+subject to the data. Secondly, they also want to pay attention to the distribution or the error must be normal. If your error is normal distributed then again we say that your model is complete is complete. But if your error term or residual is not normally distributed then it simply means that your model probably is lacking something important. lacking some relevance and the so-called something is the predictor. This can probably intro this can probably tell you that it could be some confounding variable to pay attention to
+
+01:04:12
+to go look out for them and proceed from there as well. Okay. So we see that for a formal inference by quantifying the inference by formal should tell you that you want to go more theoretical. So for a formal inference to be fully valid to fully valid then we expect that the residuals the residuals should be normally distributed normally distributed. Okay. Aside that they must have the same variance. The same variance. This means that if they have different variance they are entering into the hetroscal the
+
+01:05:17
+hetroscarity the same variance and finally the error must be independent. If these three things are observed then you and I can conclude that your inference which is the model the output model the final model is valid is valid. These are ways to test to confirm if whatever you've obtained as a model. Maybe in the field they've asked you how do you conclude that why are you so sure so confident that the model is going to work. They can show them the three tests you went through to be able to confirm
+
+01:06:02
+that truly this what is going to happen. Okay. So we proceed from there as well. Now one area where this may be of concern to data scientists that distribution. Why should we care? All these we don't really care about it. But at what point should we care? We really care about our distribution if we want to compute the confidence interval. And here the interval is on the predicted values that the output predictions not not on the coefficients that's where distribution becomes more relevant you and I to pay attention to
+
+01:06:54
+hence we say that hetero heterero scasticity is nothing but the lack of a constant residual. A constant recidual variance I mention to you same variance conidual variance at some portion of the range. So if you have a constant variance then you're convinced that there is no heteroscalastine someone. Okay. Now what does it mean to say there's no constant residual variance? Take your range for example to be this. Then realize that at this part of your model or of your error of your error and
+
+01:08:04
+this part of error for the error they have different variance being observed in that case we see this hetastic. So take note of that for us as well. Most often we want to visualize our data or our error data to be able to convince oursel indeed there's actually an issue to deal with with your model and you see most in most books a funnel being created to represent the notation or the notion I've explained to you here. Okay. Now, why should you care about hetroscapacity? Why should you care
+
+01:09:01
+about this guy in the first place? What control do we have on this data scientist? Thank you. As explained earlier to you because you are going to have like very huge data to deal with these are not things you're going to be prone to going to be prone to. So however, however, if truly you're observing this in your data, they need to take control of your data either by triming them off and replacing them with other things or manipulating the value to fall in line with what you want to achieve.
+
+01:09:48
+That's what control can have over it. Okay. But how can you also observe this as well? Why should they care about this effect? The issue is that the prediction error you're going to be getting, your prediction error. Thank you. As I've mentioned to you earlier on, we have taken some data and the data I'm asking you for an age and this data is about the youth and the data that I'm putting in for a youth for age is 65 years. If you cap, if indeed is observed and you cap that data to 50
+
+01:10:48
+years, have you caused integrity problem or not? Have you >> please come again? >> I'm picking data about youth. I went out there to actually capture data about youth. when I'm analyzing I sub5 at the age of that person in it. >> Okay. >> Will I have caused integrity problem by reversing 20 by reversing maybe 65 or 62 to 26? >> No. No, please. No. >> Exactly. So always understand that whatever we are doing you need to always add the base knowledge to make it work.
+
+01:11:50
+>> Yes sir. >> Right. Uhhuh. So for that's why at the end of the day this whole career of data science finds itself in all disciplines all domain but you cannot work in isolation. Unfortunately, you need people to help you understand, especially if you have to go back to to to the field for the same data. It's cost. It's money. You can't do it again. You can't do it again. So, you have to now be careful what you do and still proceed from there as well. Okay? Remember that once you have very
+
+01:12:33
+few data to work with, your focus will have to move away from data science into statistics and stay there. I prefer to go that route rather than doing the documentation and trying to understand my environment. And don't forget in our in our earlier class of bootstrap we told you that bootstrap can help you understand your population only if the data you're using itself is valid only if because it does not solve the data problem for you. It is an error that error will stay with you and end up increasing the error in
+
+01:13:23
+your data. as well. So you move away from science and go theoretical get the work done and proceed from there. Okay. So you proceed from there. So why do you care about hetroine? As mentioned earlier on, we have to care because it indicates that your prediction error differs from differs from or differs for different ranges different ranges of the predicted value. And this may suggest to you that your model your model is incomplete. That's why you have to care. That's how to care. And what makes your
+
+01:14:44
+model complete? I've already explained them to you here. those three things you go back there and ask yourself what can you do to it to control it. These are things you need to pay attention to to be able to resolve some of those issues and continue from there. This is where again the idea of having your your power value to be able to estimate your minimum sample get your sample size is very critical is very critical. So take note of that for us. Okay. Some prefer to use distribution histogram to be able to appreciate
+
+01:15:35
+whether our errors are skewed or not. If they are skewed, then again you have a fair idea that something is wrong with the model to pay attention to as well. Okay. The other things you also want to check out for apart from the hetroscarity which is whether your errors themselves are also independent. Are the error themselves also independent? These are very key things to pay attention to as well especially when dealing with time series data as well. to do. So there are some few things you may want to compute and from the note
+
+01:16:28
+that you have which I prepared my notes from. One of them will be to measure the debin the debon wing statistics and this is used to detect if there's any significant significant autocorrelation and we explain to you all these things in the early part of the data level in the regression. Again, it's used to detect if there's a significant autocorrelation in your regression. Okay. Now if I compute this and I realize that my error my error are correlated correlated then the information I have can be
+
+01:17:34
+useful to me when performing short-term predictions. certain predictions. Don't forget the purpose of your regression in our context for prediction. That extrapolation, if you want to extrapolate how far in the future can you go, you check your error. Your error tells you that okay, they're correlated, then you can do some short-term prediction for yourself, some few days, some few hours away from you and proceed from there. Don't go longterm because you failure. it will fail you. These are the
+
+01:18:13
+relevance of we finding out whether our errors are independent or not. Okay. Like you always will ask if your regression violates the assumption for distribution should you and I care. As mentioned earlier on the interest is primarily for prediction. How accurate are we or how bad are we? For that reason, our main focus should only be on we reviewing some effect of heteroscality on our data or on our model. Just review them, figure it out whether something wrong or not. If model is complete or not. If not, can you get
+
+01:19:11
+some more data to be able to improve upon it? If so, you fix it and it continue from there as well. It ends there. But you going to create the formal statistics to compute the f the p value statistics and and so and so forth is not really a priority when it comes to some of these things. So note what we need and proceed from there. But again, if there's no data, our conversation will change. Our conversation will change. These are things you may want to pay attention to for me. Okay. The last topic I want to consider,
+
+01:20:01
+I'm getting I'm getting excited myself. So I'll just add something small and then we may want to end it here. Okay. And continue next two weeks. Okay. At this point you and I have dealt with extensively the issues of linear models and what really can happen in there. But argument is not all predictor variables behave linearly. Not all predtor variables and their response variables have a linear relation. An example could be how you respond to drugs may not be linear. Right? If you are selling something on
+
+01:21:01
+the market, the demand and supply curve may not produce for your linear function as well. For that reason, there should be a way to move out of the linear space to a nonlinear space. And the first part that you and I want to pay attention to or put our focus on is the polomial poly nomial or and sorry the spline regression for polar regression I'm sure most of you will know about that from your start class but for the plan regression that's what we may end up spend some few time on it to create our knots and how to
+
+01:21:50
+actually fit our spline function. In the STS class, we'll be taught again how to actually model the spline regression itself, but we will not go to the extent of modeling the spline regression. So just leverage the tools and proceed from there as well. These are things you need to actually pay attention to and appreciate. Today people are messing up data science and data analytics. People go and draw bar charts by chart visualization and then they are saying they doing data science. They're not questioning anything. They
+
+01:22:36
+aren't any assumptions that they are trying to prove out. They're not answering why the data is behaving this way. and not being forced to add this way. They not so much interested in that. Yes. Still they claim they deriving insight and the insight derived from holy graphs that can't qualify to beta signs. Okay. So there are still some few things in statistics to be able to pay attention to and use them diligently. So my last word to you, if a linear function is y = mx + c with some epsylon attached to it, the
+
+01:23:26
+polar regression could be written as y = y = maybe a b not being your c + b 1 of x that's linear plus a nonlinear term x². squ. This of course in your calculus class we know that the shape is parabolic. Is parabolic and based on the sign the sign of your x². It could be this or it could be that. Again from your calculus class these are things you should be preview to as well. Okay. And once you know what they are, you are able to proceed from there as well. Okay. Now if that's the case, what this
+
+01:24:22
+explain? Now you know what a polinomial is. Don't forget it doesn't end on only x² and go as high as possible. So in calculus class they will say a polinomial is of the form y = a x1 a n x n + a n -1 x n -1 + a x + a1 x + a in the descending order or in the ascending order of a + a1 x + Plus a x n - one n - one sorry a n - one here not here plus a n x n incending order in these two guys are called the the standard form the standard form. Okay. So now you know what aia is. What are splines?
+
+01:25:30
+What are splines? So, I'll try to explain to you how splines look like. So, here we are. I have this thing to fit some data points here to fit. Right? One may say let us discretize this into smaller points over here. So that if I can do so they can easily connect one point or one knot to the other knot by a simple polinomial function. So instead of we going the entire let's assume that the graph really looks like this. We really cannot have one polomial representing this. Even if there is, we
+
+01:26:24
+don't even know what polinomial looks like this. However, I can do collection of polinomials over here. So over here for let's assume like this. I can assume a parabola over here and just come here. So all this space will give me a parabola. This could give me a line. this could give maybe or maybe a decay function and so and so forth. together I'll end up getting a collection of polinomial which actually explains my graph and that's more accurate than having a single polinomial
+
+01:27:03
+affecting the entire function to say that a poly regression Sorry a regression as I said earlier on is to capture only certain amount of curvature. Don't forget the curvature are all characteristics of polomials and curvature are seen on nonlinear functions. So the curvature this where what lead us to the dy dx in calculus. So we want to measure the amount of K which are found in this nonlinear relationship and our interval or our boundary of selection is actually limited. We are given as to how far to go in
+
+01:28:03
+there. So adding adding in higher order term such as a cubic quadratic polinomial often leads to an undesirable wiggles you're going to get. Don't to forget that having a x² a x cub plus a a x² + a x + a. So let's put zero here, one here, two here, and three here. This function. So if I'm like this for quadratic cubic will give me two turning points. two turning points cubic quatic four turning point so three turning point for quatic is n minus one turning point based on the degree of the polomial. So a pol degree
+
+01:28:57
+n will give us n minus one turning point. So the more you go the more your turning point gets increased and the more you have different can something like this. So it end up wiggling over there. Okay. So to avoid some of these things, what do you do? That's a spline becomes very important or relevant to us. Which provides a way for us to be able to smoon the interpolation between any two points. So we say that from this to this probably could be some kind of parabola. another parabola over here, another one
+
+01:29:42
+over here. Then together we can produce a very more smoothing function and proceed from there as well. So mostly come across plines when doing function smoothing or function interpolation. That's where you come across plines a lot for approximations. Okay. Now it's believed that the idea or the concept of spline actually came from draft man draftsman in drawing smooth caps and I end up telling students also that in those days I don't know about now in the visual arts department draw me those of you like those of you
+
+01:30:30
+who love pencil drawing of our body of our pictures the girl will take a picture and draw lines through it and begin to look at how the lines and draw the same thing on the paper. The same thing here on the paper. Same thing on the paper here and ask count 1 2 3 row two here I am. So 1 2 3 row two here I am. So the line starts from here and end here. Do the same thing here. So by time they will finish doing all this they end up drawing the person here without missing any step. This is what the transform end up doing.
+
+01:31:15
+So they are small small small small small small small small kids put together and end up creating a huge artifact and proceed from there as well. So again splines are created by bending thin piece of wood using weights and those weights they will say ducks and you will say not we call them not the dman will call it ducts ducts. We shall spend some more time >> again was broken sir. Oh, which part? Which part? >> Using weight something. Yeah, you mention using weight. >> Oh, okay. Okay. Okay.
+
+01:32:04
+>> I get it. Yeah, you mentioned something. >> I say a spline. So, the splines in their domain were created using some weights from some pieces of wood. And those weights are referred to as what you call the ducts. And we call them the knots. The knots. So in simple term C explaining as a series of peacewise of peacewise peacewise continuous continue polomial that the bottom line that the and I've explained them over and over. So there's one here, another one here, another one
+
+01:32:51
+here. So they are in pieces, but they're continuous. So a series of pie-wise continuous polomial is defined as spline. This is how far you and I can go for today. At this point I ask any
+

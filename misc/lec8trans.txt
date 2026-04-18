@@ -1,0 +1,300 @@
+00:00:01
+Without wasting my time, you and I would like to proceed from where we left off in our last meeting. I'll try to reemphasize on a topic model selection on a topic model. I'm sure by now you understand why I write from left to right because of how I position myself in my seat. model selection and the stepwise regression. Okay, this is where I got to. Of course, I gave you some few things in there before the time was up. But again, you and I want to re-emphasize this and proceed from there as well.
+
+00:01:02
+If you paid attention or try to watch the video again after the class, then one thing will echo in your memory. And what do we say? The comment was that in some problems many variables could be used to serve as the predictors. In our 311 you all observe that when you have more predictors the so-cal attributes then you are going to be prone to overfitting. This is the challenge you are going to be facing. I want to predict maybe in your lab work you want to predict the price of a given house. We all know the price becomes our
+
+00:01:51
+target variable. because our target variable to pred to predict this variable you need some predictors. So what do you see people do? They add on maybe the size of the building then they run 311. 311 will tell you that if you using one predictor you are too simple and so therefore you have a very high bias and a low variance. Remember the drawing I gave to you on that day the variance function and the bias function from 311. Okay. So you proceed from there. So if the more I add variables or predictors to it, the more
+
+00:02:48
+I increase my variance but reduce my bias. again DCI 311 at the same time to having a very high bias also make your model over fit again a recap from 311. So the argument here is how then do I choose my model in 311? We begin to play around the volume knob over here and ensure that we can make a trade off and pick how many features could help us get the best model at the end of the day. Okay. Now because we are going to be prone to several variables and we have to fit through them we may end up fitting through noise.
+
+00:03:42
+For that reason as I mentioned the last time the principle of the okam resor is adhered to. And what does it say? It says that all things being equal, always try to go in for the simpler models before trying to up your game to a much more higher or complicated model. One may argue that of course in today's world we have much more powerful machines GPUs and so we can just try computer functions and still get things done that is fine but in as much as they are resources it doesn't imply you should
+
+00:04:38
+waste it. So this principle still holds but from 311 point of view you realize that if you are too simple you're going to introduce very high a very low bias sorry very high bias but very low variance but you increase to a very complicated function you expose yourself to a very low bias and a very high variance. So how then do we really choose because you regression that you and I will want to compute the performance of your model to be able to select remember again the early part of 311 we
+
+00:05:27
+realize that we do some trials of different models different models and then pick out of it one the mass and stars guys only see themselves doing caref Perfect. Perfect. At the end of the day, all you are getting is the coefficients. That's what the stars guys will see, but you end up calling them parameters. They all the same anyway. Okay. So you proceed from there as well. Those who are in this class by now should know that name or attendance is taken based on telegram handle plus student ID plus your name.
+
+00:06:21
+Don't just put your name and your ID there. It simply tells us that maybe you don't pay attention in class or you just write your name and exit. Okay. So you proceed from there as well. So how then do we test the performance of our model? That's we make use of of our RMSC we came across or the R squ or that R squ right before then you and I came across the RMSC and the R squ and we know for sure that if you have increasing your parame if you're increasing your variables sorry or your predictors or your attributes
+
+00:07:03
+you end up it's an error function so you end up reducing this error This actually the higher the R square the better. So you also end up increasing this. But again in as much as you getting a very minimum error and a very maximized R squ does not mean your model is doing well because I've told you earlier on that overfitting becomes your friend. So to address these issues then you need to take into account the additional parameter the additional predictors we are adding. This where the introduction of the R
+
+00:07:49
+adjusted came to being the R square adjusted which in a previous class I gave to you as the 1 - 1 - R² which you computed earlier on then a -1 / N - P - one where P stands for the number of variables in the model to end penalizing the model against how many variables you are really bringing on board. Okay. So after the arrow adjusted was introduced parameters so other metrics were proposed to also help us select the most appropriate model for the given data. Among them the AIC you came across in a previous meeting which was named
+
+00:08:52
+after a scientist called Akai. So the A there stands for the Akai. It depends how you want to pronounce it either. Then the I stands for the information and the C stands for criteria. Criteria is believed that this metric was introduced in the 1970s. That's it was introduced. And the purpose of this metric again is to help us penalize additional term. Penalize additional terms you can call additional attribute, additional predictors, whichever we want to call it that were introduced to the model.
+
+00:10:00
+Mathematically this AIC is defined as twice the predictor plus n the log of your RSS over N. If you revise your notes that you know what RSS stands for. As usual, your P still again stands for the number of variables, the number of attributes that were introduced to the study. One may ask where from this mysterious method or metric for penalizing or for helping us decide on which model we want to pick. If you have a stars background, you may have come across the concept of asmtotics which mostly is used to prove the
+
+00:10:57
+reliability of a given model. The CS students in those days where we had the where where we had the course called information theory. information theory. Thus, you could have come across some of these models or these metrics as well. In the field of science, after a metric is been defined, many other more metrics has to been defined or been derived out of the base metric in an attempt to resolve pecular challenges that the original metric could not address. You realize that if you have a very small sample size,
+
+00:11:51
+a very small sample size, then this AIS you're going to get may kind of mislead you for that reason. The improved version, I don't say the improved version, maybe the modified version called the AI small C. The AIC remains what they are and the C some is called corrected. So the corrected AIC and this is appropriate when you have a sample size which is small which is small. The others also claim that the penalty that was induced by AIC is not big enough is not punitive enough. It's like you've stolen something and then I
+
+00:12:42
+can you. If I can you justice lashes over stealing a million cities, then you have to be king again the next time. If that's the only punishment you can receive. But if there's a more harsh punishment, then that may deter you from doing what you are doing to the classroom settings. We found we found cheating examination hall and all we could do is maybe to just cancel that paper for you. For some people this is a very difficult punishment. For others it's not difficult. What then do we do?
+
+00:13:24
+We cancel your paper and rusticate you for two years from the university and blacklist you in the entire country for two years. You can't even start any other school. So two years of your life have been brought to a standstill. Maybe that will deter you from cheating in examination hall. Stucking you for a semester. Maybe it's not helping enough but probably ricating you and banning you from all industries. You can't even do anything in in organization. This is how in those days it used to be
+
+00:14:09
+when Leon dismiss you. Tech will hear about you. You will hear about you. Your family members will hear about you. In those compound house, the entire compound house will hear about you. It's so disgraceful that your parents will have to even vacate the compound house and go to another place. In the graphic your name is there your picture is there in those daily graphic people's guide you came across those things your mother's your mother's or father's word you see them today you see
+
+00:14:47
+the BFTs so your name is published over there and the whole world will see it so you can't be apply for any job you can't do anything you are just there for two years of your Maybe if being brought back again may deter people from cheating in examination hall and the value is zero over 100 more than cheating in examination hall. Okay. So in this conversation I introduce to you the BIC which believe that the penalty that you assigning to additional variable is not huge enough for that reason the BIC was introduced
+
+00:15:37
+where the B stands for the Bashian the Bashian the INC remains what they are. to the patient information criteria. One may ask what do I choose? The choice depends on you and what you intend to achieve as well. So you proceed from there. Again I want to reemphasize that if you're part of the class then you should know that starting from some few weeks back we take your ID your name and also your telegram handle just to be sure the people on the platform and people are still joining even the last hour I'm not quite sure
+
+00:16:27
+what the problem is I know some of them have also exited That's also fine. Okay. So, we proceed from there. So, the arguments here is how then do we find a model? How do you find a model which can help us minimize minimize our AIC? Of course we know that as you minimize AIC the indirectly let me do this indirectly we can see we maximizing we are maximizing your R squ. So here can put in the R square to make it much more stronger. So max squ then do choose our model again we can start with try and error
+
+00:17:27
+we try and error in your algorithm class this try and error will be termed at exhaustive search your algorithm class but in our ML class 311 class we call it the all subset regression. The all subsets regression. If you remember your 311 class very well, the all regression. Now just as we saw in 311 or we saw in our algorithm class, the knowledge have not changed. You realize that anytime you're going by exhaustive mechanisms then you must handle very small data to be able to achieve it. So it's not very
+
+00:18:23
+feasible. It's not feasible for large data for large data. For that reason, the introduction of the stepwise regression was adopted or was developed. The stepwise regression was introduced. Again, you came across the stepwise regression in the 311 as well. If you remember that day and in your note which was given to you, it was presented some some some purple bubbles and we're dropping them one by one to see. So the gap looks something like this like this. So once it goes up they know that
+
+00:19:21
+hey you're doing something wrong. So that become a forward stepwise. the four step wise we can have a complete model and start dropping some of the parameters some of the features until it doesn't improve anymore then we stop that same concept is what we are repeating in today's class as I've said earlier on the real science ended last two weeks all other things is about after the data is now prepared How do you make meaning out of that? And those meaning the base of it was introduced in your
+
+00:20:04
+311 class. We are just revising in a with different choice of ways. Okay. So again I can start with a very big model or a very compact model or the full model and by saying full model I'm referring to taking all the parameters for those of us who are followers of our lab data intelligence and sw analytics lab or those of us who are friends who are our friends over here on LinkedIn. Again you would have observed some of the publications we write we post them over there spend some time and read them if
+
+00:20:52
+you aren't our friends feel free and connect we'll connect back to you as well whatever we share on the platform you can also have a look at it and proceed if really you want to be in this domain okay so we proceed from there but we do more research than or more theory than the application. But of course, the end result is an application. So we pick the full model and begin to chop off some of the variables which your book may call the backward elimination. Again in your 212 class with me you came
+
+00:21:35
+across the word backward elimination and for substitution under the gshian emission process but this is different from what I'm doing here. So don't confuse 212 class with this class. So the backward elimination oh elimination sorry okay so why backward we had a full model let's assume that the variables are in not are in not over here the full model so I'll drop you backward if the model is not still giving me what I I'll drop you drop you to get to a point where a f drop will affect the
+
+00:22:27
+performance of the model then I stop the forward will begin with nothing that's zero features then drop in the first feature the next feature the next feature to get to a point where the performance fails to improve. The last option is when I do add and drop. Add and drop. So I'll add you. If you are good, I'll pick you. If you're bad, I'll drop you instantly. I'll drop you instantly. I don't keep adding you until something fails. So if I add you and have no performance
+
+00:23:13
+adjustment, I'll drop you and move on to the next one as well. This is the concept behind how to pick your model. As usual, your Python code, your R code are out there for you to just go in and try. Nelson, proceed. >> So, so I wanted to ask what's the difference between this and then uh does can this also be explained? Does it relate to the early dropping and then maybe learning rate scling? >> Well, I'm not quite sure that is what is going to happen here >> because in the Okay. Can I explain
+
+00:24:01
+dropping in the game? What goes into it? >> Yes. So, you set um a threshold. You set a threshold that okay fine. When you are training the model, maybe we are training for 50 epochs. We we need some sort of patience. So we can give you like patience of maybe five apoch. So during the patient period of five apox and there is no additional improvement in the model we stop there. >> No no no early stopping that's early stopping. So no that is not what you're talking about right now the early
+
+00:24:33
+stopping criteria all we are saying is our model remains what they are. Okay. >> And you train the parameters. When the parameters fail to improve, it also means your model fails to improve. >> Yes. >> You stop. But here we are chopping off. We assuming that the model is failing to improve because of the variable >> because variable. So for example, I need to predict maybe but is not helping me. So I'll drop and continue. >> Okay. So in that >> go ahead. >> Okay. Sorry. So in that sense it will be
+
+00:25:19
+some sort of some simple ablation we are doing to know the impact of each component in the in the proportional to the model's improvement. Well, we may want to call ablation, but again, let's be careful. The choice of language that my issue I have with AI space where there are several jagons, but when you go to the root is not different from what we know in MAS, right? >> Okay. All right. >> So, when it comes to ablation, you're looking at a process has been added and that process may or may not improve the
+
+00:25:56
+process. So that's the entire process. So I want to add on this process to my work and I'm saying that with the addition of this process improve my performance that's ablation right so I push that and drop it but here you can liken it rather to feature instruction >> okay >> that's the best point you can liken it to >> okay so so that could be like the depth Maybe probably guess we have multi skills. when we have multis skills and then we have uh different layers as to
+
+00:26:36
+how deep it is and then the features extracted at every level can how they all impact the the model right >> well multis scale here only helps to get more features instead we don't add to drop so most of times that's people call mult pyramid or the mas right so we want to get the final and the coer information from a given in data and most often you see this from image processing most often not for numerical data. Once you are done we now begin to perform our pairing L1 L2. These are some of the things we are
+
+00:27:20
+trying to achieve here. So the whole point is features are being dropped or add. So when you come to multiscale we have all the features. Now ask are you relevant in the first place or not? This is where again in regression which be seen very soon we want to compute a p value and a ci to be very sure about their relevance or their potent to include or to exclude. Okay. So proceed. Go ahead >> please lastly. So my my confusion here is if you say the full model is this the case where the model has been fully
+
+00:28:05
+trained >> no >> and then like okay >> the full model here refers to taking all the variables into account >> into account >> right >> okay okay >> and you all know from the one that if you do that you have very complex model because that will also be equal to parameters being used and a complex model means you are fitting is going to be your friend if some of them are redundant. Okay. So the focus is strictly on the variables on the variables. Okay. So you proceed from there as well.
+
+00:28:47
+Right. Another way you could see this kind of penalty again want to choose a model how do we choose and we've come across how to maximize and minimize from tren error point of view which is not feasible. So we go into the stepwise approach. Now there is another one that you and I came across in our 311 class called the penalized regression. The penalized regression is something you know already just that in the 31 class we didn't say penalize regression but at least you heard the word the ridge regression
+
+00:29:38
+that you heard in 301 class and the lasso regression the regression and you realize that this guys also called the L2 penalty norm or the L1 as well and you saw from my K1 K1 class that we mostly will use lasso to perform feature extraction feature extraction that's from 311 as I've always explained to you earlier on I have organized my courses in this way for a reason from 212 will not build on to 311 will not build on to 405 they will not build on to 416. So if you never date 212 with me or 31 with
+
+00:30:40
+me, it's assumed that wherever you have your major, you might have been exposed to this concept in brief. If you are from stars department this 212, you might have seen as a multivaried kind of in your class. Coupled with algebra, you are good to go. So it is fair to say that you've done 212 already unless maybe the contest in which I introduce them to my class which is meant to prepare them towards this course is not done that way. I cannot tell that I cannot tell but I know that some knowledge was impacted from your faculty
+
+00:31:26
+or my senior colleagues. Okay. So if I keep saying in 212 class in 311 class you don't have to be confused. It's assume that you know what they are. Okay. So you proceed from there. So this could be an advice for you to tell your friends who are just picking courses and then just jumping in between not to create issues for themselves but it's not too late to catch up if some of the concepts I mentioned do not fall in line for you know okay so again in our 311 class we realized that the lasso
+
+00:32:13
+regression most preferably is used for feature extraction. Why? Why? Because it's able to control the coefficient of the parameters to the point of getting a zero. So all features that are zero are deemed to be irrelevant and so therefore they are removed. They are removed. The rate regression can also be used as a feature extractor but only on one condition that is be willing to be willing to set a threshold for yourself and that threshold unfortunately will serve as a a hyperparameter for you to find tune to
+
+00:32:58
+be able to get the best tradeoff for yourself. These are things you may want to pay attention to. Okay. So, we proceed from there. When it comes to regression as a whole in terms of model performance, then many will go in for the rich regression as opposed to the lasso regression. Don't forget in our earlier class that 311 class the loss function is only modified to take into account the riser the riser which is being adjusted by the lambda called the the regularation parameter in 311 as well which serve as a
+
+00:33:58
+parameter to control how much penalty which effect. Okay, in all of this we are still training our model in sample in sample not out of sample and we all realized in our last meeting that if I'm going in sample then technically I'll not be able to control the issue of fetting as Why? Why? Because I treat my model with a sample and still test with the same sample and conclude on the performance of my model. Which means that I only understand in 311 you will say you have memorized your data which means given an unseen
+
+00:34:59
+data an unseen data you mess up. This mess up is what you and I end up saying you're overfitting because you understand your data so much so well that you can say everything about your data but a little trick you are off and in 311 I explained to them using W and M W and M the word is that why that's why the French guy says WV and so it's only aesthetics X to write W like this. This is not double V. This not double V. Double V should have an angle of 45° to it. So really this is an M being turned
+
+00:35:53
+upside down. So if you have a child who is growing, you want to know whether he has learned the alphabet very well. We put together W and M and ask for it. If a child pick this guy as W based on orientation, you know for sure that he has missed what W is and what M is. But of course once you grow to become an adult then the orientation is what you're looking at not the geometry of it. So I can say this is W. I can this is also M. I can write M this way by virtue of it orientation DC 311. Okay. So you proceed from there as well.
+
+00:36:45
+So you have learned over and over and over what this is as W until one day it was turned upside down. Your brain will say it is M. Your brain will say is M. These are the issues you're going to face. Okay. So, we proceed from there as well. We'll now look at the next regression you want to pay attention to called the weighted regression. The weighted regression. The stars guys here use them for several purposes in trying to analyze very complex surveys. But you and I will use them for two main
+
+00:37:34
+reason. First one is what we call the inverse variance waiting. The inverse variance waiting. Pay attention to the word. I'll explain it shortly and how to use it. So when do we use the inverse variance waiting? We only make use of this guy if and only if we have different observations. Observations that are being measured that are being measured with different position with different position. Okay. In that case higher variance are weighted lower. Higher variance are weighted lower and lower variance
+
+00:38:48
+are higher. That's where the word inverse variance comes from. I pick your variance. If you're very high, I'll give you less attention. If you're very low, I'll give you more attention and proceed from there as well. Okay. In that case when you are done you have a very balanced model and proceed from there as well. Another reason that you and I may want to use the weighted regression is we want to analyze want to analyze data where our rows where your given row happens to represent
+
+00:39:36
+represent multiple cases multiple cases. In this case, you have to put in some weight to be able to proceed from there. I've always have arguments with people that this whole idea of oversampling techniques being adopted and so and so forth. You could technically adopt weight, right? So based on distribution of your data, you plan your weight. So more relevance are given to fewer data and less relevance are given to higher data so as to be able to have your data balance in disguise because the
+
+00:40:25
+attention that is being given to them are different are different. Okay. So you should inform your choice of when to use weight regression and proceed from there as well. Most often is the stars guide that fancy their use. Okay, at this point you and I want to observe something quite different. And what is it? Don't forget for you and I as data scientists our choice of regression is not necessarily for interpretability like the stars guys will love to do instead the choice of regression for you
+
+00:41:17
+and I is prediction we want to be able to predict an outcome, a target based on some input out of which you formulate a regression from it and proceed from there. That is your primary focus for doing regression. That is my primary focus for doing regression. But the stats guy is looking at explanability of a given prediction rather than what are you predicting. For that reason, we are saying that because it's not really meant for prediction. If you intend to use regression to do prediction, then be very careful with
+
+00:42:08
+the issue of extrapolation. The idea of extrapolation is something I to you in 212. In 212 when we discussed the Newton the lrangian method we came across this concept and we advised that be careful if you extrapolating and on that day I gave you two points and ask you how do you model these two points and the class automatically will say it is a straight line. It be called this what you can see in 212 we saw it in 311 we also saw it as well but what if I have more data more data then realize that oh even the point here
+
+00:43:06
+is actually an error an outlier it's actually an exponential so how much data you have can tell you what really you have to fit into it. So be very careful when doing extrapolation. So we say that do not extrapolate beyond the range of your data. Don't extrapolate beyond the range of your data. You mostly hear people from time series environments I can extrapolate maybe 3 months four months a bit more deeper. There's more to it than what we hear and so don't just assume that you just
+
+00:43:56
+pick a model and then they just extrapolating into the future. Be very careful. So don't extrapolate beyond the range of your data. Okay. Secondly, only use the predictors that was used to train the model to perform extrapolation. What do I mean? I have built a model to predict the price of my home and you are doing pricing of Islam. So the word is isleon that's the location. So is gun is here the room size the bathroom in it all the other variables and then when you are done with this model you now deploy the model
+
+00:45:02
+into north legon this mess this mess your model will not be able to understand is because the features of interest which is a location here play the critical role in the pricing. So you cannot just dump in anything here and proceed unless your prediction was generic or your model your model is generic into housing. It doesn't matter where you are. It's independent of location. Then maybe yes, you could do that. So whatever feature you are using to do your model, those same features must be collected to
+
+00:45:50
+extrapolate the future to extrapolate the future. That's one to pay attention to as well. There is another caveat you want to pay attention to apart from extrapolation dangers is your prediction interval, your prediction and confidence interval. you and I again came across the confidence interval as well. For most of these people, of course, we aren't different from them either. They are mostly involved in trying to understand and measure variability. Variability indirectly uncertainty They want to be sure that or we want to
+
+00:47:07
+be sure that whatever we are predicting really is spot on. This is why in our class we came across by saying okay our model does 90% good 80% good 60% good and so and so forth. So we have some allowance for error. Some allowance for error. What is allowance and can we really rely on it? This is why I always have an issue when maybe students say what is doing very well now and ask the person a very simple question by what margin and how valid or how significant is that in the first place? The common jargon
+
+00:47:53
+will be that oh if my model is even doing 1% better than someone's model it it's okay. Are you sure it is worth the energy for all you know that 1% is adding is going to cost me of $100,000 to get it when the 90% will give me 5 days to do it. Why would I want to pick your model which requires $100,000 to get 1% increment? Can you convince me? Of course not. That's my new argument I'm raising of late with my students with my students that don't just tell me you've done something good.
+
+00:48:41
+If you cannot prove it, if you cannot prove it, if you can prove it, then you are good to go. Okay. So we proceed from there as well. So in our previous class this is where the benefits of our t statistics our statistics np value play a critical role to help us find a formal way of reporting our output in the regression whether you are doing something good or something Okay. So, we proceed from there as well. When it comes to the concept of ML 311, then technically whatever we are reporting as P value can
+
+00:49:37
+help us decide if a given variable is good or not. So you can use them to perform feature selection. This what used to happen in the past anyway before today we have big data machine learning making all the noise feature selection or extraction we depend on D value to do that to do that. Of course we have to make an assumption that your model is linear to be able to do some of these things as well. you go if you go nonlinear becomes more difficult and that's how come the ML domain from the data with more powerful
+
+00:50:20
+computers made life much more flexible for us as well okay wait right so we continue from There I asked one of go and check if it is true that our facility have been taken away from us. Nobody came to me. So you you don't even want face to face again. You happy that even the class even take for next 10 years. in your mind. Anyway, let's proceed from there. We really hope that you are benefiting from the process as well. Okay. So, we proceed. We proceed. In as much as you want to perform some
+
+00:51:29
+of these things, you and I know that for sure having a confidence interval, most likely is more beneficial to us. What you put an uncertaintity around coefficient and our prediction as well. I have y= to some a x + b. I want to place some confidence around it. some confidence around B and also around the prediction itself the white heart the white heart you and I noticed that one of the nicest way which I've convinced you I hope I did I hope I did is to be able to move into the use of bootstrap
+
+00:52:23
+the bootstrap which is spend so much time trying to understand how it works and I believe we know. So again in this class I reech it what we saw. Don't forget at every point in time I discuss bootstrap I do it in context to the the problem at hand. So here using bootstrap to define confidence interval for our model is what we are talking about here. Don't forget another one which was more categorical to classification problem. We just create our target and say zero one or yes no yes no and dump them inside
+
+00:53:10
+shuffle and pull it out and continue. Here our target is not yes no. It is not categorical. For that reason there must be a way of creating our sample for our cell. So what we do is we take the entire row the entire row say one and give it a name say I'll call number one. The entire row two I'll call you two. The entire row three I'll call you three. I don't care what value is inside you. All I know is the entire row is one. The entire row is entire row is three and proceed from there.
+
+00:53:58
+When I am done, I know what one stands for, what three stands for in that order. So I put all the observations into my box. So for example, I want to say 300 observations into the box. Shuffle randomize which is very very key and I keep on hammering on it almost every day. Why randomization is very important. Randomize it. When you are done then draw out your ticket. Draw out your tickets. So you put your hand inside you get one. Pull it out. Record on paper one. Push it back again. with replacement.
+
+00:54:46
+Don't forget the permutation bootstrap. Okay, push it back again. Then draw. Now the reason why it is important to push it back is if you don't push back and they end up getting the same sample coming out again, the same as the original. But push it back, then you have the chance of picking it again to come out. So want to come out again. them for up to 300. So here I'm not saying we have 300 of them but we have 300 possible draws pulled out. So we have one one four and maybe the number 300 feature. All I know
+
+00:55:29
+I have 300 data points pulled out. Pull it out and repeat step two again. So this becomes your first bootstrap sample. Your first bootstrap sample. When you are done, do it again. Second booster sample. Do it again. Keep on doing it again to say a thousand times. It depends on how far you want to go with it. Don't forget you complete metric out of this to have a sampling distribution. Don't forget what I said the last time. Okay. Now, once you are done, what do we really want? All we wanted was our yhat equals a + b
+
+00:56:17
+x. And I need several entries or several observation to do this. So, I'll fit this into strap one. Fit this into strap two. Up to,000 straps. When I'm done, I will now pull out. What did I get from strap one? The A and B. Take it out. And then what? Take A and B out from this A and B out. A and B out. Take all the A and B. A and B A and B A and B out for yourself. What do you observe? You have thousands of A and thousands of B's. For example, here we assuming it's a linear function. So thousands of A,
+
+00:57:01
+thousands of B have been pulled out. Once you are done, you now don't forget you now the ordering. You order all your A's, the,000 A, the,000 B and then create your percentile out of it. Your sorry your P center P center out of it. So 5% for example to say 95 center for example which will give us nothing but 90% confidence interval the same for B. So you know the value the confidence for which your A and B are being estimated for you. This how we do it manually of course and as usual your R and your Python
+
+00:57:54
+does that for you seamlessly feel free and get that done this only to understand the CI for the V for the coefficient what about the CI for the prediction that's your white heart your white heart how do we do that all what I've said for A and B the same thing will still hold for A and B. So do all those things first excluding this part the percent part excluded. When you are done now fit your model sorry use your model to predict the possible Y hat. So I want to predict yhat out of all of this one by one. One by one but
+
+00:58:48
+when you do that what is left because you want to understand what really is going to happen we try to manipulate the values you are going to get by randomization. Remember that in our last class to compute the performance of our model we do it this way. do your fitting. Then you have some point around it. The distance between this becomes your residual. Your residual the sum of your residual the sum of the unsigned residual. Let me say that way. The sum of the unsign residual the unsign can come to a square
+
+00:59:30
+root or can come to an absolute whichever way you want to do it. So you pick at random the residual and then you manipulate the y you're going to get do it for thousand times and then again do your sorting 5% here and then 95% here if you want to compute 90% CI which you mean 10 extra if you want 95% interval then you pull out 2.5 here which become 2.5 5 against 97.5. So it depends on what CI you're interested in. You proceed from there as well. Okay. So this is how to understand the performance of your prediction model.
+
+01:00:27
+The next thing I want to talk about is whilst talking about the yhat= ax + b, you realize that I need an input value to be able to predict an output value. The input value you don't have control over it. And the input value details to you how the output should look like. Now the first question, what happens if your input value one of them actually is categorical? What happens? This introduce us to the idea of the factor variables. The factor variables in regression. in regression and this soal factor variable is what
+
+01:01:32
+you and I would have called categorical variable and we spend time to understand what they are in a previous class. Okay. So we proceed from there. Remember that if I have categorical variable for example say gender male and female I cannot put male a * male or a * female I can't do that we have to do an encoding oh why am I having wrong spelling an encoding of our data to be able to perform regression on it. How then do we do that in the first place? Okay. When it comes to generic factor factors or categorical
+
+01:02:35
+variable, what do I call generic in the first place? I'm referring to an ordered unordered. Even though your B didn't say this anyway, but this what I'm referring to an unordered for example I have say mango orange p this is an order I can't order these guys right I can't order these guys okay but for example first second third these are ordered we all know the number three has higher magnitude than second. Second has higher magnitude than first in terms of positioning ranking. Then first has higher power
+
+01:03:26
+than second. Second has higher power than third. All of this play a key role in your encoding scheme. Your encoding scheme. So you're going for unordered. To do so we make use of what to call the the binary dummy variables. The binary dummy variables are to be introduced to be able to encode your categorical data in your lab. This what we come across are the one hot encoding. Again as I said earlier on from a stars point of this how we call our thing until ML came to the world and they're
+
+01:04:17
+giving names to the thing right names to the things just change the whole communication line and then a new subject is created giving us so much work like something I see a lot we have 10 regions even that we could even part of science in our junior high school now you have 14 regions or 16 regions how the child manage that one when you and I had 10 region we didn't even know all the capital towns of all the various regions 916 we only adding more work if it will be examined we are safe but to be
+
+01:05:02
+examined then is so much cognitive problem to handle in the same way this ML NLP data science Science big data just came to create so many jargon for us to learn. Always focus on the basic is very important. The fundamentals they are very important. They are very important and it speed up your understanding in so many things. Okay. So that's what you and I want to look at. Okay. So the soal dam representation what do we do? I have I have male and female. None is of high magnitude. A female is
+
+01:05:57
+not bigger than a male and that is a male bigger than a female. So what do we do? the where the column gender the column gender is being squashed and how to squash is you introduce male and female to it. So if the gender is a male it become z become one and fe zero. If the gender is female it becomes zero and one this how we do it. So the system will know that okay this person is a female this person is a male this person is a male a female this will understand the element over here what do you observe
+
+01:06:48
+you observe that this approach is only prudent is only wise to do it if you have fewer fewer levels of category But before I move on to many many variables or many levels, what then do we do? Remember that when it comes to 311, this how it should be done. We spread everything. We expand everything as new columns. Those new column is what we call the dummy variable. The dummy variable R have their own way of naming them. Python have their own way of naming them. R mostly will say gender and then dot male gender do female to
+
+01:07:41
+represent the new dummy. The word binary simply says that you can only be a one if I'm talking about you otherwise you are zero. So it's called binary. So the B refers to the values the diamond refers to the names the names. So again take note of that for me we then proceed from there. Now in the field of statistics we don't introduce all of the features we introduce P minus one features and we tie the last element of P into a bias term so as to avoid what you call the multi- colinearity.
+
+01:08:33
+When it comes to ML311, we are not concerned about that because that not even happen in the first place based on how huge our data can be. So in R for example by default it handles that for you without stress. It will just strip off one and leave P minus one for you. So if it's gender for male and female only male or female will exist which means by default if I see a zero there implicitly I'm referring to a meal these are things we do a lot in our databases databases are states state if
+
+01:09:16
+the state is zero it means something else otherwise it means that we do mapping on it and proceed from there but in Python you responsible in telling Python that hey hold on to one of them if you want to do statistics out of it don't forget Python was not really meant for the theory of statistics is meant for you and I d science big data and the rest that's their real evolution that's their revolution so it makes sense if you're not doing that by default for you but as I've mentioned
+
+01:09:57
+what happens if you have a lot of data or of level that the word for example thousand levels for example I'm doing towns towns in Ghana the kind of time people mention to you you ask yourself does it really exist in this country or not so what do we do what do we do that is the next topic you and I want to handle which is the factor variables the factor variables with many with many levels and now I'm talking about towns in Ghana and towns in Ghana qualify to be categorical they have magnitude so you can order
+
+01:10:56
+them. You can have two or three or 10 people from the same community in Leon for example. But if I have towns and for example I'm having say a thousand names from start point of view my degree of freedom becomes n minus one that's 99. which mean 99 variables as dummy will be introduced and from 311 we know for sure that doing this will lead us into a fetus war more variables of observation we'll be in trouble how do we handle this the best practice is that since we don't have weight or we don't have ordering
+
+01:11:52
+defined on them. You must find other ways of consolidating consolidating consolidating the values. So you must find an intelligent way to do that. For example, over here one smart deal you can do for yourself is let us go into regions. regions if I say I'm coming from XYZ all access which region can I find it region greater region do region which will now reduce all my thousand entries to just 16 regions so n minus one 15 new variables which is moderate to avoid Avoid overfitting and proceed
+
+01:12:50
+from there. This how to handle multiple or deep down or more intensive levels. That's how to handle them. The argument is it's not always the case that you'll be able to see these things straightforward. So that's what the challenge really is in practice. I chose towns and regions to simplify the understanding for us. You are responsible in looking for that element which can help you simplify the entire level to some few levels. The nature of the data will determine how you intend to dot. You can proceed
+
+01:13:36
+from there as well. Okay. So you proceed from there. What if now we have ordered factor variable? Ordered factor variable. All this is just factor variable. Factor variable. But now there's an adjective that says the ordered factor variable. This is what most of us kind of are used to. usually. So that was my center base anyway. So I come in here and I ask a question for example say uh what's the best thing to use? I take traffic light indicator to the red, the amber, the green. This traffic light indicator stuff most
+
+01:14:43
+often we know for sure that high red have a higher impact followed by yellow followed by green because levels of because all define on it you just assign values to it by yourself and just okay I'll call red 20 to be more severe I'll call it say 10 and I'll call green say five or just say 012 two I am done one by doing this you preserve your order you preserve your order because if go ahead to do it as R Y B as a new dummy variable you comes 1 0 0 0 1 0 0 0 1 you've ordered you've
+
+01:15:34
+destroyed the ordering of which we know that R means more intense means Y means mouth and J means okay this why we don't do one encoding unordered factors unordered factors so you assign value to them directly and proceed from there as well loan collateral or loan default high medium low these are implied ordering you you need to put value to them without splitting them into one hot encoding. So this how to handle them as well. Okay, the last topic and then we'll end today's class and convert again next week is how to
+
+01:16:31
+interpret how to interpret your equation. Yes, our interest has always been to predict then we are gone. Is it possible that the question itself can tell us something? Of course in 31 we know that the coefficient the coefficient if our data is normalized or standardized tells us feature importance in 311. So interpreting Interpreting the regression equation, how to interpret it? Okay, remember that in my video equation the estimator you get for example say a x + b The A and X tells us a lot about our model.
+
+01:17:44
+As to you earlier on, if our data is normalized or standardized very well, then the A or the coefficient tells us the relevance of the input variable. The relevance of our input variable. Okay. Now also these coefficients can also tell us how the variables are correlated with the output. How they're correlated and you and I know again from the one that in a simple linear regression model the issue of correlation is very key. The issue of correlation is very key. If two features are highly correlated
+
+01:18:37
+then technically to affect your prediction power your prediction power and for that first you must find ways to remove those correlation and proceed from there as well. So no not no more than two features must have a very strong correlation otherwise they affect that's why from the stars point of view we say that your features must be independent that's a word over there which translates to saying that your input variables must be non-correlated this what I will say in the stars class we talk about independence
+
+01:19:20
+should be defined. If they dependent, they affect the model or we call the introduce redundancy. They introduce what you call red into your model which affects operation power of your model. If you're able to see it, you can simply remove it and proceed from there as well. Okay. So you proceed as mentioned earlier on it is your responsibility to be able to take care of this correlation. The extreme case of this correlation is what you and I will call the multi- colinearity. And I know for sure that all this issue
+
+01:20:20
+we are discussing only affect linear models. If you have a nonlinear model, you do not really care so much about this. You can proceed from there as well. Okay, we proceed. Now the as I said the extreme case of correlation to the multi colinearity which you also want to pay attention to as well. And what is it? What is it? We spoke about this in our early part of our class very very early part of our class when we're talking about the corion coefficient. Okay. So this is a condition in which
+
+01:21:07
+there is redundancy a condition in which is redundancy redundancy among your predictor variable. Of course we are redundant in a predictor if and only if you're correlated. For that reason, having a perfect multinarity will occur when one predator variable can be expressed. A perfect multi- colinearity can only occur or can occur when one predictor say X can be expressed as a linear combination of others. I've always g example all the time isolation is a cause over time right. So I can express this as this.
+
+01:22:19
+Why then do I put V and T all there as features when they correlated? I could simply replace it with the acceleration and post it from there as well. So we say that this can occur this soal multiolinearity can occur if one a variable a variable happens to be included multiple times. multiple times. A very common example could be say gender and sex. So gender male female sex male female and we have gender as an attribute and sex as an attribute in your work. They get different names but the same
+
+01:23:26
+thing. This gives us a perfect correlation as well. While speaking earlier on, I also mentioned to you that if your dummy is generated and use all your P dums, you introduce multinarity as well. You're supposed to use P minus one dummy. Python by sorry R by default gives you P minus one but Python is help to take control that take control over that by yourself and two we don't have petition but X1 and X2 happens to be almost near perfect correlation that means that even though there's change in value slightly
+
+01:24:20
+They are actually different. They are actually the same. Even though they are slight difference in their value, they are actually the same. So we try to handle them and proceed. Don't forget when it comes to our ML class, our data science class, this P does not create modularity for us. In fact, we need the total P to be able to perform our predection accurately. So take note of that as well. when it come to regression that's where we are careful with their use or their presence this how far this how far I'll be able
+
+01:25:11
+to go with you in next meeting I'll talk about the co-ounding variables or the confounding variables is the same thing the confounding variables and how they come In we shall see that they directly opposite what we saw as colinearity. In brief it says so colinearity says that I am I I I come into your scene if you are putting in redundant variable and confounding says that you made an omission. I was so important you forgot to add me. That's go founding. That's goounding. Again, this how far
+
+01:26:04
+our journey will take us.
+
