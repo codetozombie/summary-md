@@ -1,0 +1,180 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which of the statistical techniques can be used as a feature reduction mechanism",
+    "possible_answers": {
+      "A": "ANOVA",
+      "B": "t-test",
+      "C": "Descriptive statistics",
+      "D": "p-value"
+    },
+    "correct_answer": "A",
+    "explanation": "ANOVA (Analysis of Variance) can be used as a feature selection/reduction step by evaluating whether the means of numerical features differ significantly across categorical target groups, allowing you to discard irrelevant features."
+  },
+  {
+    "question_no": 2,
+    "question_text": "A pharmaceutical company fails to detect a real treatment effect because their sample size is too small. What type of error likely occurred?",
+    "possible_answers": {
+      "A": "Type 1 error",
+      "B": "Type 2 error",
+      "C": "Alpha inflation",
+      "D": "False discovery rate"
+    },
+    "correct_answer": "B",
+    "explanation": "A Type II error (false negative) occurs when a test fails to reject a false null hypothesis. Small sample sizes often lead to low statistical power, making it highly likely to miss a real effect."
+  },
+  {
+    "question_no": 3,
+    "question_text": "When is Fisher's exact test generally preferred?",
+    "possible_answers": {
+      "A": "When sample size is very large",
+      "B": "When counts are extremely low",
+      "C": "When variables are continuous",
+      "D": "When the significance level is high"
+    },
+    "correct_answer": "B",
+    "explanation": "Fisher's exact test is used for categorical data analysis when expected frequencies in a contingency table are too small (typically less than 5), invalidating the chi-square approximation."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Which strategy directly reduces the risk of alpha inflation in multiple testing scenarios?",
+    "possible_answers": {
+      "A": "Increasing sample size",
+      "B": "Alpha inflation",
+      "C": "Adjusting p-values",
+      "D": "False discovery rate"
+    },
+    "correct_answer": "C",
+    "explanation": "When doing many tests, the chance of a false positive increases. Adjusting the p-values (like using the Bonferroni correction) directly tightens the threshold needed for significance, controlling the error rate."
+  },
+  {
+    "question_no": 5,
+    "question_text": "The p-value is best interpreted as:",
+    "possible_answers": {
+      "A": "The probability that the null hypothesis is true",
+      "B": "The probability that the results occurred by chance alone",
+      "C": "The probability of observing data as extreme as the sample results",
+      "D": "The probability of making a Type 1 error"
+    },
+    "correct_answer": "C",
+    "explanation": "The p-value is the probability of obtaining test results at least as extreme as the observed results, under the strict assumption that the null hypothesis is entirely correct."
+  },
+  {
+    "question_no": 6,
+    "question_text": "A Type I error occurs when",
+    "possible_answers": {
+      "A": "a null hypothesis is rejected but should not be rejected.",
+      "B": "a null hypothesis is not rejected but should be rejected.",
+      "C": "a test statistic is incorrect.",
+      "D": "the null hypothesis and alternative hypothesis are the same"
+    },
+    "correct_answer": "A",
+    "explanation": "A Type I error is a 'false positive'. It happens when the data suggests a significant effect and the null hypothesis is rejected, even though the null hypothesis is actually true in reality."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Coefficients can be used as feature importance if the features are....",
+    "possible_answers": {
+      "A": "Highly correlated with each other",
+      "B": "Measured in different units",
+      "C": "Containing outliers",
+      "D": "Standardized"
+    },
+    "correct_answer": "D",
+    "explanation": "In regression, a coefficient's size depends on its unit. To use coefficients to compare the relative importance of different features, the features must first be standardized (scaled) so they are on equal footing."
+  },
+  {
+    "question_no": 8,
+    "question_text": "\"This is the frequency with which the chance model produces a result more extreme than the observed result.\" What statistical concept does this describe?",
+    "possible_answers": {
+      "A": "Confidence interval",
+      "B": "P-value",
+      "C": "Alpha",
+      "D": "Significance level (α)"
+    },
+    "correct_answer": "B",
+    "explanation": "This is the functional definition of a p-value, particularly intuitive when derived from permutation or resampling distributions (the chance model)."
+  },
+  {
+    "question_no": 9,
+    "question_text": "An investigator commits type II error when he/she",
+    "possible_answers": {
+      "A": "rejects a null hypothesis when it is true",
+      "B": "accepts a null hypothesis when it is true",
+      "C": "rejects a null hypothesis when it is false",
+      "D": "accepts a null hypothesis when it is false"
+    },
+    "correct_answer": "D",
+    "explanation": "A Type II error (false negative) is failing to reject (or 'accepting') the null hypothesis when the alternative hypothesis is the true state of the world."
+  },
+  {
+    "question_no": 10,
+    "question_text": "When is the chi-square test generally preferred?",
+    "possible_answers": {
+      "A": "When sample size is very large",
+      "B": "When counts are extremely low",
+      "C": "When variables are continuous",
+      "D": "When the significance level is high"
+    },
+    "correct_answer": "A",
+    "explanation": "The chi-square test statistic approximates the chi-square distribution. This mathematical approximation only holds true when the sample size and the expected cell counts in the contingency table are large enough."
+  },
+  {
+    "question_no": 11,
+    "question_text": "The coefficient of determination (R²) ranges from 0 to 1, whereas the correlation coefficient ranges from -1 to 1.",
+    "possible_answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "explanation": "True. The correlation coefficient (r) captures both strength and direction (-1 to 1). R² measures the proportion of variance explained by the model, which cannot be negative, hence it ranges from 0 to 1."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Which of the following describes residuals in regression?",
+    "possible_answers": {
+      "A": "The average of all observed values in a dataset",
+      "B": "The difference between observed values and predicted fitted values",
+      "C": "The total variance explained by the model",
+      "D": "The statistical significance level of the model"
+    },
+    "correct_answer": "B",
+    "explanation": "A residual is the error of the model. It is mathematically calculated by subtracting the model's predicted value from the actual observed data point."
+  },
+  {
+    "question_no": 13,
+    "question_text": "What is the primary difference between Correlation and Regression ....",
+    "possible_answers": {
+      "A": "Correlation measures strength of association; Regression quantifies the nature of the relation.",
+      "B": "Correlation only works for positive numbers; Regression works for all numbers.",
+      "C": "Regression measures strength; Correlation measures nature.",
+      "D": "There is no difference; they are the same concept."
+    },
+    "correct_answer": "A",
+    "explanation": "Correlation is a single metric evaluating how tightly two variables move together. Regression goes further by building an equation that describes the specific nature of that relationship, allowing for prediction."
+  },
+  {
+    "question_no": 14,
+    "question_text": "Which of the following best describes forward stepwise?",
+    "possible_answers": {
+      "A": "Starting with all variables and removing the least significant ones step by step",
+      "B": "Randomly selecting features until the model converges",
+      "C": "Starting with no variables and adding one at a time",
+      "D": "Selecting features only based on correlation without fitting a model"
+    },
+    "correct_answer": "C",
+    "explanation": "Forward stepwise selection initializes with an empty model. It systematically tests and adds the single predictor that most improves the model at each step until no remaining predictors are statistically significant."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Which term refers to the minimum magnitude of change or difference that a researcher aims to detect in a statistical study?",
+    "possible_answers": {
+      "A": "Power",
+      "B": "Effect size",
+      "C": "Significance level",
+      "D": "Sampling error"
+    },
+    "correct_answer": "B",
+    "explanation": "In power analysis and study design, researchers must define the 'Effect Size' (specifically, the Minimum Detectable Effect) which represents the smallest difference that would be practically or clinically meaningful to detect."
+  }
+]

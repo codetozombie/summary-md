@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getCourses } from "../../lib/markdown";
+import { getQuizzes } from "../../lib/quiz";
+import Sidebar from "./components/Sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,12 +27,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Fetch data on the server for the Sidebar
+  const courses = getCourses();
+  const quizzes = getQuizzes();
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}>
+        <div className="flex min-h-screen">
+          {/* Global Sidebar Navigation */}
+          <Sidebar courses={courses} quizzes={quizzes} />
+          
+          {/* Main Content Area */}
+          <div className="flex-1 overflow-x-hidden">
+            {children}
+          </div>
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>

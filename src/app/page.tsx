@@ -1,51 +1,67 @@
+import Link from 'next/link';
 import { getCourses } from '../../lib/markdown';
-import CourseTabs from './components/CourseTabs';
-import QuizButton from './components/QuizButton';
+import { getQuizzes } from '../../lib/quiz';
 
 export default function Home() {
   const courses = getCourses();
+  const quizzes = getQuizzes();
+
+  const firstCourse = courses[0];
+  const firstQuiz = quizzes[0];
 
   return (
-    <main className="min-h-screen relative overflow-hidden">
-      {/* Ambient background glow */}
-      <div className="fixed inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99, 102, 241, 0.08) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 80% 100%, rgba(99, 102, 241, 0.04) 0%, transparent 50%)',
-        }}
-      />
+    <main className="p-8 sm:p-12 animate-fade-in-up">
+      <div className="max-w-4xl">
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+          Welcome to Course Mastery
+        </h1>
+        <p className="text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed">
+          Select a lecture or quiz from the sidebar to begin your study session. All your quiz progress is automatically saved to your browser so you won't lose your place.
+        </p>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-12 flex flex-col gap-8">
-
-        {/* Hero Header */}
-        <div className="glass-card p-6 sm:p-8 animate-fade-in-up">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center"
-                  style={{ background: 'var(--accent-glow)', border: '1px solid var(--border-accent)' }}>
-                  <svg className="w-4 h-4" style={{ color: 'var(--text-accent)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                  </svg>
-                </div>
-                <span className="text-xs font-semibold uppercase tracking-widest"
-                  style={{ color: 'var(--text-tertiary)' }}>
-                  Study Platform
-                </span>
+        <div className="grid sm:grid-cols-2 gap-6">
+          {/* Quick Start: Lecture */}
+          {firstCourse && (
+            <div className="clean-card p-6 flex flex-col items-start hover:-translate-y-1 transition-transform duration-200">
+              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight"
-                style={{ color: 'var(--text-primary)' }}>
-                Course Mastery
-              </h1>
-              <p className="mt-2 text-base"
-                style={{ color: 'var(--text-secondary)' }}>
-                Dive into your curriculum and validate your knowledge.
+              <h2 className="text-xl font-bold mb-2 text-slate-900">Start Reading</h2>
+              <p className="text-slate-600 mb-6 text-sm flex-grow">
+                Begin with your first study material: <span className="font-semibold text-slate-800">{firstCourse.title}</span>.
               </p>
+              <Link 
+                href={`/lecture/${firstCourse.id}`} 
+                className="mt-auto px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors"
+              >
+                Go to Lecture
+              </Link>
             </div>
-            <QuizButton />
-          </div>
-        </div>
+          )}
 
-        <CourseTabs courses={courses} />
+          {/* Quick Start: Quiz */}
+          {firstQuiz && (
+            <div className="clean-card p-6 flex flex-col items-start hover:-translate-y-1 transition-transform duration-200">
+              <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 mb-4">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h2 className="text-xl font-bold mb-2 text-slate-900">Test Your Knowledge</h2>
+              <p className="text-slate-600 mb-6 text-sm flex-grow">
+                Jump right into the first practice quiz: <span className="font-semibold text-slate-800">{firstQuiz.title}</span>.
+              </p>
+              <Link 
+                href={`/quiz/${firstQuiz.id}`} 
+                className="mt-auto px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Start Quiz
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );
