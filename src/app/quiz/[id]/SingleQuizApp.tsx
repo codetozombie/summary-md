@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import type { QuizSet } from '../../../../lib/quiz';
 
 type QuizState = {
@@ -14,6 +14,9 @@ export default function SingleQuizApp({ quiz }: { quiz: QuizSet }) {
 
   const questions = quiz.questions;
   const currentQuestion = questions[currentQuestionIndex];
+
+  // Ref for swipe handling
+  const touchStartX = useRef<number | null>(null);
 
   // Score tracking
   const score = useMemo(() => {
@@ -100,6 +103,27 @@ export default function SingleQuizApp({ quiz }: { quiz: QuizSet }) {
     setCurrentQuestionIndex(0);
   };
 
+  // Swipe handlers
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+    
+    // Swipe left -> Next
+    if (diff > 50) {
+      handleNext();
+    } 
+    // Swipe right -> Prev
+    else if (diff < -50) {
+      handlePrev();
+    }
+    touchStartX.current = null;
+  };
+
   if (!isLoaded) return null;
 
   const selectedAnswer = quizState.answers[currentQuestionIndex];
@@ -152,9 +176,20 @@ export default function SingleQuizApp({ quiz }: { quiz: QuizSet }) {
 
       {/* Question Card */}
       {currentQuestion && (
-        <div key={currentQuestionIndex} className="clean-card p-5 sm:p-8 min-h-[420px] flex flex-col animate-scale-in">
-          <div className="inline-flex self-start px-2.5 py-1 rounded-lg text-xs font-bold mb-4 uppercase tracking-wider bg-blue-50 text-blue-600 border border-blue-100">
-            Q{currentQuestion.question_no}
+        <div 
+          key={currentQuestionIndex} 
+          className="clean-card p-5 sm:p-8 min-h-[420px] flex flex-col animate-scale-in"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
+          <div className="flex justify-between items-start mb-4">
+            <div className="inline-flex px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-600 border border-blue-100">
+              Q{currentQuestion.question_no}
+            </div>
+            <div className="text-[10px] uppercase font-bold text-slate-400 sm:hidden flex items-center gap-1">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+              Swipe
+            </div>
           </div>
 
           <h2 className="text-lg sm:text-xl font-bold leading-relaxed mb-6 text-slate-900">

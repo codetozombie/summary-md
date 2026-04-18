@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getCourses } from '../../lib/markdown';
 import { getQuizzes } from '../../lib/quiz';
+import OverallScoreCard from './components/OverallScoreCard';
 
 export default function Home() {
   const courses = getCourses();
@@ -10,16 +11,16 @@ export default function Home() {
   const firstQuiz = quizzes[0];
 
   return (
-    <main className="p-8 sm:p-12 animate-fade-in-up">
-      <div className="max-w-4xl">
+    <main className="p-4 sm:p-8 md:p-12 animate-fade-in-up">
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
           Welcome to Course Mastery
         </h1>
         <p className="text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed">
-          Select a lecture or quiz from the sidebar to begin your study session. All your quiz progress is automatically saved to your browser so you won't lose your place.
+          Select a lecture or quiz from the navigation menu to begin your study session. All your quiz progress is automatically saved to your browser so you won't lose your place.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Quick Start: Lecture */}
           {firstCourse && (
             <div className="clean-card p-6 flex flex-col items-start hover:-translate-y-1 transition-transform duration-200">
@@ -34,7 +35,7 @@ export default function Home() {
               </p>
               <Link 
                 href={`/lecture/${firstCourse.id}`} 
-                className="mt-auto px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors"
+                className="mt-auto px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors w-full text-center"
               >
                 Go to Lecture
               </Link>
@@ -49,18 +50,21 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h2 className="text-xl font-bold mb-2 text-slate-900">Test Your Knowledge</h2>
+              <h2 className="text-xl font-bold mb-2 text-slate-900">Practice Mode</h2>
               <p className="text-slate-600 mb-6 text-sm flex-grow">
                 Jump right into the first practice quiz: <span className="font-semibold text-slate-800">{firstQuiz.title}</span>.
               </p>
               <Link 
                 href={`/quiz/${firstQuiz.id}`} 
-                className="mt-auto px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                className="mt-auto px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors w-full text-center"
               >
                 Start Quiz
               </Link>
             </div>
           )}
+
+          {/* Overall Score */}
+          <OverallScoreCard quizzes={quizzes} />
         </div>
       </div>
     </main>

@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getCourses } from "../../lib/markdown";
 import { getQuizzes } from "../../lib/quiz";
 import Sidebar from "./components/Sidebar";
+import MobileNav from "./components/MobileNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,14 +36,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}>
         <div className="flex min-h-screen">
-          {/* Global Sidebar Navigation */}
+          {/* Global Sidebar Navigation (Desktop) */}
           <Sidebar courses={courses} quizzes={quizzes} />
           
           {/* Main Content Area */}
-          <div className="flex-1 overflow-x-hidden">
+          <div className="flex-1 overflow-x-hidden pb-16 sm:pb-0">
             {children}
           </div>
         </div>
+
+        {/* Global Bottom Navigation (Mobile) */}
+        <MobileNav />
+
         <Analytics />
         <SpeedInsights />
       </body>
