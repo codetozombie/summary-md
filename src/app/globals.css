@@ -1,27 +1,259 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* ── Design Tokens ── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #0b1120;
+  --bg-secondary: #111827;
+  --bg-card: #1e293b;
+  --bg-card-hover: #233044;
+  --bg-elevated: #273449;
+
+  --border-subtle: rgba(148, 163, 184, 0.08);
+  --border-default: rgba(148, 163, 184, 0.12);
+  --border-accent: rgba(99, 102, 241, 0.3);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+  --text-accent: #818cf8;
+
+  --accent-primary: #6366f1;
+  --accent-primary-hover: #818cf8;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+
+  --success: #34d399;
+  --success-bg: rgba(52, 211, 153, 0.1);
+  --success-border: rgba(52, 211, 153, 0.2);
+
+  --error: #fb7185;
+  --error-bg: rgba(251, 113, 133, 0.1);
+  --error-border: rgba(251, 113, 133, 0.2);
+
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.3), 0 4px 20px rgba(0,0,0,0.15);
+  --shadow-glow: 0 0 20px var(--accent-glow);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #e0e7ff;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* ── Focus Ring ── */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* ── Keyframe Animations ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 8px var(--accent-glow); }
+  50% { box-shadow: 0 0 20px var(--accent-glow); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out both;
+}
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out both;
+}
+.animate-scale-in {
+  animation: scaleIn 0.25s ease-out both;
+}
+
+/* Stagger children */
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 40ms; }
+.stagger > *:nth-child(3) { animation-delay: 80ms; }
+.stagger > *:nth-child(4) { animation-delay: 120ms; }
+.stagger > *:nth-child(5) { animation-delay: 160ms; }
+.stagger > *:nth-child(6) { animation-delay: 200ms; }
+
+/* ── Shimmer Progress Bar ── */
+.progress-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary) 0%,
+    var(--accent-primary-hover) 50%,
+    var(--accent-primary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* ── Glass Card ── */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--border-default);
+}
+
+/* ── Dark Prose Overrides ── */
+.prose-dark {
+  --tw-prose-body: var(--text-secondary);
+  --tw-prose-headings: var(--text-primary);
+  --tw-prose-links: var(--text-accent);
+  --tw-prose-bold: var(--text-primary);
+  --tw-prose-counters: var(--text-tertiary);
+  --tw-prose-bullets: var(--text-tertiary);
+  --tw-prose-quotes: var(--text-secondary);
+  --tw-prose-code: var(--text-accent);
+  --tw-prose-hr: var(--border-default);
+  --tw-prose-th-borders: var(--border-default);
+  --tw-prose-td-borders: var(--border-subtle);
+}
+
+.prose-dark pre {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+}
+
+.prose-dark code {
+  color: var(--text-accent) !important;
+  background: rgba(99, 102, 241, 0.1) !important;
+  padding: 2px 6px !important;
+  border-radius: 6px !important;
+  font-size: 0.875em !important;
+}
+
+.prose-dark pre code {
+  background: transparent !important;
+  padding: 0 !important;
+  color: inherit !important;
+}
+
+.prose-dark blockquote {
+  border-left-color: var(--accent-primary) !important;
+  background: rgba(99, 102, 241, 0.05);
+  padding: 12px 20px !important;
+  border-radius: 0 12px 12px 0;
+}
+
+.prose-dark table {
+  border-color: var(--border-subtle) !important;
+}
+
+.prose-dark th {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.prose-dark td {
+  border-color: var(--border-subtle) !important;
+}
+
+.prose-dark tr:nth-child(even) td {
+  background: rgba(148, 163, 184, 0.03);
+}
+
+.prose-dark img {
+  border-radius: var(--radius-lg) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+.prose-dark a {
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.prose-dark a:hover {
+  color: var(--accent-primary-hover) !important;
+  text-decoration: underline;
+}
+
+/* ── Tab Scroll Fade ── */
+.tab-scroll-container {
+  mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
 }
