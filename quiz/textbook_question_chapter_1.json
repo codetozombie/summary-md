@@ -1,0 +1,362 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which of the following is considered unstructured data?",
+    "possible_answers": {
+      "A": "A relational database table",
+      "B": "Wind speed measurements",
+      "C": "An image consisting of pixels",
+      "D": "A binary indicator variable"
+    },
+    "correct_answer": "C",
+    "explanation": "Unstructured data includes images (a collection of pixels), texts, and clickstreams, as opposed to structured numeric or categorical data."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Which of the following is a synonym for a 'feature' in a data frame?",
+    "possible_answers": {
+      "A": "Record",
+      "B": "Predictor",
+      "C": "Instance",
+      "D": "Case"
+    },
+    "correct_answer": "B",
+    "explanation": "A column within a table is commonly referred to as a feature, with synonyms including attribute, input, predictor, and variable."
+  },
+  {
+    "question_no": 3,
+    "question_text": "Which statistical term refers to the same concept as a 'record' in data science?",
+    "possible_answers": {
+      "A": "Target",
+      "B": "Outcome",
+      "C": "Observation",
+      "D": "Predictor"
+    },
+    "correct_answer": "C",
+    "explanation": "A record (row) is synonymous with case, example, instance, observation, pattern, or sample."
+  },
+  {
+    "question_no": 4,
+    "question_text": "What is the main advantage of computing a trimmed mean rather than an ordinary mean?",
+    "possible_answers": {
+      "A": "It eliminates the influence of extreme values (outliers).",
+      "B": "It accounts for underrepresented groups.",
+      "C": "It is easier to calculate.",
+      "D": "It incorporates subjective judgment."
+    },
+    "correct_answer": "A",
+    "explanation": "A trimmed mean drops a fixed number of sorted values at each end, eliminating the influence of extreme values."
+  },
+  {
+    "question_no": 5,
+    "question_text": "In which scenario would a weighted mean be most appropriate?",
+    "possible_answers": {
+      "A": "When all data values are equally reliable.",
+      "B": "When some sensors are less accurate than others.",
+      "C": "When the data has no extreme values.",
+      "D": "When estimating the middle number of a sorted list."
+    },
+    "correct_answer": "B",
+    "explanation": "A weighted mean is used when some values are intrinsically more variable, such as when one sensor is less accurate and should be downweighted."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Why is the median considered a robust estimate of location?",
+    "possible_answers": {
+      "A": "It calculates the sum of all values.",
+      "B": "It is not influenced by extreme cases (outliers) that could skew results.",
+      "C": "It divides the standard deviation by the mean.",
+      "D": "It drops the bottom and top 10% of the data."
+    },
+    "correct_answer": "B",
+    "explanation": "The median depends only on the values in the center of the sorted data, making it robust to outliers."
+  },
+  {
+    "question_no": 7,
+    "question_text": "What is the variance?",
+    "possible_answers": {
+      "A": "The square root of the standard deviation.",
+      "B": "The sum of squared deviations from the mean divided by n-1.",
+      "C": "The mean of the absolute values of the deviations from the mean.",
+      "D": "The difference between the 75th and 25th percentiles."
+    },
+    "correct_answer": "B",
+    "explanation": "Variance is the sum of squared deviations from the mean divided by n-1."
+  },
+  {
+    "question_no": 8,
+    "question_text": "Which of the following metrics is NOT a robust estimate of variability?",
+    "possible_answers": {
+      "A": "Median absolute deviation from the median (MAD)",
+      "B": "Interquartile range (IQR)",
+      "C": "Variance",
+      "D": "Difference between the 10th and 90th percentiles"
+    },
+    "correct_answer": "C",
+    "explanation": "The variance and standard deviation are very sensitive to outliers because they are based on squared deviations."
+  },
+  {
+    "question_no": 9,
+    "question_text": "In a standard boxplot, what do the top and bottom of the box represent?",
+    "possible_answers": {
+      "A": "The maximum and minimum values.",
+      "B": "The 95th and 5th percentiles.",
+      "C": "The 75th and 25th percentiles.",
+      "D": "The median and the mean."
+    },
+    "correct_answer": "C",
+    "explanation": "The top and bottom of the box are the 75th and 25th percentiles, respectively."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What defines the interquartile range (IQR)?",
+    "possible_answers": {
+      "A": "The difference between the largest and smallest values.",
+      "B": "The difference between the 75th percentile and the 25th percentile.",
+      "C": "The difference between the mean and the median.",
+      "D": "The average of the absolute deviations from the median."
+    },
+    "correct_answer": "B",
+    "explanation": "The IQR is a common measurement of variability defined as the difference between the 25th and 75th percentiles."
+  },
+  {
+    "question_no": 11,
+    "question_text": "How does a histogram typically handle bins compared to a frequency table?",
+    "possible_answers": {
+      "A": "A histogram bins have unequal sizes, while a frequency table has equal-size bins.",
+      "B": "Both have equal-size bins, but a histogram visualizes them with contiguous bars.",
+      "C": "A histogram represents categories, while a frequency table represents continuous data.",
+      "D": "A histogram only displays the quartiles of the distribution."
+    },
+    "correct_answer": "B",
+    "explanation": "A histogram visualizes a frequency table with bins of equal width and contiguous bars."
+  },
+  {
+    "question_no": 12,
+    "question_text": "In statistical theory, what do the third and fourth moments of a distribution represent?",
+    "possible_answers": {
+      "A": "Location and variability",
+      "B": "Mean and variance",
+      "C": "Skewness and kurtosis",
+      "D": "Standard deviation and IQR"
+    },
+    "correct_answer": "C",
+    "explanation": "The third and fourth moments are called skewness (tendency to skew to larger/smaller values) and kurtosis (propensity for extreme values)."
+  },
+  {
+    "question_no": 13,
+    "question_text": "Which plot can be thought of as a smoothed version of a histogram?",
+    "possible_answers": {
+      "A": "Scatterplot",
+      "B": "Density plot",
+      "C": "Boxplot",
+      "D": "Bar chart"
+    },
+    "correct_answer": "B",
+    "explanation": "A density plot shows the distribution of data values as a continuous line, often based on a kernel density estimate."
+  },
+  {
+    "question_no": 14,
+    "question_text": "What is the primary difference between a bar chart and a histogram?",
+    "possible_answers": {
+      "A": "A bar chart displays numeric data on the x-axis, while a histogram displays categorical data.",
+      "B": "A bar chart has contiguous bars, while a histogram has separate bars.",
+      "C": "A bar chart's x-axis represents different categories, while a histogram's x-axis represents values on a numeric scale.",
+      "D": "There is no difference; they are synonymous."
+    },
+    "correct_answer": "C",
+    "explanation": "In a bar chart, the x-axis represents categories of a factor variable, whereas in a histogram it represents values of a single numeric variable."
+  },
+  {
+    "question_no": 15,
+    "question_text": "What is the expected value?",
+    "possible_answers": {
+      "A": "The most commonly occurring value in a dataset.",
+      "B": "The sum of values multiplied by their probability of occurrence.",
+      "C": "The middle number in a sorted list.",
+      "D": "The difference between the maximum and minimum outcomes."
+    },
+    "correct_answer": "B",
+    "explanation": "Expected value is a form of weighted mean where the weights are probabilities."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Which metric measures the extent to which two numeric variables are associated with one another?",
+    "possible_answers": {
+      "A": "Variance",
+      "B": "Mean absolute deviation",
+      "C": "Correlation coefficient",
+      "D": "Expected value"
+    },
+    "correct_answer": "C",
+    "explanation": "The correlation coefficient is a standardized metric that measures the linear association between two variables."
+  },
+  {
+    "question_no": 17,
+    "question_text": "What does a correlation coefficient of -1 indicate?",
+    "possible_answers": {
+      "A": "No correlation",
+      "B": "Perfect positive correlation",
+      "C": "Perfect negative correlation",
+      "D": "A nonlinear relationship"
+    },
+    "correct_answer": "C",
+    "explanation": "A correlation coefficient of -1 indicates a perfect negative correlation."
+  },
+  {
+    "question_no": 18,
+    "question_text": "Which visualization is the standard way to display the relationship between two measured numeric variables for a small dataset?",
+    "possible_answers": {
+      "A": "Scatterplot",
+      "B": "Hexagonal binning",
+      "C": "Contingency table",
+      "D": "Violin plot"
+    },
+    "correct_answer": "A",
+    "explanation": "A scatterplot maps the value of one variable to the x-axis and another to the y-axis to visualize their relationship."
+  },
+  {
+    "question_no": 19,
+    "question_text": "When plotting numeric versus numeric data for hundreds of thousands of records, which visualization is preferred over a scatterplot to avoid a monolithic dark cloud?",
+    "possible_answers": {
+      "A": "Bar chart",
+      "B": "Hexagonal binning",
+      "C": "Pie chart",
+      "D": "Contingency table"
+    },
+    "correct_answer": "B",
+    "explanation": "Hexagonal binning groups records into hexagonal bins with colors indicating the count, making it ideal for large datasets."
+  },
+  {
+    "question_no": 20,
+    "question_text": "What does a contour plot overlaid onto a scatterplot represent?",
+    "possible_answers": {
+      "A": "A tally of categorical counts",
+      "B": "A topographical map showing the density of points",
+      "C": "The interquartile range of the data",
+      "D": "The correlation matrix of the variables"
+    },
+    "correct_answer": "B",
+    "explanation": "Contours represent specific densities of points, acting like a topographical map for two variables."
+  },
+  {
+    "question_no": 21,
+    "question_text": "Which tool is commonly used to summarize the relationship between two categorical variables?",
+    "possible_answers": {
+      "A": "Density plot",
+      "B": "Contingency table",
+      "C": "Histogram",
+      "D": "Hexagonal binning"
+    },
+    "correct_answer": "B",
+    "explanation": "A contingency table is a tally of counts by category used to summarize two categorical variables."
+  },
+  {
+    "question_no": 22,
+    "question_text": "How does a violin plot differ from a boxplot?",
+    "possible_answers": {
+      "A": "A violin plot is used for categorical variables, while a boxplot is used for numeric variables.",
+      "B": "A violin plot plots a density estimate on the y-axis, showing nuances in the distribution.",
+      "C": "A violin plot is highly sensitive to multicollinearity.",
+      "D": "A violin plot only shows the mean and standard deviation."
+    },
+    "correct_answer": "B",
+    "explanation": "A violin plot enhances a boxplot by plotting a mirrored density estimate, which can reveal nuances in the distribution."
+  },
+  {
+    "question_no": 23,
+    "question_text": "Which metric calculates the median of the absolute values of the deviations from the median?",
+    "possible_answers": {
+      "A": "Mean absolute deviation",
+      "B": "Variance",
+      "C": "Median absolute deviation (MAD)",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "C",
+    "explanation": "The Median absolute deviation (MAD) is the median of the absolute values of the deviations from the median."
+  },
+  {
+    "question_no": 24,
+    "question_text": "What does the term 'order statistics' refer to?",
+    "possible_answers": {
+      "A": "Metrics based on the data values sorted from smallest to biggest.",
+      "B": "Metrics used to establish a linear regression.",
+      "C": "The correlation between two categorical variables.",
+      "D": "A list of expected values."
+    },
+    "correct_answer": "A",
+    "explanation": "Statistics based on sorted or ranked data are referred to as order statistics."
+  },
+  {
+    "question_no": 25,
+    "question_text": "If you are predicting whether an auction is competitive or not, what data type does the outcome variable belong to?",
+    "possible_answers": {
+      "A": "Continuous",
+      "B": "Binary",
+      "C": "Ordinal",
+      "D": "Discrete"
+    },
+    "correct_answer": "B",
+    "explanation": "A yes/no or competitive/non-competitive outcome is a binary variable, a special case of categorical data."
+  },
+  {
+    "question_no": 26,
+    "question_text": "Which type of data takes on only integer values, such as counts?",
+    "possible_answers": {
+      "A": "Continuous",
+      "B": "Discrete",
+      "C": "Ordinal",
+      "D": "Binary"
+    },
+    "correct_answer": "B",
+    "explanation": "Discrete data can take on only integer values, such as the count of the occurrence of an event."
+  },
+  {
+    "question_no": 27,
+    "question_text": "What problem can arise when calculating the ordinary mean for a dataset with sensor data that contains a bad reading?",
+    "possible_answers": {
+      "A": "The mean will be robust and correct for it.",
+      "B": "The mean will result in a poor estimate of location due to the outlier.",
+      "C": "The mean will automatically drop the bad reading.",
+      "D": "The data will convert into categorical data."
+    },
+    "correct_answer": "B",
+    "explanation": "The mean is sensitive to outliers and a bad reading will skew the result, making it a poor estimate of location."
+  },
+  {
+    "question_no": 28,
+    "question_text": "Why is the standard deviation preferred in statistics over the mean absolute deviation?",
+    "possible_answers": {
+      "A": "It is more robust to outliers.",
+      "B": "It uses absolute values which are simpler to compute.",
+      "C": "Mathematically, working with squared values is more convenient for statistical models.",
+      "D": "It always produces a smaller value."
+    },
+    "correct_answer": "C",
+    "explanation": "Standard deviation owes its preeminence to statistical theory because working with squared values is mathematically more convenient than absolute values."
+  },
+  {
+    "question_no": 29,
+    "question_text": "According to the text, which robust alternative to the classical correlation coefficient works with ranks rather than values?",
+    "possible_answers": {
+      "A": "Pearson's correlation coefficient",
+      "B": "Spearman's rho",
+      "C": "Mean absolute deviation",
+      "D": "Expected value"
+    },
+    "correct_answer": "B",
+    "explanation": "Spearman's rho (and Kendall's tau) are correlation coefficients based on the rank of the data, making them robust to outliers."
+  },
+  {
+    "question_no": 30,
+    "question_text": "What does the total area under a density curve equal?",
+    "possible_answers": {
+      "A": "1",
+      "B": "The total number of records",
+      "C": "The interquartile range",
+      "D": "100"
+    },
+    "correct_answer": "A",
+    "explanation": "The total area under the density curve equals 1, and areas under the curve represent the proportion of the distribution."
+  }
+]
