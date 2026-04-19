@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which pandas function is used to read a compressed CSV file directly into a DataFrame?",
+    "possible_answers": {
+      "A": "pd.read_compressed()",
+      "B": "pd.read_csv()",
+      "C": "pd.open_csv()",
+      "D": "pd.load_csv()"
+    },
+    "correct_answer": "B",
+    "explanation": "Pandas' `read_csv` function can handle compressed files like `.csv.gz` directly without needing separate decompression steps."
+  },
+  {
+    "question_no": 2,
+    "question_text": "What attribute is used to find the dimensions (number of rows and columns) of a pandas DataFrame?",
+    "possible_answers": {
+      "A": "df.size",
+      "B": "df.dimensions",
+      "C": "df.shape",
+      "D": "df.len"
+    },
+    "correct_answer": "C",
+    "explanation": "The `.shape` attribute returns a tuple representing the dimensionality of the DataFrame."
+  },
+  {
+    "question_no": 3,
+    "question_text": "Which method is used to view the first 5 rows of a DataFrame?",
+    "possible_answers": {
+      "A": "df.first()",
+      "B": "df.top()",
+      "C": "df.start()",
+      "D": "df.head()"
+    },
+    "correct_answer": "D",
+    "explanation": "The `head()` method returns the first 5 rows of the DataFrame by default, which is useful for quickly exploring data."
+  },
+  {
+    "question_no": 4,
+    "question_text": "In pandas, how do you create a mask to filter a DataFrame `df` where the column 'TURNFEAR' equals 1?",
+    "possible_answers": {
+      "A": "mask = df['TURNFEAR'] == 1",
+      "B": "mask = df['TURNFEAR'] = 1",
+      "C": "mask = df.filter('TURNFEAR', 1)",
+      "D": "mask = (df['TURNFEAR'] === 1)"
+    },
+    "correct_answer": "A",
+    "explanation": "A boolean mask is created using the equality operator `==` on the specific DataFrame column to check for a condition."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which operator is used to combine multiple conditions in a pandas boolean mask?",
+    "possible_answers": {
+      "A": "and",
+      "B": "&&",
+      "C": "&",
+      "D": "||"
+    },
+    "correct_answer": "C",
+    "explanation": "In pandas, the bitwise AND operator `&` is used to combine multiple boolean conditions, and each condition must be enclosed in parentheses."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Which method calculates the variance of numerical columns in a pandas DataFrame?",
+    "possible_answers": {
+      "A": "df.variance()",
+      "B": "df.var()",
+      "C": "df.dispersion()",
+      "D": "df.std()"
+    },
+    "correct_answer": "B",
+    "explanation": "The `var()` method is used to compute the variance of features across the axes of a DataFrame."
+  },
+  {
+    "question_no": 7,
+    "question_text": "If a pandas Series is sorted in ascending order, which method extracts the 10 features with the largest values?",
+    "possible_answers": {
+      "A": "series.top(10)",
+      "B": "series.head(10)",
+      "C": "series.max(10)",
+      "D": "series.tail(10)"
+    },
+    "correct_answer": "D",
+    "explanation": "Since the data is sorted in ascending order, the largest values are at the end. The `tail(10)` method retrieves the last 10 elements."
+  },
+  {
+    "question_no": 8,
+    "question_text": "How do you initialize a KMeans model with 3 clusters using scikit-learn?",
+    "possible_answers": {
+      "A": "KMeans(clusters=3)",
+      "B": "KMeans(n_clusters=3)",
+      "C": "KMeans(k=3)",
+      "D": "KMeans(num_clusters=3)"
+    },
+    "correct_answer": "B",
+    "explanation": "The correct parameter for specifying the number of clusters in scikit-learn's KMeans implementation is `n_clusters`."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Which method is used to train a scikit-learn clustering model on a dataset `X`?",
+    "possible_answers": {
+      "A": "model.train(X)",
+      "B": "model.predict(X)",
+      "C": "model.fit(X)",
+      "D": "model.transform(X)"
+    },
+    "correct_answer": "C",
+    "explanation": "The `fit()` method computes the clustering algorithm based on the provided dataset and learns the cluster centers."
+  },
+  {
+    "question_no": 10,
+    "question_text": "After fitting a KMeans model, which attribute holds the within-cluster sum of squares (inertia)?",
+    "possible_answers": {
+      "A": "model.inertia_",
+      "B": "model.wcss_",
+      "C": "model.score_",
+      "D": "model.variance_"
+    },
+    "correct_answer": "A",
+    "explanation": "Scikit-learn stores the within-cluster sum of squares, which indicates how tight the clusters are, in the `inertia_` attribute of a fitted KMeans object."
+  },
+  {
+    "question_no": 11,
+    "question_text": "What function from `sklearn.metrics` is commonly used to evaluate the quality and separation of clusters?",
+    "possible_answers": {
+      "A": "accuracy_score",
+      "B": "cluster_score",
+      "C": "silhouette_score",
+      "D": "inertia_score"
+    },
+    "correct_answer": "C",
+    "explanation": "The `silhouette_score` function evaluates how similar an object is to its own cluster compared to other clusters."
+  },
+  {
+    "question_no": 12,
+    "question_text": "What is the primary purpose of `StandardScaler` in a machine learning pipeline?",
+    "possible_answers": {
+      "A": "To remove missing values from the dataset.",
+      "B": "To standardise features by removing the mean and scaling to unit variance.",
+      "C": "To encode categorical variables into numeric values.",
+      "D": "To reduce the dimensionality of the dataset."
+    },
+    "correct_answer": "B",
+    "explanation": "StandardScaler standardizes features by subtracting the mean and dividing by the standard deviation, ensuring all features are weighed equally by distance-based algorithms like KMeans."
+  },
+  {
+    "question_no": 13,
+    "question_text": "Which scikit-learn function is used to chain multiple processing steps, like scaling and clustering, together?",
+    "possible_answers": {
+      "A": "build_pipeline",
+      "B": "make_pipeline",
+      "C": "create_chain",
+      "D": "PipelineBuilder"
+    },
+    "correct_answer": "B",
+    "explanation": "The `make_pipeline` function is a shorthand utility that constructs a Pipeline object from the given estimators."
+  },
+  {
+    "question_no": 14,
+    "question_text": "In the context of multi-dimensional clustering, what is Principal Component Analysis (PCA) primarily used for?",
+    "possible_answers": {
+      "A": "To increase the number of features in the dataset.",
+      "B": "To handle missing data interpolation.",
+      "C": "To reduce dimensionality for 2D visualization of complex clusters.",
+      "D": "To evaluate the accuracy of the KMeans algorithm."
+    },
+    "correct_answer": "C",
+    "explanation": "PCA reduces the dimensionality of the data, allowing clusters formed by multiple features to be easily visualized on a 2D scatter plot."
+  },
+  {
+    "question_no": 15,
+    "question_text": "How do you instantiate an interactive dashboard application using JupyterDash?",
+    "possible_answers": {
+      "A": "app = JupyterDash(__name__)",
+      "B": "app = DashApp()",
+      "C": "app = create_dashboard()",
+      "D": "app = JupyterApp(__name__)"
+    },
+    "correct_answer": "A",
+    "explanation": "The standard way to initialize a JupyterDash application is by passing the standard module name `__name__` to the JupyterDash class constructor."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Which Dash module provides Python wrappers for standard HTML tags like `<div>` and `<h1>`?",
+    "possible_answers": {
+      "A": "dash_core_components",
+      "B": "dash_html_components",
+      "C": "dash_bootstrap_components",
+      "D": "dash_tags"
+    },
+    "correct_answer": "B",
+    "explanation": "The `dash_html_components` module contains classes representing all standard HTML tags, allowing UI building purely in Python."
+  },
+  {
+    "question_no": 17,
+    "question_text": "Which component would you use from `dash_core_components` to allow a user to select a value from a sliding scale?",
+    "possible_answers": {
+      "A": "dcc.Scale",
+      "B": "dcc.Range",
+      "C": "dcc.Slider",
+      "D": "dcc.Input"
+    },
+    "correct_answer": "C",
+    "explanation": "The `dcc.Slider` component provides an interactive sliding scale for users to precisely select numeric values in a Dash app."
+  },
+  {
+    "question_no": 18,
+    "question_text": "Which decorator is used to define interactivity and logic between components in a Dash application?",
+    "possible_answers": {
+      "A": "@app.interact",
+      "B": "@app.update",
+      "C": "@app.route",
+      "D": "@app.callback"
+    },
+    "correct_answer": "D",
+    "explanation": "The `@app.callback` decorator binds a Python function to inputs and outputs, automatically executing whenever the specified inputs change."
+  },
+  {
+    "question_no": 19,
+    "question_text": "In a Dash callback, what objects are used to link the interactive function to specific UI components?",
+    "possible_answers": {
+      "A": "Source and Destination",
+      "B": "Trigger and Action",
+      "C": "Input and Output",
+      "D": "Listener and Responder"
+    },
+    "correct_answer": "C",
+    "explanation": "Dash callbacks explicitly use `Input` and `Output` objects imported from `dash.dependencies` to define the reactive flow of data."
+  },
+  {
+    "question_no": 20,
+    "question_text": "Which method is called to launch the development server for a Dash application?",
+    "possible_answers": {
+      "A": "app.start()",
+      "B": "app.launch()",
+      "C": "app.run_server()",
+      "D": "app.serve()"
+    },
+    "correct_answer": "C",
+    "explanation": "The `run_server()` method is used to start the underlying Flask server and make the Dash app accessible in a browser or notebook."
+  }
+]

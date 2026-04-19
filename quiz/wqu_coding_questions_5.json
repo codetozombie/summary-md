@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which Python module is used to open and read a compressed file containing JSON data, such as a `.json.gz` file?",
+    "possible_answers": {
+      "A": "json",
+      "B": "gzip",
+      "C": "zipfile",
+      "D": "compress"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'gzip' module in Python provides the 'gzip.open()' function, which is used to read and write gzip-compressed files transparently."
+  },
+  {
+    "question_no": 2,
+    "question_text": "After opening a JSON file object `f` in Python, which method is used to parse the JSON content into a Python dictionary?",
+    "possible_answers": {
+      "A": "json.loads(f)",
+      "B": "json.read(f)",
+      "C": "json.load(f)",
+      "D": "json.parse(f)"
+    },
+    "correct_answer": "C",
+    "explanation": "The 'json.load()' function is used to read a file-like object containing a JSON document and convert it into a Python dictionary."
+  },
+  {
+    "question_no": 3,
+    "question_text": "How do you convert a nested dictionary `data[\"data\"]` into a pandas DataFrame and simultaneously set the index to a specific column named `\"company_id\"`?",
+    "possible_answers": {
+      "A": "pd.DataFrame(data[\"data\"], index=\"company_id\")",
+      "B": "pd.DataFrame().from_dict(data[\"data\"]).set_index(\"company_id\")",
+      "C": "pd.read_json(data[\"data\"]).index(\"company_id\")",
+      "D": "pd.DataFrame.from_records(data[\"data\"], index_col=\"company_id\")"
+    },
+    "correct_answer": "B",
+    "explanation": "'pd.DataFrame().from_dict()' loads the dictionary into a DataFrame, and chaining '.set_index(\"company_id\")' assigns the specified column as the DataFrame's index."
+  },
+  {
+    "question_no": 4,
+    "question_text": "How do you calculate the relative frequencies (proportions) of unique classes in a pandas Series named `df[\"bankrupt\"]`?",
+    "possible_answers": {
+      "A": "df[\"bankrupt\"].value_counts(relative=True)",
+      "B": "df[\"bankrupt\"].counts(normalize=True)",
+      "C": "df[\"bankrupt\"].value_counts(normalize=True)",
+      "D": "df[\"bankrupt\"].frequency()"
+    },
+    "correct_answer": "C",
+    "explanation": "Calling 'value_counts(normalize=True)' on a pandas Series returns the proportion of each unique value rather than the raw absolute counts."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which pandas DataFrame method provides a concise summary of the dataset including column data types, non-null counts, and memory usage?",
+    "possible_answers": {
+      "A": "df.summary()",
+      "B": "df.describe()",
+      "C": "df.dtypes()",
+      "D": "df.info()"
+    },
+    "correct_answer": "D",
+    "explanation": "The 'df.info()' method prints a compact summary of a DataFrame, making it highly useful for checking missing values and data types."
+  },
+  {
+    "question_no": 6,
+    "question_text": "To create a feature matrix `X` by safely dropping the target column `\"bankrupt\"` from the DataFrame `df` without modifying the original DataFrame, which code is correct?",
+    "possible_answers": {
+      "A": "X = df.remove(\"bankrupt\", axis=1)",
+      "B": "X = df.drop(columns=\"bankrupt\")",
+      "C": "X = df.delete(\"bankrupt\")",
+      "D": "X = df.pop(\"bankrupt\")"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'df.drop(columns=\"column_name\")' method returns a new DataFrame with the specified column removed, leaving the original DataFrame intact."
+  },
+  {
+    "question_no": 7,
+    "question_text": "What is the primary purpose of the `RandomOverSampler` class from the `imblearn` library?",
+    "possible_answers": {
+      "A": "To randomly split the dataset into training and test sets.",
+      "B": "To duplicate examples from the minority class to balance an imbalanced dataset.",
+      "C": "To randomly delete examples from the majority class.",
+      "D": "To generate entirely synthetic new samples using interpolation."
+    },
+    "correct_answer": "B",
+    "explanation": "RandomOverSampler tackles imbalanced datasets by randomly picking and duplicating samples from the minority class until it matches the majority class size."
+  },
+  {
+    "question_no": 8,
+    "question_text": "Which method is used to apply an instantiated `RandomOverSampler` named `over_sampler` to the training data `X_train` and `y_train`?",
+    "possible_answers": {
+      "A": "over_sampler.fit_transform(X_train, y_train)",
+      "B": "over_sampler.resample(X_train, y_train)",
+      "C": "over_sampler.fit_resample(X_train, y_train)",
+      "D": "over_sampler.balance(X_train, y_train)"
+    },
+    "correct_answer": "C",
+    "explanation": "In the imbalanced-learn library, the 'fit_resample()' method is used to simultaneously fit the sampler to the data and apply the resampling algorithm."
+  },
+  {
+    "question_no": 9,
+    "question_text": "What does the expression `y_train.value_counts(normalize=True).max()` calculate in a classification problem?",
+    "possible_answers": {
+      "A": "The baseline accuracy score (the frequency of the majority class).",
+      "B": "The maximum value numerically present in the target vector.",
+      "C": "The total number of features in the training set.",
+      "D": "The maximum probability predicted by the trained machine learning model."
+    },
+    "correct_answer": "A",
+    "explanation": "By finding the maximum normalized frequency in the target vector, you identify the proportion of the majority class, which serves as the naive baseline accuracy."
+  },
+  {
+    "question_no": 10,
+    "question_text": "In scikit-learn, which function is used to evaluate a model's performance on multiple splits of the data using k-fold cross-validation?",
+    "possible_answers": {
+      "A": "model_selection.validate()",
+      "B": "cross_val_score()",
+      "C": "kfold_evaluate()",
+      "D": "GridSearchCV()"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'cross_val_score' function evaluates an estimator by splitting the data into 'k' consecutive folds and returning the evaluation metric for each fold."
+  },
+  {
+    "question_no": 11,
+    "question_text": "When defining a hyperparameter grid for a `GridSearchCV` on a scikit-learn pipeline created via `make_pipeline`, how do you correctly reference the `max_depth` parameter of the `RandomForestClassifier` step?",
+    "possible_answers": {
+      "A": "max_depth",
+      "B": "rf__max_depth",
+      "C": "randomforestclassifier__max_depth",
+      "D": "estimator__max_depth"
+    },
+    "correct_answer": "C",
+    "explanation": "By default, 'make_pipeline' names each step with the lowercase class name of the estimator. You access step parameters using the step name, two underscores, and the parameter name."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Which dictionary correctly defines a parameter grid testing the 'mean' and 'median' strategies for a `SimpleImputer` inside a scikit-learn pipeline?",
+    "possible_answers": {
+      "A": "{\"strategy\": [\"mean\", \"median\"]}",
+      "B": "{\"simpleimputer__strategy\": [\"mean\", \"median\"]}",
+      "C": "{\"imputer_strategy\": (\"mean\", \"median\")}",
+      "D": "{\"SimpleImputer__strategy\": \"mean\", \"median\"}"
+    },
+    "correct_answer": "B",
+    "explanation": "The key must be the lowercase step name ('simpleimputer') followed by a double underscore ('__') and the parameter name ('strategy'), mapping to a list of values."
+  },
+  {
+    "question_no": 13,
+    "question_text": "What is the primary purpose of using `GridSearchCV` in scikit-learn?",
+    "possible_answers": {
+      "A": "To split data into training and validation sets sequentially.",
+      "B": "To systematically search for the optimal combination of hyperparameters using cross-validation.",
+      "C": "To build a random forest or gradient boosting tree model step by step.",
+      "D": "To transform multidimensional grid data into flattened arrays."
+    },
+    "correct_answer": "B",
+    "explanation": "GridSearchCV performs an exhaustive search over specified parameter values for an estimator, evaluating each combination using cross-validation to find the best model configuration."
+  },
+  {
+    "question_no": 14,
+    "question_text": "When instantiating `GridSearchCV`, what does the argument `n_jobs=-1` do?",
+    "possible_answers": {
+      "A": "It suppresses all terminal log messages during the grid search process.",
+      "B": "It restricts the grid search to use only a single CPU core to preserve memory.",
+      "C": "It commands the system to utilize all available CPU cores to run cross-validation fits in parallel.",
+      "D": "It forces the search to run indefinitely until a perfect accuracy is found."
+    },
+    "correct_answer": "C",
+    "explanation": "Setting 'n_jobs=-1' enables parallel processing by instructing scikit-learn to dispatch the computing jobs across all available processors on the machine."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Which scikit-learn ensemble estimator builds an additive model in a forward stage-wise fashion, commonly optimizing arbitrary differentiable loss functions?",
+    "possible_answers": {
+      "A": "RandomForestClassifier",
+      "B": "DecisionTreeClassifier",
+      "C": "GradientBoostingClassifier",
+      "D": "SimpleImputer"
+    },
+    "correct_answer": "C",
+    "explanation": "The 'GradientBoostingClassifier' sequentially builds an ensemble of weak learners (decision trees) where each new tree corrects the residual errors of the previous ones."
+  },
+  {
+    "question_no": 16,
+    "question_text": "How do you retrieve a tuple representing the exact number of rows and columns of a pandas DataFrame `df`?",
+    "possible_answers": {
+      "A": "df.size()",
+      "B": "df.shape",
+      "C": "df.dimensions()",
+      "D": "len(df)"
+    },
+    "correct_answer": "B",
+    "explanation": "The '.shape' attribute of a pandas DataFrame returns a tuple representing the dimensionality of the DataFrame in the format (rows, columns)."
+  },
+  {
+    "question_no": 17,
+    "question_text": "In a supervised machine learning script, what does defining `random_state=42` inside the `train_test_split` function achieve?",
+    "possible_answers": {
+      "A": "It automatically tests the model on 42 different data splits.",
+      "B": "It allocates exactly 42% of the dataset to the training subset.",
+      "C": "It seeds the random number generator so the split is identical and reproducible across different runs.",
+      "D": "It limits the dataset to exactly 42 distinct target classes."
+    },
+    "correct_answer": "C",
+    "explanation": "Providing a fixed integer to 'random_state' ensures that the randomized partitioning of the data yields the exact same result every time the code is executed."
+  },
+  {
+    "question_no": 18,
+    "question_text": "Which of the following commands properly executes a hyperparameter grid search using a `GridSearchCV` object named `model` on the resampled data?",
+    "possible_answers": {
+      "A": "model.train(X_train_over, y_train_over)",
+      "B": "model.predict(X_train_over, y_train_over)",
+      "C": "model.fit(X_train_over, y_train_over)",
+      "D": "model.evaluate(X_train_over, y_train_over)"
+    },
+    "correct_answer": "C",
+    "explanation": "Like standard scikit-learn estimators, a GridSearchCV object uses the '.fit()' method to execute the grid search and train the best model on the provided data."
+  },
+  {
+    "question_no": 19,
+    "question_text": "Which Python built-in function creates an iterable sequence of integers starting at 20 and ending at 30 (inclusive) in increments of 5?",
+    "possible_answers": {
+      "A": "list(20, 31, 5)",
+      "B": "seq(20, 30, 5)",
+      "C": "range(20, 31, 5)",
+      "D": "arange(20, 35, 5)"
+    },
+    "correct_answer": "C",
+    "explanation": "The 'range(start, stop, step)' function generates sequence numbers up to, but not including, the 'stop' argument. Thus, 'range(20, 31, 5)' yields 20, 25, and 30."
+  },
+  {
+    "question_no": 20,
+    "question_text": "If `y_train_over` is a binary target vector generated by fitting `RandomOverSampler` on an imbalanced dataset, what will `y_train_over.value_counts(normalize=True)` output?",
+    "possible_answers": {
+      "A": "The original heavily imbalanced proportions.",
+      "B": "Approximately 50% frequency for both the positive and negative class.",
+      "C": "100% for the majority class and 0% for the minority class.",
+      "D": "The baseline test set accuracy."
+    },
+    "correct_answer": "B",
+    "explanation": "By default, RandomOverSampler over-samples the minority class until it has the exact same number of examples as the majority class, resulting in a perfectly balanced 50/50 distribution."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "What is the primary purpose of the `MongoClient` class in the `pymongo` library?",
+    "possible_answers": {
+      "A": "To visualize data stored in MongoDB.",
+      "B": "To create a client object that connects to a MongoDB server.",
+      "C": "To define the structure of a MongoDB database.",
+      "D": "To automatically clean semi-structured data."
+    },
+    "correct_answer": "B",
+    "explanation": "MongoClient is used to establish a connection to a MongoDB server so that databases and collections can be queried."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Which PyMongo method is used to count the total number of documents in a collection?",
+    "possible_answers": {
+      "A": "count_all()",
+      "B": "get_count()",
+      "C": "count_documents({})",
+      "D": "size()"
+    },
+    "correct_answer": "C",
+    "explanation": "The count_documents({}) method returns the number of documents in a collection that match the provided query filter; an empty dictionary matches all documents."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What does the `find_one({})` method in PyMongo return?",
+    "possible_answers": {
+      "A": "A list of all documents in the collection.",
+      "B": "The first document in the collection that matches the query, returned as a dictionary.",
+      "C": "The number of documents matching the query.",
+      "D": "A pandas DataFrame containing one row."
+    },
+    "correct_answer": "B",
+    "explanation": "find_one() retrieves a single document from a MongoDB collection that satisfies the specified query criteria."
+  },
+  {
+    "question_no": 4,
+    "question_text": "In the context of MongoDB aggregation, what does the `$group` operator do?",
+    "possible_answers": {
+      "A": "It groups documents by a specified identifier and allows for accumulator operations like `$count`.",
+      "B": "It sorts the documents based on a specific field.",
+      "C": "It filters documents based on a condition, similar to a WHERE clause.",
+      "D": "It joins two collections together."
+    },
+    "correct_answer": "A",
+    "explanation": "The $group operator separates documents into groups according to a specified _id expression and outputs one document for each unique group."
+  },
+  {
+    "question_no": 5,
+    "question_text": "When using the `country_converter` library to change ISO 3166-1 alpha-2 codes to short country names, which argument is passed to the `to` parameter in the `convert` method?",
+    "possible_answers": {
+      "A": "name_long",
+      "B": "name_short",
+      "C": "alpha3",
+      "D": "full_name"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'name_short' argument is passed to the 'to' parameter to convert standardized country codes into readable short country names."
+  },
+  {
+    "question_no": 6,
+    "question_text": "What does the acronym ETL stand for in data engineering?",
+    "possible_answers": {
+      "A": "Evaluate, Test, Learn",
+      "B": "Extract, Transform, Load",
+      "C": "Encode, Transmit, Log",
+      "D": "Execute, Track, Launch"
+    },
+    "correct_answer": "B",
+    "explanation": "ETL stands for Extract, Transform, Load, which describes the process of taking data from a source, changing it into a required format, and writing it into a target database."
+  },
+  {
+    "question_no": 7,
+    "question_text": "In Object-Oriented Programming with Python, what is the purpose of the `__init__` method in a class?",
+    "possible_answers": {
+      "A": "It initializes the class by acting as a constructor to assign values to object properties.",
+      "B": "It deletes the object from memory.",
+      "C": "It returns a string representation of the object.",
+      "D": "It creates a static method that can be called without instantiating the class."
+    },
+    "correct_answer": "A",
+    "explanation": "The __init__ method is a special method in Python classes that is automatically called when an object of that class is created to initialize its state."
+  },
+  {
+    "question_no": 8,
+    "question_text": "In an A/B test, what does the null hypothesis typically assert?",
+    "possible_answers": {
+      "A": "That there is a significant difference between the control and treatment groups.",
+      "B": "That the treatment had a massive effect.",
+      "C": "That there is no significant difference between the control and treatment groups.",
+      "D": "That the sample size is too small."
+    },
+    "correct_answer": "C",
+    "explanation": "The null hypothesis represents the default assumption that any observed difference is due to chance and that the treatment had no actual effect."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Which `statsmodels` class is used to calculate the required sample size for a chi-square test?",
+    "possible_answers": {
+      "A": "ChiSquareSampleSize",
+      "B": "GofChisquarePower",
+      "C": "Table2x2",
+      "D": "PowerAnalysis"
+    },
+    "correct_answer": "B",
+    "explanation": "The GofChisquarePower class from statsmodels.stats.power is used to perform power analyses and calculate required sample sizes for chi-square tests."
+  },
+  {
+    "question_no": 10,
+    "question_text": "When initializing `GofChisquarePower` to solve for the number of observations, what value should be passed for the `nobs` parameter in the `solve_power` method?",
+    "possible_answers": {
+      "A": "0",
+      "B": "None",
+      "C": "100",
+      "D": "The total population size"
+    },
+    "correct_answer": "B",
+    "explanation": "By passing None to the target parameter (in this case, nobs), the solve_power method calculates and returns the required value for that parameter."
+  },
+  {
+    "question_no": 11,
+    "question_text": "What does a p-value of less than 0.05 in a Chi-square test generally indicate?",
+    "possible_answers": {
+      "A": "You fail to reject the null hypothesis, meaning the results are likely due to chance.",
+      "B": "You reject the null hypothesis, indicating a statistically significant difference between the groups.",
+      "C": "The effect size was too small to detect.",
+      "D": "The sample size was inadequate."
+    },
+    "correct_answer": "B",
+    "explanation": "A p-value below the standard 0.05 alpha level means that the observed data is highly unlikely under the null hypothesis, leading to its rejection."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Which module in `statsmodels` is used to create and analyze a 2x2 contingency table?",
+    "possible_answers": {
+      "A": "statsmodels.api.Contingency",
+      "B": "statsmodels.stats.contingency_tables.Table2x2",
+      "C": "statsmodels.distributions.Table2x2",
+      "D": "statsmodels.stats.power.Contingency"
+    },
+    "correct_answer": "B",
+    "explanation": "The Table2x2 class from statsmodels.stats.contingency_tables provides tools to analyze 2x2 frequency tables, including chi-square tests and odds ratios."
+  },
+  {
+    "question_no": 13,
+    "question_text": "In a three-tier web application architecture, what does the \"Business\" layer typically handle?",
+    "possible_answers": {
+      "A": "The visual layout and interactive components for the user.",
+      "B": "Direct connection and queries to the database.",
+      "C": "Data processing, statistical analysis, and creating visualization objects.",
+      "D": "Serving static HTML and CSS files."
+    },
+    "correct_answer": "C",
+    "explanation": "The business layer acts as the intermediary, containing the logic to process data from the database layer and format it for the display layer."
+  },
+  {
+    "question_no": 14,
+    "question_text": "When instantiating a Dash application, which library is the `Dash` class imported from?",
+    "possible_answers": {
+      "A": "plotly.express",
+      "B": "dash",
+      "C": "jupyter_dash",
+      "D": "flask"
+    },
+    "correct_answer": "B",
+    "explanation": "The main Dash application class is imported directly from the 'dash' package."
+  },
+  {
+    "question_no": 15,
+    "question_text": "In a Dash application layout, what is the purpose of the `dcc.Dropdown` component?",
+    "possible_answers": {
+      "A": "To display a static list of bullet points.",
+      "B": "To create an interactive menu allowing users to select from multiple options.",
+      "C": "To visualize data as a pie chart.",
+      "D": "To input free-form text."
+    },
+    "correct_answer": "B",
+    "explanation": "The dcc.Dropdown component renders an interactive dropdown menu that users can use to select specific values to filter or update the app."
+  },
+  {
+    "question_no": 16,
+    "question_text": "In Python, what does the `assert isinstance(repo.collection, Collection)` statement do?",
+    "possible_answers": {
+      "A": "It converts `repo.collection` into a `Collection` type.",
+      "B": "It verifies that `repo.collection` is an object of the `Collection` class, raising an error if it's not.",
+      "C": "It imports the `Collection` class into the current namespace.",
+      "D": "It prints the type of `repo.collection` to the console."
+    },
+    "correct_answer": "B",
+    "explanation": "The assert statement is used for debugging to check if a condition is true; isinstance checks if an object is an instance of a specific class."
+  },
+  {
+    "question_no": 17,
+    "question_text": "When using `pandas`, which method is used to sort a DataFrame by a specific column?",
+    "possible_answers": {
+      "A": "order_by()",
+      "B": "arrange()",
+      "C": "sort_values()",
+      "D": "group_by()"
+    },
+    "correct_answer": "C",
+    "explanation": "The sort_values() method in pandas is used to sort a DataFrame based on the values in one or more columns."
+  },
+  {
+    "question_no": 18,
+    "question_text": "When using Plotly Express to create a horizontal bar chart (`px.bar`), how do you set the orientation to horizontal?",
+    "possible_answers": {
+      "A": "orientation=\"h\"",
+      "B": "horizontal=True",
+      "C": "type=\"horizontal\"",
+      "D": "Swap the x and y data parameters without setting orientation."
+    },
+    "correct_answer": "A",
+    "explanation": "Passing the keyword argument orientation='h' explicitly tells Plotly Express to render the bar chart horizontally."
+  },
+  {
+    "question_no": 19,
+    "question_text": "What is the purpose of using synthetic data in an educational data science project?",
+    "possible_answers": {
+      "A": "Synthetic data is always perfectly clean and requires no preprocessing.",
+      "B": "It allows students to work with data that mimics real-world characteristics without exposing actual personal information.",
+      "C": "It is faster to process than real data.",
+      "D": "It guarantees that the null hypothesis will be rejected."
+    },
+    "correct_answer": "B",
+    "explanation": "Synthetic data preserves the statistical properties of real datasets, making it useful for analysis while maintaining privacy and ethics."
+  },
+  {
+    "question_no": 20,
+    "question_text": "In a Dash application, if you want the user to select a continuous numeric parameter like the number of days, which component is most appropriate?",
+    "possible_answers": {
+      "A": "html.H1",
+      "B": "dcc.Slider",
+      "C": "html.Div",
+      "D": "dcc.Graph"
+    },
+    "correct_answer": "B",
+    "explanation": "The dcc.Slider component provides a horizontal slider interface for users to select numeric values within a specified range."
+  }
+]
