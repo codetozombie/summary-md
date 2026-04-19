@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "JSON (JavaScript Object Notation) data structures are theoretically most analogous to which native Python data type?",
+    "possible_answers": {
+      "A": "Lists",
+      "B": "Tuples",
+      "C": "Dictionaries",
+      "D": "Sets"
+    },
+    "correct_answer": "C",
+    "explanation": "JSON data is fundamentally organized as a collection of key-value pairs, which translates directly to the structure and behavior of Python dictionaries."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Why is 'accuracy' often considered a misleading performance metric when evaluating models on heavily imbalanced datasets?",
+    "possible_answers": {
+      "A": "It ignores the majority class.",
+      "B": "It can be artificially high if the model simply predicts the majority class for every instance, while failing completely to identify the minority class.",
+      "C": "It heavily penalizes false positives over false negatives.",
+      "D": "It cannot be mathematically calculated if class sizes differ."
+    },
+    "correct_answer": "B",
+    "explanation": "If 99% of samples belong to Class A, a naive model always guessing Class A achieves 99% accuracy but has zero predictive power for Class B."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What is the primary theoretical mechanism of 'Oversampling' to handle imbalanced data?",
+    "possible_answers": {
+      "A": "Removing instances from the majority class until it equals the minority class.",
+      "B": "Duplicating instances (or generating synthetic instances) of the minority class to match the size of the majority class.",
+      "C": "Scaling numerical features up by a constant factor.",
+      "D": "Increasing the number of decision trees in an ensemble."
+    },
+    "correct_answer": "B",
+    "explanation": "Oversampling balances the class distribution by artificially increasing the representation of the minority class in the training set."
+  },
+  {
+    "question_no": 4,
+    "question_text": "What is the primary theoretical mechanism of 'Undersampling'?",
+    "possible_answers": {
+      "A": "Scaling numerical features down to a 0-1 range.",
+      "B": "Removing instances randomly from the majority class until its size matches the minority class.",
+      "C": "Pruning branches off a decision tree to reduce depth.",
+      "D": "Dropping features that have a low correlation with the target."
+    },
+    "correct_answer": "B",
+    "explanation": "Undersampling tackles class imbalance by deliberately discarding data from the over-represented class to achieve parity."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which of the following defines an 'Ensemble Model'?",
+    "possible_answers": {
+      "A": "A model that uses only continuous numerical features.",
+      "B": "A single, highly complex neural network.",
+      "C": "A model that combines the predictions of multiple individual 'base' models to improve overall robustness and accuracy.",
+      "D": "A model that can only be used for regression."
+    },
+    "correct_answer": "C",
+    "explanation": "Ensemble learning involves building multiple models (like a forest of trees) and combining them to produce a stronger, more stable final prediction."
+  },
+  {
+    "question_no": 6,
+    "question_text": "What does the ensemble technique known as 'Bagging' stand for?",
+    "possible_answers": {
+      "A": "Bootstrap Aggregating",
+      "B": "Binary Grouping",
+      "C": "Backward Gradient",
+      "D": "Bayesian Averaging"
+    },
+    "correct_answer": "A",
+    "explanation": "Bagging (Bootstrap Aggregating) involves taking multiple random samples with replacement (bootstrapping) from the dataset, training a model on each, and aggregating the results."
+  },
+  {
+    "question_no": 7,
+    "question_text": "How does a Random Forest predominantly achieve lower variance and resist overfitting compared to a single Decision Tree?",
+    "possible_answers": {
+      "A": "By strictly limiting the depth of every tree to 1.",
+      "B": "By averaging the predictions of multiple diverse trees trained on random data subsets and random feature subsets.",
+      "C": "By iteratively correcting the errors of previous trees.",
+      "D": "By removing features that have low correlation."
+    },
+    "correct_answer": "B",
+    "explanation": "The randomness in data sampling and feature selection ensures the trees are independent. Averaging their diverse predictions cancels out individual tree variance."
+  },
+  {
+    "question_no": 8,
+    "question_text": "In a Gradient Boosting ensemble, what does each successive weak learner specifically aim to predict?",
+    "possible_answers": {
+      "A": "The original target variable.",
+      "B": "The majority class.",
+      "C": "The residual errors (the difference between actual values and current predictions) of the combined previous learners.",
+      "D": "The variance of the feature set."
+    },
+    "correct_answer": "C",
+    "explanation": "Unlike Bagging, Boosting builds models sequentially. Each new tree is specifically trained to minimize the loss function by predicting and correcting the residual errors left by the current ensemble."
+  },
+  {
+    "question_no": 9,
+    "question_text": "What is the primary theoretical difference between Bagging and Boosting algorithms?",
+    "possible_answers": {
+      "A": "Bagging uses trees, Boosting uses linear regression.",
+      "B": "Bagging trains models sequentially, Boosting trains in parallel.",
+      "C": "Bagging trains models independently in parallel, while Boosting trains models sequentially to correct past errors.",
+      "D": "Bagging only works on classification, Boosting only on regression."
+    },
+    "correct_answer": "C",
+    "explanation": "Bagging builds independent models simultaneously to reduce variance. Boosting builds dependent models sequentially to reduce bias."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What does a 'Grid Search' (e.g., GridSearchCV) accomplish theoretically?",
+    "possible_answers": {
+      "A": "It maps spatial data onto a geographic grid.",
+      "B": "It systematically performs an exhaustive search over a specified subset of hyperparameter combinations to find the optimal model configuration.",
+      "C": "It searches the internet for additional training data.",
+      "D": "It organizes output arrays into a 2D matrix."
+    },
+    "correct_answer": "B",
+    "explanation": "Grid search is an optimization method that tests all provided combinations of hyperparameters using cross-validation to locate the best setup."
+  },
+  {
+    "question_no": 11,
+    "question_text": "In k-fold cross-validation, how is the dataset utilized?",
+    "possible_answers": {
+      "A": "The data is multiplied k times.",
+      "B": "The dataset is split into k parts; the model is trained on one part and tested on the remaining k-1 parts.",
+      "C": "The dataset is split into k parts; in each iteration, a different fold acts as the validation set while the remaining k-1 folds form the training set.",
+      "D": "The model is trained k times on the exact same data."
+    },
+    "correct_answer": "C",
+    "explanation": "This rotating approach ensures every observation is used for both training and validation exactly once, providing a highly robust estimate of model performance."
+  },
+  {
+    "question_no": 12,
+    "question_text": "What does the 'learning rate' hyperparameter theoretically control in a Gradient Boosting model?",
+    "possible_answers": {
+      "A": "The magnitude of the contribution (or step size) that each new tree makes to the overall ensemble.",
+      "B": "The proportion of data used for validation.",
+      "C": "The speed of the CPU during training.",
+      "D": "The maximum depth of the trees."
+    },
+    "correct_answer": "A",
+    "explanation": "The learning rate scales the output of each weak learner. A smaller learning rate means each tree alters the final prediction less, generally requiring more trees but improving generalization."
+  },
+  {
+    "question_no": 13,
+    "question_text": "What is meant by 'bootstrapping' in the context of ensemble models?",
+    "possible_answers": {
+      "A": "Loading the initial operating system.",
+      "B": "Randomly sampling the training dataset with replacement to create diverse subsets for training individual trees.",
+      "C": "Standardizing the feature matrix to have a mean of 0.",
+      "D": "Adding a synthetic row of data for every original row."
+    },
+    "correct_answer": "B",
+    "explanation": "Bootstrapping is a statistical resampling technique where samples are drawn randomly with replacement, meaning the same data point can appear multiple times in a single subset."
+  },
+  {
+    "question_no": 14,
+    "question_text": "What is a 'weak learner' in the context of boosting?",
+    "possible_answers": {
+      "A": "A model with an accuracy of 0%.",
+      "B": "A model that performs only slightly better than random guessing (e.g., a shallow decision tree).",
+      "C": "A model that has not been fit to the data yet.",
+      "D": "A feature that has low correlation with the target."
+    },
+    "correct_answer": "B",
+    "explanation": "Boosting relies on combining many weak learners—simple models that are just slightly better than chance—into a single, highly accurate strong learner."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Why do Random Forests select a random subset of features at each node split?",
+    "possible_answers": {
+      "A": "To save memory on the hard drive.",
+      "B": "To decorrelate the trees; preventing a few strong predictive features from dominating every single tree in the forest.",
+      "C": "Because the algorithms cannot process all features at once.",
+      "D": "To automatically drop null values."
+    },
+    "correct_answer": "B",
+    "explanation": "If one feature is incredibly strong, every normal decision tree will split on it first. By restricting feature choice randomly, Random Forests force trees to explore different patterns, increasing ensemble diversity."
+  },
+  {
+    "question_no": 16,
+    "question_text": "When establishing a baseline for an imbalanced classification problem, which naive strategy is most commonly used?",
+    "possible_answers": {
+      "A": "Predicting the minority class every time.",
+      "B": "Predicting randomly with a 50/50 chance.",
+      "C": "Predicting the majority class for every instance.",
+      "D": "Predicting based on the mean of the features."
+    },
+    "correct_answer": "C",
+    "explanation": "Predicting the majority class establishes the absolute minimum accuracy. The machine learning model must beat this naive frequency to prove it has learned underlying patterns."
+  },
+  {
+    "question_no": 17,
+    "question_text": "When calculating 'feature importance' in tree-based ensembles, what does a high score indicate?",
+    "possible_answers": {
+      "A": "The feature has a high numerical variance.",
+      "B": "The feature was frequently used to split the data and resulted in large, weighted decreases in node impurity.",
+      "C": "The feature is perfectly normally distributed.",
+      "D": "The feature has no missing values."
+    },
+    "correct_answer": "B",
+    "explanation": "Feature importance tracks how much a specific feature contributes to reducing Gini impurity (or entropy) across all the trees in the forest."
+  },
+  {
+    "question_no": 18,
+    "question_text": "What is a theoretical risk of using basic Random Oversampling?",
+    "possible_answers": {
+      "A": "It introduces entirely alien synthetic data that distorts distributions.",
+      "B": "By simply duplicating minority samples, it can make the model highly prone to overfitting on those exact duplicated points.",
+      "C": "It heavily discards valuable data.",
+      "D": "It forces the model to ignore the majority class."
+    },
+    "correct_answer": "B",
+    "explanation": "Because basic oversampling just duplicates existing rows, the model sees the exact same minority points over and over, which can cause it to memorize them (overfit) rather than generalize."
+  },
+  {
+    "question_no": 19,
+    "question_text": "In a pipeline, why should resampling techniques (like Oversampling) be applied ONLY to the training data and never the validation/test data?",
+    "possible_answers": {
+      "A": "Because test data cannot mathematically be oversampled.",
+      "B": "To ensure the test metrics reflect the model's performance on the true, real-world, natural class distribution.",
+      "C": "Because the imblearn library physically prevents it.",
+      "D": "It slows down the prediction process too much."
+    },
+    "correct_answer": "B",
+    "explanation": "The test set must represent reality. If you artificially balance the test set, your evaluation metrics will not tell you how the model will perform in the real, imbalanced world."
+  },
+  {
+    "question_no": 20,
+    "question_text": "Increasing `n_estimators` (the number of trees) in a Random Forest typically has what effect?",
+    "possible_answers": {
+      "A": "It decreases the training time significantly.",
+      "B": "It always guarantees a score of 100% accuracy.",
+      "C": "It increases computational cost but generally improves performance and reduces variance until returns diminish.",
+      "D": "It rapidly increases the risk of overfitting."
+    },
+    "correct_answer": "C",
+    "explanation": "More trees make the ensemble more robust and stable (lower variance), but after a certain point, the accuracy plateaus while the time required to train and predict continues to rise."
+  }
+]

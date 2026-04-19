@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "What is the primary purpose of Exploratory Data Analysis (EDA) in a data science project?",
+    "possible_answers": {
+      "A": "To finalize the machine learning model architecture.",
+      "B": "To discover patterns, spot anomalies, and check assumptions in the data.",
+      "C": "To deploy the application to a production server.",
+      "D": "To automatically write data cleaning scripts."
+    },
+    "correct_answer": "B",
+    "explanation": "EDA is an approach to analyzing datasets to summarize their main characteristics, often using visual methods, before formal modeling commences."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Which statistical visualization is most appropriate for displaying the distribution of a single continuous variable?",
+    "possible_answers": {
+      "A": "Pie Chart",
+      "B": "Scatter Plot",
+      "C": "Histogram",
+      "D": "Network Graph"
+    },
+    "correct_answer": "C",
+    "explanation": "A histogram groups continuous data into bins and displays the frequency of data points within each bin, showing the underlying distribution."
+  },
+  {
+    "question_no": 3,
+    "question_text": "In a standard boxplot, what does the solid line inside the central box represent?",
+    "possible_answers": {
+      "A": "The mean of the data",
+      "B": "The median (50th percentile) of the data",
+      "C": "The mode of the data",
+      "D": "The standard deviation"
+    },
+    "correct_answer": "B",
+    "explanation": "The line inside the box of a boxplot marks the median, splitting the dataset into two equal halves."
+  },
+  {
+    "question_no": 4,
+    "question_text": "What does the Interquartile Range (IQR) measure in a dataset?",
+    "possible_answers": {
+      "A": "The distance between the maximum and minimum values.",
+      "B": "The spread of the middle 50% of the data values.",
+      "C": "The average variance of all data points from the mean.",
+      "D": "The number of outliers in the dataset."
+    },
+    "correct_answer": "B",
+    "explanation": "The IQR represents the difference between the 75th percentile (Q3) and the 25th percentile (Q1), capturing the central 50% of the data."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which of the following is the most statistically robust method for imputing missing values in a feature containing extreme outliers?",
+    "possible_answers": {
+      "A": "Mean imputation",
+      "B": "Median imputation",
+      "C": "Mode imputation",
+      "D": "Zero imputation"
+    },
+    "correct_answer": "B",
+    "explanation": "The median is robust against extreme outliers, whereas the mean gets heavily skewed by them."
+  },
+  {
+    "question_no": 6,
+    "question_text": "What does a Pearson correlation coefficient of -0.89 indicate between two variables?",
+    "possible_answers": {
+      "A": "A strong positive linear relationship.",
+      "B": "A weak negative linear relationship.",
+      "C": "A strong negative linear relationship.",
+      "D": "No linear relationship."
+    },
+    "correct_answer": "C",
+    "explanation": "The Pearson correlation ranges from -1 to 1. A value of -0.89 is very close to -1, indicating a strong negative (inverse) linear relationship."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Why do machine learning algorithms generally require missing values (NaNs) to be handled prior to training?",
+    "possible_answers": {
+      "A": "Missing values cause the models to train too quickly.",
+      "B": "Most mathematical algorithms cannot perform computations on null or undefined mathematical states.",
+      "C": "Missing values automatically delete the surrounding rows during training.",
+      "D": "They cause categorical columns to convert to strings."
+    },
+    "correct_answer": "B",
+    "explanation": "Standard ML algorithms rely on numerical computations (like matrix multiplication). NaNs break these mathematical operations."
+  },
+  {
+    "question_no": 8,
+    "question_text": "When assessing the impact of house size on house price using a scatter plot, which variable is typically plotted on the y-axis?",
+    "possible_answers": {
+      "A": "The independent variable (size)",
+      "B": "The dependent variable (price)",
+      "C": "The confounding variable",
+      "D": "It does not matter"
+    },
+    "correct_answer": "B",
+    "explanation": "By convention, the dependent (target) variable that is being predicted or analyzed is placed on the y-axis."
+  },
+  {
+    "question_no": 9,
+    "question_text": "What is an outlier?",
+    "possible_answers": {
+      "A": "A data point that perfectly aligns with the mean.",
+      "B": "A missing value in a dataset.",
+      "C": "An observation that lies an abnormal distance from other values in a random sample from a population.",
+      "D": "A categorical variable with only one level."
+    },
+    "correct_answer": "C",
+    "explanation": "Outliers are extreme values that deviate significantly from the rest of the observations in the dataset."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What theoretical concept explains why house prices in a dense capital city might not increase strictly linearly with physical size?",
+    "possible_answers": {
+      "A": "The Law of Large Numbers",
+      "B": "Confounding variables (e.g., location, luxury status) heavily outweighing baseline size value.",
+      "C": "The Central Limit Theorem",
+      "D": "Data sparsity"
+    },
+    "correct_answer": "B",
+    "explanation": "In real estate, variables like location and local demand (confounding factors) often have non-linear, overriding impacts on price that disrupt simple size-price correlations."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Which of the following best describes 'data wrangling'?",
+    "possible_answers": {
+      "A": "Training a neural network.",
+      "B": "The process of cleaning, structuring, and enriching raw data into a desired format.",
+      "C": "Presenting data to stakeholders.",
+      "D": "Scraping data from HTML websites."
+    },
+    "correct_answer": "B",
+    "explanation": "Data wrangling (or munging) is the theoretical and practical process of transforming raw, messy data into a usable format for analysis."
+  },
+  {
+    "question_no": 12,
+    "question_text": "If a scatter plot shows randomly dispersed data points resembling a cloud with no discernible slope or shape, what is the likely correlation coefficient?",
+    "possible_answers": {
+      "A": "Close to 1",
+      "B": "Close to -1",
+      "C": "Close to 0",
+      "D": "Infinity"
+    },
+    "correct_answer": "C",
+    "explanation": "A lack of pattern in a scatter plot indicates no linear relationship, which corresponds to a correlation coefficient near zero."
+  },
+  {
+    "question_no": 13,
+    "question_text": "In the context of dataframe metadata, what information does the 'shape' of the dataset provide?",
+    "possible_answers": {
+      "A": "The memory usage of the dataset.",
+      "B": "The statistical distribution of the columns.",
+      "C": "The total number of rows and columns.",
+      "D": "The number of missing values."
+    },
+    "correct_answer": "C",
+    "explanation": "The shape conceptually describes the dimensionality of the tabular data matrix (rows by columns)."
+  },
+  {
+    "question_no": 14,
+    "question_text": "What is the theoretical benefit of dropping rows with missing values (listwise deletion) rather than imputing them?",
+    "possible_answers": {
+      "A": "It preserves the exact original values of the remaining data without introducing artificial statistical assumptions.",
+      "B": "It increases the total amount of training data.",
+      "C": "It guarantees that the model will not overfit.",
+      "D": "It automatically scales the remaining numerical features."
+    },
+    "correct_answer": "A",
+    "explanation": "Dropping rows ensures no synthetic data (which carries assumptions like a normal distribution when using mean imputation) biases the dataset, though it reduces sample size."
+  },
+  {
+    "question_no": 15,
+    "question_text": "What does a boolean mask conceptually represent in tabular data manipulation?",
+    "possible_answers": {
+      "A": "A cryptographic method to hide sensitive data.",
+      "B": "An array of True/False values used to filter observations that meet specific conditions.",
+      "C": "A machine learning algorithm for image recognition.",
+      "D": "A way to convert categorical data into numbers."
+    },
+    "correct_answer": "B",
+    "explanation": "A mask is a logical array aligned with the data index, permitting filtering by selecting only rows where the mask evaluates to True."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Why might a data scientist choose to log-transform a target variable like 'house price'?",
+    "possible_answers": {
+      "A": "To convert it into categorical data.",
+      "B": "To handle missing values.",
+      "C": "To normalize a highly right-skewed distribution, making it more bell-shaped.",
+      "D": "To increase the variance of the outliers."
+    },
+    "correct_answer": "C",
+    "explanation": "Financial data like prices are often heavily right-skewed. Log-transformation compresses long tails, bringing the distribution closer to normal, which benefits many statistical models."
+  },
+  {
+    "question_no": 17,
+    "question_text": "What is 'Feature Engineering'?",
+    "possible_answers": {
+      "A": "Optimizing machine learning hyperparameters.",
+      "B": "Creating new input variables from existing data to improve model performance.",
+      "C": "Deploying code to a web server.",
+      "D": "Removing unnecessary columns."
+    },
+    "correct_answer": "B",
+    "explanation": "Feature engineering uses domain knowledge to extract or mathematically create new features (e.g., splitting a lat-lon string into two numeric features)."
+  },
+  {
+    "question_no": 18,
+    "question_text": "In descriptive statistics, what does a high standard deviation relative to the mean indicate?",
+    "possible_answers": {
+      "A": "The data points are tightly clustered around the mean.",
+      "B": "The data points are spread out over a wide range of values.",
+      "C": "The dataset contains no missing values.",
+      "D": "The mean is exactly zero."
+    },
+    "correct_answer": "B",
+    "explanation": "Standard deviation measures the dispersion of a dataset. A high standard deviation means high variance and spread in the values."
+  },
+  {
+    "question_no": 19,
+    "question_text": "What is the purpose of parsing data types, such as converting a string '$150.00' to a float 150.00?",
+    "possible_answers": {
+      "A": "To save disk space on the hard drive.",
+      "B": "To obfuscate the data for security reasons.",
+      "C": "To ensure data aligns with the correct mathematical domain so analytical algorithms can process it.",
+      "D": "To translate the currency."
+    },
+    "correct_answer": "C",
+    "explanation": "Data type casting ensures that numerical operations (like finding means or regressions) can mathematically execute on the underlying data."
+  },
+  {
+    "question_no": 20,
+    "question_text": "Which of the following describes the 'curse of dimensionality'?",
+    "possible_answers": {
+      "A": "The phenomenon where data takes up too much RAM.",
+      "B": "The difficulty of plotting more than 3 dimensions visually.",
+      "C": "As the number of features grows, the volume of the feature space increases exponentially, making the data sparse and harder to model.",
+      "D": "The inability of linear models to predict categories."
+    },
+    "correct_answer": "C",
+    "explanation": "The curse of dimensionality dictates that adding more dimensions (features) exponentially increases the data space, requiring vastly more data to find reliable patterns."
+  }
+]

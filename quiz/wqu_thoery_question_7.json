@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "What is an A/B test or hypothesis test typically used for in the context of experiments?",
+    "possible_answers": {
+      "A": "To securely connect to a database server.",
+      "B": "To determine if a specific intervention, like sending a reminder email, increases the likelihood of a desired outcome.",
+      "C": "To automatically convert categorical data into numeric data.",
+      "D": "To clean semi-structured data into a tabular format."
+    },
+    "correct_answer": "B",
+    "explanation": "An A/B test is an experiment used to determine if a specific intervention, like a reminder email, increases the likelihood of a desired outcome."
+  },
+  {
+    "question_no": 2,
+    "question_text": "What is the primary advantage of using synthetic data in an educational data science project?",
+    "possible_answers": {
+      "A": "It mimics the characteristics of real data without exposing actual personal information that would violate privacy.",
+      "B": "It contains no outliers or missing values.",
+      "C": "It guarantees that the null hypothesis will always be rejected.",
+      "D": "It automatically generates the correct machine learning models."
+    },
+    "correct_answer": "A",
+    "explanation": "Synthetic data mimics the characteristics of real data without exposing actual personal information, thus protecting user privacy."
+  },
+  {
+    "question_no": 3,
+    "question_text": "Which of the following best describes semi-structured data?",
+    "possible_answers": {
+      "A": "Data that is purely unstructured text.",
+      "B": "Data that is arranged according to some logic but cannot be displayed in a regular table of rows and columns.",
+      "C": "Data strictly organized in rows and columns like a traditional relational database.",
+      "D": "Data consisting entirely of continuous numeric values."
+    },
+    "correct_answer": "B",
+    "explanation": "Semi-structured data is arranged according to some logic but cannot be displayed in a regular table of rows and columns."
+  },
+  {
+    "question_no": 4,
+    "question_text": "In PyMongo, what class is instantiated to establish a connection to a MongoDB database?",
+    "possible_answers": {
+      "A": "MongoRepository",
+      "B": "MongoConnector",
+      "C": "MongoClient",
+      "D": "MongoServer"
+    },
+    "correct_answer": "C",
+    "explanation": "The MongoClient class is used to create a client object that connects to a MongoDB database server."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which PyMongo collection method is used to determine the total number of documents in that collection?",
+    "possible_answers": {
+      "A": "count_documents()",
+      "B": "get_count()",
+      "C": "aggregate_count()",
+      "D": "size()"
+    },
+    "correct_answer": "A",
+    "explanation": "The count_documents method is used to see how many documents are in a MongoDB collection."
+  },
+  {
+    "question_no": 6,
+    "question_text": "What does the `find_one({})` method do when applied to a MongoDB collection?",
+    "possible_answers": {
+      "A": "It counts the number of unique documents.",
+      "B": "It retrieves a single document from the collection.",
+      "C": "It finds all documents that match a specific numeric threshold.",
+      "D": "It drops the first document from the collection."
+    },
+    "correct_answer": "B",
+    "explanation": "The find_one method is used to retrieve a single document from a MongoDB collection."
+  },
+  {
+    "question_no": 7,
+    "question_text": "In a MongoDB aggregation pipeline, what is the purpose of the `$group` stage?",
+    "possible_answers": {
+      "A": "To join two distinct collections together.",
+      "B": "To sort documents in descending order.",
+      "C": "To group documents by a specified identifier to calculate metrics such as counts.",
+      "D": "To filter documents based on an equality condition."
+    },
+    "correct_answer": "C",
+    "explanation": "The $group stage is used in an aggregation pipeline to group documents by a specific identifier and calculate metrics like counts."
+  },
+  {
+    "question_no": 8,
+    "question_text": "What does the acronym ETL stand for in the context of data science and engineering?",
+    "possible_answers": {
+      "A": "Extract, Transform, Load",
+      "B": "Evaluate, Test, Learn",
+      "C": "Encode, Transmit, Log",
+      "D": "Execute, Track, Launch"
+    },
+    "correct_answer": "A",
+    "explanation": "ETL stands for extract, transform, load, which is the process of taking data from a source, changing it, and loading it into a database."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Which programming paradigm utilizes classes to contain data and processes, such as ETL workflows?",
+    "possible_answers": {
+      "A": "Functional programming",
+      "B": "Object-oriented programming",
+      "C": "Procedural programming",
+      "D": "Declarative programming"
+    },
+    "correct_answer": "B",
+    "explanation": "Object-oriented programming (OOP) is a paradigm where custom classes are created to contain processes and data."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Which pandas method is used to order a DataFrame from the smallest to the largest value based on a specific column?",
+    "possible_answers": {
+      "A": "order_by()",
+      "B": "arrange()",
+      "C": "group_by()",
+      "D": "sort_values()"
+    },
+    "correct_answer": "D",
+    "explanation": "The sort_values method is used to sort a DataFrame by a specified column."
+  },
+  {
+    "question_no": 11,
+    "question_text": "What statistical test is commonly used to evaluate the results of an A/B experiment comparing control and treatment groups?",
+    "possible_answers": {
+      "A": "T-test",
+      "B": "ANOVA",
+      "C": "Chi-square test",
+      "D": "Linear regression"
+    },
+    "correct_answer": "C",
+    "explanation": "A chi-square test is used to evaluate the results of an experiment by comparing control and treatment groups."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Before conducting an A/B test, what two hypotheses must typically be developed?",
+    "possible_answers": {
+      "A": "A primary and secondary hypothesis",
+      "B": "A null and alternative hypothesis",
+      "C": "A positive and negative hypothesis",
+      "D": "A categorical and continuous hypothesis"
+    },
+    "correct_answer": "B",
+    "explanation": "A null and alternative hypothesis must be developed before testing them in an experiment."
+  },
+  {
+    "question_no": 13,
+    "question_text": "Which of the following describes the typical layers of a three-tier web application architecture?",
+    "possible_answers": {
+      "A": "Display, Business, and Database",
+      "B": "Input, Processing, and Output",
+      "C": "Extract, Transform, and Load",
+      "D": "Client, Server, and Cloud"
+    },
+    "correct_answer": "A",
+    "explanation": "A three-tier web application architecture typically involves display, business, and database layers."
+  },
+  {
+    "question_no": 14,
+    "question_text": "In a three-tier web application architecture, what is the main function of the display layer?",
+    "possible_answers": {
+      "A": "To handle mathematical computations.",
+      "B": "To securely store the database credentials.",
+      "C": "To keep all the elements that a user will see and interact with.",
+      "D": "To route requests between the database and the server."
+    },
+    "correct_answer": "C",
+    "explanation": "The display layer contains all the elements that a user will see and interact with."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Which class should be instantiated to create a modern Dash web application?",
+    "possible_answers": {
+      "A": "PlotlyApp",
+      "B": "Dash",
+      "C": "JupyterDash",
+      "D": "Flask"
+    },
+    "correct_answer": "B",
+    "explanation": "The Dash class from the main dash package should be used to instantiate an application, as JupyterDash is deprecated."
+  },
+  {
+    "question_no": 16,
+    "question_text": "In a web application, what interface component allows a user to select one visualization option from a given list?",
+    "possible_answers": {
+      "A": "A drop-down menu",
+      "B": "A slider",
+      "C": "A text input field",
+      "D": "A scatter plot"
+    },
+    "correct_answer": "A",
+    "explanation": "A drop-down menu allows users to select between multiple options, such as demographic categories."
+  },
+  {
+    "question_no": 17,
+    "question_text": "When defining a custom class in Python, which method acts as the constructor to handle initialization?",
+    "possible_answers": {
+      "A": "__main__",
+      "B": "__init__",
+      "C": "__str__",
+      "D": "__setup__"
+    },
+    "correct_answer": "B",
+    "explanation": "The __init__ method is created to handle the initialization of a class instance."
+  },
+  {
+    "question_no": 18,
+    "question_text": "Which built-in Python function is used to verify that an object belongs to a specific class type?",
+    "possible_answers": {
+      "A": "issubclass()",
+      "B": "type()",
+      "C": "isinstance()",
+      "D": "hasattr()"
+    },
+    "correct_answer": "C",
+    "explanation": "The isinstance function is used to check if an object is an instance of a specified class, such as verifying a PyMongo Collection."
+  },
+  {
+    "question_no": 19,
+    "question_text": "When using the `country_converter` library to transform ISO 3166-1 alpha-2 codes into readable short country names, what argument must be passed to the `to` parameter?",
+    "possible_answers": {
+      "A": "full_name",
+      "B": "name_short",
+      "C": "alpha3",
+      "D": "country_id"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'name_short' argument is passed to the 'to' parameter to convert standardized country codes into readable short country names."
+  },
+  {
+    "question_no": 20,
+    "question_text": "What format does the ISO 3166-1 alpha-2 standard use to represent countries?",
+    "possible_answers": {
+      "A": "A two-letter code",
+      "B": "A three-letter code",
+      "C": "A numeric integer",
+      "D": "The full spelled-out country name"
+    },
+    "correct_answer": "A",
+    "explanation": "The ISO 3166-1 alpha-2 standard represents each country using a two-letter code."
+  }
+]

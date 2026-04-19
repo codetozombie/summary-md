@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "What is the defining characteristic of time series data compared to cross-sectional data?",
+    "possible_answers": {
+      "A": "It contains only categorical variables.",
+      "B": "The observations are independent of one another.",
+      "C": "The data points are ordered chronologically and the sequence matters.",
+      "D": "It can only be collected over periods of years, not minutes or hours."
+    },
+    "correct_answer": "C",
+    "explanation": "Time series data is defined by its chronological order, meaning the temporal sequence of the data points contains critical information about trends and dependencies."
+  },
+  {
+    "question_no": 2,
+    "question_text": "In time series analysis, what does it mean for a series to be 'stationary'?",
+    "possible_answers": {
+      "A": "The data is constantly increasing or decreasing over time.",
+      "B": "The statistical properties such as mean, variance, and covariance remain constant over time.",
+      "C": "The time series contains no missing values.",
+      "D": "The model's predictions exactly match the actual values."
+    },
+    "correct_answer": "B",
+    "explanation": "Stationarity implies that the fundamental statistical properties of the series do not depend on the time at which the series is observed. Many models, like ARMA, assume stationarity."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What is the primary purpose of 'resampling' time series data (e.g., from hourly to daily)?",
+    "possible_answers": {
+      "A": "To intentionally introduce data leakage.",
+      "B": "To change the frequency of the observations, often to reduce noise or align with another dataset.",
+      "C": "To randomly shuffle the chronological order of the data.",
+      "D": "To convert continuous numerical data into categorical data."
+    },
+    "correct_answer": "B",
+    "explanation": "Resampling alters the time frequency of the data. Downsampling (e.g., hourly to daily) aggregates data and smooths noise, while upsampling increases frequency."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Why is forward-fill (carrying the last observation forward) generally preferred over mean imputation for missing values in time series forecasting?",
+    "possible_answers": {
+      "A": "Forward-fill is computationally faster than calculating the mean.",
+      "B": "Mean imputation reduces the overall variance of the dataset.",
+      "C": "Forward-fill prevents data leakage by only using information from the past, not the future.",
+      "D": "Forward-fill automatically makes a non-stationary series stationary."
+    },
+    "correct_answer": "C",
+    "explanation": "Using the overall mean incorporates future information into past missing values (data leakage). Forward-fill strictly uses previously known data."
+  },
+  {
+    "question_no": 5,
+    "question_text": "In predictive modeling for time series, what is a 'lag feature'?",
+    "possible_answers": {
+      "A": "A feature that measures the time it takes for a model to run.",
+      "B": "A previous time step's observation used as an input variable to predict the current or future value.",
+      "C": "The difference between the predicted value and the actual value.",
+      "D": "A categorical variable indicating the day of the week."
+    },
+    "correct_answer": "B",
+    "explanation": "A lag is a past value of a variable. For example, using yesterday's temperature (lag 1) to predict today's temperature."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Which core assumption of standard Ordinary Least Squares (OLS) linear regression is inherently violated by most time series data?",
+    "possible_answers": {
+      "A": "Linearity between the dependent and independent variables.",
+      "B": "Homoscedasticity (constant variance of residuals).",
+      "C": "Independence of observations.",
+      "D": "No perfect multicollinearity."
+    },
+    "correct_answer": "C",
+    "explanation": "Time series data is typically autocorrelated, meaning an observation is dependent on previous observations, violating the OLS assumption that data points are independent."
+  },
+  {
+    "question_no": 7,
+    "question_text": "What is the fundamental premise of an Autoregressive (AR) model?",
+    "possible_answers": {
+      "A": "It predicts future values based solely on external variables.",
+      "B": "It predicts the current value based on a linear combination of its own past values.",
+      "C": "It predicts the current value based solely on past forecasting errors.",
+      "D": "It assumes the time series is purely random white noise."
+    },
+    "correct_answer": "B",
+    "explanation": "An Autoregressive (AR) model literally means 'regressing on itself.' It models the current value as a function of previous (lagged) values."
+  },
+  {
+    "question_no": 8,
+    "question_text": "What does the Autocorrelation Function (ACF) plot measure?",
+    "possible_answers": {
+      "A": "The correlation between a time series and its own lagged values.",
+      "B": "The correlation between two completely different time series.",
+      "C": "The variance of the time series over a specific rolling window.",
+      "D": "The accuracy of the model's predictions over time."
+    },
+    "correct_answer": "A",
+    "explanation": "The ACF calculates the Pearson correlation coefficient between the time series and shifted (lagged) versions of itself."
+  },
+  {
+    "question_no": 9,
+    "question_text": "How does Partial Autocorrelation (PACF) differ from standard Autocorrelation (ACF)?",
+    "possible_answers": {
+      "A": "PACF only works on non-stationary data, while ACF works on stationary data.",
+      "B": "PACF measures the direct correlation between an observation and a specific lag, removing the indirect influence of shorter intervening lags.",
+      "C": "PACF requires multiple independent variables, whereas ACF only requires one.",
+      "D": "PACF can only measure positive correlations, while ACF measures both positive and negative."
+    },
+    "correct_answer": "B",
+    "explanation": "PACF isolates the 'pure' effect of a specific lag by mathematically partialing out the effects of all the lags that fall between it and the current observation."
+  },
+  {
+    "question_no": 10,
+    "question_text": "When building an Autoregressive (AR) model, how is the PACF plot typically utilized?",
+    "possible_answers": {
+      "A": "To determine the moving average order 'q'.",
+      "B": "To decide if the data needs to be converted to a string format.",
+      "C": "To identify the hyperparameter 'p' by finding the lag where the PACF abruptly cuts off or drops to zero.",
+      "D": "To verify the final accuracy score of the model."
+    },
+    "correct_answer": "C",
+    "explanation": "In an AR model, the PACF is expected to cut off sharply after lag 'p', making it a primary diagnostic tool for choosing the order of the model."
+  },
+  {
+    "question_no": 11,
+    "question_text": "In a Moving Average (MA) model, what serves as the predictor variables?",
+    "possible_answers": {
+      "A": "The historical raw values of the target variable.",
+      "B": "Past forecasting errors (residuals or 'shocks').",
+      "C": "The rolling mean of the entire dataset.",
+      "D": "Categorical variables representing seasonality."
+    },
+    "correct_answer": "B",
+    "explanation": "Unlike an AR model that uses past values, an MA model uses past prediction errors (the difference between expected and actual values) to forecast future values."
+  },
+  {
+    "question_no": 12,
+    "question_text": "In an ARMA(p, q) model, what do the parameters 'p' and 'q' specifically represent?",
+    "possible_answers": {
+      "A": "'p' is the number of periods in the season, 'q' is the number of external predictors.",
+      "B": "'p' is the degree of differencing, 'q' is the number of lags.",
+      "C": "'p' is the order of the autoregressive (AR) component, 'q' is the order of the moving average (MA) component.",
+      "D": "'p' is the probability of a positive outcome, 'q' is the probability of a negative outcome."
+    },
+    "correct_answer": "C",
+    "explanation": "An ARMA model combines AR and MA models. 'p' defines how many past observations to look at, and 'q' defines how many past error terms to look at."
+  },
+  {
+    "question_no": 13,
+    "question_text": "What is the primary purpose of the Akaike Information Criterion (AIC) in time series analysis?",
+    "possible_answers": {
+      "A": "To measure the exact dollar value saved by the model.",
+      "B": "To evaluate model quality by balancing goodness-of-fit against model complexity (number of parameters).",
+      "C": "To force non-stationary data to become stationary.",
+      "D": "To calculate the mean absolute error of the test set."
+    },
+    "correct_answer": "B",
+    "explanation": "AIC estimates the relative quality of statistical models. It penalizes adding more parameters to prevent overfitting, while rewarding models that fit the data well."
+  },
+  {
+    "question_no": 14,
+    "question_text": "When comparing two different ARMA models using the AIC metric, which model should theoretically be selected?",
+    "possible_answers": {
+      "A": "The model with the highest AIC.",
+      "B": "The model with the AIC closest to zero.",
+      "C": "The model with the lowest AIC.",
+      "D": "The model where AIC equals the BIC."
+    },
+    "correct_answer": "C",
+    "explanation": "A lower AIC indicates a better model. It signifies an optimal balance where the model explains the variance well without unnecessarily complex parametrization."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Why is a standard random train-test split (like in cross-sectional machine learning) inappropriate for evaluating time series forecasting models?",
+    "possible_answers": {
+      "A": "Because it requires too much computational power.",
+      "B": "Because time series datasets are usually too small.",
+      "C": "Because it destroys the chronological order and causes data leakage by using future data to predict the past.",
+      "D": "Because random splitting only works on categorical variables."
+    },
+    "correct_answer": "C",
+    "explanation": "Time series relies heavily on temporal sequence. Randomly splitting data means the model might train on a data point from December to predict a value in January of the same year, which is impossible in reality."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Which validation strategy is considered best practice for time series forecasting?",
+    "possible_answers": {
+      "A": "K-Fold Cross Validation.",
+      "B": "Walk-Forward Validation (Time Series Split).",
+      "C": "Stratified Shuffle Split.",
+      "D": "Leave-One-Out Cross Validation."
+    },
+    "correct_answer": "B",
+    "explanation": "Walk-forward validation respects temporal order. It trains on a chronological subset of data and tests on the immediate next time step, systematically moving the 'current' time forward."
+  },
+  {
+    "question_no": 17,
+    "question_text": "If an ARMA model has successfully captured all the temporal patterns in the data, what should the residuals (errors) look like?",
+    "possible_answers": {
+      "A": "They should exhibit a strong positive trend.",
+      "B": "They should resemble white noise, showing no significant autocorrelation at any lag.",
+      "C": "They should form a perfect sine wave.",
+      "D": "They should slowly increase in variance over time."
+    },
+    "correct_answer": "B",
+    "explanation": "If a model is good, it has extracted all the predictable signal from the data. What is left over (the residuals) should be pure, unpredictable randomness (white noise)."
+  },
+  {
+    "question_no": 18,
+    "question_text": "What is 'data leakage' in the context of predictive modeling?",
+    "possible_answers": {
+      "A": "When a computer runs out of RAM while training a model.",
+      "B": "When a dataset is accidentally deleted from the database.",
+      "C": "When information from outside the training dataset (such as future knowledge) is inadvertently used to train the model.",
+      "D": "When the model outputs predictions too quickly."
+    },
+    "correct_answer": "C",
+    "explanation": "Data leakage creates artificially high model performance during training and testing, because the model is essentially 'cheating' by looking at answers it wouldn't have in a real-world scenario."
+  },
+  {
+    "question_no": 19,
+    "question_text": "What is the main danger of adding too many lag terms (a very high 'p' value) to an Autoregressive model?",
+    "possible_answers": {
+      "A": "Underfitting.",
+      "B": "The model will automatically convert into a Moving Average model.",
+      "C": "Overfitting, where the model learns the historical noise rather than the true underlying pattern.",
+      "D": "The data will become non-stationary."
+    },
+    "correct_answer": "C",
+    "explanation": "Excessive lags increase model complexity. The model becomes overly tailored to the specific training data, capturing random fluctuations (noise) that will not generalize to unseen future data."
+  },
+  {
+    "question_no": 20,
+    "question_text": "In time series forecasting, what is a 'naive' or 'persistence' baseline model?",
+    "possible_answers": {
+      "A": "A complex neural network trained on very little data.",
+      "B": "A model that predicts the next value will be exactly the same as the most recent actual value.",
+      "C": "A model that randomly guesses a number between 0 and 1.",
+      "D": "A model that strictly predicts the historical mean of the entire dataset for every time step."
+    },
+    "correct_answer": "B",
+    "explanation": "The naive/persistence model assumes nothing changes. It shifts the entire time series forward by one step. It serves as a crucial baseline; complex models must outperform this simple heuristic to be considered useful."
+  }
+]

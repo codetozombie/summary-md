@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "In a web API request URL like 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY', what does the 'https://www.alphavantage.co' portion represent?",
+    "possible_answers": {
+      "A": "The parameter list",
+      "B": "The hostname or base URL",
+      "C": "The path",
+      "D": "The API key"
+    },
+    "correct_answer": "B",
+    "explanation": "The hostname or base URL is the web address for the server where the API data is hosted."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Which character is used in an API URL to indicate the beginning of the parameter list?",
+    "possible_answers": {
+      "A": "&",
+      "B": "/",
+      "C": "?",
+      "D": "="
+    },
+    "correct_answer": "C",
+    "explanation": "A question mark '?' denotes that everything that follows in the URL is a parameter."
+  },
+  {
+    "question_no": 3,
+    "question_text": "When passing multiple parameters in an API URL, which character is used to separate each parameter?",
+    "possible_answers": {
+      "A": "&",
+      "B": "?",
+      "C": "/",
+      "D": "+"
+    },
+    "correct_answer": "A",
+    "explanation": "Each parameter in a URL query string is separated by an ampersand '&' character."
+  },
+  {
+    "question_no": 4,
+    "question_text": "What is the primary purpose of an API key or API token?",
+    "possible_answers": {
+      "A": "To specify the data format required (e.g., CSV or JSON)",
+      "B": "To define the path to the database",
+      "C": "To act as a password that authenticates the user accessing the API",
+      "D": "To sort the returned data chronologically"
+    },
+    "correct_answer": "C",
+    "explanation": "An API key acts similarly to a password, authenticating the user and granting them access to the API's services."
+  },
+  {
+    "question_no": 5,
+    "question_text": "In Python Test-Driven Development, what happens when an `assert` statement evaluates to False?",
+    "possible_answers": {
+      "A": "The code silently ignores the error and continues",
+      "B": "An AssertionError is raised, halting execution",
+      "C": "The program prompts the user for a new input",
+      "D": "A SyntaxError is raised"
+    },
+    "correct_answer": "B",
+    "explanation": "An `assert` statement tests a condition; if the condition is False, it immediately raises an AssertionError and stops execution."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Which built-in Python function is used to check if a specific object belongs to a certain class or data type?",
+    "possible_answers": {
+      "A": "hasattr()",
+      "B": "getattr()",
+      "C": "isinstance()",
+      "D": "typeof()"
+    },
+    "correct_answer": "C",
+    "explanation": "The `isinstance()` function is used to check whether an object is an instance of a specified class or data type (e.g., `isinstance(df, pd.DataFrame)`)."
+  },
+  {
+    "question_no": 7,
+    "question_text": "When defining a class in Python, what is the purpose of the `__init__` method?",
+    "possible_answers": {
+      "A": "To define a class variable shared by all instances",
+      "B": "To act as a constructor that initializes an object's attributes",
+      "C": "To delete an instance of the class",
+      "D": "To perform garbage collection"
+    },
+    "correct_answer": "B",
+    "explanation": "The `__init__` method is the constructor method in Python, automatically called to initialize attributes when a new object of the class is created."
+  },
+  {
+    "question_no": 8,
+    "question_text": "Which Python function is used to test whether an object possesses a specific attribute?",
+    "possible_answers": {
+      "A": "checkattr()",
+      "B": "hasattr()",
+      "C": "isinstance()",
+      "D": "contains()"
+    },
+    "correct_answer": "B",
+    "explanation": "The `hasattr()` function returns True if the specified object has the given attribute, and False otherwise."
+  },
+  {
+    "question_no": 9,
+    "question_text": "When connecting to a SQLite database using `sqlite3.connect()`, what does the argument `check_same_thread=False` do?",
+    "possible_answers": {
+      "A": "It speeds up the query execution time",
+      "B": "It enforces strict typing on the database columns",
+      "C": "It allows the database connection to be shared across multiple threads",
+      "D": "It prevents multiple users from accessing the database simultaneously"
+    },
+    "correct_answer": "C",
+    "explanation": "By default, SQLite restricts connections to the thread that created them. Setting `check_same_thread=False` bypasses this safety check, allowing multiple threads to share the connection."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Which pandas function is utilized to execute a SQL query and load the results directly into a DataFrame?",
+    "possible_answers": {
+      "A": "pd.load_sql()",
+      "B": "pd.read_sql()",
+      "C": "pd.DataFrame.from_sql()",
+      "D": "pd.get_sql()"
+    },
+    "correct_answer": "B",
+    "explanation": "The `pd.read_sql()` function takes a SQL query and a database connection object, executing the query and structuring the result as a pandas DataFrame."
+  },
+  {
+    "question_no": 11,
+    "question_text": "In a SQL SELECT statement, which clause is used to restrict the maximum number of rows returned?",
+    "possible_answers": {
+      "A": "MAX",
+      "B": "TOP",
+      "C": "LIMIT",
+      "D": "RESTRICT"
+    },
+    "correct_answer": "C",
+    "explanation": "The `LIMIT` clause is appended to a SQL query to specify the maximum number of records to retrieve."
+  },
+  {
+    "question_no": 12,
+    "question_text": "When reading data from SQL into pandas using `pd.read_sql()`, how can you ensure a specific column is automatically converted into datetime objects?",
+    "possible_answers": {
+      "A": "By using the `date_cols` argument",
+      "B": "By using the `datetime` argument",
+      "C": "By using the `parse_dates` argument",
+      "D": "By using the `convert_types` argument"
+    },
+    "correct_answer": "C",
+    "explanation": "The `parse_dates` argument accepts a list of column names and tells pandas to parse those columns as datetime objects."
+  },
+  {
+    "question_no": 13,
+    "question_text": "In the context of financial time series, what does the term 'volatility' represent?",
+    "possible_answers": {
+      "A": "The overall market capitalization of a company",
+      "B": "The total trading volume in a given day",
+      "C": "The day-to-day fluctuation or spread in asset returns",
+      "D": "The absolute value of a stock's closing price"
+    },
+    "correct_answer": "C",
+    "explanation": "Volatility measures the degree of variation in a trading price series over time, representing the day-to-day fluctuation in asset returns."
+  },
+  {
+    "question_no": 14,
+    "question_text": "Which pandas method is used to calculate the fractional change between the current and a prior element, often used to compute daily stock returns?",
+    "possible_answers": {
+      "A": "pct_change()",
+      "B": "diff()",
+      "C": "percent()",
+      "D": "change()"
+    },
+    "correct_answer": "A",
+    "explanation": "The `pct_change()` method calculates the percentage change between consecutive elements, returning the fractional day-to-day return."
+  },
+  {
+    "question_no": 15,
+    "question_text": "After calculating daily returns, the first row often contains a missing value (NaN). Which pandas method removes these missing values?",
+    "possible_answers": {
+      "A": "fill_na()",
+      "B": "drop_empty()",
+      "C": "dropna()",
+      "D": "remove_na()"
+    },
+    "correct_answer": "C",
+    "explanation": "The `dropna()` method is used to remove missing values (NaN) from a pandas DataFrame or Series."
+  },
+  {
+    "question_no": 16,
+    "question_text": "When inserting a pandas DataFrame into a SQL database using the `to_sql()` method, which parameter dictates the behavior if the table already exists?",
+    "possible_answers": {
+      "A": "on_duplicate",
+      "B": "if_exists",
+      "C": "overwrite",
+      "D": "table_mode"
+    },
+    "correct_answer": "B",
+    "explanation": "The `if_exists` parameter tells pandas what to do if the target table already exists (e.g., 'replace', 'append', or 'fail')."
+  },
+  {
+    "question_no": 17,
+    "question_text": "Which method is used to arrange a pandas DataFrame chronologically based on its DatetimeIndex?",
+    "possible_answers": {
+      "A": "sort_values()",
+      "B": "order_by_date()",
+      "C": "sort_index()",
+      "D": "arrange_index()"
+    },
+    "correct_answer": "C",
+    "explanation": "The `sort_index()` method sorts the DataFrame based on its index labels, which is useful when the index represents dates."
+  },
+  {
+    "question_no": 18,
+    "question_text": "When fitting a GARCH model using the `arch` library in Python, what kind of object is typically returned by the `fit()` method?",
+    "possible_answers": {
+      "A": "A basic pandas DataFrame",
+      "B": "An ARCHModelResult object",
+      "C": "A numpy array",
+      "D": "A JSON string"
+    },
+    "correct_answer": "B",
+    "explanation": "The `fit()` method returns an `ARCHModelResult` instance, which contains the fitted parameters, statistics, and methods for forecasting."
+  },
+  {
+    "question_no": 19,
+    "question_text": "What is the specific data type used by pandas to store a sequence of timestamps or dates as an index?",
+    "possible_answers": {
+      "A": "TimeIndex",
+      "B": "DateIndex",
+      "C": "DatetimeIndex",
+      "D": "TimestampIndex"
+    },
+    "correct_answer": "C",
+    "explanation": "In pandas, time-series data is typically indexed using a `DatetimeIndex`, which provides powerful time-based slicing and resampling capabilities."
+  },
+  {
+    "question_no": 20,
+    "question_text": "When structuring a modular data application, why is it beneficial to encapsulate API requests and SQL commands inside dedicated classes (e.g., `AlphaVantageAPI`, `SQLRepository`)?",
+    "possible_answers": {
+      "A": "It automatically encrypts the data",
+      "B": "It increases the execution speed of API requests",
+      "C": "It makes the code more organized, reusable, and easier to test",
+      "D": "It eliminates the need for an internet connection"
+    },
+    "correct_answer": "C",
+    "explanation": "Encapsulating logic into classes follows Object-Oriented Programming principles, making the code highly reusable, modular, and easier to apply Test-Driven Development on."
+  }
+]

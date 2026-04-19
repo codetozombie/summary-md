@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "What is a primary theoretical advantage of using a relational database like SQLite over flat CSV files?",
+    "possible_answers": {
+      "A": "It automatically imputes missing values.",
+      "B": "It natively trains machine learning models.",
+      "C": "It allows for efficient querying and joining of multiple tables without loading everything into memory.",
+      "D": "It permanently prevents data leakage."
+    },
+    "correct_answer": "C",
+    "explanation": "Relational databases optimize data storage and retrieval, allowing analysts to extract exactly what they need efficiently without exhausting system memory."
+  },
+  {
+    "question_no": 2,
+    "question_text": "In Logistic Regression, the linear combination of inputs is transformed using which mathematical function?",
+    "possible_answers": {
+      "A": "ReLU",
+      "B": "Sigmoid",
+      "C": "Hyperbolic tangent",
+      "D": "Softmax"
+    },
+    "correct_answer": "B",
+    "explanation": "The sigmoid function maps real-valued numbers into a strict range between 0 and 1, making it ideal for predicting binary probabilities."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What does 'Gini Impurity' measure in a Decision Tree algorithm?",
+    "possible_answers": {
+      "A": "The depth of the tree.",
+      "B": "The correlation between features.",
+      "C": "The likelihood of incorrect classification if a new instance was randomly labeled based on the node's distribution.",
+      "D": "The minimum number of samples to split a node."
+    },
+    "correct_answer": "C",
+    "explanation": "Gini Impurity measures how mixed a node is. Decision trees iteratively split nodes to minimize this impurity and create homogeneous 'pure' leaf nodes."
+  },
+  {
+    "question_no": 4,
+    "question_text": "What is the natural consequence of allowing a Decision Tree to grow with no limit on its `max_depth`?",
+    "possible_answers": {
+      "A": "Severe underfitting.",
+      "B": "Severe overfitting.",
+      "C": "Failure to converge.",
+      "D": "Automatic feature selection."
+    },
+    "correct_answer": "B",
+    "explanation": "An unconstrained decision tree will keep splitting until every leaf node perfectly classifies the training data, essentially memorizing noise and failing on unseen data."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Why is Ordinal Encoding often suitable for Decision Trees but potentially problematic for Logistic Regression?",
+    "possible_answers": {
+      "A": "Trees check inequalities (e.g., feature < 2), while linear models misinterpret the encoded integers as continuous magnitude.",
+      "B": "Ordinal Encoding scales data to a 0-1 range, which breaks linear models.",
+      "C": "Logistic Regression mathematical proofs forbid integer inputs.",
+      "D": "Trees require normally distributed data."
+    },
+    "correct_answer": "A",
+    "explanation": "Linear models weight the integer values of ordinal encoding as if they have real mathematical distance. Trees only look for split points, ignoring continuous magnitude."
+  },
+  {
+    "question_no": 6,
+    "question_text": "In a machine learning context, what is 'data leakage'?",
+    "possible_answers": {
+      "A": "Memory overflow during training.",
+      "B": "Exposure of private user data.",
+      "C": "Inappropriate use of information from outside the training dataset that inflates model performance.",
+      "D": "Losing rows of data during database joins."
+    },
+    "correct_answer": "C",
+    "explanation": "Data leakage occurs when the training data inadvertently includes information about the target that would not naturally be available at the time of prediction."
+  },
+  {
+    "question_no": 7,
+    "question_text": "In a logistic regression model, what do the model coefficients theoretically represent?",
+    "possible_answers": {
+      "A": "The change in the log-odds of the target outcome for a one-unit increase in the predictor.",
+      "B": "The strict percentage probability of the positive class.",
+      "C": "The reduction in Gini impurity.",
+      "D": "The correlation coefficient of the feature."
+    },
+    "correct_answer": "A",
+    "explanation": "Logistic regression intrinsically models the log-odds (logit) of the target probability. The coefficients represent the linear change in these log-odds."
+  },
+  {
+    "question_no": 8,
+    "question_text": "In data ethics, how can a model exhibit demographic bias even if protected attributes (like race) are removed?",
+    "possible_answers": {
+      "A": "Algorithms naturally favor certain demographics.",
+      "B": "Proxy variables (like zip code) may heavily correlate with the removed attributes, leaking the bias.",
+      "C": "Models without protected attributes always underfit.",
+      "D": "The data cannot be cross-validated."
+    },
+    "correct_answer": "B",
+    "explanation": "Proxy variables capture the same underlying societal biases as explicitly protected attributes, allowing a model to indirectly discriminate."
+  },
+  {
+    "question_no": 9,
+    "question_text": "What is the theoretical purpose of a 'baseline model'?",
+    "possible_answers": {
+      "A": "To act as the final deployed application.",
+      "B": "To automatically engineer new features.",
+      "C": "To establish a minimum performance threshold that any trained model must exceed to be useful.",
+      "D": "To find the maximum possible accuracy."
+    },
+    "correct_answer": "C",
+    "explanation": "A baseline provides context. If a simple heuristic (like always guessing the majority class) yields 80% accuracy, a machine learning model must score well above 80% to be valuable."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What does a 'Primary Key' do in a relational database?",
+    "possible_answers": {
+      "A": "Encrypts the table data.",
+      "B": "Uniquely identifies each record in a table.",
+      "C": "Links a table to the internet.",
+      "D": "Automatically formats datetime strings."
+    },
+    "correct_answer": "B",
+    "explanation": "A primary key is a specific choice of a minimal set of attributes that uniquely specify a tuple (row) in a relation (table)."
+  },
+  {
+    "question_no": 11,
+    "question_text": "How does the decision boundary of a Logistic Regression model compare to a Decision Tree?",
+    "possible_answers": {
+      "A": "Logistic regression creates orthogonal step boundaries, trees create linear boundaries.",
+      "B": "Both create circular boundaries.",
+      "C": "Logistic regression creates a linear boundary, trees create orthogonal, axis-aligned step boundaries.",
+      "D": "Both rely entirely on polynomial curves."
+    },
+    "correct_answer": "C",
+    "explanation": "Because decision trees split on one feature at a time based on a threshold, their decision boundaries are boxy and parallel to the axes, unlike the smooth linear plane of logistic regression."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Why do we typically drop the 'target' variable from our feature matrix (X)?",
+    "possible_answers": {
+      "A": "Because it uses too much memory.",
+      "B": "To prevent data leakage, ensuring the model doesn't use the answer to predict the answer.",
+      "C": "Because the target variable is always categorical.",
+      "D": "Because scikit-learn will crash otherwise."
+    },
+    "correct_answer": "B",
+    "explanation": "Including the target in the feature set gives the model the exact answer it's trying to learn, completely ruining the validity of the training process."
+  },
+  {
+    "question_no": 13,
+    "question_text": "What is the primary role of the train/test split in machine learning?",
+    "possible_answers": {
+      "A": "To speed up the training process.",
+      "B": "To evaluate how well the model generalizes to unseen data.",
+      "C": "To balance imbalanced datasets automatically.",
+      "D": "To remove outliers from the data."
+    },
+    "correct_answer": "B",
+    "explanation": "By holding out a test set that the model never sees during training, we can objectively measure its ability to predict new, future data."
+  },
+  {
+    "question_no": 14,
+    "question_text": "Which of the following is a key characteristic of 'Nominal' categorical data?",
+    "possible_answers": {
+      "A": "It has a distinct numerical magnitude.",
+      "B": "It has a meaningful inherent order or ranking.",
+      "C": "It consists of distinct categories with no inherent mathematical order.",
+      "D": "It can be infinitely divided into smaller fractions."
+    },
+    "correct_answer": "C",
+    "explanation": "Nominal data (like 'Red', 'Blue', 'Green' or 'Cat', 'Dog') represents categories that cannot be logically ranked higher or lower than one another."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Logistic regression directly outputs which of the following before a threshold is applied?",
+    "possible_answers": {
+      "A": "A strict 0 or 1 class label.",
+      "B": "A continuous probability value between 0 and 1.",
+      "C": "A string containing the class name.",
+      "D": "A Gini impurity score."
+    },
+    "correct_answer": "B",
+    "explanation": "The raw output of the logistic function is a probability. A threshold (commonly 0.5) is then used to map that probability to a discrete class label."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Why is it important to use a `random_state` or seed when splitting data?",
+    "possible_answers": {
+      "A": "It ensures the split is perfectly 50/50.",
+      "B": "It randomizes the feature columns to avoid bias.",
+      "C": "It ensures reproducibility by generating the exact same random split across multiple runs.",
+      "D": "It improves the model's accuracy artificially."
+    },
+    "correct_answer": "C",
+    "explanation": "Setting a seed ensures that whenever the code is run, the pseudo-random number generator produces the same sequence, making debugging and comparison possible."
+  },
+  {
+    "question_no": 17,
+    "question_text": "In a decision tree, what characterizes a 'pure' leaf node?",
+    "possible_answers": {
+      "A": "It contains exactly 100 samples.",
+      "B": "It has a Gini impurity of 0, meaning all samples in it belong to the same class.",
+      "C": "It has not been altered by pruning.",
+      "D": "It only contains continuous numerical features."
+    },
+    "correct_answer": "B",
+    "explanation": "A pure node has a Gini impurity of 0.0 because there is no chance of misclassifying a random sample (they all share the identical target label)."
+  },
+  {
+    "question_no": 18,
+    "question_text": "When assessing model fairness, what does 'disparate impact' refer to?",
+    "possible_answers": {
+      "A": "The physical impact of a server farm on the environment.",
+      "B": "When a model performs significantly worse on a specific demographic or minority group compared to the general population.",
+      "C": "When a model takes much longer to train than expected.",
+      "D": "The difference between training accuracy and test accuracy."
+    },
+    "correct_answer": "B",
+    "explanation": "Disparate impact is a legal and ethical concept where a seemingly neutral algorithm disproportionately affects a protected group negatively."
+  },
+  {
+    "question_no": 19,
+    "question_text": "Which metric is the standard default for evaluating balanced binary classification models in scikit-learn?",
+    "possible_answers": {
+      "A": "Mean Absolute Error",
+      "B": "R-squared",
+      "C": "Accuracy",
+      "D": "Silhouette Score"
+    },
+    "correct_answer": "C",
+    "explanation": "For balanced classification tasks, accuracy (the proportion of total correct predictions) is the standard and most intuitive default evaluation metric."
+  },
+  {
+    "question_no": 20,
+    "question_text": "What does a SQL 'JOIN' clause theoretically accomplish?",
+    "possible_answers": {
+      "A": "It concatenates two strings together.",
+      "B": "It merges rows from two or more tables based on a related column between them.",
+      "C": "It appends new rows to the bottom of an existing table.",
+      "D": "It drops columns that are redundant."
+    },
+    "correct_answer": "B",
+    "explanation": "JOINs are used in relational databases to combine data spread across multiple normalized tables using foreign and primary key relationships."
+  }
+]

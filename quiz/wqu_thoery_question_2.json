@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "What is the fundamental objective of a supervised machine learning regression task?",
+    "possible_answers": {
+      "A": "To group similar data points into distinct clusters.",
+      "B": "To predict a continuous numerical output based on input features.",
+      "C": "To classify data into discrete categories.",
+      "D": "To reduce the dimensionality of the dataset."
+    },
+    "correct_answer": "B",
+    "explanation": "Regression tasks deal with mapping inputs to continuous outcomes, such as predicting a house's exact monetary price."
+  },
+  {
+    "question_no": 2,
+    "question_text": "In the equation for simple linear regression (y = mx + b), what does the coefficient 'm' represent?",
+    "possible_answers": {
+      "A": "The predicted target value when all features are zero.",
+      "B": "The error term or residual.",
+      "C": "The weight indicating the expected change in the target variable for a one-unit change in the feature.",
+      "D": "The regularization penalty."
+    },
+    "correct_answer": "C",
+    "explanation": "The coefficient (or slope) quantifies the learned relationship strength between the specific input feature and the target output."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What is the main purpose of splitting a dataset into a 'training set' and a 'test set'?",
+    "possible_answers": {
+      "A": "To run the model faster by using less data at once.",
+      "B": "To train two different models and average their predictions.",
+      "C": "To evaluate how well the model generalizes to new, unseen data.",
+      "D": "To easily remove outliers from the test set."
+    },
+    "correct_answer": "C",
+    "explanation": "The test set acts as an unbiased proxy for real-world future data, preventing a deceptive evaluation caused by overfitting the training data."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Which statement best defines Mean Absolute Error (MAE)?",
+    "possible_answers": {
+      "A": "The average of the squared differences between predicted and actual values.",
+      "B": "The proportion of correct predictions out of all predictions.",
+      "C": "The average of the absolute differences between the predicted values and the actual values.",
+      "D": "The maximum error observed in the test set."
+    },
+    "correct_answer": "C",
+    "explanation": "MAE measures the average magnitude of the errors in a set of predictions without considering their direction, providing a linear interpretation of model accuracy."
+  },
+  {
+    "question_no": 5,
+    "question_text": "What role does a 'baseline model' play in predictive modeling?",
+    "possible_answers": {
+      "A": "It is a highly complex model used as the ultimate goal.",
+      "B": "It is a simple heuristic model (like predicting the mean) that serves as a benchmark to evaluate if complex models actually add value.",
+      "C": "It is a model that always predicts zero.",
+      "D": "It is the underlying hardware infrastructure running the code."
+    },
+    "correct_answer": "B",
+    "explanation": "A baseline establishes the minimum threshold of performance. If a machine learning model cannot beat a naive baseline, it is functionally useless."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Why must categorical variables, such as neighborhood names, be subjected to One-Hot Encoding before model training?",
+    "possible_answers": {
+      "A": "To compress the memory footprint of strings.",
+      "B": "Because standard mathematical models require numerical matrices, not textual data.",
+      "C": "To prevent data leakage.",
+      "D": "To automatically remove rare categories."
+    },
+    "correct_answer": "B",
+    "explanation": "ML algorithms calculate weights and functions using math. One-Hot Encoding converts nominal categories into binary numerical columns (1s and 0s) to allow this math to execute."
+  },
+  {
+    "question_no": 7,
+    "question_text": "What is a major risk when applying One-Hot Encoding to a categorical feature with thousands of unique values?",
+    "possible_answers": {
+      "A": "The model will automatically revert to predicting the baseline.",
+      "B": "The algorithm will treat it as a continuous variable.",
+      "C": "It massively inflates the feature space dimensionality, which can cause overfitting and computational bottlenecks.",
+      "D": "It forces the model to use a deep neural network."
+    },
+    "correct_answer": "C",
+    "explanation": "Creating thousands of sparse, highly specific columns causes the 'curse of dimensionality', often giving models too many noisy parameters to memorize the training data (overfit)."
+  },
+  {
+    "question_no": 8,
+    "question_text": "How does Ridge Regression theoretically differ from Ordinary Least Squares (Standard Linear Regression)?",
+    "possible_answers": {
+      "A": "Ridge Regression can only be used for classification.",
+      "B": "Ridge Regression applies an L2 regularization penalty to model coefficients to shrink them and prevent overfitting.",
+      "C": "Ridge Regression ignores categorical features.",
+      "D": "Ridge Regression uses a polynomial kernel instead of a linear one."
+    },
+    "correct_answer": "B",
+    "explanation": "Ridge introduces a penalty term proportional to the square of the coefficients' magnitude, which discourages the model from assigning excessive importance to any single feature."
+  },
+  {
+    "question_no": 9,
+    "question_text": "In a machine learning workflow, what is the conceptual purpose of a 'Pipeline'?",
+    "possible_answers": {
+      "A": "To download data from the internet efficiently.",
+      "B": "To encapsulate multiple data transformation steps and an estimator into a single object to prevent data leakage and simplify code.",
+      "C": "To convert Python code to C++ for speed.",
+      "D": "To create interactive UI dashboards."
+    },
+    "correct_answer": "B",
+    "explanation": "Pipelines sequence preprocessing (like imputers and encoders) and the model itself, ensuring that test data is processed exactly the same way as training data without leaking test distributions."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What indicates that a machine learning model is experiencing high variance (overfitting)?",
+    "possible_answers": {
+      "A": "It performs poorly on both training and test data.",
+      "B": "It predicts the exact same target value for every row.",
+      "C": "It performs exceptionally well on the training data but has a high error rate on the test data.",
+      "D": "It takes an unusually long time to train."
+    },
+    "correct_answer": "C",
+    "explanation": "Overfitting happens when a model learns the noise and exact details of the training data perfectly, making it overly rigid and unable to generalize to new data."
+  },
+  {
+    "question_no": 11,
+    "question_text": "What is the theoretical interpretation of 'Feature Importance' in a linear model?",
+    "possible_answers": {
+      "A": "The chronological order in which features were collected.",
+      "B": "The absolute size of the coefficients, indicating the relative weight each feature contributes to the final prediction.",
+      "C": "The statistical variance of the feature itself.",
+      "D": "The percentage of missing values in the feature."
+    },
+    "correct_answer": "B",
+    "explanation": "In linear models, larger coefficient magnitudes (assuming scaled data) indicate features that heavily drive the model's output prediction up or down."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Why is 'data leakage' a severe problem during model evaluation?",
+    "possible_answers": {
+      "A": "It causes memory leaks that crash the python kernel.",
+      "B": "It allows the model to 'peek' at information from the test set during training, resulting in artificially high performance metrics.",
+      "C": "It slows down the prediction speed of the deployed model.",
+      "D": "It corrupts the original CSV files."
+    },
+    "correct_answer": "B",
+    "explanation": "If a model learns from the test set (e.g., if you scale the entire dataset before splitting), the evaluation becomes invalid because the test set is no longer 'unseen'."
+  },
+  {
+    "question_no": 13,
+    "question_text": "When building an interactive widget for a predictive model, what backend process occurs when a user adjusts a slider?",
+    "possible_answers": {
+      "A": "The model retrains completely on new data.",
+      "B": "The model alters its internal architecture.",
+      "C": "The user's input creates a new feature vector that is passed to the model's predict() method to return a dynamic output.",
+      "D": "The model downloads new historical data."
+    },
+    "correct_answer": "C",
+    "explanation": "Interactive inference takes user interface inputs, formats them to match the model's trained feature structure, and calls the predict function to output a result instantly."
+  },
+  {
+    "question_no": 14,
+    "question_text": "How does using multiple geographic coordinates (Latitude and Longitude) transform a simple linear regression's decision boundary?",
+    "possible_answers": {
+      "A": "It transforms the predictive line into a flat multi-dimensional plane.",
+      "B": "It forces the model to use a logistic sigmoid curve.",
+      "C": "It collapses the prediction into a single binary value.",
+      "D": "It causes the model to ignore spatial relationships entirely."
+    },
+    "correct_answer": "A",
+    "explanation": "Moving from one feature to two features changes the linear regression mapping from a 2D line (y = mx + b) to a 3D plane (z = ax + by + c)."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Which of the following describes the process of Data Imputation within a modeling pipeline?",
+    "possible_answers": {
+      "A": "Deleting outliers before calculating metrics.",
+      "B": "Substituting estimated values (like the training set mean) for missing data entries to maintain complete feature vectors.",
+      "C": "Normalizing data so all values fall between 0 and 1.",
+      "D": "Combining two features into one."
+    },
+    "correct_answer": "B",
+    "explanation": "Imputation algorithmically fills the holes in datasets, allowing models that require dense, complete arrays to train properly without dropping valuable rows."
+  },
+  {
+    "question_no": 16,
+    "question_text": "What is a 'hyperparameter' in the context of Ridge Regression?",
+    "possible_answers": {
+      "A": "The learned coefficients applied to the input features.",
+      "B": "The exact house price the model is trying to predict.",
+      "C": "A configuration setting (like the regularization strength 'alpha') set prior to training that dictates how the model learns.",
+      "D": "The number of rows in the training dataset."
+    },
+    "correct_answer": "C",
+    "explanation": "Hyperparameters govern the learning process itself. They are tuned by the data scientist, unlike normal parameters (coefficients) which the algorithm learns from the data."
+  },
+  {
+    "question_no": 17,
+    "question_text": "Why might predicting house prices using 'Neighborhood' (a categorical entity) yield vastly different results than 'Latitude/Longitude' (continuous coordinates)?",
+    "possible_answers": {
+      "A": "Coordinates cannot be used in mathematical modeling.",
+      "B": "Neighborhoods embed cultural, zoning, and socioeconomic boundaries that drastically impact price, which continuous physical distance might blur.",
+      "C": "Linear models cannot handle numerical data effectively.",
+      "D": "Neighborhood data never requires missing value imputation."
+    },
+    "correct_answer": "B",
+    "explanation": "A street can divide a very wealthy neighborhood from a poorer one. Smooth coordinate math misses these stark, human-made borders that one-hot encoded neighborhoods capture perfectly."
+  },
+  {
+    "question_no": 18,
+    "question_text": "If a pipeline is built with an Imputer and a LinearRegression model, what must happen to the test dataset before prediction?",
+    "possible_answers": {
+      "A": "It must be imputed using the statistical measures (e.g., means) calculated entirely from the training dataset.",
+      "B": "It must be imputed using its own internal means to improve accuracy.",
+      "C": "Missing values must be dropped.",
+      "D": "It must be sent through the model backwards."
+    },
+    "correct_answer": "A",
+    "explanation": "To avoid data leakage, test data must be processed using the exact parameter mappings (like the mean value) established and stored by the pipeline during the `.fit()` step on the training set."
+  },
+  {
+    "question_no": 19,
+    "question_text": "In evaluating a regression model, if your baseline MAE is $100,000 and your trained model's MAE is $120,000, what is the theoretical conclusion?",
+    "possible_answers": {
+      "A": "The model has achieved state-of-the-art predictive power.",
+      "B": "The model has successfully generalized the data.",
+      "C": "The model is worse than simply guessing the average, meaning it has failed to find a predictive signal.",
+      "D": "The baseline model was overfitted."
+    },
+    "correct_answer": "C",
+    "explanation": "If a trained model produces a higher error than a naive baseline guess, its learned parameters are actively degrading accuracy, proving the model is ineffective."
+  },
+  {
+    "question_no": 20,
+    "question_text": "What is the consequence of high multicollinearity (features highly correlated with each other) in ordinary linear regression?",
+    "possible_answers": {
+      "A": "It drastically increases the number of features.",
+      "B": "It makes the model perfectly accurate on both train and test sets.",
+      "C": "It makes the coefficients unstable and difficult to interpret, as multiple features represent the same underlying variance.",
+      "D": "It automatically converts the problem into a classification task."
+    },
+    "correct_answer": "C",
+    "explanation": "When features share the same predictive signal, the linear algorithm struggles to assign the 'correct' weight to each, leading to wildly swinging, unreliable coefficients for feature importance."
+  }
+]

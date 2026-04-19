@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which survey tracks financial, demographic, and opinion information about families in the United States and is sponsored by the US Federal Reserve?",
+    "possible_answers": {
+      "A": "Census Bureau Economic Survey",
+      "B": "Survey of Consumer Finances (SCF)",
+      "C": "National Household Wealth Index",
+      "D": "Consumer Price Index (CPI)"
+    },
+    "correct_answer": "B",
+    "explanation": "The Survey of Consumer Finances (SCF) is sponsored by the US Federal Reserve and tracks financial and demographic behaviors of US families."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Why might a data scientist choose to exclude ultra-wealthy households (e.g., net worth over $2 million) when analyzing typical consumer finances?",
+    "possible_answers": {
+      "A": "Because their data is usually corrupted or missing.",
+      "B": "To remove outliers that could skew the analysis and obscure patterns among average households.",
+      "C": "Because K-Means clustering cannot handle high numerical values.",
+      "D": "To increase the dimensionality of the dataset."
+    },
+    "correct_answer": "B",
+    "explanation": "Ultra-wealthy households act as severe outliers in financial datasets. Excluding them helps models and visualizations focus on the variance and behaviors of the general population."
+  },
+  {
+    "question_no": 3,
+    "question_text": "In the context of the consumer finance project, what theoretical condition does the 'TURNFEAR' feature represent?",
+    "possible_answers": {
+      "A": "Households that have recently invested in real estate.",
+      "B": "Households that have filed for bankruptcy in the last 5 years.",
+      "C": "Households that have been turned down for credit or feared being denied credit.",
+      "D": "Households that have successfully paid off all debt."
+    },
+    "correct_answer": "C",
+    "explanation": "The 'TURNFEAR' variable specifically flags individuals or families who were denied credit or abstained from applying due to the fear of rejection."
+  },
+  {
+    "question_no": 4,
+    "question_text": "What is the primary theoretical goal of the K-Means clustering algorithm?",
+    "possible_answers": {
+      "A": "To predict a continuous numerical output based on historical trends.",
+      "B": "To partition unlabeled data into distinct, non-overlapping groups based on feature similarity.",
+      "C": "To classify data into predefined, human-labeled categories.",
+      "D": "To reduce the number of features in a dataset to two dimensions."
+    },
+    "correct_answer": "B",
+    "explanation": "K-Means is an unsupervised learning algorithm that groups unlabelled data points together based on their distance to a central point (centroid), grouping them by similarity."
+  },
+  {
+    "question_no": 5,
+    "question_text": "When choosing a subset of features from a large dataset for clustering, why is selecting features with high variance a common strategy?",
+    "possible_answers": {
+      "A": "Features with high variance contain the most information and highlight the greatest differences between data points.",
+      "B": "High variance indicates that the feature has the fewest missing values.",
+      "C": "Low variance features are usually categorical, which K-Means cannot process.",
+      "D": "High variance ensures that the clusters will be perfectly balanced in size."
+    },
+    "correct_answer": "A",
+    "explanation": "Variance measures how spread out the data is. Features with higher variance provide more discriminatory power to separate data points into distinct clusters."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Which of the following best describes the purpose of Principal Component Analysis (PCA)?",
+    "possible_answers": {
+      "A": "To replace missing values in a dataset using the median.",
+      "B": "To classify text data into binary categories.",
+      "C": "A dimensionality reduction technique used to project high-dimensional data into fewer dimensions while retaining variance.",
+      "D": "An algorithm used exclusively to scale features to a standard normal distribution."
+    },
+    "correct_answer": "C",
+    "explanation": "PCA reduces the number of dimensions (features) in a dataset while trying to preserve as much of the original variance as possible, making it highly useful for 2D visualization of complex clusters."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Which metric is commonly used to evaluate the quality of a clustering model by measuring how similar an object is to its own cluster compared to other clusters?",
+    "possible_answers": {
+      "A": "R-squared",
+      "B": "Silhouette Score",
+      "C": "F1-Macro Score",
+      "D": "Mean Squared Error"
+    },
+    "correct_answer": "B",
+    "explanation": "The Silhouette Score evaluates cluster cohesion (how tight a cluster is) and separation (how far apart clusters are from one another). Scores range from -1 to 1."
+  },
+  {
+    "question_no": 8,
+    "question_text": "What does the concept of 'inertia' represent in a K-Means clustering model?",
+    "possible_answers": {
+      "A": "The time it takes for the model to converge.",
+      "B": "The sum of squared distances of samples to their closest cluster center.",
+      "C": "The distance between the two furthest centroids.",
+      "D": "The optimal number of clusters for a given dataset."
+    },
+    "correct_answer": "B",
+    "explanation": "Inertia, or within-cluster sum of squares (WCSS), measures how internally coherent the clusters are. A lower inertia indicates tighter clusters."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Why is it theoretically important to standardize or scale data before applying K-Means clustering?",
+    "possible_answers": {
+      "A": "To convert all string values to numeric types.",
+      "B": "To ensure the algorithm ignores categorical variables.",
+      "C": "Because K-Means uses distance metrics (like Euclidean), so features with larger ranges would disproportionately dominate the results.",
+      "D": "To automatically detect the optimal 'K' value."
+    },
+    "correct_answer": "C",
+    "explanation": "K-Means calculates geometric distances. If one feature ranges from 1 to 10 and another from 1,000 to 100,000, the larger feature will overpower the distance calculation unless they are scaled equally."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Which machine learning paradigm does K-Means clustering belong to?",
+    "possible_answers": {
+      "A": "Supervised Learning",
+      "B": "Reinforcement Learning",
+      "C": "Semi-Supervised Learning",
+      "D": "Unsupervised Learning"
+    },
+    "correct_answer": "D",
+    "explanation": "K-Means is unsupervised because it draws inferences from datasets consisting of input data without labeled responses."
+  },
+  {
+    "question_no": 11,
+    "question_text": "What is the primary theoretical benefit of building an interactive dashboard for a data science model?",
+    "possible_answers": {
+      "A": "It increases the mathematical accuracy of the underlying algorithms.",
+      "B": "It allows stakeholders and non-technical users to build, evaluate, and explore models through a graphical interface without writing code.",
+      "C": "It automatically cleans missing values from the dataset.",
+      "D": "It permanently stores user data on local hardware."
+    },
+    "correct_answer": "B",
+    "explanation": "Interactive dashboards serve as communication and exploration tools, democratizing access to data insights and model building for non-programmers."
+  },
+  {
+    "question_no": 12,
+    "question_text": "In data preparation, what is the theoretical purpose of creating a 'boolean mask'?",
+    "possible_answers": {
+      "A": "To encrypt sensitive personal information.",
+      "B": "To subset or filter a dataset based on specific logical conditions (e.g., True/False criteria).",
+      "C": "To combine two completely separate datasets together.",
+      "D": "To visualize the boundaries between clusters."
+    },
+    "correct_answer": "B",
+    "explanation": "A mask evaluates a condition across a dataset, returning boolean (True/False) values that are used to filter the data to only the rows meeting the criteria."
+  },
+  {
+    "question_no": 13,
+    "question_text": "If a dataset has 5 features and you want to visualize the distinct clusters formed by these features on a standard 2D scatter plot, what technique is theoretically required?",
+    "possible_answers": {
+      "A": "Linear Regression",
+      "B": "K-Means",
+      "C": "Principal Component Analysis (PCA)",
+      "D": "Hyperparameter Tuning"
+    },
+    "correct_answer": "C",
+    "explanation": "A standard scatterplot can only show 2 (or 3) dimensions. PCA is required to reduce the 5 dimensions down to 2 principal components for visualization."
+  },
+  {
+    "question_no": 14,
+    "question_text": "What is the foundational definition of a 'cluster' in data science?",
+    "possible_answers": {
+      "A": "A single data point that acts as an anomaly.",
+      "B": "A group of data points that are more similar to each other than to those in other groups.",
+      "C": "A mathematical formula used to predict future trends.",
+      "D": "A specific type of neural network layer."
+    },
+    "correct_answer": "B",
+    "explanation": "Clustering seeks to group entities such that intra-cluster similarities are high and inter-cluster similarities are low."
+  },
+  {
+    "question_no": 15,
+    "question_text": "In a machine learning architecture, what is the primary advantage of utilizing a 'Pipeline' to chain steps like scaling and clustering?",
+    "possible_answers": {
+      "A": "It ensures that sequence of transformations and the final estimator are executed correctly, preventing data leakage and reducing code repetition.",
+      "B": "It allows the model to run without needing an internet connection.",
+      "C": "It automatically generates a graphical user interface.",
+      "D": "It guarantees that the Silhouette Score will be 1.0."
+    },
+    "correct_answer": "A",
+    "explanation": "Pipelines encapsulate data preprocessing and modeling steps into a single object, ensuring transformations are applied consistently to training and testing data."
+  },
+  {
+    "question_no": 16,
+    "question_text": "When analyzing consumer finances, what is a practical business application of segmenting (clustering) households?",
+    "possible_answers": {
+      "A": "To accurately predict the exact date a household will default on a loan.",
+      "B": "To tailor specific financial products, marketing strategies, and interventions to different customer profiles.",
+      "C": "To automatically deny credit to all users in the dataset.",
+      "D": "To increase the computational complexity of the bank's database."
+    },
+    "correct_answer": "B",
+    "explanation": "Clustering allows businesses to understand different archetypes of customers (e.g., highly indebted vs. equity-rich) and offer customized solutions."
+  },
+  {
+    "question_no": 17,
+    "question_text": "Which type of visualization is theoretically best suited to plot the direct relationship between two continuous numerical variables?",
+    "possible_answers": {
+      "A": "Pie Chart",
+      "B": "Histogram",
+      "C": "Bar Chart",
+      "D": "Scatter Plot"
+    },
+    "correct_answer": "D",
+    "explanation": "A scatter plot positions data points on horizontal and vertical axes to represent values for two distinct numeric variables, illustrating their correlation."
+  },
+  {
+    "question_no": 18,
+    "question_text": "How does Principal Component Analysis (PCA) conceptually construct its new dimensions (components)?",
+    "possible_answers": {
+      "A": "By randomly selecting a subset of the original features and discarding the rest.",
+      "B": "By creating new orthogonal axes that maximize the variance of the projected data.",
+      "C": "By finding the median of all features and subtracting it.",
+      "D": "By assigning categorical labels to numerical inputs."
+    },
+    "correct_answer": "B",
+    "explanation": "PCA transforms the original variables into a new set of uncorrelated variables called principal components, ordered so that the first few retain most of the variation."
+  },
+  {
+    "question_no": 19,
+    "question_text": "What is the theoretical definition of a data 'outlier'?",
+    "possible_answers": {
+      "A": "A data point that lies precisely on the mean of the distribution.",
+      "B": "A missing value that must be imputed.",
+      "C": "An observation that lies an abnormal distance from other values in a random sample from a population.",
+      "D": "The central centroid in a K-Means algorithm."
+    },
+    "correct_answer": "C",
+    "explanation": "Outliers are extreme values that deviate significantly from the rest of the dataset and can disproportionately affect statistical analyses and machine learning models."
+  },
+  {
+    "question_no": 20,
+    "question_text": "What does a Silhouette Score close to +1 theoretically indicate about a specific data point?",
+    "possible_answers": {
+      "A": "The data point is located exactly between two different clusters.",
+      "B": "The data point is an outlier and belongs to no cluster.",
+      "C": "The data point has been assigned to the wrong cluster.",
+      "D": "The data point is very well matched to its own cluster and poorly matched to neighboring clusters."
+    },
+    "correct_answer": "D",
+    "explanation": "A score near +1 indicates the sample is far away from the neighboring clusters and tightly aligned with the points in its own assigned cluster, signifying a strong clustering assignment."
+  }
+]
