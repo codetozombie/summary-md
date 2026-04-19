@@ -1,0 +1,362 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "What is the primary difference between a population and a sample in statistics?",
+    "possible_answers": {
+      "A": "A sample is the entire data set, while a population is a subset.",
+      "B": "A population is the larger defined data set, while a sample is a subset of data from it.",
+      "C": "A population consists only of normally distributed data, while a sample is skewed.",
+      "D": "A sample is always biased, while a population is always unbiased."
+    },
+    "correct_answer": "B",
+    "explanation": "In statistics, a population is the larger, defined set of data (sometimes theoretical), and a sample is a subset of data drawn from that larger population."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Which sampling method involves dividing the population into homogeneous subgroups and taking random samples from each?",
+    "possible_answers": {
+      "A": "Simple random sampling",
+      "B": "Stratified sampling",
+      "C": "Convenience sampling",
+      "D": "Bootstrap sampling"
+    },
+    "correct_answer": "B",
+    "explanation": "Stratified sampling divides the population into strata (homogeneous subgroups) and randomly samples from each stratum to ensure representativeness."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What does 'sample bias' refer to?",
+    "possible_answers": {
+      "A": "The natural variation that occurs in every sample.",
+      "B": "A sample that misrepresents the population due to systematic error.",
+      "C": "The error introduced by using a sample size that is too large.",
+      "D": "The practice of dropping extreme outliers from a dataset."
+    },
+    "correct_answer": "B",
+    "explanation": "Sample bias occurs when a sample is different in some meaningful and nonrandom way from the larger population it was meant to represent, leading to systematic error."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Which phenomenon describes the risk of finding a false 'significant' effect by repeatedly running different models and asking different questions with a large data set?",
+    "possible_answers": {
+      "A": "Regression to the mean",
+      "B": "The vast search effect",
+      "C": "Central limit theorem",
+      "D": "Stratified selection"
+    },
+    "correct_answer": "B",
+    "explanation": "The vast search effect refers to the bias or nonreproducibility resulting from repeated data modeling or extensive data snooping until something 'interesting' emerges by chance."
+  },
+  {
+    "question_no": 5,
+    "question_text": "In sports, a rookie of the year often performs worse in their second year. Which statistical concept best explains this?",
+    "possible_answers": {
+      "A": "Regression to the mean",
+      "B": "The vast search effect",
+      "C": "Self-selection bias",
+      "D": "The Central Limit Theorem"
+    },
+    "correct_answer": "A",
+    "explanation": "Regression to the mean refers to the phenomenon where extreme observations tend to be followed by more central ones. An outstanding first year involves high skill and good luck, but the luck usually regresses in the following year."
+  },
+  {
+    "question_no": 6,
+    "question_text": "What is the difference between a data distribution and a sampling distribution?",
+    "possible_answers": {
+      "A": "A data distribution refers to sample metrics, while a sampling distribution refers to population metrics.",
+      "B": "A data distribution is the frequency distribution of individual values, while a sampling distribution is the frequency distribution of a sample statistic over many samples.",
+      "C": "They are synonymous terms for the same concept.",
+      "D": "A data distribution must be normal, while a sampling distribution is heavily skewed."
+    },
+    "correct_answer": "B",
+    "explanation": "The data distribution describes individual data points, whereas the sampling distribution describes the distribution of a sample statistic (like the mean) drawn from multiple samples."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Which theorem states that the means drawn from multiple samples will resemble the bell-shaped normal curve, provided the sample size is large enough?",
+    "possible_answers": {
+      "A": "Law of Large Numbers",
+      "B": "Bayes' Theorem",
+      "C": "Central Limit Theorem",
+      "D": "The Bootstrap Theorem"
+    },
+    "correct_answer": "C",
+    "explanation": "The Central Limit Theorem states that the distribution of sample means tends to take on a normal shape as the sample size rises, regardless of the source population's underlying distribution."
+  },
+  {
+    "question_no": 8,
+    "question_text": "What does the 'standard error' measure?",
+    "possible_answers": {
+      "A": "The variability of individual data points in a sample.",
+      "B": "The systematic bias introduced by non-random sampling.",
+      "C": "The variability of a sample statistic over many samples.",
+      "D": "The difference between the sample mean and the median."
+    },
+    "correct_answer": "C",
+    "explanation": "The standard error sums up the variability in the sampling distribution for a statistic (like the mean) over many samples, distinct from standard deviation which measures individual data point variability."
+  },
+  {
+    "question_no": 9,
+    "question_text": "According to the square root of n rule, if you want to reduce the standard error by a factor of 2, by what factor must you increase the sample size?",
+    "possible_answers": {
+      "A": "2",
+      "B": "4",
+      "C": "8",
+      "D": "16"
+    },
+    "correct_answer": "B",
+    "explanation": "The standard error is inversely proportional to the square root of the sample size. To halve the standard error, the sample size must be multiplied by 4."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What is the 'bootstrap' in statistics?",
+    "possible_answers": {
+      "A": "A method to fill in missing data points in an existing data set.",
+      "B": "A technique to draw additional samples with replacement from the sample itself to estimate a sampling distribution.",
+      "C": "A rule that adjusts the sample mean to match the population mean.",
+      "D": "A test used exclusively to determine the median of categorical data."
+    },
+    "correct_answer": "B",
+    "explanation": "The bootstrap is a resampling procedure where samples are repeatedly drawn with replacement from an observed dataset to assess the variability of a sample statistic."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Which of the following is a common misconception about the bootstrap method?",
+    "possible_answers": {
+      "A": "It requires sampling with replacement.",
+      "B": "It is computationally intensive.",
+      "C": "It compensates for a small sample size by creating new data.",
+      "D": "It can estimate the standard error without assuming a normal distribution."
+    },
+    "correct_answer": "C",
+    "explanation": "A common misconception is that the bootstrap creates new data or compensates for small sample sizes. It merely informs how additional samples from the same population would behave."
+  },
+  {
+    "question_no": 12,
+    "question_text": "What happens to a confidence interval if the required level of confidence is increased (e.g., from 90% to 95%)?",
+    "possible_answers": {
+      "A": "The interval becomes narrower.",
+      "B": "The interval becomes wider.",
+      "C": "The interval shifts to the left.",
+      "D": "The interval remains exactly the same."
+    },
+    "correct_answer": "B",
+    "explanation": "The higher the level of confidence you require, the wider the confidence interval must be to be sufficiently assured of capturing the true value."
+  },
+  {
+    "question_no": 13,
+    "question_text": "If a confidence interval is based on a larger sample size, how is the interval generally affected compared to a smaller sample size?",
+    "possible_answers": {
+      "A": "It becomes wider.",
+      "B": "It becomes narrower.",
+      "C": "It requires a lower confidence level.",
+      "D": "It becomes perfectly symmetrical."
+    },
+    "correct_answer": "B",
+    "explanation": "The more data you have (larger sample size), the less variable the sample estimate will be, which results in a narrower confidence interval."
+  },
+  {
+    "question_no": 14,
+    "question_text": "In a normal distribution, approximately what percentage of data falls within one standard deviation of the mean?",
+    "possible_answers": {
+      "A": "50%",
+      "B": "68%",
+      "C": "95%",
+      "D": "99.7%"
+    },
+    "correct_answer": "B",
+    "explanation": "In a normal distribution, approximately 68% of the data falls within one standard deviation of the mean, 95% within two, and 99.7% within three."
+  },
+  {
+    "question_no": 15,
+    "question_text": "How do you calculate a z-score to standardize a data point?",
+    "possible_answers": {
+      "A": "Subtract the standard deviation and divide by the mean.",
+      "B": "Subtract the mean and divide by the standard deviation.",
+      "C": "Multiply by the mean and subtract the variance.",
+      "D": "Divide the value by the median."
+    },
+    "correct_answer": "B",
+    "explanation": "Standardization (converting to a z-score) involves subtracting the mean from the data point and then dividing the result by the standard deviation."
+  },
+  {
+    "question_no": 16,
+    "question_text": "What is the primary purpose of a QQ-Plot?",
+    "possible_answers": {
+      "A": "To visualize the correlation between two numeric variables.",
+      "B": "To visually determine how close a sample is to a specified distribution, such as the normal distribution.",
+      "C": "To map the geographic density of data points.",
+      "D": "To show the frequency of categorical variables."
+    },
+    "correct_answer": "B",
+    "explanation": "A QQ-Plot (Quantile-Quantile plot) orders z-scores and plots them against the quantiles of a normal distribution to visually assess normality; a straight diagonal line indicates a normal distribution."
+  },
+  {
+    "question_no": 17,
+    "question_text": "What characterizes a 'long-tailed' distribution?",
+    "possible_answers": {
+      "A": "The majority of the data is concentrated at the mean.",
+      "B": "It is perfectly symmetrical and bell-shaped.",
+      "C": "It has a long narrow portion where relatively extreme values occur at low frequency.",
+      "D": "It only takes on binary (0 or 1) outcomes."
+    },
+    "correct_answer": "C",
+    "explanation": "A long-tailed distribution has a long, narrow tail indicating that relatively extreme values occur at a low frequency, meaning extreme events are more likely than a normal distribution would predict."
+  },
+  {
+    "question_no": 18,
+    "question_text": "Which distribution was originally published by W. S. Gosset under a pseudonym?",
+    "possible_answers": {
+      "A": "The Normal distribution",
+      "B": "The Poisson distribution",
+      "C": "Student's t-distribution",
+      "D": "The Weibull distribution"
+    },
+    "correct_answer": "C",
+    "explanation": "W. S. Gosset, an employee at the Guinness brewery, published the t-distribution in 1908 under the pseudonym 'Student' because his employer did not want competitors to know they were using statistics."
+  },
+  {
+    "question_no": 19,
+    "question_text": "How does the shape of the t-distribution change as the sample size increases?",
+    "possible_answers": {
+      "A": "It becomes more skewed.",
+      "B": "It becomes indistinguishable from a uniform distribution.",
+      "C": "Its tails become thicker.",
+      "D": "It becomes more normally shaped."
+    },
+    "correct_answer": "D",
+    "explanation": "The t-distribution is normally shaped but has thicker tails. As the sample size (and degrees of freedom) increases, the t-distribution approaches the shape of the standard normal distribution."
+  },
+  {
+    "question_no": 20,
+    "question_text": "What type of outcomes does the binomial distribution model?",
+    "possible_answers": {
+      "A": "Continuous numeric variables like height or weight.",
+      "B": "Time elapsed between specific random events.",
+      "C": "Yes/no or binary outcomes across a given number of trials.",
+      "D": "The ratio of variances across multiple groups."
+    },
+    "correct_answer": "C",
+    "explanation": "The binomial distribution is the frequency distribution of the number of successes (yes/no, 0/1 outcomes) in a given number of trials with a specified probability of success."
+  },
+  {
+    "question_no": 21,
+    "question_text": "What is the mean of a binomial distribution with n trials and probability of success p?",
+    "possible_answers": {
+      "A": "n + p",
+      "B": "n * p * (1-p)",
+      "C": "n * p",
+      "D": "p / n"
+    },
+    "correct_answer": "C",
+    "explanation": "The mean (or expected value) of a binomial distribution is the number of trials multiplied by the probability of success, calculated as n * p."
+  },
+  {
+    "question_no": 22,
+    "question_text": "Which distribution is typically used to measure the extent to which observed category counts depart from expected null-model counts?",
+    "possible_answers": {
+      "A": "Chi-square distribution",
+      "B": "F-distribution",
+      "C": "Exponential distribution",
+      "D": "Weibull distribution"
+    },
+    "correct_answer": "A",
+    "explanation": "The chi-square distribution is used to test departure from expectation, especially for categorical counts, by comparing observed values to expected values."
+  },
+  {
+    "question_no": 23,
+    "question_text": "The F-distribution is primarily used in which type of statistical procedure?",
+    "possible_answers": {
+      "A": "A/B testing with binary outcomes",
+      "B": "Linear regression extrapolation",
+      "C": "Analysis of variance (ANOVA)",
+      "D": "Kernel density estimation"
+    },
+    "correct_answer": "C",
+    "explanation": "The F-distribution is the reference distribution for the F-statistic, which is used in ANOVA to measure the ratio of variability among group means to variability within groups."
+  },
+  {
+    "question_no": 24,
+    "question_text": "Which distribution models the number of events occurring in a specified unit of time or space (e.g., website visitors per minute)?",
+    "possible_answers": {
+      "A": "Binomial distribution",
+      "B": "Poisson distribution",
+      "C": "Exponential distribution",
+      "D": "F-distribution"
+    },
+    "correct_answer": "B",
+    "explanation": "The Poisson distribution describes the frequency of events per unit of time or space. The key parameter is lambda, the average event rate."
+  },
+  {
+    "question_no": 25,
+    "question_text": "If the Poisson distribution models the number of events per time period, which distribution models the time elapsed *between* those events?",
+    "possible_answers": {
+      "A": "Binomial distribution",
+      "B": "Chi-square distribution",
+      "C": "Exponential distribution",
+      "D": "Student's t-distribution"
+    },
+    "correct_answer": "C",
+    "explanation": "The exponential distribution is used to model the time or distance from one event to the next event, using the same rate parameter as the Poisson distribution."
+  },
+  {
+    "question_no": 26,
+    "question_text": "How does the Weibull distribution differ from the exponential distribution?",
+    "possible_answers": {
+      "A": "It is only used for categorical data.",
+      "B": "It forces the event rate to remain perfectly constant over time.",
+      "C": "It allows the event rate to change over time, dictated by a shape parameter.",
+      "D": "It strictly models binary outcomes."
+    },
+    "correct_answer": "C",
+    "explanation": "The Weibull distribution is an extension of the exponential distribution where the event rate is allowed to shift over time (e.g., failure risk increasing over time), specified by a shape parameter."
+  },
+  {
+    "question_no": 27,
+    "question_text": "What is the primary assumption about raw data distribution in data science?",
+    "possible_answers": {
+      "A": "Raw data is nearly always normally distributed.",
+      "B": "Raw data is generally not normally distributed and often has long tails or skew.",
+      "C": "Raw data always fits the binomial distribution.",
+      "D": "Raw data must be converted to a t-distribution before analysis."
+    },
+    "correct_answer": "B",
+    "explanation": "Despite the historical importance of the normal distribution, raw data is generally not normally distributed; it is often skewed or has long tails."
+  },
+  {
+    "question_no": 28,
+    "question_text": "What does a high chi-square statistic indicate about a set of counts?",
+    "possible_answers": {
+      "A": "The observed counts closely follow the expected distribution.",
+      "B": "The variance among group means is highly significant.",
+      "C": "The counts differ markedly from what is expected under the null model.",
+      "D": "The data is perfectly normally distributed."
+    },
+    "correct_answer": "C",
+    "explanation": "A high chi-square statistic indicates that the observed values differ markedly from the expected values under the null hypothesis."
+  },
+  {
+    "question_no": 29,
+    "question_text": "In a binomial distribution, if the sample size 'n' is very large and the probability 'p' is not too close to 0 or 1, what happens to the distribution?",
+    "possible_answers": {
+      "A": "It becomes indistinguishable from the normal distribution.",
+      "B": "It transforms into an F-distribution.",
+      "C": "It forms a uniform distribution.",
+      "D": "It exhibits extremely long, skewed tails."
+    },
+    "correct_answer": "A",
+    "explanation": "With a large enough number of trials, the binomial distribution is virtually indistinguishable from the normal distribution, which is why the normal distribution is often used as an approximation."
+  },
+  {
+    "question_no": 30,
+    "question_text": "When assessing the variability of a sample statistic without mathematical formulas, which 'one size fits all' empirical method is highly recommended?",
+    "possible_answers": {
+      "A": "The F-test",
+      "B": "The Central Limit Theorem",
+      "C": "The Bootstrap",
+      "D": "The Chi-Square test"
+    },
+    "correct_answer": "C",
+    "explanation": "The bootstrap (sampling with replacement) is an attractive, empirical 'one size fits all' method to determine possible error in sample estimates without relying on distributional assumptions."
+  }
+]

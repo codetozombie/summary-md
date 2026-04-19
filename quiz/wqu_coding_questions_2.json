@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which pandas string method is used to check if a substring exists within each element of a Series?",
+    "possible_answers": {
+      "A": "str.match()",
+      "B": "str.contains()",
+      "C": "str.find()",
+      "D": "str.search()"
+    },
+    "correct_answer": "B",
+    "explanation": "The `.str.contains()` method evaluates each string in a Series and returns a boolean mask indicating whether the specified pattern or substring is present."
+  },
+  {
+    "question_no": 2,
+    "question_text": "How do you correctly combine multiple boolean masks (e.g., `mask1`, `mask2`) to filter a pandas DataFrame?",
+    "possible_answers": {
+      "A": "df[mask1 and mask2]",
+      "B": "df[mask1 & mask2]",
+      "C": "df[mask1 && mask2]",
+      "D": "df.filter(mask1, mask2)"
+    },
+    "correct_answer": "B",
+    "explanation": "In pandas, bitwise operators like `&` (and), `|` (or), and `~` (not) must be used to combine boolean masks element-wise."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What does the method call `df[\"surface_covered_in_m2\"].quantile([0.1, 0.9])` return?",
+    "possible_answers": {
+      "A": "The mean value between the 10th and 90th percentiles.",
+      "B": "A boolean mask filtering out values outside the 10th and 90th percentiles.",
+      "C": "A pandas Series containing the exact values at the 10th and 90th percentiles.",
+      "D": "The total count of values falling within the 10th and 90th percentiles."
+    },
+    "correct_answer": "C",
+    "explanation": "Passing a list of probabilities to the `.quantile()` method returns a Series with the computed quantile values for those specific percentiles."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Which pandas Series method checks whether values fall within a specific closed range `[low, high]`?",
+    "possible_answers": {
+      "A": ".in_range(low, high)",
+      "B": ".between(low, high)",
+      "C": ".within(low, high)",
+      "D": ".bound(low, high)"
+    },
+    "correct_answer": "B",
+    "explanation": "The `.between()` method is a convenient way to create a boolean mask identifying which values in a Series lie between a specified lower and upper bound."
+  },
+  {
+    "question_no": 5,
+    "question_text": "To combine a list of multiple DataFrames into a single continuous DataFrame, which pandas function should be used?",
+    "possible_answers": {
+      "A": "pd.merge()",
+      "B": "pd.join()",
+      "C": "pd.concat()",
+      "D": "pd.append()"
+    },
+    "correct_answer": "C",
+    "explanation": "`pd.concat()` takes an iterable (like a list) of pandas objects and concatenates them along a particular axis (by default, row-wise)."
+  },
+  {
+    "question_no": 6,
+    "question_text": "What is the effect of setting `ignore_index=True` inside `pd.concat()`?",
+    "possible_answers": {
+      "A": "It removes the index column entirely from the resulting DataFrame.",
+      "B": "It ignores any missing values during concatenation.",
+      "C": "It preserves the original indices of the source DataFrames.",
+      "D": "It reassigns a new continuous integer index from 0 to n-1 in the resulting DataFrame."
+    },
+    "correct_answer": "D",
+    "explanation": "Setting `ignore_index=True` discards the original row labels of the concatenated DataFrames and generates a fresh, clean sequential index."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Which Python library and function are used to find all file pathnames matching a specified pattern, such as `\"data/real-estate-*.csv\"`?",
+    "possible_answers": {
+      "A": "os.find()",
+      "B": "sys.search()",
+      "C": "re.match()",
+      "D": "glob.glob()"
+    },
+    "correct_answer": "D",
+    "explanation": "The `glob` module provides a function `glob()` that finds all the pathnames matching a specified pattern according to the rules used by the Unix shell."
+  },
+  {
+    "question_no": 8,
+    "question_text": "What is the correct syntax to drop multiple columns named `\"floor\"` and `\"rooms\"` in-place from a DataFrame?",
+    "possible_answers": {
+      "A": "df.drop([\"floor\", \"rooms\"], inplace=True)",
+      "B": "df.drop(columns=[\"floor\", \"rooms\"], inplace=True)",
+      "C": "df.delete([\"floor\", \"rooms\"])",
+      "D": "df.remove([\"floor\", \"rooms\"], axis=1)"
+    },
+    "correct_answer": "B",
+    "explanation": "Using the `columns` argument in `df.drop()` explicitly specifies that the labels provided in the list correspond to column names that should be dropped."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Which Python construct elegantly applies a `wrangle()` function to a list of `files` to create a list of DataFrames?",
+    "possible_answers": {
+      "A": "(wrangle(file) for file in files)",
+      "B": "[wrangle(file) for file in files]",
+      "C": "{wrangle(file) : file in files}",
+      "D": "list(wrangle(files))"
+    },
+    "correct_answer": "B",
+    "explanation": "List comprehensions `[expression for item in iterable]` provide a concise way to create lists. In this case, applying the function to each file iteratively."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What does `df[\"col\"].str.split(\"|\", expand=True)[1]` accomplish?",
+    "possible_answers": {
+      "A": "It splits the strings by \"|\", expands the result into a DataFrame, and selects the column at index 1.",
+      "B": "It splits the strings by \"|\", expands into a list, and returns the first character.",
+      "C": "It replaces \"|\" with the number 1 in the string.",
+      "D": "It returns the count of \"|\" characters in the string."
+    },
+    "correct_answer": "A",
+    "explanation": "The `expand=True` parameter forces the split strings to become separate columns in a new DataFrame, and `[1]` selects the second column (index 1) of that resulting DataFrame."
+  },
+  {
+    "question_no": 11,
+    "question_text": "To convert a newly expanded string DataFrame column containing numerical characters into floats, which method should be chained?",
+    "possible_answers": {
+      "A": ".to_float()",
+      "B": ".as_numeric()",
+      "C": ".astype(float)",
+      "D": ".float()"
+    },
+    "correct_answer": "C",
+    "explanation": "The `.astype(float)` method is used to cast the underlying data to the specified numpy float data type."
+  },
+  {
+    "question_no": 12,
+    "question_text": "In the object-oriented API for Matplotlib, what does `fig, ax = plt.subplots()` create?",
+    "possible_answers": {
+      "A": "A figure object and an array of axes objects for multiple plots.",
+      "B": "A single Figure object and a single Axes object to plot on.",
+      "C": "A 3D plot and its corresponding projection axes.",
+      "D": "A data frame tailored for plotting and a figure."
+    },
+    "correct_answer": "B",
+    "explanation": "Without passing dimensions, `plt.subplots()` defaults to creating one Figure and one Axes object, facilitating object-oriented chart manipulation."
+  },
+  {
+    "question_no": 13,
+    "question_text": "Using the object-oriented Matplotlib API, how do you set the x-axis label on an Axes object named `ax`?",
+    "possible_answers": {
+      "A": "ax.xlabel(\"Label\")",
+      "B": "ax.set_xlabel(\"Label\")",
+      "C": "ax.xaxis.label(\"Label\")",
+      "D": "plt.xlabel(ax, \"Label\")"
+    },
+    "correct_answer": "B",
+    "explanation": "In the object-oriented API, getter and setter methods like `.set_xlabel()` and `.set_ylabel()` are used to modify the properties of an Axes object."
+  },
+  {
+    "question_no": 14,
+    "question_text": "How do you create a new column named `\"borough\"` in a pandas DataFrame `df` and assign values to it?",
+    "possible_answers": {
+      "A": "df.add_column(\"borough\", values)",
+      "B": "df.insert(\"borough\") = values",
+      "C": "df[\"borough\"] = values",
+      "D": "pd.new_column(df, \"borough\", values)"
+    },
+    "correct_answer": "C",
+    "explanation": "Standard dictionary-style bracket notation `df[\"new_column_name\"] = ...` is the most common and direct way to create or update a column in a DataFrame."
+  },
+  {
+    "question_no": 15,
+    "question_text": "What information is explicitly printed by calling the `df.info()` method?",
+    "possible_answers": {
+      "A": "The summary statistics like mean, median, and standard deviation.",
+      "B": "The first 5 and last 5 rows of the DataFrame.",
+      "C": "The correlation matrix of numerical columns.",
+      "D": "The column names, non-null counts, data types, and memory usage."
+    },
+    "correct_answer": "D",
+    "explanation": "`df.info()` provides a concise summary of a DataFrame, making it highly useful for checking data types, memory constraints, and identifying missing values."
+  },
+  {
+    "question_no": 16,
+    "question_text": "What is the correct way to silence `FutureWarning` messages using Python's `warnings` module?",
+    "possible_answers": {
+      "A": "warnings.filter(\"ignore\", category=FutureWarning)",
+      "B": "warnings.simplefilter(action=\"ignore\", category=FutureWarning)",
+      "C": "warnings.silence(FutureWarning)",
+      "D": "warnings.ignore_warnings()"
+    },
+    "correct_answer": "B",
+    "explanation": "`warnings.simplefilter` allows for basic rule configuration, and setting the action to `\"ignore\"` for the `FutureWarning` category suppresses those specific alerts."
+  },
+  {
+    "question_no": 17,
+    "question_text": "When trying to drop specific columns, which argument is used in the `drop()` method to identify them?",
+    "possible_answers": {
+      "A": "labels= or columns=",
+      "B": "index=",
+      "C": "nulls=",
+      "D": "features="
+    },
+    "correct_answer": "A",
+    "explanation": "You can use `df.drop(columns=[...])` or `df.drop(labels=[...], axis=1)` to specify which column features should be removed from the DataFrame."
+  },
+  {
+    "question_no": 18,
+    "question_text": "Which statement about the difference between `plt.plot()` and `ax.plot()` is true?",
+    "possible_answers": {
+      "A": "plt.plot() uses the global state-based interface, while ax.plot() uses the object-oriented interface.",
+      "B": "plt.plot() only draws scatter plots, while ax.plot() only draws line plots.",
+      "C": "ax.plot() is used strictly for pandas objects, while plt.plot() is for numpy arrays.",
+      "D": "There is no difference; they are exact aliases of each other."
+    },
+    "correct_answer": "A",
+    "explanation": "`plt.plot()` relies on Matplotlib's pyplot state machine (acting on the \"current\" figure), whereas `ax.plot()` is an explicit call on a specific Axes object."
+  },
+  {
+    "question_no": 19,
+    "question_text": "In a pandas DataFrame, what is the default behavior of `df.drop(columns=[\"price\"])` if `inplace=True` is NOT provided?",
+    "possible_answers": {
+      "A": "It throws a ValueError.",
+      "B": "It modifies the original DataFrame but returns None.",
+      "C": "It returns a new DataFrame with the column removed, leaving the original unchanged.",
+      "D": "It drops the column permanently."
+    },
+    "correct_answer": "C",
+    "explanation": "By default, pandas operations return a copy of the object with the operation applied. The original DataFrame (`df`) is unaltered unless explicitly overwritten or modified in-place."
+  },
+  {
+    "question_no": 20,
+    "question_text": "When chaining methods like `df[\"lat-lon\"].str.split(\",\", expand=True).astype(float)`, what data structure is returned immediately after `expand=True` evaluates?",
+    "possible_answers": {
+      "A": "A pandas Series of lists.",
+      "B": "A pandas DataFrame with multiple columns.",
+      "C": "A numpy multidimensional array.",
+      "D": "A regular Python dictionary."
+    },
+    "correct_answer": "B",
+    "explanation": "The `expand=True` argument causes the `.str.split()` operation to return a DataFrame where each element of the split string is placed into its own column."
+  }
+]

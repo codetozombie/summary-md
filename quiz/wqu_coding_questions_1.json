@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which pandas method is used to load data from a CSV file into a DataFrame?",
+    "possible_answers": {
+      "A": "read_table()",
+      "B": "load_csv()",
+      "C": "read_csv()",
+      "D": "import_csv()"
+    },
+    "correct_answer": "C",
+    "explanation": "pd.read_csv() is the standard pandas function to read comma-separated values into a DataFrame, as seen in the code pd.read_csv('data/brasil-real-estate-1.csv')."
+  },
+  {
+    "question_no": 2,
+    "question_text": "What is the effect of executing `df.dropna(inplace=True)`?",
+    "possible_answers": {
+      "A": "It replaces missing values with the mean.",
+      "B": "It removes rows with missing values and modifies the original DataFrame.",
+      "C": "It returns a new DataFrame with missing values removed, leaving the original unchanged.",
+      "D": "It drops columns containing missing values."
+    },
+    "correct_answer": "B",
+    "explanation": "The dropna() method removes null values. Setting inplace=True applies this change directly to the existing DataFrame without needing to reassign it."
+  },
+  {
+    "question_no": 3,
+    "question_text": "How can you split a column named `\"lat-lon\"` containing values like `\"-9.6,-35.7\"` into separate columns?",
+    "possible_answers": {
+      "A": "df[\"lat-lon\"].split(\",\")",
+      "B": "df[\"lat-lon\"].str.split(\",\", expand=True)",
+      "C": "df[\"lat-lon\"].separate(\",\")",
+      "D": "df[\"lat-lon\"].divide(\",\")"
+    },
+    "correct_answer": "B",
+    "explanation": "The .str accessor allows applying string methods to a pandas Series, and split(',', expand=True) splits the string by the comma and creates a new DataFrame with the resulting parts."
+  },
+  {
+    "question_no": 4,
+    "question_text": "In pandas, what does the `expand=True` argument do when used with `str.split()`?",
+    "possible_answers": {
+      "A": "It expands the string to its maximum length.",
+      "B": "It splits the string into a list of words within a single column.",
+      "C": "It expands the split strings into separate columns in a new DataFrame.",
+      "D": "It drops the original column after splitting."
+    },
+    "correct_answer": "C",
+    "explanation": "Passing expand=True to str.split() transforms the split lists into separate columns, which is useful for extracting structured data like latitudes and longitudes."
+  },
+  {
+    "question_no": 5,
+    "question_text": "In the context of data visualization in Python, which library is conventionally imported using the alias `px`?",
+    "possible_answers": {
+      "A": "Plotly Express",
+      "B": "Pandas",
+      "C": "Pyplot",
+      "D": "PySpark"
+    },
+    "correct_answer": "A",
+    "explanation": "As shown in the notebooks, `import plotly.express as px` is the standard convention for importing the Plotly Express library for interactive visualizations."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Which string method is used to remove a specific leading character, such as a dollar sign (`$`), from a pandas Series?",
+    "possible_answers": {
+      "A": "str.trim(\"$\")",
+      "B": "str.remove(\"$\")",
+      "C": "str.strip(\"$\")",
+      "D": "str.lstrip(\"$\")"
+    },
+    "correct_answer": "D",
+    "explanation": "The str.lstrip() method strips specific leading characters from the left side of a string."
+  },
+  {
+    "question_no": 7,
+    "question_text": "How do you vertically combine two DataFrames, `df1` and `df2`, in pandas?",
+    "possible_answers": {
+      "A": "pd.merge([df1, df2])",
+      "B": "pd.concat([df1, df2])",
+      "C": "pd.join([df1, df2])",
+      "D": "df1.append_df(df2)"
+    },
+    "correct_answer": "B",
+    "explanation": "pd.concat([df1, df2]) is used to concatenate DataFrames along a particular axis. By default, it stacks them vertically (row-wise)."
+  },
+  {
+    "question_no": 8,
+    "question_text": "What information does the `df.shape` attribute provide about a DataFrame?",
+    "possible_answers": {
+      "A": "The memory size of the DataFrame.",
+      "B": "The total number of non-null elements.",
+      "C": "A tuple representing the number of rows and columns.",
+      "D": "The data types of each column."
+    },
+    "correct_answer": "C",
+    "explanation": "df.shape returns a tuple formatted as (rows, columns), representing the dimensions of the DataFrame."
+  },
+  {
+    "question_no": 9,
+    "question_text": "To remove a column named `\"price_brl\"` from a DataFrame, which code should be used?",
+    "possible_answers": {
+      "A": "df.drop(\"price_brl\", axis=\"columns\")",
+      "B": "df.remove(\"price_brl\")",
+      "C": "df.delete(\"price_brl\", axis=1)",
+      "D": "df.drop_column(\"price_brl\")"
+    },
+    "correct_answer": "A",
+    "explanation": "df.drop(labels, axis='columns') (or axis=1) correctly drops the specified column from the DataFrame."
+  },
+  {
+    "question_no": 10,
+    "question_text": "How do you cast a string Series to float data types in pandas?",
+    "possible_answers": {
+      "A": ".to_float()",
+      "B": ".as_float()",
+      "C": ".astype(float)",
+      "D": ".convert(float)"
+    },
+    "correct_answer": "C",
+    "explanation": "The .astype() method is used to cast a pandas object to a specified numpy dtype, such as float."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Which pandas operation successfully removes commas from a string representation of a number?",
+    "possible_answers": {
+      "A": "str.replace(\",\", \"\")",
+      "B": "str.delete(\",\")",
+      "C": "str.remove(\",\")",
+      "D": "str.sub(\",\", \"\")"
+    },
+    "correct_answer": "A",
+    "explanation": "The .str.replace(old, new) method allows for substring replacements inside a pandas Series of strings."
+  },
+  {
+    "question_no": 12,
+    "question_text": "What code achieves dividing a column `\"price_brl\"` by 3.19 and rounding to 2 decimal places?",
+    "possible_answers": {
+      "A": "(df[\"price_brl\"] / 3.19).round(2)",
+      "B": "df[\"price_brl\"].divide(3.19, round=2)",
+      "C": "round(df[\"price_brl\"] / 3.19, 2)",
+      "D": "(df[\"price_brl\"] / 3.19).truncate(2)"
+    },
+    "correct_answer": "A",
+    "explanation": "Pandas Series support vectorized arithmetic operations and have a built-in .round() method to specify decimal places."
+  },
+  {
+    "question_no": 13,
+    "question_text": "To embed a Vimeo video in a Jupyter Notebook, which import is necessary?",
+    "possible_answers": {
+      "A": "import vimeo from jupyter",
+      "B": "from IPython.display import VimeoVideo",
+      "C": "from jupyter.media import Vimeo",
+      "D": "import IPython.video"
+    },
+    "correct_answer": "B",
+    "explanation": "The IPython.display module provides the VimeoVideo class for embedding Vimeo iframe players within notebook cells."
+  },
+  {
+    "question_no": 14,
+    "question_text": "What does the code `df[[\"lat\", \"lon\"]]` output?",
+    "possible_answers": {
+      "A": "It creates a multi-index Series.",
+      "B": "It returns a DataFrame containing only the \"lat\" and \"lon\" columns.",
+      "C": "It returns a tuple of the two columns.",
+      "D": "It concatenates the two columns into a single string."
+    },
+    "correct_answer": "B",
+    "explanation": "Passing a list of column names inside the indexing brackets [] selects multiple columns and returns them as a new DataFrame."
+  },
+  {
+    "question_no": 15,
+    "question_text": "In the expression `df1[\"place_with_parent_names\"].str.split(\"|\", expand=True)[2]`, what is the purpose of `[2]`?",
+    "possible_answers": {
+      "A": "To select the second row of the DataFrame.",
+      "B": "To split the string into a maximum of two parts.",
+      "C": "To select the third column from the resulting expanded DataFrame.",
+      "D": "To split by the character at index 2."
+    },
+    "correct_answer": "C",
+    "explanation": "Because expand=True returns a DataFrame, indexing with [2] selects the column at index 2 (which corresponds to the 3rd element resulting from the split)."
+  },
+  {
+    "question_no": 16,
+    "question_text": "If `df.dropna()` is called without `inplace=True`, what happens to the original `df`?",
+    "possible_answers": {
+      "A": "It throws a syntax error.",
+      "B": "The missing values are replaced with zeros.",
+      "C": "The original DataFrame is permanently modified.",
+      "D": "The original DataFrame remains unchanged."
+    },
+    "correct_answer": "D",
+    "explanation": "By default, pandas operations return a new DataFrame. Unless assigned back to a variable or used with inplace=True, the original DataFrame is not altered."
+  },
+  {
+    "question_no": 17,
+    "question_text": "Which alias is traditionally used for importing Matplotlib's pyplot module?",
+    "possible_answers": {
+      "A": "plt",
+      "B": "mp",
+      "C": "plot",
+      "D": "pl"
+    },
+    "correct_answer": "A",
+    "explanation": "`import matplotlib.pyplot as plt` is the universally accepted convention in the Python data science community."
+  },
+  {
+    "question_no": 18,
+    "question_text": "What does `df.head()` do?",
+    "possible_answers": {
+      "A": "Returns the column names (the 'head' of the columns).",
+      "B": "Returns the top 5 rows of the DataFrame.",
+      "C": "Returns the most frequently occurring row.",
+      "D": "Sorts the DataFrame in descending order."
+    },
+    "correct_answer": "B",
+    "explanation": "The .head() method in pandas is used to quickly preview the first 5 rows of the DataFrame."
+  },
+  {
+    "question_no": 19,
+    "question_text": "Which parameter is identical to `axis=1` in pandas `drop()`?",
+    "possible_answers": {
+      "A": "axis=\"rows\"",
+      "B": "axis=\"columns\"",
+      "C": "axis=\"index\"",
+      "D": "axis=True"
+    },
+    "correct_answer": "B",
+    "explanation": "In pandas, axis=1 and axis='columns' are interchangeable and both refer to operations applied along the columns."
+  },
+  {
+    "question_no": 20,
+    "question_text": "In the dataset processing, how is a price like `\"$187,230.85\"` fully cleaned into a float?",
+    "possible_answers": {
+      "A": "str.lstrip(\"$\").str.replace(\",\", \"\").astype(float)",
+      "B": "str.clean(\"$\", \",\").float()",
+      "C": "str.remove(\"$,\").astype(float)",
+      "D": "replace(\"$\", \"\").replace(\",\", \"\").to_float()"
+    },
+    "correct_answer": "A",
+    "explanation": "It requires chaining .str methods to strip the dollar sign and replace the comma, followed by .astype(float) to cast the cleaned string to a numerical type."
+  }
+]
