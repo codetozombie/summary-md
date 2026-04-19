@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "In PyMongo, which class is imported to establish a connection to a MongoDB server?",
+    "possible_answers": {
+      "A": "MongoDatabase",
+      "B": "MongoClient",
+      "C": "MongoServer",
+      "D": "DBConnection"
+    },
+    "correct_answer": "B",
+    "explanation": "MongoClient is the standard class in the pymongo library used to create a connection to a running MongoDB instance."
+  },
+  {
+    "question_no": 2,
+    "question_text": "Given a PyMongo database object `db`, what is the correct syntax to access a collection named 'dar_es_salaam'?",
+    "possible_answers": {
+      "A": "db.get_collection('dar_es_salaam')",
+      "B": "db('dar_es_salaam')",
+      "C": "db['dar_es_salaam']",
+      "D": "db.dar_es_salaam_collection"
+    },
+    "correct_answer": "C",
+    "explanation": "In PyMongo, collections are accessed using dictionary-style bracket notation on the database object, such as db['collection_name']."
+  },
+  {
+    "question_no": 3,
+    "question_text": "Which PyMongo method is used to retrieve multiple documents from a collection that match a specific query?",
+    "possible_answers": {
+      "A": "get_many()",
+      "B": "find_all()",
+      "C": "search()",
+      "D": "find()"
+    },
+    "correct_answer": "D",
+    "explanation": "The find() method is used in PyMongo to query collections and returns a cursor pointing to all documents that match the specified criteria."
+  },
+  {
+    "question_no": 4,
+    "question_text": "When extracting data from MongoDB into a pandas DataFrame, how do you set the 'timestamp' column as the DataFrame's index in a single operation?",
+    "possible_answers": {
+      "A": "pd.DataFrame(results, index='timestamp')",
+      "B": "pd.DataFrame(results).set_index('timestamp')",
+      "C": "pd.DataFrame.from_dict(results, index='timestamp')",
+      "D": "pd.DataFrame(results).index('timestamp')"
+    },
+    "correct_answer": "B",
+    "explanation": "The set_index() method in pandas is used to set an existing column as the index of the DataFrame."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which pandas method is used to assign a specific timezone (e.g., UTC) to a naive DatetimeIndex?",
+    "possible_answers": {
+      "A": "tz_convert()",
+      "B": "set_tz()",
+      "C": "tz_localize()",
+      "D": "to_timezone()"
+    },
+    "correct_answer": "C",
+    "explanation": "tz_localize() is used to make a naive time series timezone-aware by assigning it a specific timezone."
+  },
+  {
+    "question_no": 6,
+    "question_text": "After a pandas DatetimeIndex is localized to UTC, which method is used to convert the times to the 'Africa/Dar_es_Salaam' timezone?",
+    "possible_answers": {
+      "A": "tz_convert('Africa/Dar_es_Salaam')",
+      "B": "tz_localize('Africa/Dar_es_Salaam')",
+      "C": "set_timezone('Africa/Dar_es_Salaam')",
+      "D": "change_tz('Africa/Dar_es_Salaam')"
+    },
+    "correct_answer": "A",
+    "explanation": "tz_convert() changes the timezone of a timezone-aware index to another specified timezone."
+  },
+  {
+    "question_no": 7,
+    "question_text": "In pandas, which method is used to change the frequency of time series data (e.g., aggregating sensor readings to 1-hour intervals)?",
+    "possible_answers": {
+      "A": "groupby()",
+      "B": "aggregate()",
+      "C": "resample()",
+      "D": "reindex()"
+    },
+    "correct_answer": "C",
+    "explanation": "The resample() method is specifically designed for frequency conversion and resampling of time series data in pandas."
+  },
+  {
+    "question_no": 8,
+    "question_text": "When using `df.fillna(method='ffill')` on a pandas DataFrame, what happens to the missing (NaN) values?",
+    "possible_answers": {
+      "A": "They are filled with the mean of the column.",
+      "B": "They are dropped from the dataset entirely.",
+      "C": "They are filled by propagating the last valid non-null observation forward.",
+      "D": "They are replaced with zeros."
+    },
+    "correct_answer": "C",
+    "explanation": "Forward filling ('ffill') propagates the last observed valid value forward to fill the missing gaps in the time series."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Which pandas method is used to create a lag feature by displacing the data along the time index by a specified number of periods?",
+    "possible_answers": {
+      "A": "lag()",
+      "B": "delay()",
+      "C": "shift()",
+      "D": "move()"
+    },
+    "correct_answer": "C",
+    "explanation": "The shift() method shifts the index by the specified number of periods, which is heavily used for creating lagged features in time series modeling."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What does the `inplace=True` argument do when calling `df.dropna(inplace=True)`?",
+    "possible_answers": {
+      "A": "It returns a new DataFrame with missing values dropped.",
+      "B": "It modifies the original DataFrame directly without returning a new object.",
+      "C": "It replaces missing values with the boolean value True.",
+      "D": "It drops missing values only from the index."
+    },
+    "correct_answer": "B",
+    "explanation": "inplace=True tells pandas to perform the operation directly on the existing DataFrame object rather than returning a modified copy."
+  },
+  {
+    "question_no": 11,
+    "question_text": "What is the primary purpose of the `assert` statement in Python (e.g., `assert len(df) > 0`)?",
+    "possible_answers": {
+      "A": "To assign a specific length to the DataFrame.",
+      "B": "To print a value to the console.",
+      "C": "To test a condition and raise an AssertionError if the condition is false.",
+      "D": "To automatically handle exceptions without crashing the program."
+    },
+    "correct_answer": "C",
+    "explanation": "The assert keyword is used for debugging; it evaluates an expression and raises an AssertionError if it evaluates to False."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Which standard Python module is commonly imported to inspect the arguments a function takes (e.g., extracting parameters of a model constructor)?",
+    "possible_answers": {
+      "A": "sys",
+      "B": "inspect",
+      "C": "os",
+      "D": "traceback"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'inspect' module provides functions to get information about live objects, including the signature and parameters of functions."
+  },
+  {
+    "question_no": 13,
+    "question_text": "Which function from `statsmodels.graphics.tsaplots` is used to plot the Autocorrelation Function?",
+    "possible_answers": {
+      "A": "plot_correlation()",
+      "B": "plot_acf()",
+      "C": "acf_plot()",
+      "D": "plot_autocorr()"
+    },
+    "correct_answer": "B",
+    "explanation": "plot_acf() is the built-in statsmodels function for generating an autocorrelation plot of a time series."
+  },
+  {
+    "question_no": 14,
+    "question_text": "Which function from `statsmodels.graphics.tsaplots` is used to visualize the Partial Autocorrelation Function?",
+    "possible_answers": {
+      "A": "plot_pacf()",
+      "B": "partial_corr()",
+      "C": "plot_partial_acf()",
+      "D": "pacf_graph()"
+    },
+    "correct_answer": "A",
+    "explanation": "plot_pacf() is used in statsmodels to visualize partial autocorrelation, which is particularly useful for determining the order (p) of an AR model."
+  },
+  {
+    "question_no": 15,
+    "question_text": "In scikit-learn, which class is instantiated to build a standard linear regression model?",
+    "possible_answers": {
+      "A": "LinearRegressor",
+      "B": "LinearModel",
+      "C": "RegressionLinear",
+      "D": "LinearRegression"
+    },
+    "correct_answer": "D",
+    "explanation": "LinearRegression is the standard implementation of Ordinary Least Squares regression in the sklearn.linear_model module."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Which function from `sklearn.metrics` is commonly used to evaluate regression models by calculating the average of the absolute differences between predictions and actual values?",
+    "possible_answers": {
+      "A": "mean_squared_error",
+      "B": "mean_absolute_error",
+      "C": "absolute_error_mean",
+      "D": "calculate_mae"
+    },
+    "correct_answer": "B",
+    "explanation": "mean_absolute_error calculates the MAE, a common and interpretable metric for regression models, particularly in time series forecasting."
+  },
+  {
+    "question_no": 17,
+    "question_text": "Which class from `statsmodels.tsa.ar_model` is used to fit a standard Autoregressive (AR) time series model?",
+    "possible_answers": {
+      "A": "AR",
+      "B": "Autoregressor",
+      "C": "AutoReg",
+      "D": "ARModel"
+    },
+    "correct_answer": "C",
+    "explanation": "AutoReg is the modern class provided by statsmodels for estimating and fitting autoregressive models."
+  },
+  {
+    "question_no": 18,
+    "question_text": "To build an ARMA or ARIMA model in modern versions of statsmodels, which class is imported from `statsmodels.tsa.arima.model`?",
+    "possible_answers": {
+      "A": "ARMA",
+      "B": "ARIMAModel",
+      "C": "ARIMA",
+      "D": "AutoARIMA"
+    },
+    "correct_answer": "C",
+    "explanation": "The ARIMA class is the unified module in modern statsmodels for building AR, MA, ARMA, and ARIMA models based on the order parameters provided."
+  },
+  {
+    "question_no": 19,
+    "question_text": "What is the primary reason the `warnings.filterwarnings('ignore')` statement is often used in data science notebooks?",
+    "possible_answers": {
+      "A": "To fix syntax errors in the code automatically.",
+      "B": "To suppress non-critical warning messages (like FutureWarnings) from cluttering the output.",
+      "C": "To stop the execution of the program when a statistical warning occurs.",
+      "D": "To automatically log warnings to an external log file."
+    },
+    "correct_answer": "B",
+    "explanation": "It is frequently used to hide verbose DeprecationWarnings or FutureWarnings generated by libraries like pandas and statsmodels to keep notebook outputs clean."
+  },
+  {
+    "question_no": 20,
+    "question_text": "Which library and function is used as `px.line()` to create interactive line charts for time series predictions?",
+    "possible_answers": {
+      "A": "matplotlib.pyplot.line",
+      "B": "seaborn.lineplot",
+      "C": "plotly.express",
+      "D": "bokeh.plotting"
+    },
+    "correct_answer": "C",
+    "explanation": "plotly.express, standardly imported as px, provides the px.line() method to rapidly build interactive line charts."
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "What is the primary goal of a classification algorithm?",
+    "possible_answers": {
+      "A": "To predict a continuous numerical value.",
+      "B": "To group unlabeled data into homogeneous clusters.",
+      "C": "To predict which category or class a record belongs to.",
+      "D": "To find the principal components of a dataset."
+    },
+    "correct_answer": "C",
+    "explanation": "Classification is the process of predicting which of a set of categories (classes) a given record belongs to."
+  },
+  {
+    "question_no": 2,
+    "question_text": "What defines the 'Naive' assumption in the Naive Bayes classifier?",
+    "possible_answers": {
+      "A": "It assumes all predictor variables have a normal distribution.",
+      "B": "It assumes predictor variables are completely independent of one another given the outcome class.",
+      "C": "It assumes the prior probability of all classes is exactly equal.",
+      "D": "It assumes there is a linear relationship between predictors and the log-odds."
+    },
+    "correct_answer": "B",
+    "explanation": "The 'naive' assumption is that all predictor variables are statistically independent of each other conditional on the target class, which is rarely true but mathematically convenient and highly effective."
+  },
+  {
+    "question_no": 3,
+    "question_text": "How does Naive Bayes primarily calculate the probability of a record belonging to a specific class?",
+    "possible_answers": {
+      "A": "By finding the nearest neighbors in geometric space.",
+      "B": "By multiplying the individual conditional probabilities of each predictor given the class.",
+      "C": "By fitting a straight line through the data points.",
+      "D": "By dividing the variance of the class by the total variance."
+    },
+    "correct_answer": "B",
+    "explanation": "Naive Bayes calculates the overall probability by multiplying the conditional probabilities of the observed predictor values for a given class, along with the prior probability of that class."
+  },
+  {
+    "question_no": 4,
+    "question_text": "In Naive Bayes, what technique is used to solve the problem where a predictor category has zero instances in the training data for a specific class?",
+    "possible_answers": {
+      "A": "Standardization",
+      "B": "Removing the predictor entirely",
+      "C": "Adding a small pseudo-count (Laplace smoothing)",
+      "D": "Converting the variable to a continuous feature"
+    },
+    "correct_answer": "C",
+    "explanation": "To prevent the entire probability from becoming zero due to a missing combination, a small pseudo-count (like 1) is added to the frequencies, a technique often called Laplace smoothing."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Discriminant analysis is the earliest statistical classifier. What assumption does Linear Discriminant Analysis (LDA) make about the predictor variables?",
+    "possible_answers": {
+      "A": "They are categorical and independent.",
+      "B": "They follow a continuous normal distribution with the same covariance matrix across classes.",
+      "C": "They are heavily skewed and contain many outliers.",
+      "D": "They have a non-linear relationship with the response."
+    },
+    "correct_answer": "B",
+    "explanation": "LDA assumes that the predictor variables are normally distributed and that the covariance matrix is identical across all outcome classes."
+  },
+  {
+    "question_no": 6,
+    "question_text": "Which metric is commonly used in discriminant analysis to measure the distance between a data point and the mean of a group, taking covariance into account?",
+    "possible_answers": {
+      "A": "Euclidean distance",
+      "B": "Manhattan distance",
+      "C": "Mahalanobis distance",
+      "D": "Levenshtein distance"
+    },
+    "correct_answer": "C",
+    "explanation": "Mahalanobis distance measures the distance between a point and a distribution mean, scaling by the covariance matrix to account for the shape of the data."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Which model acts as the categorical counterpart to multiple linear regression?",
+    "possible_answers": {
+      "A": "Linear Discriminant Analysis",
+      "B": "Logistic Regression",
+      "C": "Naive Bayes",
+      "D": "Principal Component Analysis"
+    },
+    "correct_answer": "B",
+    "explanation": "Logistic regression is the analog of multiple linear regression but is used when the outcome variable is binary (categorical)."
+  },
+  {
+    "question_no": 8,
+    "question_text": "What function does logistic regression use to ensure that the predicted output is a probability constrained between 0 and 1?",
+    "possible_answers": {
+      "A": "The linear identity function",
+      "B": "The exponential decay function",
+      "C": "The logistic (or sigmoid) function",
+      "D": "The hyperbolic tangent function"
+    },
+    "correct_answer": "C",
+    "explanation": "The logistic (sigmoid) function maps any real-valued number into a value between 0 and 1, interpreting it as a probability."
+  },
+  {
+    "question_no": 9,
+    "question_text": "In statistics, how are 'odds' defined?",
+    "possible_answers": {
+      "A": "The probability of an event occurring minus the probability of it not occurring.",
+      "B": "The probability of an event occurring divided by the probability of the event not occurring.",
+      "C": "The square of the probability of the event.",
+      "D": "The percentage of positive outcomes."
+    },
+    "correct_answer": "B",
+    "explanation": "Odds are defined as the ratio of the probability of an event occurring (p) to the probability of it not occurring (1 - p)."
+  },
+  {
+    "question_no": 10,
+    "question_text": "What does the 'logit' function represent in logistic regression?",
+    "possible_answers": {
+      "A": "The natural logarithm of the odds",
+      "B": "The inverse of the probability",
+      "C": "The standard error of the coefficients",
+      "D": "The difference between two classes"
+    },
+    "correct_answer": "A",
+    "explanation": "The logit function maps the probability p to the natural log of the odds: log(p / (1 - p))."
+  },
+  {
+    "question_no": 11,
+    "question_text": "How are the coefficients in a logistic regression model typically estimated?",
+    "possible_answers": {
+      "A": "Ordinary Least Squares (OLS)",
+      "B": "Maximum Likelihood Estimation (MLE)",
+      "C": "K-means clustering",
+      "D": "Bootstrap resampling"
+    },
+    "correct_answer": "B",
+    "explanation": "Logistic regression coefficients are estimated using Maximum Likelihood Estimation (MLE), which finds the parameters that maximize the probability of observing the actual data."
+  },
+  {
+    "question_no": 12,
+    "question_text": "In logistic regression, what is the analog to the Root Mean Squared Error (RMSE) used to evaluate the model's fit?",
+    "possible_answers": {
+      "A": "R-squared",
+      "B": "Deviance",
+      "C": "F-statistic",
+      "D": "Pearson correlation"
+    },
+    "correct_answer": "B",
+    "explanation": "Deviance is the metric used to measure goodness-of-fit in logistic regression, acting as the analog to RMSE in linear regression; lower deviance indicates a better fit."
+  },
+  {
+    "question_no": 13,
+    "question_text": "If a logistic regression coefficient for a predictor is positive, what effect does increasing that predictor have on the outcome?",
+    "possible_answers": {
+      "A": "It decreases the probability of the positive class.",
+      "B": "It increases the log-odds, thus increasing the probability of the positive class.",
+      "C": "It has no effect on the odds.",
+      "D": "It forces the outcome to exactly 1."
+    },
+    "correct_answer": "B",
+    "explanation": "A positive coefficient means that as the predictor value increases, the log-odds increase, which translates to a higher probability of the positive outcome."
+  },
+  {
+    "question_no": 14,
+    "question_text": "What is the primary purpose of a confusion matrix?",
+    "possible_answers": {
+      "A": "To measure the variance of the predictor variables.",
+      "B": "To display the counts of true positives, false positives, true negatives, and false negatives.",
+      "C": "To calculate the Mahalanobis distance between clusters.",
+      "D": "To show the correlation matrix of all features."
+    },
+    "correct_answer": "B",
+    "explanation": "A confusion matrix is a table that categorizes the predictions of a classification model against the actual outcomes, detailing true and false positives and negatives."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Which evaluation metric represents the overall proportion of records that were correctly classified?",
+    "possible_answers": {
+      "A": "Precision",
+      "B": "Recall",
+      "C": "Specificity",
+      "D": "Accuracy"
+    },
+    "correct_answer": "D",
+    "explanation": "Accuracy measures the total number of correct predictions (both positive and negative) divided by the total number of records."
+  },
+  {
+    "question_no": 16,
+    "question_text": "Which metric specifically measures the proportion of predicted positive cases that were actually positive?",
+    "possible_answers": {
+      "A": "Recall",
+      "B": "Precision",
+      "C": "Sensitivity",
+      "D": "Accuracy"
+    },
+    "correct_answer": "B",
+    "explanation": "Precision evaluates the exactness of the positive predictions: True Positives / (True Positives + False Positives)."
+  },
+  {
+    "question_no": 17,
+    "question_text": "What is another common name for the metric 'Recall'?",
+    "possible_answers": {
+      "A": "Specificity",
+      "B": "Precision",
+      "C": "Sensitivity",
+      "D": "Accuracy"
+    },
+    "correct_answer": "C",
+    "explanation": "Recall is also known as Sensitivity or the True Positive Rate. It measures the proportion of actual positive cases that were correctly identified."
+  },
+  {
+    "question_no": 18,
+    "question_text": "What does 'Specificity' measure in a binary classification model?",
+    "possible_answers": {
+      "A": "The proportion of actual negatives correctly identified as negative.",
+      "B": "The proportion of actual positives correctly identified as positive.",
+      "C": "The total correct predictions over all predictions.",
+      "D": "The ratio of false positives to true positives."
+    },
+    "correct_answer": "A",
+    "explanation": "Specificity (or the True Negative Rate) measures the model's ability to correctly identify actual negative cases."
+  },
+  {
+    "question_no": 19,
+    "question_text": "By default, what probability threshold (cutoff) is typically used to assign a record to the positive class in binary classification?",
+    "possible_answers": {
+      "A": "0.1",
+      "B": "0.5",
+      "C": "0.9",
+      "D": "It depends strictly on the prior probability."
+    },
+    "correct_answer": "B",
+    "explanation": "A standard default cutoff is 0.5. If the estimated probability is >= 0.5, the record is assigned to the positive class; otherwise, to the negative class."
+  },
+  {
+    "question_no": 20,
+    "question_text": "What two metrics are plotted against each other to create an ROC Curve?",
+    "possible_answers": {
+      "A": "Precision on the y-axis and Recall on the x-axis",
+      "B": "True Positive Rate (Sensitivity) on the y-axis and False Positive Rate (1 - Specificity) on the x-axis",
+      "C": "Accuracy on the y-axis and Threshold on the x-axis",
+      "D": "True Positives on the y-axis and True Negatives on the x-axis"
+    },
+    "correct_answer": "B",
+    "explanation": "The Receiver Operating Characteristic (ROC) curve plots the True Positive Rate (Recall/Sensitivity) against the False Positive Rate across all possible classification cutoffs."
+  },
+  {
+    "question_no": 21,
+    "question_text": "What does AUC stand for when evaluating classification models?",
+    "possible_answers": {
+      "A": "Average Underlying Correlation",
+      "B": "Area Under the ROC Curve",
+      "C": "Absolute Uniform Cutoff",
+      "D": "Adjusted Utility Coefficient"
+    },
+    "correct_answer": "B",
+    "explanation": "AUC stands for Area Under the Curve, specifically the ROC curve. It is a single scalar value measuring the overall performance of the classifier."
+  },
+  {
+    "question_no": 22,
+    "question_text": "An AUC value of 0.5 indicates that the classification model:",
+    "possible_answers": {
+      "A": "Is perfectly accurate.",
+      "B": "Performs exactly as well as a random guess.",
+      "C": "Is perfectly inaccurate (predicts the opposite every time).",
+      "D": "Has a 50% precision rate."
+    },
+    "correct_answer": "B",
+    "explanation": "An AUC of 0.5 represents the diagonal line on an ROC curve, indicating that the model has no discrimination capacity and is equivalent to random guessing."
+  },
+  {
+    "question_no": 23,
+    "question_text": "What is the purpose of a lift chart (or decile chart)?",
+    "possible_answers": {
+      "A": "To measure the exact distance between clusters.",
+      "B": "To compare how much better a model is at identifying positive cases compared to random selection in different deciles of the data.",
+      "C": "To calculate the statistical significance of regression coefficients.",
+      "D": "To visualize the correlation between predictor variables."
+    },
+    "correct_answer": "B",
+    "explanation": "A lift chart sorts the data by predicted probability and shows how much better the model is at identifying positives (usually in the top deciles) compared to randomly selecting records."
+  },
+  {
+    "question_no": 24,
+    "question_text": "What is the primary danger of using standard 'accuracy' to evaluate a model on a highly imbalanced dataset (e.g., 99% Class A, 1% Class B)?",
+    "possible_answers": {
+      "A": "Accuracy cannot be calculated when classes are imbalanced.",
+      "B": "The model can simply predict the majority class for every record, yielding 99% accuracy but failing to identify any Class B cases.",
+      "C": "The accuracy metric will mathematically result in a negative number.",
+      "D": "The model will automatically overfit to the minority class."
+    },
+    "correct_answer": "B",
+    "explanation": "In an imbalanced dataset, a naive model that always predicts the majority class will have very high accuracy, masking the fact that it is completely useless at finding the minority class."
+  },
+  {
+    "question_no": 25,
+    "question_text": "What strategy involves randomly discarding records from the majority class to balance the training data?",
+    "possible_answers": {
+      "A": "Oversampling",
+      "B": "Undersampling (Downsampling)",
+      "C": "Data imputation",
+      "D": "Stratified testing"
+    },
+    "correct_answer": "B",
+    "explanation": "Undersampling (or downsampling) involves randomly dropping records from the abundant majority class to make the class distribution more balanced."
+  },
+  {
+    "question_no": 26,
+    "question_text": "How does 'oversampling' (up-weighting) handle imbalanced data?",
+    "possible_answers": {
+      "A": "By ignoring the minority class completely.",
+      "B": "By drawing a smaller sample from the majority class.",
+      "C": "By sampling the minority class multiple times or assigning higher weights to its records.",
+      "D": "By altering the target variable to be continuous."
+    },
+    "correct_answer": "C",
+    "explanation": "Oversampling (up-weighting) duplicates records from the minority class or applies heavier penalty weights to them during model training to force the model to pay attention to them."
+  },
+  {
+    "question_no": 27,
+    "question_text": "What does the SMOTE algorithm primarily do?",
+    "possible_answers": {
+      "A": "It strictly deletes majority cases.",
+      "B": "It creates synthetic data points for the minority class based on the features of nearby existing records.",
+      "C": "It removes outliers from the dataset.",
+      "D": "It calculates the deviance of a logistic regression model."
+    },
+    "correct_answer": "B",
+    "explanation": "SMOTE (Synthetic Minority Over-sampling Technique) creates synthetic, slightly perturbed data points of the minority class by interpolating between existing minority instances using k-nearest neighbors."
+  },
+  {
+    "question_no": 28,
+    "question_text": "What is 'cost-based classification'?",
+    "possible_answers": {
+      "A": "A method of estimating the financial cost of deploying a model.",
+      "B": "A strategy that assigns different mathematical penalties (costs) to false positives versus false negatives during training.",
+      "C": "A cloud-computing metric for machine learning.",
+      "D": "A model that only uses variables with zero acquisition cost."
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-based classification modifies the algorithm's objective function to penalize misclassifying the minority class more heavily than misclassifying the majority class."
+  },
+  {
+    "question_no": 29,
+    "question_text": "If predicting a rare disease, why might you adjust the classification cutoff probability from 0.5 to 0.1?",
+    "possible_answers": {
+      "A": "To increase precision at the expense of recall.",
+      "B": "To increase recall (sensitivity) so fewer actual positive cases are missed, accepting more false positives.",
+      "C": "To ensure perfect accuracy.",
+      "D": "To satisfy the naive assumption."
+    },
+    "correct_answer": "B",
+    "explanation": "Lowering the threshold (e.g., to 0.1) makes the model more eager to classify a record as positive, which increases recall (fewer missed diseases) but decreases precision (more false alarms)."
+  },
+  {
+    "question_no": 30,
+    "question_text": "In evaluating binary classifiers, what is the 'False Discovery Rate'?",
+    "possible_answers": {
+      "A": "The proportion of false positives among all actual negatives.",
+      "B": "The proportion of false positives among all predicted positives.",
+      "C": "The proportion of actual positives that were missed.",
+      "D": "The number of true negatives divided by false negatives."
+    },
+    "correct_answer": "B",
+    "explanation": "The False Discovery Rate is the complement to Precision (1 - Precision). It measures the proportion of records predicted as positive that were actually negative (false alarms)."
+  }
+]
