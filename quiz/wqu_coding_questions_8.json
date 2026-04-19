@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "In the URL 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=demo', what does '/query' represent?",
+    "possible_answers": {
+      "A": "Hostname",
+      "B": "Parameter",
+      "C": "Path",
+      "D": "Protocol"
+    },
+    "correct_answer": "C",
+    "explanation": "The '/query' component of the URL is the path, which represents the name of the particular operation being accessed on the server."
+  },
+  {
+    "question_no": 2,
+    "question_text": "How are multiple parameters separated from each other in an API query string?",
+    "possible_answers": {
+      "A": "Using a '?' character",
+      "B": "Using a '&' character",
+      "C": "Using a '/' character",
+      "D": "Using a '=' character"
+    },
+    "correct_answer": "B",
+    "explanation": "After the initial '?' that begins the parameter list, each individual parameter in the URL is separated by an '&' character."
+  },
+  {
+    "question_no": 3,
+    "question_text": "What is the primary purpose of the 'apikey' parameter when making requests to the AlphaVantage API?",
+    "possible_answers": {
+      "A": "To specify the stock ticker symbol",
+      "B": "To authenticate the user making the request",
+      "C": "To determine the output format (e.g., CSV or JSON)",
+      "D": "To set the time frequency of the time series"
+    },
+    "correct_answer": "B",
+    "explanation": "An API key acts as a password that authenticates the user, granting them access to the API and tracking their usage."
+  },
+  {
+    "question_no": 4,
+    "question_text": "Which Jupyter Notebook magic command is used to load the SQL extension so that SQL queries can be executed directly in a cell?",
+    "possible_answers": {
+      "A": "%load sql",
+      "B": "%sql_ext",
+      "C": "%load_ext sql",
+      "D": "!pip install sql"
+    },
+    "correct_answer": "C",
+    "explanation": "The magic command '%load_ext sql' loads the jupysql/ipython-sql extension, enabling the use of '%sql' and '%%sql' magics."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which of the following is the correct way to assert that a variable 'result' is a pandas DataFrame?",
+    "possible_answers": {
+      "A": "assert isinstance(result, pd.DataFrame)",
+      "B": "test type(result) == pd.DataFrame",
+      "C": "check isinstance(result, pd.DataFrame)",
+      "D": "assert result.type == pd.DataFrame"
+    },
+    "correct_answer": "A",
+    "explanation": "In Python, the 'assert' statement combined with the 'isinstance()' function (or 'type(result) == pd.DataFrame') is the correct way to test an object's type during Test-Driven Development."
+  },
+  {
+    "question_no": 6,
+    "question_text": "When writing an 'assert' statement to test code, what happens if the test condition evaluates to False?",
+    "possible_answers": {
+      "A": "The script prints a warning and continues",
+      "B": "An AssertionError is raised",
+      "C": "A ValueError is raised",
+      "D": "The script pauses and asks for user input"
+    },
+    "correct_answer": "B",
+    "explanation": "If the condition in an assert statement evaluates to False, Python immediately stops execution and raises an AssertionError."
+  },
+  {
+    "question_no": 7,
+    "question_text": "What argument must be passed to 'sqlite3.connect()' to allow the database connection to be used across multiple threads?",
+    "possible_answers": {
+      "A": "multithreading=True",
+      "B": "allow_threads=True",
+      "C": "check_same_thread=False",
+      "D": "threaded=True"
+    },
+    "correct_answer": "C",
+    "explanation": "Setting 'check_same_thread=False' bypasses SQLite's default safety check, allowing the connection to be shared across multiple threads."
+  },
+  {
+    "question_no": 8,
+    "question_text": "In Python, which built-in function is used to verify if an object (e.g., 'repo') contains a specific attribute (e.g., 'connection')?",
+    "possible_answers": {
+      "A": "has_attribute(repo, 'connection')",
+      "B": "getattr(repo, 'connection')",
+      "C": "checkattr(repo, 'connection')",
+      "D": "hasattr(repo, 'connection')"
+    },
+    "correct_answer": "D",
+    "explanation": "The 'hasattr()' function returns True if the specified object possesses the given attribute, and False otherwise."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Which pandas function is used to execute a SQL query and read the results directly into a DataFrame?",
+    "possible_answers": {
+      "A": "pd.read_sql()",
+      "B": "pd.execute_sql()",
+      "C": "pd.to_sql()",
+      "D": "pd.query_sql()"
+    },
+    "correct_answer": "A",
+    "explanation": "The 'pd.read_sql()' function takes a SQL query string and a database connection, executing the query and loading the result set into a pandas DataFrame."
+  },
+  {
+    "question_no": 10,
+    "question_text": "When extracting data from a database using 'pd.read_sql()', which argument automatically parses specified columns into datetime objects?",
+    "possible_answers": {
+      "A": "convert_dates=['date']",
+      "B": "parse_dates=['date']",
+      "C": "datetime_cols=['date']",
+      "D": "date_parser='date'"
+    },
+    "correct_answer": "B",
+    "explanation": "Passing a list of column names to the 'parse_dates' argument tells pandas to parse those columns as datetime objects rather than standard strings."
+  },
+  {
+    "question_no": 11,
+    "question_text": "To fetch a limited number of rows from a SQLite database table, which clause is appended to the SQL 'SELECT' statement?",
+    "possible_answers": {
+      "A": "TOP 5",
+      "B": "LIMIT 5",
+      "C": "FETCH 5",
+      "D": "MAX 5"
+    },
+    "correct_answer": "B",
+    "explanation": "In SQLite (and PostgreSQL/MySQL), the 'LIMIT' clause is appended to the end of a query to restrict the maximum number of rows returned."
+  },
+  {
+    "question_no": 12,
+    "question_text": "How can you return the data types of all columns within a pandas DataFrame named 'df_suzlon'?",
+    "possible_answers": {
+      "A": "df_suzlon.type",
+      "B": "df_suzlon.columns.type",
+      "C": "df_suzlon.dtypes",
+      "D": "df_suzlon.datatype"
+    },
+    "correct_answer": "C",
+    "explanation": "The 'dtypes' attribute of a DataFrame returns a pandas Series indicating the data type of every column."
+  },
+  {
+    "question_no": 13,
+    "question_text": "Which pandas method is used to calculate the day-to-day percentage change in a stock's closing price?",
+    "possible_answers": {
+      "A": "diff()",
+      "B": "pct_change()",
+      "C": "percentage()",
+      "D": "change()"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'pct_change()' method computes the fractional change between the current element and a prior element, which is the standard way to calculate returns."
+  },
+  {
+    "question_no": 14,
+    "question_text": "When defining a Python class, what is the standard method name used to initialize newly created objects?",
+    "possible_answers": {
+      "A": "__init__",
+      "B": "__main__",
+      "C": "__class__",
+      "D": "__start__"
+    },
+    "correct_answer": "A",
+    "explanation": "The '__init__' method is a special \"dunder\" method in Python that acts as a constructor, initializing the object's attributes."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Which command correctly sorts a pandas DataFrame 'df' by its index in ascending order and modifies it in place?",
+    "possible_answers": {
+      "A": "df.sort_values(ascending=True, inplace=True)",
+      "B": "df.sort_index(ascending=True, inplace=True)",
+      "C": "df.order_by_index(ascending=True)",
+      "D": "df.sort(index=True, inplace=True)"
+    },
+    "correct_answer": "B",
+    "explanation": "'df.sort_index(ascending=True, inplace=True)' targets the index for sorting and applies the 'inplace=True' argument so the existing DataFrame is updated."
+  },
+  {
+    "question_no": 16,
+    "question_text": "After calculating daily stock returns using 'pct_change()', the first row naturally becomes missing. Which pandas method removes these missing values?",
+    "possible_answers": {
+      "A": "fillna()",
+      "B": "drop()",
+      "C": "dropna()",
+      "D": "remove_na()"
+    },
+    "correct_answer": "C",
+    "explanation": "The 'dropna()' method drops all rows containing missing (NaN) values from a pandas DataFrame or Series."
+  },
+  {
+    "question_no": 17,
+    "question_text": "When inserting a DataFrame into a SQLite database, which argument dictates what happens if the target table already exists?",
+    "possible_answers": {
+      "A": "if_exists",
+      "B": "on_duplicate",
+      "C": "overwrite",
+      "D": "append_mode"
+    },
+    "correct_answer": "A",
+    "explanation": "The 'if_exists' parameter (commonly passed as 'replace', 'append', or 'fail') tells pandas how to behave if the SQL table already exists."
+  },
+  {
+    "question_no": 18,
+    "question_text": "In the context of the notebook's 'GarchModel' class, the 'wrangle_data' method calculates what specific time-series feature to train the GARCH(1,1) model?",
+    "possible_answers": {
+      "A": "Moving averages",
+      "B": "Daily returns",
+      "C": "Trading volume",
+      "D": "Opening prices"
+    },
+    "correct_answer": "B",
+    "explanation": "GARCH models in finance are traditionally fitted on daily returns (the daily volatility of percentage changes) rather than raw absolute prices."
+  },
+  {
+    "question_no": 19,
+    "question_text": "After isolating a specific column from a DataFrame (e.g., y = df['return']), what attribute holds the string identifier for that 1-dimensional array?",
+    "possible_answers": {
+      "A": "name",
+      "B": "title",
+      "C": "col_name",
+      "D": "id"
+    },
+    "correct_answer": "A",
+    "explanation": "A pandas Series has a 'name' attribute which usually inherits the column label it possessed when inside the DataFrame."
+  },
+  {
+    "question_no": 20,
+    "question_text": "When using the 'arch' library to build a volatility model, what type of object is typically returned by the model's 'fit()' method?",
+    "possible_answers": {
+      "A": "A pandas DataFrame",
+      "B": "An ARCHModelResult object",
+      "C": "A numpy array",
+      "D": "A raw string containing the summary"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'fit()' method returns an 'ARCHModelResult' instance, which encapsulates the fitted parameters, statistical summaries, and forecasting methods."
+  }
+]

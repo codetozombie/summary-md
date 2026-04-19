@@ -1,0 +1,242 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "Which Jupyter magic command is used to load the SQL extension?",
+    "possible_answers": {
+      "A": "%sql",
+      "B": "!sql",
+      "C": "%load_ext sql",
+      "D": "%%sql"
+    },
+    "correct_answer": "C",
+    "explanation": "The command '%load_ext sql' is used to load the ipython-sql extension, which allows for SQL execution directly within Jupyter Notebook cells."
+  },
+  {
+    "question_no": 2,
+    "question_text": "To execute a single-line SQL statement using the loaded sql extension in a Jupyter notebook cell, which prefix is used?",
+    "possible_answers": {
+      "A": "%sql",
+      "B": "%%sql",
+      "C": "!sql",
+      "D": "$sql"
+    },
+    "correct_answer": "A",
+    "explanation": "'%sql' is the line magic command used to execute a single line of SQL code, whereas '%%sql' is a cell magic command used for multi-line SQL queries."
+  },
+  {
+    "question_no": 3,
+    "question_text": "Which pandas function is used to execute a SQL query and store the results directly into a DataFrame?",
+    "possible_answers": {
+      "A": "read_db()",
+      "B": "read_sql()",
+      "C": "sql_to_df()",
+      "D": "to_dataframe()"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'pandas.read_sql()' function executes a SQL query over an established database connection and returns the result set as a pandas DataFrame."
+  },
+  {
+    "question_no": 4,
+    "question_text": "What is the correct way to drop a list of columns named `drop_cols` from a pandas DataFrame `df` in-place?",
+    "possible_answers": {
+      "A": "df.drop(drop_cols, axis=1)",
+      "B": "df.remove(columns=drop_cols, inplace=True)",
+      "C": "df.drop(columns=drop_cols, inplace=True)",
+      "D": "df.delete(drop_cols, in_place=True)"
+    },
+    "correct_answer": "C",
+    "explanation": "The 'drop' method with the 'columns' argument specifies the columns to be removed, and 'inplace=True' ensures the original DataFrame is modified without returning a new one."
+  },
+  {
+    "question_no": 5,
+    "question_text": "If you want to create a list of column names from `df` that contain the substring 'post_eq', which list comprehension is correct?",
+    "possible_answers": {
+      "A": "[col for col in df.columns if \"post_eq\" in col]",
+      "B": "[col for df.columns if \"post_eq\" == col]",
+      "C": "[col where \"post_eq\" in df.columns]",
+      "D": "[col for col in df.columns if col.contains(\"post_eq\")]"
+    },
+    "correct_answer": "A",
+    "explanation": "This standard Python list comprehension iterates over 'df.columns' and includes only the column names (strings) where 'post_eq' is a substring."
+  },
+  {
+    "question_no": 6,
+    "question_text": "How do you extract the last character of each string in the column 'damage_grade' and convert it to an integer?",
+    "possible_answers": {
+      "A": "df[\"damage_grade\"].get(-1).to_int()",
+      "B": "df[\"damage_grade\"].chars[-1].int()",
+      "C": "df[\"damage_grade\"].str[-1].astype(int)",
+      "D": "df[\"damage_grade\"].substr(-1).as_type(int)"
+    },
+    "correct_answer": "C",
+    "explanation": "The '.str' accessor in pandas allows string manipulation on Series. '[-1]' slices the last character, and '.astype(int)' casts the resulting character into an integer type."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Given a column `damage_grade` containing integers, how do you create a binary column `severe_damage` where values strictly greater than 3 are 1 and others are 0?",
+    "possible_answers": {
+      "A": "df[\"severe_damage\"] = df[\"damage_grade\"] > 3",
+      "B": "df[\"severe_damage\"] = df[\"damage_grade\"].apply(lambda x: 1 if x >= 3 else 0)",
+      "C": "df[\"severe_damage\"] = df[\"damage_grade\"].map(> 3)",
+      "D": "df[\"severe_damage\"] = (df[\"damage_grade\"] > 3).astype(int)"
+    },
+    "correct_answer": "D",
+    "explanation": "The comparison '(df[\"damage_grade\"] > 3)' returns a boolean Series. Chaining '.astype(int)' converts True to 1 and False to 0."
+  },
+  {
+    "question_no": 8,
+    "question_text": "Which method is used to keep only the columns in a DataFrame that match a specific regular expression, such as 'post_eq'?",
+    "possible_answers": {
+      "A": "df.select(regex=\"post_eq\")",
+      "B": "df.filter(regex=\"post_eq\")",
+      "C": "df.keep(regex=\"post_eq\")",
+      "D": "df.match(\"post_eq\")"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'filter' method in pandas can be used with the 'regex' parameter to subset a DataFrame's columns based on regular expression matching."
+  },
+  {
+    "question_no": 9,
+    "question_text": "Which code snippet calculates the baseline accuracy for a classification problem using the most frequent class in the training target vector `y_train`?",
+    "possible_answers": {
+      "A": "y_train.mean()",
+      "B": "y_train.mode().value()",
+      "C": "y_train.max_class_probability()",
+      "D": "y_train.value_counts(normalize=True).max()"
+    },
+    "correct_answer": "D",
+    "explanation": "'value_counts(normalize=True)' returns the proportion of each class in the target vector. '.max()' selects the highest proportion, which represents the baseline accuracy."
+  },
+  {
+    "question_no": 10,
+    "question_text": "When using `train_test_split` to divide data into training and testing sets, what is the purpose of the `random_state` parameter?",
+    "possible_answers": {
+      "A": "It determines the percentage of data used for testing.",
+      "B": "It randomizes the feature columns to avoid target leakage.",
+      "C": "It shuffles the data using a random number generator seed for reproducibility.",
+      "D": "It generates random labels for testing model robustness."
+    },
+    "correct_answer": "C",
+    "explanation": "The 'random_state' parameter sets the seed for the internal random number generator, ensuring that the randomized train-test split yields the exact same results across different runs."
+  },
+  {
+    "question_no": 11,
+    "question_text": "Which scikit-learn function is commonly used to create a machine learning pipeline that sequentially applies a list of transforms and a final estimator?",
+    "possible_answers": {
+      "A": "create_pipeline",
+      "B": "build_pipeline",
+      "C": "Pipeline_Builder",
+      "D": "make_pipeline"
+    },
+    "correct_answer": "D",
+    "explanation": "The 'make_pipeline' function from 'sklearn.pipeline' is a shorthand for constructing a Pipeline without having to explicitly name each step."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Which method is used to train a scikit-learn estimator or pipeline on the training data (`X_train`, `y_train`)?",
+    "possible_answers": {
+      "A": "train()",
+      "B": "fit()",
+      "C": "predict()",
+      "D": "transform()"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'fit()' method computes the necessary parameters for the model or transformations based on the provided training data."
+  },
+  {
+    "question_no": 13,
+    "question_text": "What method calculates the mean accuracy of a trained scikit-learn model on the given test data and labels?",
+    "possible_answers": {
+      "A": "evaluate(X_test, y_test)",
+      "B": "accuracy(X_test, y_test)",
+      "C": "score(X_test, y_test)",
+      "D": "validate(X_test, y_test)"
+    },
+    "correct_answer": "C",
+    "explanation": "In scikit-learn classifiers, the 'score()' method evaluates the model on the test features and returns the mean accuracy when compared against the true labels."
+  },
+  {
+    "question_no": 14,
+    "question_text": "How do you retrieve the maximum depth a trained `DecisionTreeClassifier` actually reached during training?",
+    "possible_answers": {
+      "A": "clf.max_depth",
+      "B": "clf.get_depth()",
+      "C": "clf.tree_depth_",
+      "D": "clf.depth()"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'get_depth()' method of a fitted DecisionTreeClassifier returns the maximum depth of the underlying decision tree structure."
+  },
+  {
+    "question_no": 15,
+    "question_text": "If you want to create a sequence of odd integers from 1 to 49 (inclusive), which Python `range` function call is correct?",
+    "possible_answers": {
+      "A": "range(1, 49, 2)",
+      "B": "range(1, 50, 2)",
+      "C": "range(1, 51, 1)",
+      "D": "range(0, 50, 2)"
+    },
+    "correct_answer": "B",
+    "explanation": "The built-in 'range(start, stop, step)' function generates numbers starting from 'start' up to (but not including) 'stop'. Using 'range(1, 50, 2)' correctly generates odd numbers up to 49."
+  },
+  {
+    "question_no": 16,
+    "question_text": "If `model` is a fitted scikit-learn pipeline, how can you access a specific step named 'decisiontreeclassifier' to call its specific methods?",
+    "possible_answers": {
+      "A": "model.step(\"decisiontreeclassifier\")",
+      "B": "model.get_estimator(\"decisiontreeclassifier\")",
+      "C": "model.named_steps[\"decisiontreeclassifier\"]",
+      "D": "model[\"decisiontreeclassifier\"]"
+    },
+    "correct_answer": "C",
+    "explanation": "The 'named_steps' attribute of a Pipeline is a dictionary-like object that allows access to individual steps by their designated string names."
+  },
+  {
+    "question_no": 17,
+    "question_text": "Which transformer from `category_encoders` is commonly used to encode categorical features into integer labels?",
+    "possible_answers": {
+      "A": "OneHotEncoder",
+      "B": "LabelEncoder",
+      "C": "OrdinalEncoder",
+      "D": "CategoryEncoder"
+    },
+    "correct_answer": "C",
+    "explanation": "'OrdinalEncoder' transforms categorical variables into ordered integer labels (ordinals), which is particularly useful for tree-based models."
+  },
+  {
+    "question_no": 18,
+    "question_text": "Which SQL command is used to calculate the total number of observations (rows) in a table named `household_demographics`?",
+    "possible_answers": {
+      "A": "SELECT total() FROM household_demographics",
+      "B": "SELECT sum(rows) FROM household_demographics",
+      "C": "SELECT number_of_rows() FROM household_demographics",
+      "D": "SELECT count(*) FROM household_demographics"
+    },
+    "correct_answer": "D",
+    "explanation": "The aggregate SQL function 'COUNT(*)' counts the total number of rows returned by a query, regardless of whether they contain NULL values."
+  },
+  {
+    "question_no": 19,
+    "question_text": "How do you restrict the output of a SQLite query to only the first five rows?",
+    "possible_answers": {
+      "A": "Add TOP 5 at the end of the query.",
+      "B": "Add LIMIT 5 at the end of the query.",
+      "C": "Add FETCH FIRST 5 ROWS ONLY at the beginning.",
+      "D": "Add MAX_ROWS = 5 in the WHERE clause."
+    },
+    "correct_answer": "B",
+    "explanation": "In SQLite (and several other SQL dialects), the 'LIMIT' clause is appended to the end of a SELECT query to cap the number of rows returned."
+  },
+  {
+    "question_no": 20,
+    "question_text": "In a standard supervised learning setup for scikit-learn, what do the variables `X` and `y` typically represent?",
+    "possible_answers": {
+      "A": "X is the testing data, y is the training data.",
+      "B": "X is the target vector, y is the feature matrix.",
+      "C": "X is the feature matrix, y is the target vector.",
+      "D": "X represents continuous features, y represents categorical features."
+    },
+    "correct_answer": "C",
+    "explanation": "By convention in data science, the uppercase 'X' represents the two-dimensional matrix of features, and the lowercase 'y' represents the one-dimensional target vector (labels)."
+  }
+]
