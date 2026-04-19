@@ -1,0 +1,362 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "In the context of statistical experiments, what is the primary purpose of an A/B test?",
+    "possible_answers": {
+      "A": "To test multiple variables simultaneously.",
+      "B": "To compare a newly developed treatment against a standard baseline.",
+      "C": "To find the relationship between a continuous predictor and a continuous outcome.",
+      "D": "To classify records into distinct categories."
+    },
+    "correct_answer": "B",
+    "explanation": "An A/B test is an experiment with two groups to establish which of two treatments, products, or procedures is superior, typically comparing a new treatment against a standard baseline or control."
+  },
+  {
+    "question_no": 2,
+    "question_text": "What is the logical embodiment of the assumption that the treatments to which groups were exposed do not differ?",
+    "possible_answers": {
+      "A": "The alternative hypothesis",
+      "B": "The null hypothesis",
+      "C": "The omnibus test",
+      "D": "The standard error"
+    },
+    "correct_answer": "B",
+    "explanation": "The null hypothesis is a baseline assumption that the treatments are equivalent and any observed difference is due to chance."
+  },
+  {
+    "question_no": 3,
+    "question_text": "Which of the following describes a permutation test?",
+    "possible_answers": {
+      "A": "Repeatedly sampling with replacement to estimate standard error.",
+      "B": "Combining two or more samples and randomly reallocating the observations to resamples.",
+      "C": "Using a mathematical formula to approximate a normal distribution.",
+      "D": "Calculating the ratio of group variance to residual variance."
+    },
+    "correct_answer": "B",
+    "explanation": "A permutation test combines the results from different groups into a single data set, and then randomly shuffles and divides the data into new resamples to test the null hypothesis."
+  },
+  {
+    "question_no": 4,
+    "question_text": "When a company measures web page success using 'average session time' because actual sales are too infrequent to track efficiently, 'average session time' is acting as a:",
+    "possible_answers": {
+      "A": "Confounding variable",
+      "B": "Proxy variable",
+      "C": "Dummy variable",
+      "D": "Dependent variable"
+    },
+    "correct_answer": "B",
+    "explanation": "A proxy variable is one that stands in for the true variable of interest, which may be unavailable, too costly, or too time-consuming to measure."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which variant of the permutation test figures out all the possible ways data could be divided rather than randomly shuffling?",
+    "possible_answers": {
+      "A": "Bootstrap permutation test",
+      "B": "Exhaustive permutation test",
+      "C": "Randomization test",
+      "D": "Chi-square test"
+    },
+    "correct_answer": "B",
+    "explanation": "An exhaustive permutation test explicitly calculates all possible divisions of the data, which is only practical for relatively small sample sizes."
+  },
+  {
+    "question_no": 6,
+    "question_text": "What does a p-value represent in significance testing?",
+    "possible_answers": {
+      "A": "The probability that the null hypothesis is true.",
+      "B": "The probability of obtaining the observed results, or something more extreme, given that the null hypothesis is true.",
+      "C": "The probability that the alternative hypothesis is true.",
+      "D": "The probability that the results are practically significant."
+    },
+    "correct_answer": "B",
+    "explanation": "The p-value is the probability of observing an outcome as extreme as or more extreme than the one observed, assuming a chance model (the null hypothesis) is true."
+  },
+  {
+    "question_no": 7,
+    "question_text": "In hypothesis testing, what does 'alpha' specify?",
+    "possible_answers": {
+      "A": "The probability of making a Type 2 error.",
+      "B": "The actual difference between the treatment groups.",
+      "C": "The probability threshold of 'unusualness' that chance results must surpass for actual outcomes to be deemed statistically significant.",
+      "D": "The number of degrees of freedom in the test."
+    },
+    "correct_answer": "C",
+    "explanation": "Alpha is the statistical significance level, defining the probability threshold that a result must surpass to be considered statistically significant rather than due to chance."
+  },
+  {
+    "question_no": 8,
+    "question_text": "Concluding that an effect is real when it is actually just the product of random chance is called a:",
+    "possible_answers": {
+      "A": "Type 1 error",
+      "B": "Type 2 error",
+      "C": "Standard error",
+      "D": "Sampling error"
+    },
+    "correct_answer": "A",
+    "explanation": "A Type 1 error occurs when you mistakenly conclude that an effect is real (rejecting the null hypothesis) when it is actually just due to chance."
+  },
+  {
+    "question_no": 9,
+    "question_text": "What is the definition of a Type 2 error?",
+    "possible_answers": {
+      "A": "Mistakenly concluding an effect is real when it is chance.",
+      "B": "Mistakenly concluding that an effect is due to chance when it is actually real.",
+      "C": "Measuring the wrong variable entirely.",
+      "D": "Applying the wrong alpha level."
+    },
+    "correct_answer": "B",
+    "explanation": "A Type 2 error occurs when you mistakenly conclude that an effect is due to chance (failing to reject the null hypothesis) when a real effect actually exists."
+  },
+  {
+    "question_no": 10,
+    "question_text": "Which traditional statistical test is commonly used as a formulaic alternative to a resampling permutation test for comparing the means of two groups?",
+    "possible_answers": {
+      "A": "Chi-square test",
+      "B": "t-test",
+      "C": "F-test",
+      "D": "Fisher's Exact Test"
+    },
+    "correct_answer": "B",
+    "explanation": "The t-test is the most common traditional test used to compare the means of two groups, serving as an approximation to permutation tests."
+  },
+  {
+    "question_no": 11,
+    "question_text": "What is the consequence of 'multiple testing' (e.g., trying lots of statistical models or checking multiple pairwise differences)?",
+    "possible_answers": {
+      "A": "It decreases the probability of a Type 1 error.",
+      "B": "It increases the risk of concluding that something is significant just by chance.",
+      "C": "It eliminates the need for a holdout sample.",
+      "D": "It guarantees an unbiased estimation."
+    },
+    "correct_answer": "B",
+    "explanation": "Multiplicity increases the chance of being fooled by randomness, leading to a higher risk of false discoveries (Type 1 errors) just by chance."
+  },
+  {
+    "question_no": 12,
+    "question_text": "What does the Bonferroni adjustment do to compensate for multiple testing?",
+    "possible_answers": {
+      "A": "It multiplies the p-value by the sample size.",
+      "B": "It simply divides the alpha by the number of comparisons.",
+      "C": "It removes outliers from the dataset.",
+      "D": "It uses a completely different distribution."
+    },
+    "correct_answer": "B",
+    "explanation": "The Bonferroni adjustment sets a more stringent bar for statistical significance by dividing the alpha by the number of comparisons being made."
+  },
+  {
+    "question_no": 13,
+    "question_text": "Which multiple testing adjustment procedure is specifically used to compare multiple group means by calculating a benchmark based on the maximum difference?",
+    "possible_answers": {
+      "A": "Tukey's Honest Significant Difference (HSD)",
+      "B": "Bonferroni adjustment",
+      "C": "False Discovery Rate",
+      "D": "Fisher's Exact Test"
+    },
+    "correct_answer": "A",
+    "explanation": "Tukey's HSD applies to the maximum difference among group means, comparing it to a benchmark based on the t-distribution to adjust for multiple comparisons."
+  },
+  {
+    "question_no": 14,
+    "question_text": "In statistics, what does 'degrees of freedom' refer to?",
+    "possible_answers": {
+      "A": "The number of treatment groups in an experiment.",
+      "B": "The number of observations free to vary in a calculation.",
+      "C": "The probability threshold alpha.",
+      "D": "The number of iterations in a permutation test."
+    },
+    "correct_answer": "B",
+    "explanation": "Degrees of freedom refers to the number of values in a final calculation of a statistic that are free to vary after certain constraints have been met."
+  },
+  {
+    "question_no": 15,
+    "question_text": "Which statistical procedure is used to test for a statistically significant difference among multiple (more than two) groups?",
+    "possible_answers": {
+      "A": "Two-sample t-test",
+      "B": "ANOVA (Analysis of Variance)",
+      "C": "Chi-Square Test",
+      "D": "Logistic Regression"
+    },
+    "correct_answer": "B",
+    "explanation": "Analysis of variance (ANOVA) is the statistical procedure that tests for a statistically significant difference among multiple group means."
+  },
+  {
+    "question_no": 16,
+    "question_text": "What is an omnibus test in the context of ANOVA?",
+    "possible_answers": {
+      "A": "A single hypothesis test of the overall variance among multiple group means.",
+      "B": "A test between two specific groups (pairwise).",
+      "C": "A test for categorical counts.",
+      "D": "A test to calculate degrees of freedom."
+    },
+    "correct_answer": "A",
+    "explanation": "An omnibus test evaluates a single overall hypothesis, such as whether all groups have the same underlying mean, rather than comparing individual pairs."
+  },
+  {
+    "question_no": 17,
+    "question_text": "In ANOVA, the F-statistic is based on the ratio of what two variances?",
+    "possible_answers": {
+      "A": "Variance among group means to variance due to residual error.",
+      "B": "Total variance to grand average.",
+      "C": "Variance of categorical counts to expected values.",
+      "D": "Degrees of freedom to sample size."
+    },
+    "correct_answer": "A",
+    "explanation": "The F-statistic measures the ratio of the variance across group means (the treatment effect) to the variance due to residual error."
+  },
+  {
+    "question_no": 18,
+    "question_text": "When observed values in a dataset are broken down into the grand average, the treatment effect, and the residual error, this is called:",
+    "possible_answers": {
+      "A": "Standardization",
+      "B": "Permutation",
+      "C": "Decomposition of variance",
+      "D": "False discovery rate"
+    },
+    "correct_answer": "C",
+    "explanation": "Decomposition of variance separates components contributing to an individual value into the grand average, treatment effect, and residual error."
+  },
+  {
+    "question_no": 19,
+    "question_text": "What distinguishes a two-way ANOVA from a one-way ANOVA?",
+    "possible_answers": {
+      "A": "A two-way ANOVA only has two groups.",
+      "B": "A two-way ANOVA evaluates two different factors and their interaction.",
+      "C": "A two-way ANOVA conducts two pairwise tests.",
+      "D": "A two-way ANOVA splits the data into two resampling sets."
+    },
+    "correct_answer": "B",
+    "explanation": "A two-way ANOVA analyzes the effect of two different factors (e.g., treatment group and time of week) and their interaction effect on a response."
+  },
+  {
+    "question_no": 20,
+    "question_text": "Which distribution is typically used to test whether observed categorical counts differ significantly from expected counts?",
+    "possible_answers": {
+      "A": "t-distribution",
+      "B": "F-distribution",
+      "C": "Chi-Square distribution",
+      "D": "Binomial distribution"
+    },
+    "correct_answer": "C",
+    "explanation": "The chi-square distribution is used to test the extent to which observed counts depart from expected counts in a contingency table."
+  },
+  {
+    "question_no": 21,
+    "question_text": "In chi-square analysis, what does the Pearson residual measure?",
+    "possible_answers": {
+      "A": "The extent to which actual counts differ from expected counts.",
+      "B": "The ratio of treatment variance to error variance.",
+      "C": "The difference between two continuous means.",
+      "D": "The number of degrees of freedom in a categorical table."
+    },
+    "correct_answer": "A",
+    "explanation": "The Pearson residual is defined as (Observed - Expected) / sqrt(Expected) and measures the difference between actual and expected counts."
+  },
+  {
+    "question_no": 22,
+    "question_text": "When sample sizes are very small, which test is often used instead of the Chi-Square test?",
+    "possible_answers": {
+      "A": "F-test",
+      "B": "Tukey's HSD",
+      "C": "Fisher's Exact Test",
+      "D": "Bonferroni test"
+    },
+    "correct_answer": "C",
+    "explanation": "Fisher's Exact Test is an exhaustive permutation procedure that yields the exact p-value, traditionally used when expected counts are too small for the chi-square approximation."
+  },
+  {
+    "question_no": 23,
+    "question_text": "Why do data scientists often use Multi-Arm Bandit algorithms instead of traditional A/B tests?",
+    "possible_answers": {
+      "A": "They guarantee finding a statistically significant p-value.",
+      "B": "They allow for testing multiple treatments at once and reaching optimal selection faster.",
+      "C": "They are the only way to test exactly two groups.",
+      "D": "They eliminate all residual error."
+    },
+    "correct_answer": "B",
+    "explanation": "Bandit algorithms allow testing multiple treatments simultaneously and dynamically altering sampling probabilities to favor the winning treatment, optimizing overall effort."
+  },
+  {
+    "question_no": 24,
+    "question_text": "In the epsilon-greedy algorithm for a multi-arm bandit, what happens if a generated random number is greater than or equal to epsilon?",
+    "possible_answers": {
+      "A": "A fair coin is flipped to decide between arms.",
+      "B": "The algorithm stops completely.",
+      "C": "Whichever offer has had the highest response rate to date is shown.",
+      "D": "A random new offer is introduced."
+    },
+    "correct_answer": "C",
+    "explanation": "If the random number >= epsilon, the epsilon-greedy algorithm exploits the best current knowledge by selecting the highest-performing arm."
+  },
+  {
+    "question_no": 25,
+    "question_text": "Which multi-arm bandit approach uses a Bayesian method with a beta distribution to update probabilities of choosing the best arm?",
+    "possible_answers": {
+      "A": "Epsilon-greedy algorithm",
+      "B": "Thompson's sampling",
+      "C": "Fisher's Exact approach",
+      "D": "Exhaustive permutation"
+    },
+    "correct_answer": "B",
+    "explanation": "Thompson's sampling uses a Bayesian approach, assuming a prior beta distribution of rewards that is updated with each draw to maximize the probability of choosing the best arm."
+  },
+  {
+    "question_no": 26,
+    "question_text": "In the context of sample size calculation, what is the 'effect size'?",
+    "possible_answers": {
+      "A": "The physical size of the data sample.",
+      "B": "The probability that the test will reveal a difference.",
+      "C": "The minimum size of the difference you hope to be able to detect in a statistical test.",
+      "D": "The number of treatments being tested."
+    },
+    "correct_answer": "C",
+    "explanation": "Effect size is the minimum meaningful difference between treatments that you want your experiment to be able to detect."
+  },
+  {
+    "question_no": 27,
+    "question_text": "What is 'power' in statistical testing?",
+    "possible_answers": {
+      "A": "The probability of committing a Type 1 error.",
+      "B": "The size of the difference between group means.",
+      "C": "The number of degrees of freedom.",
+      "D": "The probability of detecting a given effect size with a given sample size."
+    },
+    "correct_answer": "D",
+    "explanation": "Power is the probability that a statistical test will correctly reject a false null hypothesis, essentially the probability of detecting a specified effect."
+  },
+  {
+    "question_no": 28,
+    "question_text": "Which of the following is NOT one of the four moving parts used when calculating required sample size?",
+    "possible_answers": {
+      "A": "Effect size",
+      "B": "Power",
+      "C": "Degrees of freedom",
+      "D": "Significance level (alpha)"
+    },
+    "correct_answer": "C",
+    "explanation": "The four moving parts in power calculations are Sample size, Effect size, Significance level (alpha), and Power."
+  },
+  {
+    "question_no": 29,
+    "question_text": "To reduce the probability of being fooled by chance when fitting a predictive model to a large dataset, data scientists commonly use:",
+    "possible_answers": {
+      "A": "A holdout sample (cross-validation)",
+      "B": "The F-statistic",
+      "C": "Fisher's exact test",
+      "D": "A smaller alpha level"
+    },
+    "correct_answer": "A",
+    "explanation": "The use of a holdout sample or cross-validation is the standard data science approach to mitigate the risk of finding illusory models from repeated searching."
+  },
+  {
+    "question_no": 30,
+    "question_text": "Why do data scientists generally favor resampling and simulation over traditional formula-based hypothesis testing?",
+    "possible_answers": {
+      "A": "Resampling always gives a p-value of exactly zero.",
+      "B": "Formulas are computationally too slow for big data.",
+      "C": "Resampling is more flexible and makes fewer restrictive assumptions about data distribution.",
+      "D": "Resampling eliminates the possibility of a Type 1 error."
+    },
+    "correct_answer": "C",
+    "explanation": "Resampling procedures like the permutation test offer a flexible, intuitive approach that does not rely on strict distributional assumptions, making them highly adaptable for data science."
+  }
+]

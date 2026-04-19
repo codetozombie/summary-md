@@ -1,0 +1,362 @@
+[
+  {
+    "question_no": 1,
+    "question_text": "In the context of data science, what is the most common use of linear regression?",
+    "possible_answers": {
+      "A": "To explain the causal relationship between two variables.",
+      "B": "To predict individual outcomes for new data.",
+      "C": "To classify a record into one of two categories.",
+      "D": "To cluster unlabeled data into homogeneous groups."
+    },
+    "correct_answer": "B",
+    "explanation": "While historically used for explanation, with the advent of big data, regression is widely used to form a model to predict individual outcomes for new data."
+  },
+  {
+    "question_no": 2,
+    "question_text": "In the machine learning community, what term is commonly used as a synonym for the independent variable?",
+    "possible_answers": {
+      "A": "Target",
+      "B": "Response",
+      "C": "Feature",
+      "D": "Outcome"
+    },
+    "correct_answer": "C",
+    "explanation": "The X variable is known as the predictor or independent variable in statistics, but the machine learning community tends to call it a feature."
+  },
+  {
+    "question_no": 3,
+    "question_text": "In the simple linear regression equation Y = b0 + b1X, what does the symbol b0 represent?",
+    "possible_answers": {
+      "A": "The regression coefficient (slope)",
+      "B": "The residual error",
+      "C": "The fitted value",
+      "D": "The intercept (or constant)"
+    },
+    "correct_answer": "D",
+    "explanation": "The symbol b0 is known as the intercept (or constant), which is the predicted value when X = 0."
+  },
+  {
+    "question_no": 4,
+    "question_text": "What are 'residuals' in a regression model?",
+    "possible_answers": {
+      "A": "The predictions of the response variable.",
+      "B": "The difference between the observed values and the fitted (predicted) values.",
+      "C": "The slope of the regression line.",
+      "D": "The independent variables left out of the model."
+    },
+    "correct_answer": "B",
+    "explanation": "Residuals (or errors) are defined as the difference between the observed values and the fitted (predicted) values."
+  },
+  {
+    "question_no": 5,
+    "question_text": "Which method is typically used to fit a linear regression model?",
+    "possible_answers": {
+      "A": "Maximum likelihood estimation",
+      "B": "Least squares (ordinary least squares)",
+      "C": "K-Nearest Neighbors",
+      "D": "Recursive partitioning"
+    },
+    "correct_answer": "B",
+    "explanation": "The method of minimizing the sum of the squared residuals to fit the model is termed least squares regression, or ordinary least squares (OLS)."
+  },
+  {
+    "question_no": 6,
+    "question_text": "What does 'hat' notation (e.g., Y-hat) signify in regression statistics?",
+    "possible_answers": {
+      "A": "It indicates a known, observed value.",
+      "B": "It indicates an estimate or predicted value versus a known value.",
+      "C": "It indicates the variance of the data.",
+      "D": "It indicates an outlier in the dataset."
+    },
+    "correct_answer": "B",
+    "explanation": "The 'hat' notation is used to differentiate between estimates (predicted values) and known, true values."
+  },
+  {
+    "question_no": 7,
+    "question_text": "Which of the following is the most widely used metric to compare overall regression models in data science?",
+    "possible_answers": {
+      "A": "R-squared",
+      "B": "t-statistic",
+      "C": "Root mean squared error (RMSE)",
+      "D": "P-value"
+    },
+    "correct_answer": "C",
+    "explanation": "Root mean squared error (RMSE) is the square root of the average squared error and is the most important performance metric to compare overall accuracy of regression models in data science."
+  },
+  {
+    "question_no": 8,
+    "question_text": "How does the residual standard error (RSE) differ from the root mean squared error (RMSE)?",
+    "possible_answers": {
+      "A": "RSE divides by the degrees of freedom instead of the number of records.",
+      "B": "RSE uses absolute values instead of squared values.",
+      "C": "RSE measures the proportion of variance explained.",
+      "D": "There is no mathematical difference."
+    },
+    "correct_answer": "A",
+    "explanation": "The only difference is that the denominator for RSE is the degrees of freedom (n - p - 1), as opposed to the number of records (n) for RMSE."
+  },
+  {
+    "question_no": 9,
+    "question_text": "What does the R-squared metric measure?",
+    "possible_answers": {
+      "A": "The average squared error of the regression.",
+      "B": "The proportion of variance in the data explained by the model.",
+      "C": "The significance of an individual predictor.",
+      "D": "The multicollinearity among the predictors."
+    },
+    "correct_answer": "B",
+    "explanation": "R-squared (coefficient of determination) is the proportion of variance explained by the model, ranging from 0 to 1."
+  },
+  {
+    "question_no": 10,
+    "question_text": "In linear regression, what does a very high t-statistic (with a p-value near 0) for a predictor indicate to a data scientist?",
+    "possible_answers": {
+      "A": "The predictor is highly correlated with other predictors.",
+      "B": "The predictor should likely be dropped from the model.",
+      "C": "The predictor should be retained in the model.",
+      "D": "The model is overfitting the data."
+    },
+    "correct_answer": "C",
+    "explanation": "Data scientists focus on the t-statistic as a guide; a high t-statistic indicates a predictor has a meaningful contribution and should be retained in the model."
+  },
+  {
+    "question_no": 11,
+    "question_text": "What is the primary advantage of using cross-validation over in-sample metrics?",
+    "possible_answers": {
+      "A": "It automatically fits nonlinear splines.",
+      "B": "It evaluates how the model will perform on new, out-of-sample data, mitigating the risk of overfitting.",
+      "C": "It increases the R-squared value.",
+      "D": "It runs significantly faster than a single model fit."
+    },
+    "correct_answer": "B",
+    "explanation": "Cross-validation extends the idea of a holdout sample to multiple sequential holdout samples to assess 'out-of-sample' performance and avoid overfitting."
+  },
+  {
+    "question_no": 12,
+    "question_text": "Which metric penalizes a model for adding extra variables to prevent overfitting?",
+    "possible_answers": {
+      "A": "Akaike's Information Criteria (AIC)",
+      "B": "Root Mean Squared Error (RMSE)",
+      "C": "R-squared",
+      "D": "T-statistic"
+    },
+    "correct_answer": "A",
+    "explanation": "AIC (and similar metrics like BIC and adjusted R-squared) penalizes adding terms to a model to guide model selection."
+  },
+  {
+    "question_no": 13,
+    "question_text": "What is the model selection approach where you start with a full model and successively drop variables that don't contribute meaningfully?",
+    "possible_answers": {
+      "A": "Forward selection",
+      "B": "Backward elimination",
+      "C": "Penalized regression",
+      "D": "All subset regression"
+    },
+    "correct_answer": "B",
+    "explanation": "Backward elimination starts with a full model and successively drops variables that don't contribute meaningfully."
+  },
+  {
+    "question_no": 14,
+    "question_text": "How do penalized regression methods like ridge and lasso differ from stepwise regression?",
+    "possible_answers": {
+      "A": "They search through all possible subsets of variables.",
+      "B": "They apply a penalty that reduces coefficients (sometimes to zero) rather than explicitly searching through discrete models.",
+      "C": "They only work with categorical variables.",
+      "D": "They increase the complexity of the model."
+    },
+    "correct_answer": "B",
+    "explanation": "Penalized regression applies the penalty by reducing coefficients, in some cases to near zero, rather than explicitly searching through and eliminating variables discretely."
+  },
+  {
+    "question_no": 15,
+    "question_text": "When would a data scientist typically use weighted regression?",
+    "possible_answers": {
+      "A": "When all observations are equally reliable.",
+      "B": "To encode factor variables with many levels.",
+      "C": "When older data is less reliable than more recent data.",
+      "D": "To automatically find interaction terms."
+    },
+    "correct_answer": "C",
+    "explanation": "Weighted regression is useful when different observations have been measured with different precision, such as when older sales are less reliable than more recent sales."
+  },
+  {
+    "question_no": 16,
+    "question_text": "What is the difference between a prediction interval and a confidence interval?",
+    "possible_answers": {
+      "A": "They are exactly the same concept.",
+      "B": "A prediction interval pertains to uncertainty around a single individual value, while a confidence interval pertains to a mean or other calculated statistic.",
+      "C": "A confidence interval is always wider than a prediction interval.",
+      "D": "A prediction interval is only used in classification."
+    },
+    "correct_answer": "B",
+    "explanation": "A prediction interval pertains to uncertainty around a single value, while a confidence interval pertains to a mean or other statistic calculated from multiple values."
+  },
+  {
+    "question_no": 17,
+    "question_text": "How are factor (categorical) variables typically coded so they can be used in a multiple linear regression model?",
+    "possible_answers": {
+      "A": "As text strings",
+      "B": "As continuous floats",
+      "C": "As binary dummy variables",
+      "D": "As spline knots"
+    },
+    "correct_answer": "C",
+    "explanation": "Regression requires numerical inputs, so factor variables need to be recoded, most commonly by converting them into a set of binary dummy variables."
+  },
+  {
+    "question_no": 18,
+    "question_text": "In standard linear regression with an intercept, if a categorical variable has P distinct levels, how many dummy columns are typically used?",
+    "possible_answers": {
+      "A": "P",
+      "B": "P - 1",
+      "C": "P + 1",
+      "D": "2P"
+    },
+    "correct_answer": "B",
+    "explanation": "In regression, a factor variable with P levels is usually represented by P - 1 columns because the Pth value is redundant when an intercept is included."
+  },
+  {
+    "question_no": 19,
+    "question_text": "What is the term for the dummy coding representation, common in machine learning algorithms, where all P levels of a categorical variable are retained?",
+    "possible_answers": {
+      "A": "Reference coding",
+      "B": "Deviation coding",
+      "C": "One hot encoding",
+      "D": "Polynomial coding"
+    },
+    "correct_answer": "C",
+    "explanation": "In the machine learning community, representing a factor variable with a dummy variable for every single level is referred to as one hot encoding."
+  },
+  {
+    "question_no": 20,
+    "question_text": "What problem can occur if you include all P dummy columns for a factor variable in a linear regression model that has an intercept?",
+    "possible_answers": {
+      "A": "Heteroskedasticity",
+      "B": "Multicollinearity",
+      "C": "Confounding",
+      "D": "Extrapolation"
+    },
+    "correct_answer": "B",
+    "explanation": "Adding the Pth column creates redundancy, causing perfect multicollinearity where the regression does not have a well-defined solution."
+  },
+  {
+    "question_no": 21,
+    "question_text": "What is a confounding variable in the context of regression?",
+    "possible_answers": {
+      "A": "A variable that is highly correlated with another predictor.",
+      "B": "An important predictor that is omitted from the model, leading to spurious relationships.",
+      "C": "A predictor that has zero correlation with the response.",
+      "D": "A categorical variable with too many levels."
+    },
+    "correct_answer": "B",
+    "explanation": "A confounding variable is an important predictor that is omitted from a model, which can lead to naive interpretations and spurious relationships."
+  },
+  {
+    "question_no": 22,
+    "question_text": "What term describes a situation where the relationship between a predictor variable and the response depends on the level of another predictor variable?",
+    "possible_answers": {
+      "A": "Main effect",
+      "B": "Collinearity",
+      "C": "Interaction",
+      "D": "Confounding"
+    },
+    "correct_answer": "C",
+    "explanation": "An interaction term is used when the relationship between a predictor and the outcome is interdependent with (or depends on the magnitude of) another predictor."
+  },
+  {
+    "question_no": 23,
+    "question_text": "Which metric is typically used in regression diagnostics to determine if a record is an outlier?",
+    "possible_answers": {
+      "A": "R-squared",
+      "B": "Standardized residual",
+      "C": "Cook's distance",
+      "D": "Leverage (hat-value)"
+    },
+    "correct_answer": "B",
+    "explanation": "The standardized residual (residual divided by its standard error) is the metric typically used to determine whether a record is classified as an outlier in regression."
+  },
+  {
+    "question_no": 24,
+    "question_text": "What is the definition of an influential value in a regression model?",
+    "possible_answers": {
+      "A": "A variable that has the highest t-statistic.",
+      "B": "A record whose predicted value exactly matches its actual value.",
+      "C": "A record whose absence would significantly change the regression equation.",
+      "D": "A predictor that explains the majority of the variance."
+    },
+    "correct_answer": "C",
+    "explanation": "An influential observation is a value or record whose presence or absence makes a big difference in the regression equation."
+  },
+  {
+    "question_no": 25,
+    "question_text": "Which diagnostic metric defines the influence of a single record as a combination of leverage and residual size?",
+    "possible_answers": {
+      "A": "Cook's distance",
+      "B": "Hat-value",
+      "C": "Standardized residual",
+      "D": "Durbin-Watson statistic"
+    },
+    "correct_answer": "A",
+    "explanation": "Cook's distance defines influence as a combination of leverage and residual size."
+  },
+  {
+    "question_no": 26,
+    "question_text": "In regression diagnostics, what does 'heteroskedasticity' refer to?",
+    "possible_answers": {
+      "A": "Non-normal distribution of the predictor variables.",
+      "B": "The lack of constant residual variance across the range of predicted values.",
+      "C": "The presence of perfect multicollinearity.",
+      "D": "The omission of an important confounding variable."
+    },
+    "correct_answer": "B",
+    "explanation": "Heteroskedasticity is the lack of constant residual variance across the range of predicted values, meaning errors are greater for some ranges than others."
+  },
+  {
+    "question_no": 27,
+    "question_text": "Which diagnostic plot isolates the relationship between a single predictor variable and the response, taking all other predictors into account?",
+    "possible_answers": {
+      "A": "Scatterplot smooth",
+      "B": "Influence plot",
+      "C": "Partial residual plot",
+      "D": "Histogram of residuals"
+    },
+    "correct_answer": "C",
+    "explanation": "A partial residual plot (or added variables plot) visualizes the isolated relationship between a single predictor and the outcome."
+  },
+  {
+    "question_no": 28,
+    "question_text": "When a nonlinear relationship is modeled by adding squared or cubed terms to the regression equation, this is known as:",
+    "possible_answers": {
+      "A": "Logistic regression",
+      "B": "Spline regression",
+      "C": "Polynomial regression",
+      "D": "Stepwise regression"
+    },
+    "correct_answer": "C",
+    "explanation": "Polynomial regression involves adding polynomial terms (squares, cubes, etc.) to a regression equation to capture nonlinear effects."
+  },
+  {
+    "question_no": 29,
+    "question_text": "In spline regression, what do we call the fixed points where the piecewise continuous polynomial segments smoothly connect?",
+    "possible_answers": {
+      "A": "Knots",
+      "B": "Leverage points",
+      "C": "Ducks",
+      "D": "Intercepts"
+    },
+    "correct_answer": "A",
+    "explanation": "The polynomial pieces in splines are smoothly connected at a series of fixed points in a predictor variable referred to as knots."
+  },
+  {
+    "question_no": 30,
+    "question_text": "Which model automates the process of specifying the knots in splines to fit nonlinear relationships?",
+    "possible_answers": {
+      "A": "Ordinary Least Squares (OLS)",
+      "B": "Generalized Additive Models (GAM)",
+      "C": "Linear Discriminant Analysis",
+      "D": "K-Nearest Neighbors"
+    },
+    "correct_answer": "B",
+    "explanation": "Generalized Additive Models (GAMs) are a flexible modeling technique that automates the process of specifying knots in splines."
+  }
+]
